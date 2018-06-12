@@ -14,7 +14,8 @@ const DropdownKebab = ({
   id,
   pullRight,
   componentClass,
-  toggleStyle
+  toggleStyle,
+  ...props
 }) => {
   const kebabClass = classNames('dropdown-kebab-pf', className);
   return (
@@ -23,6 +24,7 @@ const DropdownKebab = ({
       id={id}
       pullRight={pullRight}
       componentClass={componentClass}
+      {...props}
     >
       <Dropdown.Toggle bsStyle={toggleStyle} noCaret>
         <Icon name="ellipsis-v" />

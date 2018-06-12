@@ -1,9 +1,11 @@
-import { configure, setAddon } from '@storybook/react';
+import { configure, setAddon, addDecorator } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import infoAddon from '@storybook/addon-info';
+import { checkA11y } from '@storybook/addon-a11y';
 import './sass/base.scss';
 
 setAddon(infoAddon);
+addDecorator(checkA11y);
 
 const coreContext = require.context('../packages/core', true, /\.stories\.js$/);
 const consoleContext = require.context(
