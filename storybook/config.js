@@ -1,13 +1,30 @@
 import { configure, setAddon, addDecorator } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import infoAddon from '@storybook/addon-info';
-import { checkA11y } from '@storybook/addon-a11y';
+import { checkA11y, configureA11y } from '@storybook/addon-a11y';
 import './sass/base.scss';
 
 setAddon(infoAddon);
+
+// Disable some of the a11y rules
+// List: https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md
+// bypass, document-title
+// const axeOptions = {
+//   rules: [
+//     {
+//       id: 'color-contrast',
+//       enabled: false
+//     }
+//   ]
+// };
+// configureA11y(axeOptions);
 addDecorator(checkA11y);
 
-const coreContext = require.context('../packages/core', true, /\.stories\.js$/);
+const coreContext = require.context(
+  '../packages/core',
+  true,
+  /\SerialConsole.stories\.js$/
+);
 const consoleContext = require.context(
   '../packages/console',
   true,

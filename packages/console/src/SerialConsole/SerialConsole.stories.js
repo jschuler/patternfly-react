@@ -151,4 +151,4 @@ class SerialConsoleConnector extends React.Component {
   }
 }
 
-stories.addWithInfo('SerialConsole', () => <SerialConsoleConnector />);
+stories.add('SerialConsole', () => <SerialConsoleConnector />);
