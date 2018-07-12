@@ -5,7 +5,7 @@ import { inlineTemplate } from 'storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from 'storybook/constants/siteConstants';
 
 const utilizationBarCardStory = stories => {
-  stories.addWithInfo('Utilization Bar Card', '', () => {
+  stories.add('Utilization Bar Card', () => {
     const story = (
       <body className="cards-pf">
         <CardGrid>
@@ -104,7 +104,7 @@ const utilizationBarCardStory = stories => {
       title: 'Utilization Bar Card',
       documentationLink: `${
         DOCUMENTATION_URL.PATTERNFLY_ORG_CARDS
-      }utilization-bar-card/#code`,
+        }utilization-bar-card/#code`,
       story
     });
   });

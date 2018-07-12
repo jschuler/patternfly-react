@@ -13,7 +13,7 @@ import { name } from '../../../package.json';
 
 const SliderStories = storiesOf(
   `${storybookPackageName(name)}/${
-    STORYBOOK_CATEGORY.FORMS_AND_CONTROLS
+  STORYBOOK_CATEGORY.FORMS_AND_CONTROLS
   }/Slider`,
   module
 );
@@ -26,7 +26,7 @@ SliderStories.addDecorator(
   })
 );
 
-SliderStories.addWithInfo('Slider', () => (
+SliderStories.add('Slider', () => (
   <div>
     <p>
       The component uses the Bootstrap-slider library, for more reading and

@@ -14,7 +14,7 @@ import { inlineTemplate } from 'storybook/decorators/storyTemplates';
 import { DOCUMENTATION_URL } from 'storybook/constants/siteConstants';
 
 const utilizationCardAddWithInfo = stories => {
-  stories.addWithInfo('Utilization Trend Card', () => {
+  stories.add('Utilization Trend Card', () => {
     const donutConfigData = {
       columns: [['Used', 1100], ['Available', 200]],
       groups: [['used', 'available']],
@@ -80,7 +80,7 @@ const utilizationCardAddWithInfo = stories => {
       title: 'Utilization Trend Card',
       documentationLink: `${
         DOCUMENTATION_URL.PATTERNFLY_ORG_CARDS
-      }utilization-trend-card/#code`,
+        }utilization-trend-card/#code`,
       story
     });
   });

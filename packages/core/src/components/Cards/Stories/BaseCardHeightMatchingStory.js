@@ -30,7 +30,7 @@ const handleClick = e => {
 };
 
 const baseCardHeightMatchingStory = stories => {
-  stories.addWithInfo('Base Card w/HeightMatching', '', () => {
+  stories.add('Base Card w/HeightMatching', () => {
     const matchHeightBool = boolean('Match Height', true);
     const story = (
       <body className="cards-pf">
@@ -123,7 +123,7 @@ const baseCardHeightMatchingStory = stories => {
       title: 'Base Card',
       documentationLink: `${
         DOCUMENTATION_URL.PATTERNFLY_ORG_CARDS
-      }base-card/#code`,
+        }base-card/#code`,
       story
     });
   });

@@ -22,7 +22,7 @@ const handleClick = e => {
 };
 
 const baseCardAddWithInfo = stories => {
-  stories.addWithInfo('Base Card', '', () => {
+  stories.add('Base Card', () => {
     const accentedBool = boolean('Accent', false);
 
     const story = (
@@ -116,7 +116,7 @@ const baseCardAddWithInfo = stories => {
       title: 'Base Card',
       documentationLink: `${
         DOCUMENTATION_URL.PATTERNFLY_ORG_CARDS
-      }base-card/#code`,
+        }base-card/#code`,
       story
     });
   });

@@ -297,7 +297,7 @@ const panels = [
 ];
 
 const StatefulNotificationDrawerStory = stories => {
-  stories.addWithInfo('Stateful Drawer Wrapper', '', () => {
+  stories.add('Stateful Drawer Wrapper', () => {
     const story = (
       <nav className="navbar navbar-pf-vertical">
         <nav className="collapse navbar-collapse">
@@ -314,7 +314,7 @@ const StatefulNotificationDrawerStory = stories => {
       title: 'Stateful Drawer Wrapper',
       documentationLink: `${
         DOCUMENTATION_URL.PATTERNFLY_ORG_COMMUNICATION
-      }notification-drawer`,
+        }notification-drawer`,
       story
     });
   });

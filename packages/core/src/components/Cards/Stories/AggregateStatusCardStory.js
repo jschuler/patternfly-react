@@ -18,7 +18,7 @@ const handleClick = e => {
 const tooltip = <Tooltip id="tooltip">Tooltip!</Tooltip>;
 
 const aggregateCardAddWithInfo = stories => {
-  stories.addWithInfo('Aggregate Status Card', '', () => {
+  stories.add('Aggregate Status Card', () => {
     const story = (
       <body className="cards-pf">
         <CardGrid>
@@ -161,7 +161,7 @@ const aggregateCardAddWithInfo = stories => {
       title: 'Aggregate Status Card',
       documentationLink: `${
         DOCUMENTATION_URL.PATTERNFLY_ORG_CARDS
-      }aggregate-status-card/#code`,
+        }aggregate-status-card/#code`,
       story
     });
   });

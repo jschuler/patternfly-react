@@ -91,7 +91,7 @@ const panels = [
 ];
 
 const WrapperNotificationDrawerStory = stories => {
-  stories.addWithInfo('Drawer Wrapper', '', () => {
+  stories.add('Drawer Wrapper', () => {
     const story = (
       <nav className="navbar navbar-pf-vertical">
         <nav className="collapse navbar-collapse">
@@ -120,7 +120,7 @@ const WrapperNotificationDrawerStory = stories => {
       title: 'Drawer Wrapper',
       documentationLink: `${
         DOCUMENTATION_URL.PATTERNFLY_ORG_COMMUNICATION
-      }notification-drawer`,
+        }notification-drawer`,
       story
     });
   });
