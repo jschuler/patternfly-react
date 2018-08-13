@@ -44,11 +44,14 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   return config;
 };
 
-const componentPathRegEx = /(components|layouts)\//;
+const componentPathRegEx = /(components|layouts|apis)\//;
 
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
-  if (node.internal.type === 'SitePage' && componentPathRegEx.test(node.path)) {
+  const isMarkdown = node.internal.type === 'MarkdownRemark';
+  const isSitePage = node.internal.type === 'SitePage';
+
+  if (isSitePage && componentPathRegEx.test(node.path)) {
     const pathLabel = node.path
       .split('/')
       .filter(Boolean)

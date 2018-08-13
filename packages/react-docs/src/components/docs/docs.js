@@ -10,7 +10,7 @@ const propTypes = {
   title: PropTypes.string.isRequired,
   props: PropTypes.any.isRequired,
   description: PropTypes.string,
-  children: PropTypes.any.isRequired
+  children: PropTypes.any
 };
 
 const defaultProps = {
@@ -23,13 +23,13 @@ const Docs = ({ title, description, children, props }) => (
       {title}
     </Title>
     <p className={css(styles.description)}>{description}</p>
-    <section>
+    {children && <section>
       <Title size="xl" withMargins>
         Examples
       </Title>
       <div>{children}</div>
-    </section>
-    <section>
+    </section>}
+    {!children && <section>
       <Title size="xl" withMargins>
         Props
       </Title>
@@ -37,7 +37,7 @@ const Docs = ({ title, description, children, props }) => (
         The {title} component accepts the following props:
       </p>
       <PropsTable props={props} />
-    </section>
+    </section>}
   </Content>
 );
 

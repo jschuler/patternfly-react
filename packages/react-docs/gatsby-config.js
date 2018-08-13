@@ -20,6 +20,20 @@ module.exports = {
         path: resolve(__dirname, '../react-core/src/layouts')
       }
     },
-    'gatsby-transformer-react-docgen'
+    'gatsby-transformer-react-docgen',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: ['gatsby-remark-prismjs']
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: resolve(__dirname, 'src/examples'),
+        name: 'markdown-pages'
+      }
+    },
+    'gatsby-transformer-remark'
   ]
 };

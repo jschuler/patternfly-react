@@ -15,12 +15,14 @@ const routeShape = PropTypes.shape({
 
 const propTypes = {
   componentRoutes: PropTypes.arrayOf(routeShape),
-  layoutRoutes: PropTypes.arrayOf(routeShape)
+  layoutRoutes: PropTypes.arrayOf(routeShape),
+  apiRoutes: PropTypes.arrayOf(routeShape)
 };
 
 const defaultProps = {
   componentRoutes: [],
-  layoutRoutes: []
+  layoutRoutes: [],
+  apiRoutes: []
 };
 
 class Navigation extends React.Component {
@@ -38,7 +40,7 @@ class Navigation extends React.Component {
   };
 
   render() {
-    const { componentRoutes, layoutRoutes } = this.props;
+    const { componentRoutes, layoutRoutes, apiRoutes } = this.props;
     const { searchValue } = this.state;
     const searchRE = new RegExp(searchValue, 'i');
 
@@ -49,6 +51,8 @@ class Navigation extends React.Component {
     const filteredLayoutRoutes = layoutRoutes.filter(c =>
       searchRE.test(c.label)
     );
+
+    const filteredApiRoutes = apiRoutes.filter(c => searchRE.test(c.label));
 
     return (
       <div className={css(styles.navigation)}>
@@ -85,9 +89,26 @@ class Navigation extends React.Component {
                 <NavigationItemGroup
                   isExpanded={value}
                   onToggleExpand={toggle}
-                  title="Components"
+                  title="Component Demos"
                 >
                   {filteredComponentRoutes.map(route => (
+                    <NavigationItem key={route.label} to={route.to}>
+                      {route.label}
+                    </NavigationItem>
+                  ))}
+                </NavigationItemGroup>
+              )}
+            </ValueToggle>
+          )}
+          {Boolean(filteredApiRoutes.length) && (
+            <ValueToggle defaultValue>
+              {({ value, toggle }) => (
+                <NavigationItemGroup
+                  isExpanded={value}
+                  onToggleExpand={toggle}
+                  title="Component API"
+                >
+                  {filteredApiRoutes.map(route => (
                     <NavigationItem key={route.label} to={route.to}>
                       {route.label}
                     </NavigationItem>

@@ -7,8 +7,10 @@ exports.replaceRenderer = ({
   replaceBodyHTMLString,
   setHeadComponents
 }) => {
-  const { html, styleTags, renderedClassNames } = renderStatic(() =>
-    renderToString(bodyComponent)
+  const { html, styleTags, renderedClassNames } = renderStatic(() => {
+    console.log(bodyComponent);
+    renderToString(bodyComponent);
+  }
   );
 
   replaceBodyHTMLString(html);

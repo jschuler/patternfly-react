@@ -15,11 +15,11 @@ lerna bootstrap
 ## Running
 To start the site locally.
 ```sh
-yarn start:site
+yarn start:docs
 ```
 
 ## Building
 To build the site.
 ```sh
-yarn build:site
+yarn build:docs
 ```
