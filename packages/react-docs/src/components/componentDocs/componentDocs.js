@@ -4,22 +4,22 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   data: PropTypes.any.isRequired,
-  examples: PropTypes.any,
+  children: PropTypes.any.isRequired,
   markdown: PropTypes.any
 };
 
 const defaultProps = {
-  examples: null,
   markdown: null
 };
 
-const ComponentDocs = ({ data, examples, markdown }) => (
+const ComponentDocs = ({ data, children, markdown }) => (
   <Docs
     title={data.componentMetadata.displayName}
     props={data.componentMetadata.props}
-    examples={examples}
     markdown={markdown}
-  />
+  >
+    {children}
+  </Docs>
 );
 
 ComponentDocs.propTypes = propTypes;

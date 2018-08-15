@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AlertVariant } from '@patternfly/react-core';
+import ComponentDocs from '../../components/componentDocs';
 import Docs from '../../components/docs';
 import markdown from '../../examples/alert/alert.md';
+import Example from '../../components/example';
+import AlertSuccess from '../../examples/alert/AlertSuccess';
+import AlertDanger from '../../examples/alert/AlertDanger';
+import AlertWarning from '../../examples/alert/AlertWarning';
+import AlertInfo from '../../examples/alert/AlertInfo';
 
 const propTypes = {
   data: PropTypes.any.isRequired
@@ -40,12 +46,27 @@ const examples = [
 ];
 
 const AlertDocs = ({ data }) => (
-  <Docs
-    title={data.componentMetadata.displayName}
-    props={data.componentMetadata.props}
-    examples={examples}
-    markdown={markdown}
-  />
+  <ComponentDocs data={data}>
+    <Example title={`Notification - ${AlertVariant.success}`}>
+      <AlertSuccess />
+    </Example>
+    <Example title={`Notification - ${AlertVariant.danger}`}>
+      <AlertDanger />
+    </Example>
+    <Example title={`Notification - ${AlertVariant.warning}`}>
+      <AlertWarning />
+    </Example>
+    <Example title={`Notification - ${AlertVariant.info}`}>
+      <AlertInfo />
+    </Example>
+  </ComponentDocs>
+
+  // <Docs
+  //   title={data.componentMetadata.displayName}
+  //   props={data.componentMetadata.props}
+  //   examples={examples}
+  //   markdown={markdown}
+  // />
 );
 
 AlertDocs.propTypes = propTypes;

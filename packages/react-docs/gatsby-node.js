@@ -1,6 +1,5 @@
 const path = require(`path`);
 const pascalCase = require('pascal-case');
-const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   const oldCSSLoader = config._loaders.css;
@@ -26,13 +25,11 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
     .loader('css', {
       ...oldCSSLoader.config,
       exclude: pfStylesTest
+    })
+    .loader('markdown-loader', {
+      test: /\.md$/,
+      loader: 'html-loader!markdown-loader'
     });
-
-  config.loader('markdown-loader', current => {
-    current.test = /\.md$/;
-    current.loader = 'html-loader!markdown-loader';
-    return current;
-  });
 
   config.merge({
     resolve: {
@@ -77,7 +74,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       name: 'label',
       value: node.displayName
     });
-    // Add field for fist character so we can group by it
+    // Add field for first character so we can group by it
     createNodeField({
       node,
       name: 'firstChar',

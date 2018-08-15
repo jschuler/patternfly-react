@@ -6,18 +6,33 @@ import { Title } from '@patternfly/react-core';
 import Demo from './demo';
 
 const propTypes = {
-  children: PropTypes.node,
-  title: PropTypes.string,
-  examples: PropTypes.array
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string
 };
 
 const defaultProps = {
-  examples: []
+  description: ''
 };
 
-const Example = ({ children, title, examples, ...props }) => (
+const Example = ({ children, title, description, ...props }) => (
   <div>
-    <div {...props}>
+    <Title size="lg" withMargins>
+      {title}
+    </Title>
+    {Boolean(description) && <p className={css(styles.description)}>{description}</p>}
+    <div className={css(styles.example)} {...props}>
+      {React.Children.map(
+        children,
+        child =>
+          React.isValidElement(child) &&
+          React.cloneElement(child, {
+            className: css(child.props && child.props.className, styles.spacing)
+          })
+      )}
+    </div>
+
+    {/* <div {...props}>
       {examples &&
         examples.map((example, index) => (
           <React.Fragment key={`${example.title}_${index}`}>
@@ -44,7 +59,7 @@ const Example = ({ children, title, examples, ...props }) => (
               )
             })
         )}
-    </div>
+    </div> */}
   </div>
 );
 

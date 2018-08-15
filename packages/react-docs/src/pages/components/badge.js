@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ComponentDocs from '../../components/componentDocs';
 import Docs from '../../components/docs';
+import Example from '../../components/example';
+import UnreadBadge from '../../examples/badge/UnreadBadge';
+import ReadBadge from '../../examples/badge/ReadBadge';
 
 const propTypes = {
   data: PropTypes.any.isRequired
@@ -22,12 +26,20 @@ const examples = [
 ];
 
 const BadgeDocs = ({ data }) => (
-  <Docs
-    title={data.componentMetadata.displayName}
-    props={data.componentMetadata.props}
-    examples={examples}
-    style={{ background: 'white' }}
-  />
+  <ComponentDocs data={data}>
+    <Example title="Unread Badge" style={{ background: 'white' }}>
+      <UnreadBadge />
+    </Example>
+    <Example title="Read Badge" style={{ background: 'white' }}>
+      <ReadBadge />
+    </Example>
+  </ComponentDocs>
+  // <Docs
+  //   title={data.componentMetadata.displayName}
+  //   props={data.componentMetadata.props}
+  //   examples={examples}
+  //   style={{ background: 'white' }}
+  // />
 );
 
 BadgeDocs.propTypes = propTypes;
