@@ -13,9 +13,9 @@ export default StyleSheet.create({
     width: sidebarWidth.value
   },
   navigationContent: {
-    position: 'fixed',
+    // position: 'fixed',
     width: 'inherit',
-    height: '100vh',
+    // height: '100vh',
     backgroundColor: navBackgroundColor.var
   },
   logo: {

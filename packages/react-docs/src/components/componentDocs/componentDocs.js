@@ -4,19 +4,26 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   data: PropTypes.any.isRequired,
-  children: PropTypes.any.isRequired
+  examples: PropTypes.any,
+  markdown: PropTypes.any
 };
 
-const ComponentDocs = ({ data, children }) => (
+const defaultProps = {
+  examples: null,
+  markdown: null
+};
+
+const ComponentDocs = ({ data, examples, markdown }) => (
   <Docs
     title={data.componentMetadata.displayName}
     props={data.componentMetadata.props}
-  >
-    {children}
-  </Docs>
+    examples={examples}
+    markdown={markdown}
+  />
 );
 
 ComponentDocs.propTypes = propTypes;
+ComponentDocs.defaultProps = defaultProps;
 
 export const componentDocsFragment = graphql`
   fragment ComponentDocs on ComponentMetadata {

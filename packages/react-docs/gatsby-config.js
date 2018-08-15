@@ -26,14 +26,6 @@ module.exports = {
       options: {
         plugins: ['gatsby-remark-prismjs']
       }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: resolve(__dirname, 'src/examples'),
-        name: 'markdown-pages'
-      }
-    },
-    'gatsby-transformer-remark'
+    }
   ]
 };

@@ -194,7 +194,11 @@ class Demo extends React.Component {
           <span className={css(styles.componentApiTitle)}>Components:</span>
           {componentApis &&
             componentApis.map((api, index) => (
-              <Link to={`/apis/${api}`} key={`github ${api} ${index}`} className={css(styles.componentApi)}>
+              <Link
+                to={`/api/${api}`}
+                key={`github ${api} ${index}`}
+                className={css(styles.componentApi)}
+              >
                 <Badge>{api}</Badge>
               </Link>
             ))}

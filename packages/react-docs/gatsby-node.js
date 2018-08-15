@@ -1,5 +1,6 @@
 const path = require(`path`);
 const pascalCase = require('pascal-case');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   const oldCSSLoader = config._loaders.css;
@@ -27,6 +28,12 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       exclude: pfStylesTest
     });
 
+  config.loader('markdown-loader', current => {
+    current.test = /\.md$/;
+    current.loader = 'html-loader!markdown-loader';
+    return current;
+  });
+
   config.merge({
     resolve: {
       alias: {
@@ -46,10 +53,10 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
 
 const componentPathRegEx = /(components|layouts|apis)\//;
 
-exports.onCreateNode = ({ node, boundActionCreators }) => {
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators;
-  const isMarkdown = node.internal.type === 'MarkdownRemark';
   const isSitePage = node.internal.type === 'SitePage';
+  const isComponentMetadata = node.internal.type === 'ComponentMetadata';
 
   if (isSitePage && componentPathRegEx.test(node.path)) {
     const pathLabel = node.path
@@ -57,10 +64,66 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       .filter(Boolean)
       .pop();
 
+    // Add an extra field to graphql so we can name the sidebar item
     createNodeField({
       node,
       name: 'label',
       value: pascalCase(pathLabel)
     });
+  } else if (isComponentMetadata) {
+    // Add an extra field to graphql so we can name the sidebar item
+    createNodeField({
+      node,
+      name: 'label',
+      value: node.displayName
+    });
+    // Add field for fist character so we can group by it
+    createNodeField({
+      node,
+      name: 'firstChar',
+      value: node.displayName.charAt(0)
+    });
   }
+};
+
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators;
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allComponentMetadata(sort: {fields:[displayName], order: ASC}) {
+          edges {
+            node {
+              fields {
+                label
+              }
+              displayName
+              description
+              props {
+                name
+                type {
+                  value
+                  raw
+                }
+                required
+              }
+            }
+          }
+        }
+      }
+    `
+    ).then(result => {
+      result.data.allComponentMetadata.edges.forEach(({ node }) => {
+        createPage({
+          path: `api/${node.displayName}`,
+          component: path.resolve(`./src/templates/api.js`),
+          context: {
+            // Data passed to context is available in page queries as GraphQL variables.
+            name: node.displayName
+          }
+        });
+      });
+      resolve();
+    });
+  });
 };

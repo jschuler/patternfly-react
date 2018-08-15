@@ -1,9 +1,8 @@
 import React from 'react';
-import ComponentDocs from '../../components/componentDocs';
 import PropTypes from 'prop-types';
 import { AlertVariant } from '@patternfly/react-core';
-import Example from '../../components/example';
-// import markdown from '../../examples/alert/alert.md';
+import Docs from '../../components/docs';
+import markdown from '../../examples/alert/alert.md';
 
 const propTypes = {
   data: PropTypes.any.isRequired
@@ -18,7 +17,7 @@ const examples = [
     title: `Notification - ${capitalizeFirstLetter(AlertVariant.success)}`,
     js: require('../../examples/alert/AlertSuccess'),
     raw: require('!!raw!../../examples/alert/AlertSuccess'),
-    github: 'components/alert.js'
+    github: 'examples/alert/AlertSuccess.js'
   },
   {
     title: `Notification - ${capitalizeFirstLetter(AlertVariant.danger)}`,
@@ -41,9 +40,12 @@ const examples = [
 ];
 
 const AlertDocs = ({ data }) => (
-  <ComponentDocs data={data}>
-    <Example examples={examples} />
-  </ComponentDocs>
+  <Docs
+    title={data.componentMetadata.displayName}
+    props={data.componentMetadata.props}
+    examples={examples}
+    markdown={markdown}
+  />
 );
 
 AlertDocs.propTypes = propTypes;

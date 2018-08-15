@@ -1,28 +1,33 @@
 import React from 'react';
-import ComponentDocs from '../../components/componentDocs';
 import PropTypes from 'prop-types';
-import { Badge } from '@patternfly/react-core';
-import Example from '../../components/example';
+import Docs from '../../components/docs';
 
 const propTypes = {
   data: PropTypes.any.isRequired
 };
 
+const examples = [
+  {
+    title: 'Unread Badge',
+    js: require('../../examples/badge/UnreadBadge'),
+    raw: require('!!raw!../../examples/badge/UnreadBadge'),
+    github: 'examples/badge/UnreadBadge.js'
+  },
+  {
+    title: 'Read Badge',
+    js: require('../../examples/badge/ReadBadge'),
+    raw: require('!!raw!../../examples/badge/ReadBadge'),
+    github: 'examples/badge/ReadBadge.js'
+  }
+];
+
 const BadgeDocs = ({ data }) => (
-  <ComponentDocs data={data}>
-    <Example title="Unread Badge" style={{ background: 'white' }}>
-      <Badge>7</Badge>
-      <Badge>24</Badge>
-      <Badge>240</Badge>
-      <Badge>999+</Badge>
-    </Example>
-    <Example title="Read Badge" style={{ background: 'white' }}>
-      <Badge isRead>7</Badge>
-      <Badge isRead>24</Badge>
-      <Badge isRead>240</Badge>
-      <Badge isRead>999+</Badge>
-    </Example>
-  </ComponentDocs>
+  <Docs
+    title={data.componentMetadata.displayName}
+    props={data.componentMetadata.props}
+    examples={examples}
+    style={{ background: 'white' }}
+  />
 );
 
 BadgeDocs.propTypes = propTypes;

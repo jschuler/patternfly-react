@@ -27,7 +27,7 @@ const Layout = ({ children, data }) => {
   }));
 
   const apiRoutes = data.apiPages.edges.map(e => ({
-    to: e.node.path,
+    to: `/api/${e.node.displayName}`,
     label: e.node.fields.label
   }));
 
@@ -101,12 +101,21 @@ export const query = graphql`
         }
       }
     }
-    apiPages: allSitePage(filter: { path: { regex: "/apis/" } }) {
+    apiPages: allComponentMetadata(sort: {fields:[displayName], order: ASC}) {
       edges {
         node {
-          path
           fields {
             label
+          }
+          displayName
+          description
+          props {
+            name
+            type {
+              value
+              raw
+            }
+            required
           }
         }
       }
