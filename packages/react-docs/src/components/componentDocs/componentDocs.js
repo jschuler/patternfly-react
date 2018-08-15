@@ -13,11 +13,7 @@ const defaultProps = {
 };
 
 const ComponentDocs = ({ data, children, markdown }) => (
-  <Docs
-    title={data.componentMetadata.displayName}
-    props={data.componentMetadata.props}
-    markdown={markdown}
-  >
+  <Docs title={data.componentMetadata.displayName} props={data.componentMetadata.props} markdown={markdown}>
     {children}
   </Docs>
 );

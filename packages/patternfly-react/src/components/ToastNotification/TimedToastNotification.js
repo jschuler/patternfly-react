@@ -83,8 +83,8 @@ TimedToastNotification.defaultProps = {
   timerdelay: 8000
 };
 
-TimedToastNotification.TOAST_NOTIFICATION_TYPES = [
-  ...ToastNotification.TOAST_NOTIFICATION_TYPES
-];
+TimedToastNotification.TOAST_NOTIFICATION_TYPES = [...ToastNotification.TOAST_NOTIFICATION_TYPES];
+
+TimedToastNotification.displayName = 'TimedToastNotification';
 
 export default TimedToastNotification;

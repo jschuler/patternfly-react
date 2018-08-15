@@ -61,13 +61,7 @@ const Layout = ({ children, data }) => {
       </Helmet>
       <Page
         title="Patternfly React"
-        navigation={
-          <Navigation
-            componentRoutes={componentRoutes}
-            layoutRoutes={layoutRoutes}
-            apiRoutes={apiRoutes}
-          />
-        }
+        navigation={<Navigation componentRoutes={componentRoutes} layoutRoutes={layoutRoutes} apiRoutes={apiRoutes} />}
       >
         {children()}
       </Page>
@@ -101,7 +95,7 @@ export const query = graphql`
         }
       }
     }
-    apiPages: allComponentMetadata(sort: {fields:[displayName], order: ASC}) {
+    apiPages: allComponentMetadata(sort: { fields: [displayName], order: ASC }) {
       edges {
         node {
           fields {

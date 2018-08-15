@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Highlighter } from 'react-bootstrap-typeahead';
+import { TypeAheadSelect } from './index';
 
 const GithubMenuItem = props => (
   <div key={props.option.id}>
-    <img
-      alt="avatar"
-      height="20px"
-      src={props.option.avatar_url}
-      style={{ borderRadius: '10px', margin: '5px' }}
-    />
-    <Highlighter search={props.text}>{props.option.login}</Highlighter>
+    <img alt="avatar" height="20px" src={props.option.avatar_url} style={{ borderRadius: '10px', margin: '5px' }} />
+    <TypeAheadSelect.Highlighter search={props.text}>{props.option.login}</TypeAheadSelect.Highlighter>
   </div>
 );
 

@@ -6,25 +6,58 @@ exports[`action button 1`] = `
   position: relative;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
-  color: #292e34;
+  color: #282d33;
   text-align: center;
   white-space: nowrap;
   background-color: transparent;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
-  aria-label=""
+  aria-disabled={null}
+  aria-label={null}
   className="pf-c-button pf-m-action"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   action
    Button
 </button>
+`;
+
+exports[`aria-disabled is set to true and tabIndex to -1 if component is not a button and is disabled 1`] = `
+.pf-c-button.pf-m-primary.pf-m-disabled {
+  display: inline-block;
+  position: relative;
+  padding: 0.25rem 1.5rem 0.25rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #72767b;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #d1d1d1;
+  border: 0px;
+  border-radius: 30em;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+<a
+  aria-disabled={true}
+  aria-label={null}
+  className="pf-c-button pf-m-primary pf-m-disabled"
+  disabled={null}
+  tabIndex={-1}
+  type={null}
+>
+  Disabled Anchor Button
+</a>
 `;
 
 exports[`danger button 1`] = `
@@ -33,7 +66,7 @@ exports[`danger button 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #ffffff;
   text-align: center;
@@ -41,12 +74,15 @@ exports[`danger button 1`] = `
   background-color: #a30000;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-danger"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   danger
@@ -60,7 +96,7 @@ exports[`isBlock 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #ffffff;
   text-align: center;
@@ -68,13 +104,16 @@ exports[`isBlock 1`] = `
   background-color: #00659c;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
   width: 100%;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-primary pf-m-block"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   Block Button
@@ -87,7 +126,7 @@ exports[`isDisabled 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #72767b;
   text-align: center;
@@ -95,13 +134,16 @@ exports[`isDisabled 1`] = `
   background-color: #d1d1d1;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
   pointer-events: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-primary pf-m-disabled"
   disabled={true}
+  tabIndex={null}
   type="button"
 >
   Disabled Button
@@ -114,7 +156,7 @@ exports[`isFocus 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #ffffff;
   text-align: center;
@@ -122,12 +164,15 @@ exports[`isFocus 1`] = `
   background-color: #00659c;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-primary pf-m-focus"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   Focused Button
@@ -140,7 +185,7 @@ exports[`isHover 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #ffffff;
   text-align: center;
@@ -148,12 +193,15 @@ exports[`isHover 1`] = `
   background-color: #00659c;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-primary pf-m-hover"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   Hovered Button
@@ -166,7 +214,7 @@ exports[`link button 1`] = `
   position: relative;
   padding: 0.25rem 0.25rem 0.25rem 0.25rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #00486e;
   text-align: center;
@@ -174,12 +222,15 @@ exports[`link button 1`] = `
   background-color: transparent;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-link"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   link
@@ -193,7 +244,7 @@ exports[`primary button 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #ffffff;
   text-align: center;
@@ -201,12 +252,15 @@ exports[`primary button 1`] = `
   background-color: #00659c;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-primary"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   primary
@@ -220,7 +274,7 @@ exports[`secondary button 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #00659c;
   text-align: center;
@@ -228,12 +282,15 @@ exports[`secondary button 1`] = `
   background-color: transparent;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-secondary"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   secondary
@@ -247,20 +304,23 @@ exports[`tertiary button 1`] = `
   position: relative;
   padding: 0.25rem 1.5rem 0.25rem 1.5rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
-  color: #292e34;
+  color: #282d33;
   text-align: center;
   white-space: nowrap;
   background-color: transparent;
   border: 0px;
   border-radius: 30em;
+  text-decoration: none;
 }
 
 <button
+  aria-disabled={null}
   aria-label={null}
   className="pf-c-button pf-m-tertiary"
   disabled={false}
+  tabIndex={null}
   type="button"
 >
   tertiary
