@@ -27,7 +27,7 @@ const examples = [
 
 const BadgeDocs = ({ data }) => (
   <ComponentDocs data={data}>
-    <Example title="Unread Badge" style={{ background: 'white' }}>
+    <Example title="Unread Badge asd" style={{ background: 'white' }}>
       <UnreadBadge />
     </Example>
     <Example title="Read Badge" style={{ background: 'white' }}>

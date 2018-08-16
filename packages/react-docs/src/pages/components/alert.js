@@ -47,16 +47,36 @@ const examples = [
 
 const AlertDocs = ({ data }) => (
   <ComponentDocs data={data}>
-    <Example title={`Notification - ${AlertVariant.success}`}>
+    <Example
+      title={`Notification - ${capitalizeFirstLetter(AlertVariant.success)}`}
+      js={examples[0].js}
+      raw={examples[0].raw}
+      github={examples[0].github}
+    >
       <AlertSuccess />
     </Example>
-    <Example title={`Notification - ${AlertVariant.danger}`}>
+    <Example
+      title={`Notification - ${capitalizeFirstLetter(AlertVariant.danger)}`}
+      js={examples[1].js}
+      raw={examples[1].raw}
+      github={examples[1].github}
+    >
       <AlertDanger />
     </Example>
-    <Example title={`Notification - ${AlertVariant.warning}`}>
+    <Example
+      title={`Notification - ${capitalizeFirstLetter(AlertVariant.warning)}`}
+      js={examples[2].js}
+      raw={examples[2].raw}
+      github={examples[2].github}
+    >
       <AlertWarning />
     </Example>
-    <Example title={`Notification - ${AlertVariant.info}`}>
+    <Example
+      title={`Notification - ${capitalizeFirstLetter(AlertVariant.info)}`}
+      js={examples[3].js}
+      raw={examples[3].raw}
+      github={examples[3].github}
+    >
       <AlertInfo />
     </Example>
   </ComponentDocs>

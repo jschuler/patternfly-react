@@ -8,20 +8,27 @@ import Demo from './demo';
 const propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string
+  description: PropTypes.string,
+  js: PropTypes.func,
+  raw: PropTypes.string,
+  github: PropTypes.string
 };
 
 const defaultProps = {
-  description: ''
+  description: '',
+  js: null,
+  raw: '',
+  github: ''
 };
 
-const Example = ({ children, title, description, ...props }) => (
+const Example = ({ children, title, description, js, raw, github, ...props }) => (
   <div>
     <Title size="lg" withMargins>
       {title}
     </Title>
     {Boolean(description) && <p className={css(styles.description)}>{description}</p>}
-    <div className={css(styles.example)} {...props}>
+    {js && <Demo js={js} raw={raw} github={github} />}
+    {/* <div className={css(styles.example)} {...props}>
       {React.Children.map(
         children,
         child =>
@@ -30,7 +37,7 @@ const Example = ({ children, title, description, ...props }) => (
             className: css(child.props && child.props.className, styles.spacing)
           })
       )}
-    </div>
+    </div> */}
 
     {/* <div {...props}>
       {examples &&

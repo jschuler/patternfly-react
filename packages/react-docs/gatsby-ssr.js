@@ -3,7 +3,15 @@ import { renderToString } from 'react-dom/server';
 import { renderStatic } from '@patternfly/react-styles/server';
 
 exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
-  const { html, styleTags, renderedClassNames } = renderStatic(() => renderToString(bodyComponent));
+  // const { html, styleTags, renderedClassNames } = renderStatic(() => renderToString(bodyComponent));
+
+  const { html, styleTags, renderedClassNames } = renderStatic(() => {
+    try {
+      renderToString(bodyComponent);
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
   replaceBodyHTMLString(html);
 

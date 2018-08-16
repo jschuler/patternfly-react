@@ -27,6 +27,7 @@ const ApiDocsIndex = ({ data }) => {
               <Link
                 to={`/api/${edge.node.displayName}`}
                 className={css(styles.apiItem)}
+                key={`/api/${edge.node.displayName}`}
               >
                 <Badge>{edge.node.displayName}</Badge>
               </Link>

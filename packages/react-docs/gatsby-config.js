@@ -7,6 +7,13 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [],
+        precision: 5
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `components`,
