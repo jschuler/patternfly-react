@@ -4,7 +4,7 @@ import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/patternfly-next/components/Backdrop/styles.css';
 
 const propTypes = {
-  /** content rendered inside the bullseye */
+  /** content rendered inside the backdrop */
   children: PropTypes.node,
   /** additional classes added to the button */
   className: PropTypes.string
