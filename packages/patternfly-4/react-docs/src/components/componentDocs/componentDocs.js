@@ -29,6 +29,7 @@ const defaultProps = {
   fullPageOnly: false
 };
 
+<<<<<<< HEAD
 class ComponentDocs extends React.PureComponent {
 
   render() {
@@ -64,6 +65,37 @@ class ComponentDocs extends React.PureComponent {
     );
   }
 }
+=======
+const ComponentDocs = ({ title, description, examples, components, enumValues, fullPageOnly, rawExamples, images }) => (
+  <Content>
+    <Title size="3xl">{title}</Title>
+    {Boolean(description) && <p className={css(styles.description)}>{description}</p>}
+    <Section title="Examples">
+      {examples.map((ComponentExample, i) => {
+        const { __docgenInfo: componentDocs } = ComponentExample;
+        const rawExample = rawExamples.find(example => example.name === componentDocs.displayName);
+        return (
+          <Example
+            key={i}
+            title={ComponentExample.title}
+            description={ComponentExample.description}
+            raw={rawExample && rawExample.file}
+            images={images}
+            fullPageOnly={fullPageOnly}
+            name={ComponentExample.name}
+            {...(ComponentExample.getContainerProps ? ComponentExample.getContainerProps() : {})}
+          >
+            <ComponentExample />
+          </Example>
+        );
+      })}
+    </Section>
+    {Object.entries(components).map(([componentName, { __docgenInfo: componentDocs }]) => (
+      <PropsTable key={componentName} name={componentName} props={componentDocs.props} enumValues={enumValues} />
+    ))}
+  </Content>
+);
+>>>>>>> upstream/master
 
 ComponentDocs.propTypes = propTypes;
 ComponentDocs.defaultProps = defaultProps;

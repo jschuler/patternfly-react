@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** Keep alphabetically sorted */
 export * from './Alert';
 export * from './Avatar';
@@ -15,3 +16,17 @@ export * from './Select';
 export * from './TextArea';
 export * from './TextInput';
 export * from './Title';
+=======
+export * from './Alert';
+export * from './Badge';
+export * from './Button';
+export * from './Card';
+export * from './Checkbox';
+export * from './Modal';
+export * from './Radio';
+export * from './Title';
+export * from './Alert';
+export * from './Dropdown';
+export * from './Select';
+export * from './List';
+>>>>>>> upstream/master
