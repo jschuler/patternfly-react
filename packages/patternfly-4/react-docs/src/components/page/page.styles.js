@@ -1,4 +1,5 @@
 import { StyleSheet } from '@patternfly/react-styles';
+import { global_spacer_md as spacerMd } from '@patternfly/react-tokens';
 
 export default StyleSheet.create({
   page: {
@@ -14,5 +15,11 @@ export default StyleSheet.create({
     position: 'relative',
     flex: '1 1 auto',
     overflowX: 'hidden'
-  }
+  },
+  section: {
+    overflowX: 'auto'
+  },
+  logo: {
+    marginBottom: '5px'
+  },
 });

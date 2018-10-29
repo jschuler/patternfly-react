@@ -32,7 +32,7 @@ export function formatClassName(className) {
 }
 
 export function getCSSClasses(cssString) {
-  return cssString.match(/(\.)(?!\d)([^\s\.,{\[>+~#:)]*)(?![^{]*})/g); //eslint-disable-line
+  return cssString.match && cssString.match(/(\.)(?!\d)([^\s\.,{\[>+~#:)]*)(?![^{]*})/g); //eslint-disable-line
 }
 
 export function getClassName(styleObj = {}) {

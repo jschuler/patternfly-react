@@ -1,5 +1,4 @@
 import React from 'react';
-import Content from '../../components/content';
 import { Title } from '@patternfly/react-core';
 import { Table, Heading, Body, TH, TD, Row } from '../../components/table';
 import * as tokensModule from '@patternfly/react-tokens';
@@ -24,7 +23,7 @@ const isColorRegex = /^(#|rgb)/;
 
 function Tokens() {
   return (
-    <Content>
+    <React.Fragment>
       <Title size="3xl">Tokens</Title>
       <Table>
         <Heading>
@@ -56,7 +55,7 @@ function Tokens() {
           }, [])}
         </Body>
       </Table>
-    </Content>
+    </React.Fragment>
   );
 }
 

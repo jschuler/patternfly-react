@@ -13,8 +13,16 @@ module.exports = {
         path: resolve(__dirname, '../react-core/src')
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `readme`,
+        path: resolve(__dirname, '../react-core/README.md')
+      }
+    },
     'gatsby-transformer-react-docgen',
-    'gatsby-plugin-emotion'
+    'gatsby-plugin-emotion',
+    'gatsby-transformer-remark'
   ],
   pathPrefix: 'patternfly-4'
 };

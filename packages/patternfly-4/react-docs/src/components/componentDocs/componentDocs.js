@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './componentDocs.styles';
-import { css } from '@patternfly/react-styles';
 import Example from '../example';
-import Content from '../content';
-import { Title } from '@patternfly/react-core';
+import { Title, StyledBox } from '@patternfly/react-core';
 import PropsTable from '../propsTable';
 import Section from '../section';
+import { GitHubMarkdownStyles } from '../../pages/styles/github-markdown';
+import { css } from '@patternfly/react-styles';
+import Showdown from 'showdown';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -30,13 +30,22 @@ const defaultProps = {
 };
 
 class ComponentDocs extends React.PureComponent {
-
   render() {
     const { title, description, examples, components, enumValues, fullPageOnly, rawExamples, images } = this.props;
+    const converter = new Showdown.Converter({
+      smartIndentationFix: true
+    });
+    converter.setFlavor('github');
     return (
-      <Content>
+      <React.Fragment>
         <Title size="3xl">{title}</Title>
-        {Boolean(description) && <p className={css(styles.description)}>{description}</p>}
+        {Boolean(description) && (
+          <StyledBox
+            my={4}
+            className={css(GitHubMarkdownStyles.markdownBody)}
+            dangerouslySetInnerHTML={{ __html: converter.makeHtml(description) }}
+          />
+        )}
         <Section title="Examples">
           {examples.map((ComponentExample, i) => {
             const { __docgenInfo: componentDocs } = ComponentExample;
@@ -63,7 +72,7 @@ class ComponentDocs extends React.PureComponent {
         {Object.entries(components).map(([componentName, { __docgenInfo: componentDocs }]) => (
           <PropsTable key={componentName} name={componentName} props={componentDocs.props} enumValues={enumValues} />
         ))}
-      </Content>
+      </React.Fragment>
     );
   }
 }

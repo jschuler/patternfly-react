@@ -1,8 +1,5 @@
 import React from 'react';
-import styles from './docs.styles';
-import { css } from '@patternfly/react-styles';
-import { Title } from '@patternfly/react-core';
-import Content from '../content';
+import { Title, StyledBox } from '@patternfly/react-core';
 import PropTypes from 'prop-types';
 
 const PropsTable = () => null;
@@ -19,19 +16,23 @@ const defaultProps = {
 };
 
 const Docs = ({ title, description, children, props }) => (
-  <Content>
+  <React.Fragment>
     <Title size="3xl">{title}</Title>
-    <p className={css(styles.description)}>{description}</p>
+    <StyledBox component="p" mb={4}>
+      {description}
+    </StyledBox>
     <section>
       <Title size="xl">Examples</Title>
       <div>{children}</div>
     </section>
     <section>
       <Title size="xl">Props</Title>
-      <p className={css(styles.description)}>The {title} component accepts the following props:</p>
+      <StyledBox component="p" mb={4}>
+        The {title} component accepts the following props:
+      </StyledBox>
       <PropsTable props={props} />
     </section>
-  </Content>
+  </React.Fragment>
 );
 
 Docs.propTypes = propTypes;

@@ -1,5 +1,4 @@
 import React from 'react';
-import Content from '../../components/content';
 import { Title, Grid, GridItem } from '@patternfly/react-core';
 import * as icons from '@patternfly/react-icons';
 import { css, StyleSheet } from '@patternfly/react-styles';
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
 
 function Icons() {
   return (
-    <Content>
+    <React.Fragment>
       <Title size="3xl">Icons</Title>
       <Grid>
         {allIcons.map(([id, Icon]) => (
@@ -32,7 +31,7 @@ function Icons() {
           </GridItem>
         ))}
       </Grid>
-    </Content>
+    </React.Fragment>
   );
 }
 

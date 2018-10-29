@@ -1,11 +1,7 @@
 import React from 'react';
-import { css } from '@patternfly/react-styles';
-import styles from './navigation.styles';
-import Link from 'gatsby-link';
+import { navigateTo } from 'gatsby-link';
 import PropTypes from 'prop-types';
-import logo from '../../assets/logo.png';
-import NavigationItemGroup from './navigationItemGroup';
-import NavigationItem from './navigationItem';
+import { StyledBox, TextInput, Nav, NavGroup, NavItem } from '@patternfly/react-core';
 
 const routeShape = PropTypes.shape({
   to: PropTypes.string.isRequired,
@@ -27,20 +23,35 @@ const defaultProps = {
 class Navigation extends React.Component {
   static propTypes = propTypes;
   static defaultProps = defaultProps;
-  state = {
-    searchValue: ''
-  };
 
-  handleSearchChange = e => {
-    const searchValue = e.target.value;
+  constructor(props) {
+    super(props);
+
+    const location = window && window.location;
+
+    this.state = {
+      searchValue: '',
+      activeItem: location ? location.pathname : ''
+    };
+  }
+
+  handleSearchChange = searchValue => {
     this.setState(() => ({
       searchValue
     }));
   };
 
+  onSelect = result => {
+    this.setState({
+      activeItem: result.to
+    });
+    navigateTo(result.to);
+  };
+
   render() {
     const { componentRoutes, layoutRoutes, demoRoutes } = this.props;
-    const { searchValue } = this.state;
+    const { searchValue, activeItem } = this.state;
+
     const searchRE = new RegExp(searchValue, 'i');
 
     const filteredComponentRoutes = componentRoutes.filter(c => searchRE.test(c.label));
@@ -50,55 +61,54 @@ class Navigation extends React.Component {
     const filteredDemoRoutes = demoRoutes.filter(c => searchRE.test(c.label));
 
     return (
-      <div className={css(styles.navigation)}>
-        <div className={css(styles.navigationContent)}>
-          <div className={css(styles.logo)}>
-            <Link to="/">
-              <img src={logo} alt="PatternFly Logo" />
-            </Link>
-          </div>
-          <div className={css(styles.search)}>
-            <input
-              className={css(styles.input)}
-              placeholder="Find components, templates,..."
-              type="text"
-              value={searchValue}
-              onChange={this.handleSearchChange}
-            />
-          </div>
-          <NavigationItemGroup title="Style">
-            <NavigationItem to="/styles/tokens">Tokens</NavigationItem>
-            <NavigationItem to="/styles/icons">Icons</NavigationItem>
-          </NavigationItemGroup>
+      <React.Fragment>
+        <StyledBox m={2}>
+          <TextInput
+            placeholder="Find components, layouts,..."
+            type="text"
+            value={searchValue}
+            onChange={this.handleSearchChange}
+            id="search-box"
+          />
+        </StyledBox>
+        <Nav onSelect={this.onSelect} aria-label="Primary Nav Grouped Example">
+          <NavGroup title="Styles">
+            <NavItem preventDefault to="/styles/tokens" isActive={activeItem === '/styles/tokens'}>
+              Tokens
+            </NavItem>
+            <NavItem preventDefault to="/styles/icons" isActive={activeItem === '/styles/icons'}>
+              Icons
+            </NavItem>
+          </NavGroup>
           {Boolean(filteredComponentRoutes.length) && (
-            <NavigationItemGroup title="Components">
+            <NavGroup title="Components">
               {filteredComponentRoutes.map(route => (
-                <NavigationItem key={route.label} to={route.to}>
+                <NavItem preventDefault key={route.label} to={route.to} isActive={activeItem === route.to}>
                   {route.label}
-                </NavigationItem>
+                </NavItem>
               ))}
-            </NavigationItemGroup>
+            </NavGroup>
           )}
           {Boolean(filteredLayoutRoutes.length) && (
-            <NavigationItemGroup title="Layouts">
+            <NavGroup title="Layouts">
               {filteredLayoutRoutes.map(route => (
-                <NavigationItem key={route.label} to={route.to}>
+                <NavItem preventDefault key={route.label} to={route.to} isActive={activeItem === route.to}>
                   {route.label}
-                </NavigationItem>
+                </NavItem>
               ))}
-            </NavigationItemGroup>
+            </NavGroup>
           )}
           {Boolean(filteredDemoRoutes.length) && (
-            <NavigationItemGroup title="Demos">
+            <NavGroup title="Demos">
               {filteredDemoRoutes.map(route => (
-                <NavigationItem key={route.label} to={route.to}>
+                <NavItem preventDefault key={route.label} to={route.to} isActive={activeItem === route.to}>
                   {route.label}
-                </NavigationItem>
+                </NavItem>
               ))}
-            </NavigationItemGroup>
+            </NavGroup>
           )}
-        </div>
-      </div>
+        </Nav>
+      </React.Fragment>
     );
   }
 }

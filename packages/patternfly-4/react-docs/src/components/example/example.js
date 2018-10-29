@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@patternfly/react-styles';
 import styles from './example.styles';
 import PropTypes from 'prop-types';
-import { Title } from '@patternfly/react-core';
+import { Title, StyledBox } from '@patternfly/react-core';
 import LiveDemo from './liveDemo';
 import Link from 'gatsby-link';
 import Section from '../section';
@@ -65,13 +65,13 @@ const Example = ({
     return (
       <Section>
         <Title size="lg">{title}</Title>
-        <div className={css(className, styles.example)} {...props}>
+        <StyledBox p={2} border="sm" borderColor="border_dark" className={css(className)} {...props}>
           This example can only be accessed in&nbsp;
           <Link target="_blank" to={path}>
             full page mode
           </Link>
           .
-        </div>
+        </StyledBox>
         <LiveDemo raw={raw.trim()} path={examplePath} live={false} />
       </Section>
     );
@@ -80,7 +80,11 @@ const Example = ({
   return (
     <div>
       <Title size="lg">{title}</Title>
-      {Boolean(description) && <p className={css(styles.description)}>{description}</p>}
+      {Boolean(description) && (
+        <StyledBox component="p" mb={4}>
+          {description}
+        </StyledBox>
+      )}
       {GATSBY_LIVE_EXAMPLES ? (
         <React.Fragment>
           {!live && (
