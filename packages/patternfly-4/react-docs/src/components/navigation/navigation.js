@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigateTo } from 'gatsby-link';
+import Link, { navigateTo } from 'gatsby-link';
 import PropTypes from 'prop-types';
 import { StyledBox, TextInput, Nav, NavGroup, NavItem } from '@patternfly/react-core';
 
@@ -45,7 +45,10 @@ class Navigation extends React.Component {
     this.setState({
       activeItem: result.to
     });
-    navigateTo(result.to);
+  };
+
+  onNavItemClick = (event, itemId, groupId, to) => {
+    navigateTo(to);
   };
 
   render() {
@@ -73,18 +76,28 @@ class Navigation extends React.Component {
         </StyledBox>
         <Nav onSelect={this.onSelect} aria-label="Primary Nav Grouped Example">
           <NavGroup title="Styles">
-            <NavItem preventDefault to="/styles/tokens" isActive={activeItem === '/styles/tokens'}>
+            <NavItem
+              preventDefault
+              to="/styles/tokens"
+              onClick={this.onNavItemClick}
+              isActive={activeItem === '/styles/tokens'}
+            >
               Tokens
             </NavItem>
-            <NavItem preventDefault to="/styles/icons" isActive={activeItem === '/styles/icons'}>
+            <NavItem
+              preventDefault
+              to="/styles/icons"
+              onClick={this.onNavItemClick}
+              isActive={activeItem === '/styles/icons'}
+            >
               Icons
             </NavItem>
           </NavGroup>
           {Boolean(filteredComponentRoutes.length) && (
             <NavGroup title="Components">
               {filteredComponentRoutes.map(route => (
-                <NavItem preventDefault key={route.label} to={route.to} isActive={activeItem === route.to}>
-                  {route.label}
+                <NavItem key={route.label} to={route.to} isActive={activeItem === route.to}>
+                  <Link to={route.to}>{route.label}</Link>
                 </NavItem>
               ))}
             </NavGroup>
@@ -92,7 +105,13 @@ class Navigation extends React.Component {
           {Boolean(filteredLayoutRoutes.length) && (
             <NavGroup title="Layouts">
               {filteredLayoutRoutes.map(route => (
-                <NavItem preventDefault key={route.label} to={route.to} isActive={activeItem === route.to}>
+                <NavItem
+                  preventDefault
+                  key={route.label}
+                  to={route.to}
+                  onClick={this.onNavItemClick}
+                  isActive={activeItem === route.to}
+                >
                   {route.label}
                 </NavItem>
               ))}
