@@ -3,6 +3,84 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.25.1](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.25.0...@patternfly/react-docs@3.25.1) (2019-04-02)
+
+**Note:** Version bump only for package @patternfly/react-docs
+
+
+
+
+
+# [3.25.0](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.9...@patternfly/react-docs@3.25.0) (2019-04-02)
+
+
+### Features
+
+* **Select:** add checkbox select variant ([#1487](https://github.com/patternfly/patternfly-react/issues/1487)) ([3b64c00](https://github.com/patternfly/patternfly-react/commit/3b64c00))
+
+
+
+
+
+## [3.24.9](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.8...@patternfly/react-docs@3.24.9) (2019-04-02)
+
+
+### Features
+
+* **Tabs:** Allow tabbing of content outside Tabs ([#1413](https://github.com/patternfly/patternfly-react/issues/1413)) ([b3c406f](https://github.com/patternfly/patternfly-react/commit/b3c406f)), closes [#1364](https://github.com/patternfly/patternfly-react/issues/1364) [#1364](https://github.com/patternfly/patternfly-react/issues/1364) [#1364](https://github.com/patternfly/patternfly-react/issues/1364) [#1364](https://github.com/patternfly/patternfly-react/issues/1364) [#1597](https://github.com/patternfly/patternfly-react/issues/1597) [#1268](https://github.com/patternfly/patternfly-react/issues/1268) [#1268](https://github.com/patternfly/patternfly-react/issues/1268) [#1597](https://github.com/patternfly/patternfly-react/issues/1597)
+
+
+### BREAKING CHANGES
+
+* **Tabs:** Use of React.forwardRef
+
+
+
+
+
+## [3.24.8](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.7...@patternfly/react-docs@3.24.8) (2019-04-02)
+
+**Note:** Version bump only for package @patternfly/react-docs
+
+
+
+
+
+## [3.24.7](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.6...@patternfly/react-docs@3.24.7) (2019-04-01)
+
+
+### Bug Fixes
+
+* **misc:** small bug fixes ([#1660](https://github.com/patternfly/patternfly-react/issues/1660)) ([14e4cd3](https://github.com/patternfly/patternfly-react/commit/14e4cd3))
+
+
+
+
+
+## [3.24.6](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.5...@patternfly/react-docs@3.24.6) (2019-03-29)
+
+**Note:** Version bump only for package @patternfly/react-docs
+
+
+
+
+
+## [3.24.5](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.4...@patternfly/react-docs@3.24.5) (2019-03-29)
+
+**Note:** Version bump only for package @patternfly/react-docs
+
+
+
+
+
+## [3.24.4](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.3...@patternfly/react-docs@3.24.4) (2019-03-28)
+
+**Note:** Version bump only for package @patternfly/react-docs
+
+
+
+
+
 ## [3.24.3](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-docs@3.24.2...@patternfly/react-docs@3.24.3) (2019-03-27)
 
 **Note:** Version bump only for package @patternfly/react-docs
