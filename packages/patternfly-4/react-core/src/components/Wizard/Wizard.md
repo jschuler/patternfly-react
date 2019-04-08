@@ -205,10 +205,10 @@ class ValidationWizard extends React.Component {
 }
 ```
 
-### Uncontrolled Wizard
+### Controlled Wizard Footer
 ```js
 import React from 'react';
-import { Button, Wizard, BackgroundImageSrc } from '@patternfly/react-core';
+import { Button, Wizard, WizardFooter, BackgroundImageSrc } from '@patternfly/react-core';
 
 class UncontrolledWizard extends React.Component {
   constructor(props) {
@@ -255,6 +255,12 @@ class UncontrolledWizard extends React.Component {
       { name: 'Final Step', component: <p>Final Step</p>, hideCancelButton: true, hideBackButton: true }
     ];
 
+    const CustomFooter = (
+      <WizardFooter>
+        <Button>Validate</Button>
+      </WizardFooter>
+    );
+
     return (
       <React.Fragment>
         <Button variant="primary" onClick={this.toggleOpen}>
@@ -263,8 +269,9 @@ class UncontrolledWizard extends React.Component {
         {isOpen && (
           <Wizard
             isOpen={isOpen}
-            title="Simple Wizard"
-            description="Simple Wizard Description"
+            onClose={this.toggleOpen}
+            footer={CustomFooter}
+            title="Custom Footer"
             steps={steps}
             backgroundImgSrc={images}
           />

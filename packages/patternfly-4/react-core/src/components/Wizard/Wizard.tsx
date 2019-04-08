@@ -8,7 +8,7 @@ import { Backdrop } from '../Backdrop';
 import { Bullseye } from '../../layouts/Bullseye';
 import { BackgroundImage, BackgroundImageSrc } from '../BackgroundImage';
 import WizardHeader from './WizardHeader';
-import WizardFooter from './WizardFooter';
+import { WizardFooterInternal } from './WizardFooter';
 import WizardToggle from './WizardToggle';
 import WizardNav from './WizardNav';
 import WizardNavItem from './WizardNavItem';
@@ -24,8 +24,6 @@ export interface WizardStep {
   name: string;
   /** The component to render in the main body */
   component?: any;
-  /** Component step custom footer items */
-  footerItems?: any;
   /** The condition needed to enable the Next button */
   enableNext?: boolean;
   /** True to hide the Cancel button */
@@ -52,15 +50,9 @@ export interface WizardProps {
   description?: string;
   /** Mapping of image sizes to image paths */
   backgroundImgSrc?: string | BackgroundImageSrcMap;
-  /** Calback function to close the wizard */
+  /** Callback function to close the wizard */
   onClose?(): void;
-  /** Callback function to save at the end of the wizard, if not specified uses onClose */
-  onSave?(): void;
-  /** Callback function after Next button is clicked */
-  onNext?: WizardStepFunctionType;
-  /** Callback function after Back button is clicked */
-  onBack?: WizardStepFunctionType;
-  /** Calback function when a step in the nav is clicked */
+  /** Callback function when a step in the nav is clicked */
   onGoToStep?: WizardStepFunctionType;
   /** Additional classes spread to the Wizard */
   className?: string;
@@ -68,22 +60,28 @@ export interface WizardProps {
   steps: WizardStep[];
   /** The step to start the wizard at (1 or higher) */
   startAtStep?: number;
-  /** The Next button text */
-  nextButtonText?: string;
-  /** The Back button text */
-  backButtonText?: string;
-  /** The Cancel button text */
-  cancelButtonText?: string;
-  /** The text for the Next button on the last step */
-  lastStepButtonText?: string;
-  /** Alignment of the footer items */
-  footerRightAlign?: boolean;
-  /** aria-label for the close button */
-  ariaLabelCloseButton?: string;
   /** aria-label for the Nav */
   ariaLabelNav?: string;
   /** Can remove the default padding around the main body content by setting this to false */
   hasBodyPadding?: boolean;
+  /** (Use to control the footer) Passing in a footer component lets you control the buttons yourself */
+  footer?: React.ReactNode;
+  /** (Unused if footer is controlled) Callback function to save at the end of the wizard, if not specified uses onClose */
+  onSave?(): void;
+  /** (Unused if footer is controlled) Callback function after Next button is clicked */
+  onNext?: WizardStepFunctionType;
+  /** (Unused if footer is controlled) Callback function after Back button is clicked */
+  onBack?: WizardStepFunctionType;
+  /** (Unused if footer is controlled) The Next button text */
+  nextButtonText?: string;
+  /** (Unused if footer is controlled) The Back button text */
+  backButtonText?: string;
+  /** (Unused if footer is controlled) The Cancel button text */
+  cancelButtonText?: string;
+  /** (Unused if footer is controlled) The text for the Next button on the last step */
+  lastStepButtonText?: string;
+  /** (Unused if footer is controlled) aria-label for the close button */
+  ariaLabelCloseButton?: string;
 }
 
 const images = {
@@ -110,10 +108,10 @@ class Wizard extends React.Component<WizardProps> {
     backButtonText: 'Back',
     cancelButtonText: 'Cancel',
     lastStepButtonText: 'Save',
-    footerRightAlign: false,
     ariaLabelCloseButton: 'Close',
     ariaLabelNav: 'Steps',
-    hasBodyPadding: true
+    hasBodyPadding: true,
+    footer: null
   };
 
   public container?: HTMLDivElement = undefined;
@@ -223,12 +221,12 @@ class Wizard extends React.Component<WizardProps> {
       goToStep: this.goToStep,
       currentStep
     };
-    debugger;
-    for (let step of flattenedSteps) {
-      if (step.footerItems) {
-        step.footerItems = React.cloneElement(step.footerItems, additionalProps);
-      }
-    }
+    // debugger;
+    // for (let step of flattenedSteps) {
+    //   if (step.footerItems) {
+    //     step.footerItems = React.cloneElement(step.footerItems, additionalProps);
+    //   }
+    // }
     return flattenedSteps;
   }
 
@@ -312,10 +310,10 @@ class Wizard extends React.Component<WizardProps> {
       backButtonText = 'Back',
       cancelButtonText = 'Cancel',
       lastStepButtonText = 'Save',
-      footerRightAlign = false,
       ariaLabelCloseButton = 'Close',
       ariaLabelNav = 'Steps',
       hasBodyPadding,
+      footer,
       ...rest
     } = this.props;
     const { currentStep, isNavOpen } = this.state;
@@ -372,21 +370,21 @@ class Wizard extends React.Component<WizardProps> {
                 <BackgroundImage src={backgroundImgSrc} />
                 <WizardHeader titleId={this.titleId} descriptionId={this.descriptionId} onClose={onClose} title={title} description={description as string} ariaLabel={ariaLabelCloseButton as string} />
                 <WizardToggle isNavOpen={isNavOpen} onNavToggle={(isNavOpen) => this.setState({ isNavOpen })} nav={nav} steps={steps} activeStep={activeStep} hasBodyPadding={hasBodyPadding as boolean}>
-                  <WizardFooter
-                    footerItems={activeStep.footerItems}
-                    footerRightAlign={footerRightAlign}
-                    onNext={this.onNext}
-                    onBack={this.onBack}
-                    onClose={onClose}
-                    isValid={isValid}
-                    firstStep={firstStep}
-                    lastStep={lastStep}
-                    activeStep={activeStep}
-                    lastStepButtonText={lastStepButtonText}
-                    nextButtonText={nextButtonText}
-                    backButtonText={backButtonText}
-                    cancelButtonText={cancelButtonText}
-                  />
+                  {footer || (
+                    <WizardFooterInternal
+                      onNext={this.onNext}
+                      onBack={this.onBack}
+                      onClose={onClose}
+                      isValid={isValid}
+                      firstStep={firstStep}
+                      lastStep={lastStep}
+                      activeStep={activeStep}
+                      lastStepButtonText={lastStepButtonText}
+                      nextButtonText={nextButtonText}
+                      backButtonText={backButtonText}
+                      cancelButtonText={cancelButtonText}
+                    />
+                  )}
                 </WizardToggle>
               </div>
             </Bullseye>

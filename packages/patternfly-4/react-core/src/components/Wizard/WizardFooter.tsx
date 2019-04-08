@@ -5,8 +5,21 @@ import { Button } from '../Button';
 import { WizardStep } from './Wizard';
 
 interface WizardFooterProps {
-  footerItems: any;
-  footerRightAlign: boolean;
+  /** Buttons in the footer */
+  children: any;
+}
+
+const WizardFooter: React.SFC<WizardFooterProps> = ({
+  children
+}) => {
+  return (
+    <footer className={css(styles.wizardFooter)}>
+      {children}
+    </footer>
+  )
+};
+
+interface WizardFooterInternalProps {
   onNext: any;
   onBack: any;
   onClose: any;
@@ -20,9 +33,7 @@ interface WizardFooterProps {
   cancelButtonText: string;
 }
 
-const WizardFooter: React.SFC<WizardFooterProps> = ({
-  footerItems,
-  footerRightAlign,
+const WizardFooterInternal: React.SFC<WizardFooterInternalProps> = ({
   onNext,
   onBack,
   onClose,
@@ -34,25 +45,18 @@ const WizardFooter: React.SFC<WizardFooterProps> = ({
   nextButtonText,
   backButtonText,
   cancelButtonText
-}) => {
-  const defaultButtons = (
-    <>
+}) => (
+    <footer className={css(styles.wizardFooter)}>
       <Button variant="primary" type="submit" onClick={onNext} isDisabled={!isValid}>
         {lastStep ? lastStepButtonText : nextButtonText}
       </Button>
-      {!firstStep && !activeStep.hideBackButton && <Button variant="secondary" onClick={onBack}>
+      {!activeStep.hideBackButton && <Button variant="secondary" onClick={onBack} className={css(firstStep && 'pf-m-disabled')}>
         {backButtonText}
       </Button>}
       {!activeStep.hideCancelButton && <Button variant="link" onClick={onClose}>
         {cancelButtonText}
       </Button>}
-    </>
-  );
-  return (
-    <footer className={css(styles.wizardFooter, footerRightAlign && 'pf-m-align-right')}>
-      {footerItems || defaultButtons}
     </footer>
-  )
-};
+  );
 
-export default WizardFooter;
+export { WizardFooter, WizardFooterInternal };
