@@ -7,8 +7,8 @@ import styles from '@patternfly/patternfly/components/Wizard/wizard.css';
 import { Backdrop } from '../Backdrop';
 import { Bullseye } from '../../layouts/Bullseye';
 import { BackgroundImage, BackgroundImageSrc } from '../BackgroundImage';
-import { Button } from '../Button';
 import WizardHeader from './WizardHeader';
+import WizardFooter from './WizardFooter';
 import WizardToggle from './WizardToggle';
 import WizardNav from './WizardNav';
 import WizardNavItem from './WizardNavItem';
@@ -24,6 +24,8 @@ export interface WizardStep {
   name: string;
   /** The component to render in the main body */
   component?: any;
+  /** Component step custom footer items */
+  footerItems?: any;
   /** The condition needed to enable the Next button */
   enableNext?: boolean;
   /** True to hide the Cancel button */
@@ -212,11 +214,25 @@ class Wizard extends React.Component<WizardProps> {
         flattenedSteps.push(step);
       }
     }
-    return flattenedSteps;
+    return this.stepsWithAdditionalProps(flattenedSteps);
   };
 
-  getFlattenedStepsIndex = (stepName: string): number => {
-    const flattenedSteps = this.getFlattenedSteps();
+  stepsWithAdditionalProps = (flattenedSteps: WizardStep[]): WizardStep[] => {
+    const { currentStep } = this.state;
+    const additionalProps = {
+      goToStep: this.goToStep,
+      currentStep
+    };
+    debugger;
+    for (let step of flattenedSteps) {
+      if (step.footerItems) {
+        step.footerItems = React.cloneElement(step.footerItems, additionalProps);
+      }
+    }
+    return flattenedSteps;
+  }
+
+  getFlattenedStepsIndex = (flattenedSteps: WizardStep[], stepName: string): number => {
     for (let i = 0; i < flattenedSteps.length; i++) {
       if (flattenedSteps[i].name === stepName) {
         return i + 1;
@@ -292,13 +308,13 @@ class Wizard extends React.Component<WizardProps> {
       className,
       steps,
       startAtStep,
-      nextButtonText,
-      backButtonText,
-      cancelButtonText,
-      lastStepButtonText,
-      footerRightAlign,
-      ariaLabelCloseButton,
-      ariaLabelNav,
+      nextButtonText = 'Next',
+      backButtonText = 'Back',
+      cancelButtonText = 'Cancel',
+      lastStepButtonText = 'Save',
+      footerRightAlign = false,
+      ariaLabelCloseButton = 'Close',
+      ariaLabelNav = 'Steps',
       hasBodyPadding,
       ...rest
     } = this.props;
@@ -327,12 +343,12 @@ class Wizard extends React.Component<WizardProps> {
                 canJumpToParent = true;
               }
             }
-            navItemStep = this.getFlattenedStepsIndex(step.steps[0].name);
+            navItemStep = this.getFlattenedStepsIndex(flattenedSteps, step.steps[0].name);
             return (
               <WizardNavItem hasChildren key={index} label={step.name} current={hasActiveChild} disabled={!canJumpToParent} step={navItemStep} onNavItemClick={this.goToStep}>
                 <WizardNav returnList>
                   {step.steps.map((childStep, indexChild) => {
-                    navItemStep = this.getFlattenedStepsIndex(childStep.name);
+                    navItemStep = this.getFlattenedStepsIndex(flattenedSteps, childStep.name);
                     enabled = Boolean(childStep.canJumpTo);
                     return <WizardNavItem key={`child_${indexChild}`} label={childStep.name} current={activeStep === childStep} disabled={!enabled} step={navItemStep} onNavItemClick={this.goToStep} />
                   })}
@@ -340,7 +356,7 @@ class Wizard extends React.Component<WizardProps> {
               </WizardNavItem>
             );
           }
-          navItemStep = this.getFlattenedStepsIndex(step.name);
+          navItemStep = this.getFlattenedStepsIndex(flattenedSteps, step.name);
           enabled = Boolean(step.canJumpTo);
           return <WizardNavItem key={index} label={step.name} current={activeStep === step} disabled={!enabled} step={navItemStep} onNavItemClick={this.goToStep} />;
         })}
@@ -356,17 +372,21 @@ class Wizard extends React.Component<WizardProps> {
                 <BackgroundImage src={backgroundImgSrc} />
                 <WizardHeader titleId={this.titleId} descriptionId={this.descriptionId} onClose={onClose} title={title} description={description as string} ariaLabel={ariaLabelCloseButton as string} />
                 <WizardToggle isNavOpen={isNavOpen} onNavToggle={(isNavOpen) => this.setState({ isNavOpen })} nav={nav} steps={steps} activeStep={activeStep} hasBodyPadding={hasBodyPadding as boolean}>
-                  <footer className={css(styles.wizardFooter, footerRightAlign && 'pf-m-align-right')}>
-                    <Button variant="primary" type="submit" onClick={this.onNext} isDisabled={!isValid}>
-                      {lastStep ? lastStepButtonText : nextButtonText}
-                    </Button>
-                    {!firstStep && !activeStep.hideBackButton && <Button variant="secondary" onClick={this.onBack}>
-                      {backButtonText}
-                    </Button>}
-                    {!activeStep.hideCancelButton && <Button variant="link" onClick={onClose}>
-                      {cancelButtonText}
-                    </Button>}
-                  </footer>
+                  <WizardFooter
+                    footerItems={activeStep.footerItems}
+                    footerRightAlign={footerRightAlign}
+                    onNext={this.onNext}
+                    onBack={this.onBack}
+                    onClose={onClose}
+                    isValid={isValid}
+                    firstStep={firstStep}
+                    lastStep={lastStep}
+                    activeStep={activeStep}
+                    lastStepButtonText={lastStepButtonText}
+                    nextButtonText={nextButtonText}
+                    backButtonText={backButtonText}
+                    cancelButtonText={cancelButtonText}
+                  />
                 </WizardToggle>
               </div>
             </Bullseye>

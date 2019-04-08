@@ -14,7 +14,12 @@ export default {
       '(newStep: { id?: string | number; name: string; }, prevStep: { prevId?: string | number; prevName: string; }) => void'
   },
   examples: [
-    { component: SimpleWizard, title: 'Simple Wizard' },
-    { component: ValidationWizard, title: 'Validation Wizard', liveScope: { SampleFormOne, SampleFormTwo } }
+    { component: SimpleWizard, title: 'Simple Wizard', live: false },
+    {
+      component: ValidationWizard,
+      title: 'Validation Wizard',
+      liveScope: { SampleFormOne, SampleFormTwo },
+      live: false
+    }
   ]
 };

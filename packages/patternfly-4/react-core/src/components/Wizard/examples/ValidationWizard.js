@@ -78,6 +78,30 @@ class ValidationWizard extends React.Component {
       [BackgroundImageSrc.filter]: '/assets/images/background-filter.svg#image_overlay'
     };
 
+    const CustomFooter = ({ ...props }) => {
+
+      function validateStep() {
+        console.log('asd');
+        // setTimeout(() => this.setState({ loading: false }), 5000);
+      }
+
+      function goToStep() {
+        debugger;
+        props.goToStep(4);
+      }
+
+      return (
+        <React.Fragment>
+          <Button variant="primary" type="submit" onClick={validateStep}>
+            Validate
+          </Button>
+          <Button variant="secondary" onClick={goToStep}>
+            Back
+          </Button>
+        </React.Fragment>
+      );
+    };
+
     const steps = [
       { id: 1, name: 'Information', component: <p>Step 1</p> },
       {
@@ -89,6 +113,7 @@ class ValidationWizard extends React.Component {
             component: (
               <SampleFormOne formValue={formValueA} isFormValid={isFormValidA} onChange={this.onFormChangeA} />
             ),
+            footerItems: <CustomFooter />,
             enableNext: isFormValidA
           },
           {
