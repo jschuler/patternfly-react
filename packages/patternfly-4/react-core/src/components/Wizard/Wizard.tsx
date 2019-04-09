@@ -6,13 +6,12 @@ import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/patternfly/components/Wizard/wizard.css';
 import { Backdrop } from '../Backdrop';
 import { Bullseye } from '../../layouts/Bullseye';
-import { BackgroundImage, BackgroundImageSrc } from '../BackgroundImage';
+import { Button } from '../Button';
 import WizardHeader from './WizardHeader';
 import { WizardFooterInternal } from './WizardFooter';
 import WizardToggle from './WizardToggle';
 import WizardNav from './WizardNav';
 import WizardNavItem from './WizardNavItem';
-import { BackgroundImageSrcMap } from '../BackgroundImage';
 // because of the way this module is exported, cannot use regular import syntax
 // tslint:disable-next-line
 const FocusTrap: any = require('focus-trap-react');
@@ -30,6 +29,10 @@ export interface WizardStep {
   hideCancelButton?: boolean;
   /** True to hide the Back button */
   hideBackButton?: boolean;
+  /** Setting to true hides the side nav and footer */
+  isFinishedStep?: boolean;
+  /** Can change the Next button text (for example to Finish or Close). If nextButtonText is also set for the Wizard, this step specific one overrides it. */
+  nextButtonText?: string;
   /** Sub steps */
   steps?: any[];
 }
@@ -48,9 +51,7 @@ export interface WizardProps {
   title: string;
   /** The wizard description */
   description?: string;
-  /** Mapping of image sizes to image paths */
-  backgroundImgSrc?: string | BackgroundImageSrcMap;
-  /** Callback function to close the wizard */
+  /** Calback function to close the wizard */
   onClose?(): void;
   /** Callback function when a step in the nav is clicked */
   onGoToStep?: WizardStepFunctionType;
@@ -78,27 +79,15 @@ export interface WizardProps {
   backButtonText?: string;
   /** (Unused if footer is controlled) The Cancel button text */
   cancelButtonText?: string;
-  /** (Unused if footer is controlled) The text for the Next button on the last step */
-  lastStepButtonText?: string;
   /** (Unused if footer is controlled) aria-label for the close button */
   ariaLabelCloseButton?: string;
 }
-
-const images = {
-  [BackgroundImageSrc.xs]: '/assets/images/pfbg_576.jpg',
-  [BackgroundImageSrc.xs2x]: '/assets/images/pfbg_576@2x.jpg',
-  [BackgroundImageSrc.sm]: '/assets/images/pfbg_768.jpg',
-  [BackgroundImageSrc.sm2x]: '/assets/images/pfbg_768@2x.jpg',
-  [BackgroundImageSrc.lg]: '/assets/images/pfbg_1200.jpg',
-  [BackgroundImageSrc.filter]: '/assets/images/background-filter.svg#image_overlay'
-};
 
 class Wizard extends React.Component<WizardProps> {
   static currentId = 0;
   static defaultProps = {
     isOpen: false,
     description: '',
-    backgroundImgSrc: images,
     onBack: null,
     onNext: null,
     onGoToStep: null,
@@ -107,7 +96,6 @@ class Wizard extends React.Component<WizardProps> {
     nextButtonText: 'Next',
     backButtonText: 'Back',
     cancelButtonText: 'Cancel',
-    lastStepButtonText: 'Save',
     ariaLabelCloseButton: 'Close',
     ariaLabelNav: 'Steps',
     hasBodyPadding: true,
@@ -297,7 +285,6 @@ class Wizard extends React.Component<WizardProps> {
       isOpen,
       title,
       description,
-      backgroundImgSrc = images,
       onClose,
       onSave,
       onBack,
@@ -309,7 +296,6 @@ class Wizard extends React.Component<WizardProps> {
       nextButtonText = 'Next',
       backButtonText = 'Back',
       cancelButtonText = 'Cancel',
-      lastStepButtonText = 'Save',
       ariaLabelCloseButton = 'Close',
       ariaLabelNav = 'Steps',
       hasBodyPadding,
@@ -321,7 +307,6 @@ class Wizard extends React.Component<WizardProps> {
     const activeStep = flattenedSteps[currentStep - 1];
     const computedSteps: ComputedStep[] = this.initSteps(steps, activeStep);
     const firstStep = activeStep === flattenedSteps[0];
-    const lastStep = activeStep === flattenedSteps[flattenedSteps.length - 1];
     const isValid = activeStep.enableNext !== undefined ? activeStep.enableNext : true;
 
     const nav = (isWizardNavOpen: boolean) => (
@@ -366,8 +351,7 @@ class Wizard extends React.Component<WizardProps> {
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
           <Backdrop>
             <Bullseye>
-              <div {...rest} className={css(styles.wizard, className)} role="dialog" aria-modal="true" aria-labelledby={this.titleId} aria-describedby={description ? this.descriptionId : undefined}>
-                <BackgroundImage src={backgroundImgSrc} />
+              <div {...rest} className={css(styles.wizard, activeStep.isFinishedStep && 'pf-m-finished', className)} role="dialog" aria-modal="true" aria-labelledby={this.titleId} aria-describedby={description ? this.descriptionId : undefined}>
                 <WizardHeader titleId={this.titleId} descriptionId={this.descriptionId} onClose={onClose} title={title} description={description as string} ariaLabel={ariaLabelCloseButton as string} />
                 <WizardToggle isNavOpen={isNavOpen} onNavToggle={(isNavOpen) => this.setState({ isNavOpen })} nav={nav} steps={steps} activeStep={activeStep} hasBodyPadding={hasBodyPadding as boolean}>
                   {footer || (
@@ -377,10 +361,8 @@ class Wizard extends React.Component<WizardProps> {
                       onClose={onClose}
                       isValid={isValid}
                       firstStep={firstStep}
-                      lastStep={lastStep}
                       activeStep={activeStep}
-                      lastStepButtonText={lastStepButtonText}
-                      nextButtonText={nextButtonText}
+                      nextButtonText={activeStep.nextButtonText || nextButtonText}
                       backButtonText={backButtonText}
                       cancelButtonText={cancelButtonText}
                     />

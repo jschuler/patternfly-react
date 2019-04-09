@@ -25,9 +25,7 @@ interface WizardFooterInternalProps {
   onClose: any;
   isValid: boolean;
   firstStep: boolean;
-  lastStep: boolean;
   activeStep: WizardStep;
-  lastStepButtonText: string;
   nextButtonText: string;
   backButtonText: string;
   cancelButtonText: string;
@@ -39,16 +37,14 @@ const WizardFooterInternal: React.SFC<WizardFooterInternalProps> = ({
   onClose,
   isValid,
   firstStep,
-  lastStep,
   activeStep,
-  lastStepButtonText,
   nextButtonText,
   backButtonText,
   cancelButtonText
 }) => (
     <footer className={css(styles.wizardFooter)}>
       <Button variant="primary" type="submit" onClick={onNext} isDisabled={!isValid}>
-        {lastStep ? lastStepButtonText : nextButtonText}
+        {nextButtonText}
       </Button>
       {!activeStep.hideBackButton && <Button variant="secondary" onClick={onBack} className={css(firstStep && 'pf-m-disabled')}>
         {backButtonText}
