@@ -6,7 +6,6 @@ import { css } from '@patternfly/react-styles';
 import styles from '@patternfly/patternfly/components/Wizard/wizard.css';
 import { Backdrop } from '../Backdrop';
 import { Bullseye } from '../../layouts/Bullseye';
-import { Button } from '../Button';
 import WizardHeader from './WizardHeader';
 import { WizardFooterInternal } from './WizardFooter';
 import WizardToggle from './WizardToggle';
@@ -15,6 +14,8 @@ import WizardNavItem from './WizardNavItem';
 // because of the way this module is exported, cannot use regular import syntax
 // tslint:disable-next-line
 const FocusTrap: any = require('focus-trap-react');
+
+const WizardContext = React.createContext({});
 
 export interface WizardStep {
   /** Optional identifier */
@@ -33,12 +34,16 @@ export interface WizardStep {
   isFinishedStep?: boolean;
   /** Can change the Next button text (for example to Finish or Close). If nextButtonText is also set for the Wizard, this step specific one overrides it. */
   nextButtonText?: string;
+  /** (Optional) Enables or disables the step in the navigation. If not defined the navigation item is enabled progressively when the step is reached. */
+  enabled?: boolean;
+  /** If false cannot click the step in the side navigation */
+  canActivate?: boolean;
   /** Sub steps */
-  steps?: any[];
+  steps?: ComputedStep[];
 }
 
 interface ComputedStep extends WizardStep {
-  /** The condition needed to be able to navigate to this step */
+  /** Enables the step. If undefined, enables the step progressively (enable when the step is reached) */
   canJumpTo?: boolean;
 };
 
@@ -188,6 +193,30 @@ class Wizard extends React.Component<WizardProps> {
     return onGoToStep && onGoToStep({ id, name }, { prevId, prevName });
   };
 
+  goToStepById = (stepId: number | string): void => {
+    const flattenedSteps = this.getFlattenedSteps();
+    let step;
+    for (let i = 0; i < flattenedSteps.length; i++) {
+      if (flattenedSteps[i].id === stepId) {
+        step = i + 1;
+        break;
+      }
+    }
+    step && this.setState({ currentStep: step });
+  };
+
+  goToStepByName = (stepName: string): void => {
+    const flattenedSteps = this.getFlattenedSteps();
+    let step;
+    for (let i = 0; i < flattenedSteps.length; i++) {
+      if (flattenedSteps[i].name === stepName) {
+        step = i + 1;
+        break;
+      }
+    }
+    step && this.setState({ currentStep: step });
+  };
+
   getFlattenedSteps = (): WizardStep[] => {
     const { steps } = this.props;
     const flattenedSteps: WizardStep[] = [];
@@ -200,23 +229,8 @@ class Wizard extends React.Component<WizardProps> {
         flattenedSteps.push(step);
       }
     }
-    return this.stepsWithAdditionalProps(flattenedSteps);
-  };
-
-  stepsWithAdditionalProps = (flattenedSteps: WizardStep[]): WizardStep[] => {
-    const { currentStep } = this.state;
-    const additionalProps = {
-      goToStep: this.goToStep,
-      currentStep
-    };
-    // debugger;
-    // for (let step of flattenedSteps) {
-    //   if (step.footerItems) {
-    //     step.footerItems = React.cloneElement(step.footerItems, additionalProps);
-    //   }
-    // }
     return flattenedSteps;
-  }
+  };
 
   getFlattenedStepsIndex = (flattenedSteps: WizardStep[], stepName: string): number => {
     for (let i = 0; i < flattenedSteps.length; i++) {
@@ -235,24 +249,32 @@ class Wizard extends React.Component<WizardProps> {
       let found = false;
       if (step.steps) {
         for (const subStep of step.steps) {
-          if (activeStep === subStep) {
-            // one of the children matches
-            subStep.canJumpTo = true;
-            found = true;
-            break;
-          } else {
-            subStep.canJumpTo = true;
+          // Can be controlled through the steps config on consumer side
+          // If not set, then we progressively determine whether the side nav item should be enabled
+          if (subStep.enabled === undefined) {
+            if (activeStep === subStep) {
+              // one of the children matches
+              subStep.canJumpTo = true;
+              found = true;
+              break;
+            } else {
+              subStep.canJumpTo = true;
+            }
           }
         }
       }
       if (found) {
         break;
       }
-      if (activeStep === step) {
-        step.canJumpTo = true;
-        break;
-      } else {
-        step.canJumpTo = true;
+      // Can be controlled through the steps config on consumer side
+      // If not set, then we progressively determine whether the side nav item should be enabled
+      if (step.enabled === undefined) {
+        if (activeStep === step) {
+          step.canJumpTo = true;
+          break;
+        } else {
+          step.canJumpTo = true;
+        }
       }
     }
     return computedSteps;
@@ -297,7 +319,7 @@ class Wizard extends React.Component<WizardProps> {
       backButtonText = 'Back',
       cancelButtonText = 'Cancel',
       ariaLabelCloseButton = 'Close',
-      ariaLabelNav = 'Steps',
+      ariaLabelNav,
       hasBodyPadding,
       footer,
       ...rest
@@ -312,6 +334,10 @@ class Wizard extends React.Component<WizardProps> {
     const nav = (isWizardNavOpen: boolean) => (
       <WizardNav isOpen={isWizardNavOpen} ariaLabel={ariaLabelNav}>
         {computedSteps.map((step, index) => {
+          if (step.isFinishedStep) {
+            // Don't show finished step in the side nav
+            return;
+          }
           let enabled;
           let navItemStep;
           if (step.steps) {
@@ -322,53 +348,68 @@ class Wizard extends React.Component<WizardProps> {
                 // one of the children matches
                 hasActiveChild = true;
               }
-              if (subStep.canJumpTo) {
+              if (subStep.enabled || subStep.canJumpTo) {
                 canJumpToParent = true;
               }
             }
             navItemStep = this.getFlattenedStepsIndex(flattenedSteps, step.steps[0].name);
             return (
-              <WizardNavItem hasChildren key={index} label={step.name} current={hasActiveChild} disabled={!canJumpToParent} step={navItemStep} onNavItemClick={this.goToStep}>
+              <WizardNavItem hasChildren key={index} label={step.name} current={hasActiveChild} disabled={!canJumpToParent} step={navItemStep} onNavItemClick={step.canActivate !== false && this.goToStep}>
                 <WizardNav returnList>
                   {step.steps.map((childStep, indexChild) => {
+                    if (childStep.isFinishedStep) {
+                      // Don't show finished step in the side nav
+                      return;
+                    }
                     navItemStep = this.getFlattenedStepsIndex(flattenedSteps, childStep.name);
-                    enabled = Boolean(childStep.canJumpTo);
-                    return <WizardNavItem key={`child_${indexChild}`} label={childStep.name} current={activeStep === childStep} disabled={!enabled} step={navItemStep} onNavItemClick={this.goToStep} />
+                    enabled = childStep.enabled || childStep.canJumpTo;
+                    return <WizardNavItem key={`child_${indexChild}`} label={childStep.name} current={activeStep === childStep} disabled={!enabled} step={navItemStep} onNavItemClick={childStep.canActivate !== false && this.goToStep} />
                   })}
                 </WizardNav>
               </WizardNavItem>
             );
           }
           navItemStep = this.getFlattenedStepsIndex(flattenedSteps, step.name);
-          enabled = Boolean(step.canJumpTo);
-          return <WizardNavItem key={index} label={step.name} current={activeStep === step} disabled={!enabled} step={navItemStep} onNavItemClick={this.goToStep} />;
+          enabled = step.enabled || step.canJumpTo;
+          return <WizardNavItem key={index} label={step.name} current={activeStep === step} disabled={!enabled} step={navItemStep} onNavItemClick={step.canActivate !== false && this.goToStep} />;
         })}
       </WizardNav>
     );
+
+    const context = {
+      goToStepById: this.goToStepById,
+      goToStepByName: this.goToStepByName,
+      onNext: this.onNext,
+      onBack: this.onBack,
+      onClose: onClose,
+      activeStep
+    };
 
     return (
       isOpen && ReactDOM.createPortal(
         <FocusTrap focusTrapOptions={{ clickOutsideDeactivates: true }}>
           <Backdrop>
             <Bullseye>
-              <div {...rest} className={css(styles.wizard, activeStep.isFinishedStep && 'pf-m-finished', className)} role="dialog" aria-modal="true" aria-labelledby={this.titleId} aria-describedby={description ? this.descriptionId : undefined}>
-                <WizardHeader titleId={this.titleId} descriptionId={this.descriptionId} onClose={onClose} title={title} description={description as string} ariaLabel={ariaLabelCloseButton as string} />
-                <WizardToggle isNavOpen={isNavOpen} onNavToggle={(isNavOpen) => this.setState({ isNavOpen })} nav={nav} steps={steps} activeStep={activeStep} hasBodyPadding={hasBodyPadding as boolean}>
-                  {footer || (
-                    <WizardFooterInternal
-                      onNext={this.onNext}
-                      onBack={this.onBack}
-                      onClose={onClose}
-                      isValid={isValid}
-                      firstStep={firstStep}
-                      activeStep={activeStep}
-                      nextButtonText={activeStep.nextButtonText || nextButtonText}
-                      backButtonText={backButtonText}
-                      cancelButtonText={cancelButtonText}
-                    />
-                  )}
-                </WizardToggle>
-              </div>
+              <WizardContext.Provider value={context}>
+                <div {...rest} className={css(styles.wizard, activeStep.isFinishedStep && 'pf-m-finished', className)} role="dialog" aria-modal="true" aria-labelledby={this.titleId} aria-describedby={description ? this.descriptionId : undefined}>
+                  <WizardHeader titleId={this.titleId} descriptionId={this.descriptionId} onClose={onClose} title={title} description={description as string} ariaLabel={ariaLabelCloseButton as string} />
+                  <WizardToggle isNavOpen={isNavOpen} onNavToggle={(isNavOpen) => this.setState({ isNavOpen })} nav={nav} steps={steps} activeStep={activeStep} hasBodyPadding={hasBodyPadding as boolean}>
+                    {footer || (
+                      <WizardFooterInternal
+                        onNext={this.onNext}
+                        onBack={this.onBack}
+                        onClose={onClose}
+                        isValid={isValid}
+                        firstStep={firstStep}
+                        activeStep={activeStep}
+                        nextButtonText={activeStep.nextButtonText || nextButtonText}
+                        backButtonText={backButtonText}
+                        cancelButtonText={cancelButtonText}
+                      />
+                    )}
+                  </WizardToggle>
+                </div>
+              </WizardContext.Provider>
             </Bullseye>
           </Backdrop>
         </FocusTrap>,
@@ -378,4 +419,4 @@ class Wizard extends React.Component<WizardProps> {
   }
 }
 
-export { Wizard };
+export { Wizard, WizardContext };
