@@ -61,7 +61,7 @@ export interface ISeparator {
 
 export interface ICell {
   title: String;
-  transfroms: Array<Function>;
+  transforms: Array<Function>;
   cellTransforms: Array<Function>;
   formatters: Array<Function>;
   cellFormatters: Array<Function>;
@@ -78,12 +78,15 @@ export interface IRow {
   isOpen: Boolean;
   parent: Number;
   props: any;
+  fullWidth?: Boolean;
+  noPadding?: Boolean;
 }
 
 export interface TableProps extends Omit<Omit<HTMLProps<HTMLTableElement>, 'onSelect'>, 'rows'> {
   children?: ReactNode;
   className?: string;
   variant?: OneOf<typeof TableVariant, keyof typeof TableVariant>;
+  borders?: boolean;
   gridBreakPoint?: OneOf<typeof TableGridBreakpoint, keyof typeof TableGridBreakpoint>;
   sortBy?: ISortBy;
   onCollapse?: (event: MouseEvent, rowIndex: number, isOpen: boolean, rowData: IRowData, extraData: IExtraData) => void;

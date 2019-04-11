@@ -22,112 +22,116 @@ exports[`Wizard should match snapshot 1`] = `
           className=""
           component="div"
         >
-          <div
-            aria-describedby="pf-wizard-description-0"
-            aria-labelledby="pf-wizard-title-0"
-            aria-modal="true"
-            className="pf-c-wizard"
-            role="dialog"
-          >
-            <WizardHeader
-              ariaLabel="Close"
-              description="Description here"
-              descriptionId="pf-wizard-description-0"
-              title="Wizard title"
-              titleId="pf-wizard-title-0"
-            />
-            <WizardToggle
-              activeStep={
-                Object {
+          <Context.Provider
+            value={
+              Object {
+                "activeStep": Object {
                   "canJumpTo": true,
                   "component": <p>
                     Step 1
                   </p>,
                   "name": "A",
-                }
+                },
+                "goToStepById": [Function],
+                "goToStepByName": [Function],
+                "onBack": [Function],
+                "onClose": undefined,
+                "onNext": [Function],
               }
-              hasBodyPadding={true}
-              isNavOpen={false}
-              nav={[Function]}
-              onNavToggle={[Function]}
-              steps={
-                Array [
+            }
+          >
+            <div
+              aria-describedby="pf-wizard-description-0"
+              aria-labelledby="pf-wizard-title-0"
+              aria-modal="true"
+              className="pf-c-wizard"
+              role="dialog"
+            >
+              <WizardHeader
+                ariaLabel="Close"
+                description="Description here"
+                descriptionId="pf-wizard-description-0"
+                title="Wizard title"
+                titleId="pf-wizard-title-0"
+              />
+              <WizardToggle
+                activeStep={
                   Object {
                     "canJumpTo": true,
                     "component": <p>
                       Step 1
                     </p>,
                     "name": "A",
-                  },
-                  Object {
-                    "name": "B",
-                    "steps": Array [
-                      Object {
-                        "component": <p>
-                          Step 2
-                        </p>,
-                        "enableNext": true,
-                        "name": "B-1",
-                      },
-                      Object {
-                        "component": <p>
-                          Step 3
-                        </p>,
-                        "enableNext": false,
-                        "name": "B-2",
-                      },
-                    ],
-                  },
-                  Object {
-                    "component": <p>
-                      Step 4
-                    </p>,
-                    "name": "C",
-                  },
-                  Object {
-                    "component": <p>
-                      Step 5
-                    </p>,
-                    "name": "D",
-                  },
-                ]
-              }
-            >
-              <footer
-                className="pf-c-wizard__footer"
+                  }
+                }
+                hasBodyPadding={true}
+                isNavOpen={false}
+                nav={[Function]}
+                onNavToggle={[Function]}
+                steps={
+                  Array [
+                    Object {
+                      "canJumpTo": true,
+                      "component": <p>
+                        Step 1
+                      </p>,
+                      "name": "A",
+                    },
+                    Object {
+                      "name": "B",
+                      "steps": Array [
+                        Object {
+                          "component": <p>
+                            Step 2
+                          </p>,
+                          "enableNext": true,
+                          "name": "B-1",
+                        },
+                        Object {
+                          "component": <p>
+                            Step 3
+                          </p>,
+                          "enableNext": false,
+                          "name": "B-2",
+                        },
+                      ],
+                    },
+                    Object {
+                      "component": <p>
+                        Step 4
+                      </p>,
+                      "name": "C",
+                    },
+                    Object {
+                      "component": <p>
+                        Step 5
+                      </p>,
+                      "name": "D",
+                    },
+                  ]
+                }
               >
-                <Button
-                  aria-label={null}
-                  className=""
-                  component="button"
-                  isActive={false}
-                  isBlock={false}
-                  isDisabled={false}
-                  isFocus={false}
-                  isHover={false}
-                  onClick={[Function]}
-                  type="submit"
-                  variant="primary"
-                >
-                  Next
-                </Button>
-                <Button
-                  aria-label={null}
-                  className=""
-                  component="button"
-                  isActive={false}
-                  isBlock={false}
-                  isDisabled={false}
-                  isFocus={false}
-                  isHover={false}
-                  type="button"
-                  variant="link"
-                >
-                  Cancel
-                </Button>
-              </footer>
-            </WizardToggle>
-          </div>
+                <WizardFooterInternal
+                  activeStep={
+                    Object {
+                      "canJumpTo": true,
+                      "component": <p>
+                        Step 1
+                      </p>,
+                      "name": "A",
+                    }
+                  }
+                  backButtonText="Back"
+                  cancelButtonText="Cancel"
+                  firstStep={true}
+                  isValid={true}
+                  nextButtonText="Next"
+                  onBack={[Function]}
+                  onNext={[Function]}
+                />
+              </WizardToggle>
+            </div>
+          </Context.Provider>
         </Bullseye>
       </Backdrop>
     </FocusTrap>,
@@ -328,6 +332,12 @@ exports[`Wizard should match snapshot 1`] = `
                     type="submit"
                   >
                     Next
+                  </button>
+                  <button
+                    class="pf-c-button pf-m-secondary pf-m-disabled"
+                    type="button"
+                  >
+                    Back
                   </button>
                   <button
                     class="pf-c-button pf-m-link"
@@ -537,6 +547,12 @@ exports[`Wizard should match snapshot 1`] = `
                     type="submit"
                   >
                     Next
+                  </button>
+                  <button
+                    class="pf-c-button pf-m-secondary pf-m-disabled"
+                    type="button"
+                  >
+                    Back
                   </button>
                   <button
                     class="pf-c-button pf-m-link"

@@ -36,8 +36,6 @@ export interface WizardStep {
   nextButtonText?: string;
   /** (Optional) Enables or disables the step in the navigation. If not defined the navigation item is enabled progressively when the step is reached. */
   enabled?: boolean;
-  /** If false cannot click the step in the side navigation */
-  canActivate?: boolean;
   /** Sub steps */
   steps?: ComputedStep[];
 }
@@ -354,7 +352,14 @@ class Wizard extends React.Component<WizardProps> {
             }
             navItemStep = this.getFlattenedStepsIndex(flattenedSteps, step.steps[0].name);
             return (
-              <WizardNavItem hasChildren key={index} label={step.name} current={hasActiveChild} disabled={!canJumpToParent} step={navItemStep} onNavItemClick={step.canActivate !== false && this.goToStep}>
+              <WizardNavItem
+                hasChildren key={index}
+                label={step.name}
+                current={hasActiveChild}
+                disabled={!canJumpToParent}
+                step={navItemStep}
+                onNavItemClick={this.goToStep}
+              >
                 <WizardNav returnList>
                   {step.steps.map((childStep, indexChild) => {
                     if (childStep.isFinishedStep) {
@@ -363,7 +368,15 @@ class Wizard extends React.Component<WizardProps> {
                     }
                     navItemStep = this.getFlattenedStepsIndex(flattenedSteps, childStep.name);
                     enabled = childStep.enabled || childStep.canJumpTo;
-                    return <WizardNavItem key={`child_${indexChild}`} label={childStep.name} current={activeStep === childStep} disabled={!enabled} step={navItemStep} onNavItemClick={childStep.canActivate !== false && this.goToStep} />
+                    return (
+                      <WizardNavItem
+                        key={`child_${indexChild}`}
+                        label={childStep.name}
+                        current={activeStep === childStep}
+                        disabled={!enabled}
+                        step={navItemStep}
+                        onNavItemClick={this.goToStep} />
+                    );
                   })}
                 </WizardNav>
               </WizardNavItem>
@@ -371,7 +384,15 @@ class Wizard extends React.Component<WizardProps> {
           }
           navItemStep = this.getFlattenedStepsIndex(flattenedSteps, step.name);
           enabled = step.enabled || step.canJumpTo;
-          return <WizardNavItem key={index} label={step.name} current={activeStep === step} disabled={!enabled} step={navItemStep} onNavItemClick={step.canActivate !== false && this.goToStep} />;
+          return (
+            <WizardNavItem
+              key={index}
+              label={step.name}
+              current={activeStep === step}
+              disabled={!enabled}
+              step={navItemStep}
+              onNavItemClick={this.goToStep} />
+          );
         })}
       </WizardNav>
     );
