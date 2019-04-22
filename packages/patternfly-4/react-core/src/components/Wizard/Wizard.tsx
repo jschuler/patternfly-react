@@ -50,6 +50,8 @@ export type WizardStepFunctionType = (newStep: { id?: string | number; name: str
 export interface WizardProps {
   /** True to show the wizard */
   isOpen?: boolean;
+  /** If true makes the navigation more compact */
+  isCompact?: boolean;
   /** The wizard title */
   title: string;
   /** The wizard description */
@@ -90,6 +92,7 @@ class Wizard extends React.Component<WizardProps> {
   static currentId = 0;
   static defaultProps = {
     isOpen: false,
+    isCompact: false,
     description: '',
     onBack: null,
     onNext: null,
@@ -303,6 +306,7 @@ class Wizard extends React.Component<WizardProps> {
     }
     const {
       isOpen,
+      isCompact,
       title,
       description,
       onClose,
@@ -412,7 +416,7 @@ class Wizard extends React.Component<WizardProps> {
           <Backdrop>
             <Bullseye>
               <WizardContext.Provider value={context}>
-                <div {...rest} className={css(styles.wizard, activeStep.isFinishedStep && 'pf-m-finished', className)} role="dialog" aria-modal="true" aria-labelledby={this.titleId} aria-describedby={description ? this.descriptionId : undefined}>
+                <div {...rest} className={css(styles.wizard, isCompact && 'pf-m-compact-nav', activeStep.isFinishedStep && 'pf-m-finished', className)} role="dialog" aria-modal="true" aria-labelledby={this.titleId} aria-describedby={description ? this.descriptionId : undefined}>
                   <WizardHeader titleId={this.titleId} descriptionId={this.descriptionId} onClose={onClose} title={title} description={description as string} ariaLabel={ariaLabelCloseButton as string} />
                   <WizardToggle isNavOpen={isNavOpen} onNavToggle={(isNavOpen) => this.setState({ isNavOpen })} nav={nav} steps={steps} activeStep={activeStep} hasBodyPadding={hasBodyPadding as boolean}>
                     {footer || (

@@ -1,12 +1,16 @@
 ---
-title: "Wizard"
-cssPrefix: "pf-c-wizard"
+title: 'Wizard'
+cssPrefix: 'pf-c-wizard'
 ---
+
+import { Button, Wizard, WizardFooter, WizardContext, Alert } from '@patternfly/react-core';
+import FinishedStep from './examples/FinishedStep';
+import SampleForm from './examples/SampleForm';
+
 ### Simple Wizard
 ```js
 import React from 'react';
 import { Button, Wizard } from '@patternfly/react-core';
-import FinishedStep from './examples';
 
 class SimpleWizard extends React.Component {
   constructor(props) {
@@ -29,19 +33,7 @@ class SimpleWizard extends React.Component {
       { name: 'Step 2', component: <p>Step 2</p>, enabled: true },
       { name: 'Step 3', component: <p>Step 3</p>, enabled: true },
       { name: 'Step 4', component: <p>Step 4</p>, enabled: true },
-      { name: 'Review', component: <p>Review Step</p>, nextButtonText: 'Finish', enabled: true },
-      { 
-        name: 'Finish', 
-        component: (
-          <WizardContext.Consumer>
-            {({ activeStep, goToStepByName, goToStepById, onNext, onBack, onClose }) => {
-              return <FinishedStep onClose={() => onNext()} />;
-            }}
-          </WizardContext.Consumer>
-        ), 
-        isFinishedStep: true
-      },
-      { name: 'Finish 2', component: <FinishedStep onClose={this.toggleOpen} />, isFinishedStep: true }
+      { name: 'Review', component: <p>Review Step</p>, nextButtonText: 'Finish', enabled: true }
     ];
 
     return (
@@ -64,64 +56,160 @@ class SimpleWizard extends React.Component {
 }
 ```
 
-### Validation Wizard
+### Wizard - compact navigation
 ```js
 import React from 'react';
 import { Button, Wizard } from '@patternfly/react-core';
+
+class CompactWizard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+    this.toggleOpen = () => {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+    };
+  }
+
+  render() {
+    const { isOpen } = this.state;
+
+    const steps = [
+      { name: 'Step 1', component: <p>Step 1</p> },
+      { name: 'Step 2', component: <p>Step 2</p>, enabled: true },
+      { name: 'Step 3', component: <p>Step 3</p>, enabled: true },
+      { name: 'Step 4', component: <p>Step 4</p>, enabled: true },
+      { name: 'Review', component: <p>Review Step</p>, nextButtonText: 'Finish', enabled: true }
+    ];
+
+    return (
+      <React.Fragment>
+        <Button variant="primary" onClick={this.toggleOpen}>
+          Show Wizard
+        </Button>
+        {isOpen && (
+          <Wizard
+            isOpen={isOpen}
+            isCompact
+            onClose={this.toggleOpen}
+            title="Simple Wizard"
+            description="Simple Wizard Description"
+            steps={steps}
+          />
+        )}
+      </React.Fragment>
+    );
+  }
+}
+```
+
+### Wizard - finished step
+```js
 import React from 'react';
-import { Form, FormGroup, TextInput } from '@patternfly/react-core';
-import { SampleFormOne, SampleFormTwo } from './examples';
+import { Button, Wizard } from '@patternfly/react-core';
+import FinishedStep from './examples/FinishedStep';
+
+class FinishedStepWizard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+    this.toggleOpen = () => {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+    };
+  }
+
+  render() {
+    const { isOpen } = this.state;
+
+    const steps = [
+      { name: 'Step 1', component: <p>Step 1</p> },
+      { name: 'Step 2', component: <p>Step 2</p>, enabled: true },
+      { name: 'Step 3', component: <p>Step 3</p>, enabled: true },
+      { name: 'Step 4', component: <p>Step 4</p>, enabled: true },
+      { name: 'Review', component: <p>Review Step</p>, nextButtonText: 'Finish', enabled: true },
+      { name: 'Finish', component: <FinishedStep onClose={this.toggleOpen} />, isFinishedStep: true }
+    ];
+
+    return (
+      <React.Fragment>
+        <Button variant="primary" onClick={this.toggleOpen}>
+          Show Wizard
+        </Button>
+        {isOpen && (
+          <Wizard
+            isOpen={isOpen}
+            isCompact
+            onClose={this.toggleOpen}
+            title="Simple Wizard"
+            description="Simple Wizard Description"
+            steps={steps}
+          />
+        )}
+      </React.Fragment>
+    );
+  }
+}
+```
+
+### Wizard - enable Next button on form validation
+```js
+import React from 'react';
+import { Button, Wizard, Form, FormGroup, TextInput } from '@patternfly/react-core';
+import SampleForm from './examples/SampleForm';
 
 class ValidationWizard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isOpen: false,
-      isFormValidA: false,
-      formValueA: 'Five',
-      isFormValidB: false,
-      formValueB: 'Six',
+      isFormValid: false,
+      formValue: 'Thirty',
       allStepsValid: false
     };
+
     this.toggleOpen = () => {
       this.setState(({ isOpen }) => ({
         isOpen: !isOpen
       }));
     };
-    this.onFormChangeA = (isValid, value) => {
+
+    this.onFormChange = (isValid, value) => {
       this.setState(
         {
-          isFormValidA: isValid,
-          formValueA: value
+          isFormValid: isValid,
+          formValue: value
         },
         this.areAllStepsValid
       );
     };
-    this.onFormChangeB = (isValid, value) => {
-      this.setState(
-        {
-          isFormValidB: isValid,
-          formValueB: value
-        },
-        this.areAllStepsValid
-      );
-    };
+
     this.areAllStepsValid = () => {
       this.setState({
-        allStepsValid: this.state.isFormValidA && this.state.isFormValidB
+        allStepsValid: this.state.isFormValid
       });
     };
+
     this.onNext = ({ id, name }, { prevId, prevName }) => {
       console.log(`current id: ${id}, current name: ${name}, previous id: ${prevId}, previous name: ${prevName}`);
       this.areAllStepsValid();
     };
+
     this.onBack = ({ id, name }, { prevId, prevName }) => {
       console.log(`current id: ${id}, current name: ${name}, previous id: ${prevId}, previous name: ${prevName}`);
       this.areAllStepsValid();
     };
+
     this.onGoToStep = ({ id, name }, { prevId, prevName }) => {
       console.log(`current id: ${id}, current name: ${name}, previous id: ${prevId}, previous name: ${prevName}`);
     };
+
     this.onSave = () => {
       console.log('Saved and closed the wizard');
       this.setState({
@@ -131,7 +219,7 @@ class ValidationWizard extends React.Component {
   }
 
   render() {
-    const { isOpen, isFormValidA, isFormValidB, formValueA, formValueB, allStepsValid } = this.state;
+    const { isOpen, isFormValid, formValue, allStepsValid } = this.state;
 
     const steps = [
       { id: 1, name: 'Information', component: <p>Step 1</p> },
@@ -142,19 +230,11 @@ class ValidationWizard extends React.Component {
             id: 2,
             name: 'Substep A with validation',
             component: (
-              <SampleFormOne formValue={formValueA} isFormValid={isFormValidA} onChange={this.onFormChangeA} />
+              <SampleForm formValue={formValue} isFormValid={isFormValid} onChange={this.onFormChange} />
             ),
-            enableNext: isFormValidA
+            enableNext: isFormValid
           },
-          {
-            id: 3,
-            name: 'Substep B with validation',
-            component: (
-              <SampleFormTwo formValue={formValueB} isFormValid={isFormValidB} onChange={this.onFormChangeB} />
-            ),
-            enableNext: isFormValidB
-          },
-          { id: 4, name: 'Substep C', component: <p>Substep C</p> }
+          { id: 4, name: 'Substep B', component: <p>Substep B</p> }
         ]
       },
       { id: 5, name: 'Additional', component: <p>Step 3</p>, enableNext: allStepsValid },
@@ -185,13 +265,14 @@ class ValidationWizard extends React.Component {
 }
 ```
 
-### Controlled Wizard Footer
+### Wizard - custom footer and progressive steps
 ```js
 import React from 'react';
 import { Button, Wizard, WizardFooter, WizardContext, Alert } from '@patternfly/react-core';
-import { SampleFormOne, FinishedStep } from './examples';
+import SampleForm from './examples/SampleForm';
+import FinishedStep from './examples/FinishedStep';
 
-class ControlledWizard extends React.Component {
+class ProgressiveWizard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -232,7 +313,7 @@ class ControlledWizard extends React.Component {
         name: 'Final Step', 
         component: (
           <>
-            <SampleFormOne formValue="Validating on button press" isFormValid={stepsValid !== 1} />
+            <SampleForm formValue="Validating on button press" isFormValid={stepsValid !== 1} />
             {stepsValid === 1 && <div style={{padding: '15px 0'}}><Alert variant="warning" title="Validation failed, please try again" /></div>}
           </>
         )

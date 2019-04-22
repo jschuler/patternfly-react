@@ -16,7 +16,7 @@ const defaultProps = {
   currentStep: null
 };
 
-class SampleFormOne extends React.Component {
+class SampleForm extends React.Component {
   static propTypes = propTypes;
   static defaultProps = defaultProps;
 
@@ -58,4 +58,4 @@ class SampleFormOne extends React.Component {
   }
 }
 
-export default SampleFormOne;
+export default SampleForm;
