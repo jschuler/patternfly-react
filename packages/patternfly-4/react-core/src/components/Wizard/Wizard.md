@@ -3,7 +3,7 @@ title: 'Wizard'
 cssPrefix: 'pf-c-wizard'
 ---
 
-import { Button, Wizard, WizardFooter, WizardContext, Alert } from '@patternfly/react-core';
+import { Button, Wizard, WizardFooter, WizardContextConsumer, Alert } from '@patternfly/react-core';
 import FinishedStep from './examples/FinishedStep';
 import SampleForm from './examples/SampleForm';
 
@@ -323,7 +323,7 @@ class ValidationWizard extends React.Component {
 ### Wizard - validate on button press
 ```js
 import React from 'react';
-import { Button, Wizard, WizardFooter, WizardContext, Alert } from '@patternfly/react-core';
+import { Button, Wizard, WizardFooter, Alert } from '@patternfly/react-core';
 import SampleForm from './examples/SampleForm';
 import FinishedStep from './examples/FinishedStep';
 
@@ -357,45 +357,12 @@ class ValidateButtonPressWizard extends React.Component {
     const steps = [
       { name: 'Step 1', component: <p>Step 1</p> },
       { name: 'Step 2', component: <p>Step 2</p> },
-      { 
-        name: 'Final Step', 
-        component: (
-          <>
-            <SampleForm formValue="Validating on button press" isFormValid={stepsValid !== 1} />
-            {stepsValid === 1 && <div style={{padding: '15px 0'}}><Alert variant="warning" title="Validation failed, please try again" /></div>}
-          </>
-        )
-      },
       { name: 'Finish', component: <FinishedStep onClose={this.toggleOpen} />, isFinishedStep: true }
     ];
 
     const CustomFooter = (
       <WizardFooter>
-        <WizardContext.Consumer>
-          {({ activeStep, goToStepByName, goToStepById, onNext, onBack, onClose }) => {
-            if (activeStep.name !== 'Final Step') {
-              return (
-                <>
-                  <Button variant="primary" type="submit" onClick={onNext}>
-                    Forward
-                  </Button>
-                  <Button variant="secondary" onClick={onBack} className={activeStep.name === 'Step 1' ? 'pf-m-disabled' : ''}>
-                    Backward
-                  </Button>
-                  <Button variant="link" onClick={onClose}>
-                    Cancel
-                  </Button>
-                </>
-              )
-            }
-            // Final step buttons
-            return (
-              <>
-                <Button onClick={() => this.validateLastStep(onNext)}>Validate</Button>
-                <Button onClick={() => goToStepByName('Step 1')}>Go to Beginning</Button>
-              </>
-            )}}
-        </WizardContext.Consumer>
+        asd
       </WizardFooter>
     );
 
@@ -408,285 +375,8 @@ class ValidateButtonPressWizard extends React.Component {
           <Wizard
             isOpen={isOpen}
             onClose={this.toggleOpen}
-            footer={CustomFooter}
+            footer={<WizardFooter>asd</WizardFooter>}
             title="Validate on button press"
-            steps={steps}
-          />
-        )}
-      </React.Fragment>
-    );
-  }
-}
-```
-
-### Wizard - progressive steps
-```js
-import React from 'react';
-import { Button, Wizard, WizardFooter, WizardContext, Alert } from '@patternfly/react-core';
-import SampleForm from './examples/SampleForm';
-import FinishedStep from './examples/FinishedStep';
-
-class ProgressiveWizard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false,
-      showCreateStep: false,
-      showUpdateStep: false,
-      showOptionsStep: false,
-      showReviewStep: false,
-      getStartedStepRadio: 'Create',
-      createStepRadio: 'Quick',
-      updateStepRadio: 'Quick'
-    };
-    this.toggleOpen = () => {
-      this.setState({
-        isOpen: !this.state.isOpen
-      });
-    };
-    this.onGoToStep = ({ id, name }, { prevId, prevName }) => {
-      // Remove steps after the currently clicked step
-      if (name === 'Get Started') {
-        this.setState({ 
-          showReviewStep: false,
-          showOptionsStep: false,
-          showCreateStep: false,
-          showUpdateStep: false
-        });
-      } else if (name === 'Create Options' || name === 'Update Options') {
-        this.setState({ 
-          showReviewStep: false,
-          showOptionsStep: false
-        });
-      } else if (name.indexOf('Substep') > -1) {
-        this.setState({ 
-          showReviewStep: false
-        });
-      }
-    };
-    this.getNextStep = (activeStep, callback) => {
-      if (activeStep.name === 'Get Started') {
-        if (this.state.getStartedStepRadio === 'Create') {
-          this.setState({ 
-            showCreateStep: true,
-            showUpdateStep: false,
-            showOptionsStep: false,
-            showReviewStep: false
-          }, () => {
-            callback();
-          });
-        } else {
-          this.setState({ 
-            showCreateStep: false,
-            showUpdateStep: true,
-            showOptionsStep: false,
-            showReviewStep: false
-          }, () => {
-            callback();
-          });
-        }
-      } else if (activeStep.name === 'Create Options' || activeStep.name === 'Update Options') {
-        this.setState({ 
-          showOptionsStep: true,
-          showReviewStep: false
-        }, () => {
-          callback();
-        });
-      } else if (activeStep.name === 'Substep 3') {
-        this.setState({ 
-          showReviewStep: true 
-        }, () => {
-          callback();
-        });
-      } else {
-        callback();
-      }
-    };
-    this.getPreviousStep = (activeStep, callback) => {
-      if (activeStep.name === 'Review') {
-        this.setState({ 
-          showReviewStep: false
-        }, () => {
-          callback();
-        });
-      } else if (activeStep.name === 'Substep 1') {
-        this.setState({ 
-          showOptionsStep: false
-        }, () => {
-          callback();
-        });
-      } else if (activeStep.name === 'Create Options') {
-        this.setState({ 
-          showCreateStep: false
-        }, () => {
-          callback();
-        });
-      } else if (activeStep.name === 'Update Options') {
-        this.setState({ 
-          showUpdateStep: false
-        }, () => {
-          callback();
-        });
-      } else {
-        callback();
-      }
-    };
-  }
-
-  render() {
-    const { 
-      isOpen, 
-      stepsValid, 
-      getStartedStepRadio, 
-      createStepRadio, 
-      updateStepRadio,
-      showCreateStep,
-      showUpdateStep,
-      showOptionsStep,
-      showReviewStep
-    } = this.state;
-
-    const getStartedStep = { 
-      name: 'Get Started', 
-      component: (
-        <div>
-          <Radio
-            value="Create"
-            isChecked={getStartedStepRadio === 'Create'}
-            onChange={(_, event) => this.setState({ getStartedStepRadio: event.currentTarget.value })}
-            label="Create a new thing"
-            name="radio-step-start"
-            id="radio-step-start-1"
-          />{' '}
-          <Radio
-            value="Update"
-            isChecked={getStartedStepRadio === 'Update'}
-            onChange={(_, event) => this.setState({ getStartedStepRadio: event.currentTarget.value })}
-            label="Update an existing thing"
-            name="radio-step-start"
-            id="radio-step-start-2"
-          />
-        </div>
-      )
-    };
-
-    const createStep = {
-      name: 'Create Options',
-      component: (
-        <div>
-          <Radio
-            value="Quick"
-            isChecked={createStepRadio === 'Quick'}
-            onChange={(_, event) => this.setState({ createStepRadio: event.currentTarget.value })}
-            label="Quick Create"
-            name="radio-step-create"
-            id="radio-step-create-1"
-          />{' '}
-          <Radio
-            value="Custom"
-            isChecked={createStepRadio === 'Custom'}
-            onChange={(_, event) => this.setState({ createStepRadio: event.currentTarget.value })}
-            label="Custom Create"
-            name="radio-step-create"
-            id="radio-step-create-2"
-          />
-        </div>
-      )
-    };
-
-    const updateStep = {
-      name: 'Update Options',
-      component: (
-        <div>
-          <Radio
-            value="Quick"
-            isChecked={updateStepRadio === 'Quick'}
-            onChange={(_, event) => this.setState({ updateStepRadio: event.currentTarget.value })}
-            label="Quick Update"
-            name="radio-step-update"
-            id="radio-step-update-1"
-          />{' '}
-          <Radio
-            value="Custom"
-            isChecked={updateStepRadio === 'Custom'}
-            onChange={(_, event) => this.setState({ updateStepRadio: event.currentTarget.value })}
-            label="Custom Update"
-            name="radio-step-update"
-            id="radio-step-update-2"
-          />
-        </div>
-      )
-    };
-
-    const optionsStep = {
-      name: showCreateStep ? `${createStepRadio} Options` : `${updateStepRadio} Options`,
-      steps: [
-        {
-          name: 'Substep 1',
-          component: 'Substep 1'
-        },
-        {
-          name: 'Substep 2',
-          component: 'Substep 2'
-        },
-        {
-          name: 'Substep 3',
-          component: 'Substep 3'
-        }
-      ]
-    };
-    
-    const reviewStep = {
-      name: 'Review',
-      component: (
-        <div>
-          <div>First choice: {getStartedStepRadio}</div>
-          <div>Second choice: {showCreateStep ? createStepRadio : updateStepRadio}</div>
-        </div>
-      )
-    };
-
-    const steps = [ 
-      getStartedStep,
-      ...(showCreateStep ? [createStep] : []),
-      ...(showUpdateStep ? [updateStep] : []),
-      ...(showOptionsStep ? [optionsStep] : []),
-      ...(showReviewStep ? [reviewStep] : []),
-    ];
-
-    const CustomFooter = (
-      <WizardFooter>
-        <WizardContext.Consumer>
-          {({ activeStep, goToStepByName, goToStepById, onNext, onBack, onClose }) => {
-            return (
-              <>
-                <Button variant="primary" type="submit" onClick={() => this.getNextStep(activeStep, onNext)}>
-                  {activeStep.name === 'Review' ? 'Finish' : 'Next'}
-                </Button>
-                <Button variant="secondary" onClick={() => this.getPreviousStep(activeStep, onBack)} className={activeStep.name === 'Get Started' ? 'pf-m-disabled' : ''}>
-                  Back
-                </Button>
-                <Button variant="link" onClick={onClose}>
-                  Cancel
-                </Button>
-              </>
-            )}}
-        </WizardContext.Consumer>
-      </WizardFooter>
-    );
-
-    return (
-      <React.Fragment>
-        <Button variant="primary" onClick={this.toggleOpen}>
-          Show Wizard
-        </Button>
-        {isOpen && (
-          <Wizard
-            isOpen={isOpen}
-            onClose={this.toggleOpen}
-            footer={CustomFooter}
-            onGoToStep={this.onGoToStep}
-            title="Progressive Wizard"
             steps={steps}
           />
         )}

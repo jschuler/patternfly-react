@@ -9,7 +9,7 @@ interface WizardFooterProps {
   children: any;
 }
 
-const WizardFooter: React.SFC<WizardFooterProps> = ({
+export const WizardFooter: React.SFC<WizardFooterProps> = ({
   children
 }) => {
   return (
@@ -31,7 +31,7 @@ interface WizardFooterInternalProps {
   cancelButtonText: string;
 }
 
-const WizardFooterInternal: React.SFC<WizardFooterInternalProps> = ({
+export const WizardFooterInternal: React.SFC<WizardFooterInternalProps> = ({
   onNext,
   onBack,
   onClose,
@@ -55,4 +55,4 @@ const WizardFooterInternal: React.SFC<WizardFooterInternalProps> = ({
     </footer>
   );
 
-export { WizardFooter, WizardFooterInternal };
+// export { WizardFooter, WizardFooterInternal };
