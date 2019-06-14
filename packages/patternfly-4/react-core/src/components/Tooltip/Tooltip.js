@@ -119,12 +119,12 @@ class Tooltip extends React.Component {
         lazy
         animateFill={false}
         theme="pf-tippy"
-        performance
         placement={position}
         trigger={trigger}
         delay={[entryDelay, exitDelay]}
         distance={15}
         flip={enableFlip}
+        boundary="window"
         popperOptions={{
           modifiers: {
             preventOverflow: {
@@ -136,7 +136,7 @@ class Tooltip extends React.Component {
           }
         }}
       >
-        {isAppLauncher ? this.extendChildren() : children}
+        <span>{isAppLauncher ? this.extendChildren() : children}</span>
       </Tippy>
     );
   }

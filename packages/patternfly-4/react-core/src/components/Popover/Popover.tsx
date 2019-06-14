@@ -259,12 +259,12 @@ export class Popover extends React.Component<PopoverProps, PopoverState> {
         hideOnClick={shouldHideOnClick()}
         animateFill={false}
         theme="pf-tippy"
-        performance
         interactive
         interactiveBorder={0}
         placement={position}
         distance={25}
         flip={enableFlip}
+        boundary="window"
         popperOptions={{
           modifiers: {
             preventOverflow: {
@@ -281,7 +281,7 @@ export class Popover extends React.Component<PopoverProps, PopoverState> {
         onShown={this.onShown}
         onMount={this.onMount}
       >
-        {children}
+        <span>{children}</span>
       </Tippy>
     );
   }
