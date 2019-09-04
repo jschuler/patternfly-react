@@ -113,16 +113,21 @@ export function keyHandler(index: number, position: string, refsCollection: any[
   }
   let nextIndex;
   if (position === 'up') {
+    console.log('up');
     if (index === 0) {
+      console.log('loop to end');
       // loop back to end
       nextIndex = kids.length - 1;
     } else {
+      console.log(`next: ${index - 1}`);
       nextIndex = index - 1;
     }
   } else if (index === kids.length - 1) {
     // loop back to beginning
+    console.log('loop to beginning');
     nextIndex = 0;
   } else {
+    console.log(`next: ${index + 1}`);
     nextIndex = index + 1;
   }
   if (refsCollection[nextIndex] === null) {

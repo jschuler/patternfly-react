@@ -16,6 +16,7 @@ export interface ApplicationLauncherItemProps {
   tooltip?: React.ReactNode;
   /** Additional tooltip props forwarded to the Tooltip component */
   tooltipProps?: any;
+  component?: any;
 }
 
 export const ApplicationLauncherItem: React.FunctionComponent<ApplicationLauncherItemProps & DropdownItemProps> = ({
@@ -26,14 +27,26 @@ export const ApplicationLauncherItem: React.FunctionComponent<ApplicationLaunche
   href,
   tooltip = null,
   tooltipProps = null,
+  component = null,
   ...props
-}: ApplicationLauncherItemProps & DropdownItemProps) => (
+}: ApplicationLauncherItemProps & DropdownItemProps) => {
+  const Component = children;
+  const asd = component;
+  return (
+    <DropdownItem
+      href={href || null}
+      className={css(isExternal && styles.modifiers.external, className)}
+      tooltip={tooltip}
+      tooltipProps={tooltipProps}
+      {...props}
+    >
+      {children}
+    </DropdownItem>
+  );
+  return (
   <DropdownItem
-    component={href ? 'a' : 'div'}
     href={href || null}
     className={css(isExternal && styles.modifiers.external, className)}
-    // add style until https://github.com/patternfly/patternfly-next/issues/1944 is fixed
-    style={!href ? { cursor: 'pointer' } : null}
     tooltip={tooltip}
     tooltipProps={tooltipProps}
     {...props}
@@ -47,4 +60,4 @@ export const ApplicationLauncherItem: React.FunctionComponent<ApplicationLaunche
       </>
     )}
   </DropdownItem>
-);
+)};

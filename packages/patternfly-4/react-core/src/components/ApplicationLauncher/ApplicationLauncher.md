@@ -10,11 +10,13 @@ To add a tooltip, use the `tooltip` prop and optionally add more tooltip props b
 import { ApplicationLauncher, ApplicationLauncherIcon, ApplicationLauncherText, ApplicationLauncherItem, ApplicationLauncherGroup, ApplicationLauncherSeparator } from '@patternfly/react-core';
 import { HelpIcon } from '@patternfly/react-icons';
 import pfIcon from './examples/pf-logo-small.svg';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 ## Simple application launcher
 ```js
 import React from 'react';
 import { ApplicationLauncher, ApplicationLauncherItem } from '@patternfly/react-core';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class SimpleApplicationLauncher extends React.Component {
   constructor(props) {
@@ -37,6 +39,9 @@ class SimpleApplicationLauncher extends React.Component {
   render() {
     const { isOpen } = this.state;
     const appLauncherItems = [
+      <ApplicationLauncherItem key="router">
+        <Link to="/components/alert/">Alerts</Link>
+      </ApplicationLauncherItem>,
       <ApplicationLauncherItem key="application_1a" href="#">
         Application 1 (anchor link)
       </ApplicationLauncherItem>,
@@ -51,12 +56,14 @@ class SimpleApplicationLauncher extends React.Component {
       </ApplicationLauncherItem>
     ];
     return (
-      <ApplicationLauncher
-        onSelect={this.onSelect}
-        onToggle={this.onToggle}
-        isOpen={isOpen}
-        items={appLauncherItems}
-      />
+      <Router>
+        <ApplicationLauncher
+          onSelect={this.onSelect}
+          onToggle={this.onToggle}
+          isOpen={isOpen}
+          items={appLauncherItems}
+        />
+      </Router>
     );
   }
 }

@@ -117,6 +117,7 @@ export class InternalDropdownItem extends React.Component<InternalDropdownItemPr
                 ? React.Children.map(children, (child) => {
                     const toClone = child as React.ReactHTMLElement<any>;
                     const clonedElement = React.cloneElement(toClone, {
+                      ...additionalProps,
                       className: css(classes, itemClass),
                       ref: this.ref,
                       onKeyDown: this.onKeyDown,

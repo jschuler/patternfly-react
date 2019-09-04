@@ -119,6 +119,7 @@ export class DropdownMenu extends React.Component<DropdownMenuProps> {
   }
 
   extendCustomChildren() {
+    debugger;
     const mappedChildren = React.Children.map(this.props.children, (child0, index) => {
       const child = child0 as React.ReactElement<DropdownMenuItem>;
       const mappedChild = React.cloneElement(child, {
