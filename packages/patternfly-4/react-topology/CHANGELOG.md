@@ -3,62 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.8.27](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.26...@patternfly/react-topology@2.8.27) (2019-09-06)
-
-**Note:** Version bump only for package @patternfly/react-topology
-
-
-
-
-
-## [2.8.26](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.25...@patternfly/react-topology@2.8.26) (2019-09-06)
-
-**Note:** Version bump only for package @patternfly/react-topology
-
-
-
-
-
-## [2.8.25](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.24...@patternfly/react-topology@2.8.25) (2019-09-06)
-
-**Note:** Version bump only for package @patternfly/react-topology
-
-
-
-
-
-## [2.8.24](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.23...@patternfly/react-topology@2.8.24) (2019-09-06)
-
-**Note:** Version bump only for package @patternfly/react-topology
-
-
-
-
-
-## [2.8.23](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.22...@patternfly/react-topology@2.8.23) (2019-09-06)
-
-**Note:** Version bump only for package @patternfly/react-topology
-
-
-
-
-
-## [2.8.22](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.21...@patternfly/react-topology@2.8.22) (2019-09-06)
-
-**Note:** Version bump only for package @patternfly/react-topology
-
-
-
-
-
-## [2.8.21](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.20...@patternfly/react-topology@2.8.21) (2019-09-06)
-
-**Note:** Version bump only for package @patternfly/react-topology
-
-
-
-
-
 ## [2.8.20](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-topology@2.8.19...@patternfly/react-topology@2.8.20) (2019-09-06)
 
 **Note:** Version bump only for package @patternfly/react-topology

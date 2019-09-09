@@ -67,7 +67,7 @@ export class Radio extends React.Component<RadioProps> {
           onChange={this.handleChange}
           aria-invalid={!isValid}
           disabled={isDisabled}
-          defaultChecked={checked || isChecked}
+          checked={checked || isChecked}
           {...!isChecked && { defaultChecked }}
           {...!label && { 'aria-label': ariaLabel }}
         />

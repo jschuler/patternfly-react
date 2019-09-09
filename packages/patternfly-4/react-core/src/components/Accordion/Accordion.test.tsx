@@ -4,6 +4,7 @@ import { Accordion } from './Accordion';
 import { AccordionToggle } from './AccordionToggle';
 import { AccordionContent } from './AccordionContent';
 import { AccordionItem } from './AccordionItem';
+import { AccordionContext } from './AccordionContext';
 
 describe('Accordion', () => {
   test('Accordion default', () => {
@@ -25,9 +26,10 @@ describe('Accordion', () => {
 
   test('It should pass optional aria props', () => {
     const view = mount(
-      <Accordion asDefinitionList>
+      <AccordionContext.Provider value={{ asDefinitionList: true }}>
         <AccordionToggle aria-label="Toggle details for" aria-labelledby="ex-toggle2 ex-item2" id="ex-toggle2" />
-      </Accordion>
+      </AccordionContext.Provider>,
+      {}
     );
     const button = view.find('button[id="ex-toggle2"]').getElement();
     expect(button.props['aria-label']).toBe('Toggle details for');
@@ -37,26 +39,12 @@ describe('Accordion', () => {
 
   test('Toggle expanded', () => {
     const view = mount(
-      <Accordion asDefinitionList>
+      <AccordionContext.Provider value={{ asDefinitionList: true }}>
         <AccordionToggle aria-label="Toggle details for" id="ex-toggle2" isExpanded />
-      </Accordion>
+      </AccordionContext.Provider>
     );
     const button = view.find('button[id="ex-toggle2"]').getElement();
     expect(button.props['aria-expanded']).toBe(true);
     expect(button.props.className).toContain('pf-m-expanded');
-  });
-
-  test('Custom containers', () => {
-    const container = 'a';
-    const view = mount(
-      <Accordion headingLevel="h2">
-        <AccordionItem>
-          <AccordionToggle id="item-1" component={container}>Item One</AccordionToggle>
-          <AccordionContent component={container}>Item One Content</AccordionContent>
-        </AccordionItem>
-      </Accordion>
-    );
-    expect(view.find(AccordionToggle).getDOMNode().tagName).toBe(container.toLocaleUpperCase());
-    expect(view.find(AccordionContent).getDOMNode().tagName).toBe(container.toLocaleUpperCase());
   });
 });

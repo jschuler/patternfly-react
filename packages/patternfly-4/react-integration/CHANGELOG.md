@@ -3,29 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [2.24.0](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-integration@2.23.0...@patternfly/react-integration@2.24.0) (2019-09-06)
-
-
-### Features
-
-* **Select:** add creatable and new features ([#2820](https://github.com/patternfly/patternfly-react/issues/2820)) ([f16e0f3](https://github.com/patternfly/patternfly-react/commit/f16e0f3))
-* **tab:** support JSX elements in Tab title ([#2681](https://github.com/patternfly/patternfly-react/issues/2681)) ([e6d04fd](https://github.com/patternfly/patternfly-react/commit/e6d04fd))
-
-
-
-
-
-# [2.23.0](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-integration@2.22.0...@patternfly/react-integration@2.23.0) (2019-09-06)
-
-
-### Features
-
-* **Spinner:** Add Spinner to experimental ([#2858](https://github.com/patternfly/patternfly-react/issues/2858)) ([77afa63](https://github.com/patternfly/patternfly-react/commit/77afa63)), closes [#2753](https://github.com/patternfly/patternfly-react/issues/2753)
-
-
-
-
-
 # [2.22.0](https://github.com/patternfly/patternfly-react/compare/@patternfly/react-integration@2.21.2...@patternfly/react-integration@2.22.0) (2019-09-06)
 
 

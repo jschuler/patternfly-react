@@ -14,8 +14,6 @@ export interface AccordionToggleProps extends Omit<React.HTMLProps<HTMLButtonEle
   isExpanded?: boolean;
   /** Identify the Accordion toggle number  */
   id: string;
-  /** Container to override the default for toggle */
-  component?: React.ElementType;
 }
 
 export const AccordionToggle: React.FunctionComponent<AccordionToggleProps> = ({
@@ -23,14 +21,13 @@ export const AccordionToggle: React.FunctionComponent<AccordionToggleProps> = ({
   id,
   isExpanded = false,
   children = null,
-  component,
   ...props
 }: AccordionToggleProps) => (
   <AccordionContext.Consumer>
-    {({ ToggleContainer }) => {
-      const Container = component || ToggleContainer;
+    {({ asDefinitionList, AccordionHeadingLevel }) => {
+      const AccordionToggleContainer = asDefinitionList ? 'dt' : AccordionHeadingLevel;
       return (
-        <Container>
+        <AccordionToggleContainer>
           <button
             id={id}
             className={css(styles.accordionToggle, isExpanded && styles.modifiers.expanded, className)}
@@ -40,7 +37,7 @@ export const AccordionToggle: React.FunctionComponent<AccordionToggleProps> = ({
             <span className={css(styles.accordionToggleText)}>{children}</span>
             <AngleRightIcon className={css(styles.accordionToggleIcon)} />
           </button>
-        </Container>
+        </AccordionToggleContainer>
       );
     }}
   </AccordionContext.Consumer>

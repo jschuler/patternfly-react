@@ -47,7 +47,7 @@ export class DropdownToggleCheckbox extends React.Component<DropdownToggleCheckb
           onChange={this.handleChange}
           aria-invalid={!isValid}
           disabled={isDisabled}
-          defaultChecked={isChecked || checked}
+          checked={isChecked || checked}
         />
       </label>
     );
