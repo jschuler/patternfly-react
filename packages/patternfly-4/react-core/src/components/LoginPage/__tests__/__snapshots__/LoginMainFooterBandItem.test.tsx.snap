@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginMainFooterBandItem test LoginMainFooterBandItem should match snapshot 1`] = `
+<Component
+  className="''"
+>
+  <p
+    className="pf-c-login__main-footer-band-item ''"
+  >
+    ReactNode
+  </p>
+</Component>
+`;

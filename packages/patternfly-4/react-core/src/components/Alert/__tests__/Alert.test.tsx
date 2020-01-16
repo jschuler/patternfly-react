@@ -1,13 +1,8 @@
-
 // Auto-generated do not edit
 
-
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-undef */
 import * as React from 'react';
 import { mount } from 'enzyme';
 import { Alert } from '../Alert';
-
 
 describe('Alert test', () => {
   it('Alert should match snapshot', () => {
@@ -15,7 +10,7 @@ describe('Alert test', () => {
       <Alert
         variant={'success'}
 				isInline={false}
-				title={'defaultString'}
+				title={<>ReactNode</>}
 				action={null}
 				children={''}
 				className={"''"}

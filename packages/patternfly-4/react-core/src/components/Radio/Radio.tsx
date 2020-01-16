@@ -36,7 +36,7 @@ export class Radio extends React.Component<RadioProps> {
     className: '',
     isDisabled: false,
     isValid: true,
-    onChange: Function.prototype
+    onChange: () => {}
   };
 
   constructor(props: RadioProps) {

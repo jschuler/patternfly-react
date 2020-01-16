@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationBadge test NotificationBadge should match snapshot 1`] = `
+<Component
+  isRead={false}
+>
+  <Component
+    variant="plain"
+  >
+    <ComponentWithOuia
+      component={[Function]}
+      componentProps={
+        Object {
+          "aria-label": undefined,
+          "children": <span
+            className="pf-c-notification-badge pf-m-unread"
+          />,
+          "className": undefined,
+          "variant": "plain",
+        }
+      }
+      consumerContext={null}
+    >
+      <Button
+        ouiaContext={
+          Object {
+            "isOuia": false,
+            "ouiaId": null,
+          }
+        }
+        variant="plain"
+      >
+        <button
+          aria-disabled={null}
+          aria-label={null}
+          className="pf-c-button pf-m-plain"
+          disabled={false}
+          tabIndex={null}
+          type="button"
+        >
+          <span
+            className="pf-c-notification-badge pf-m-unread"
+          />
+        </button>
+      </Button>
+    </ComponentWithOuia>
+  </Component>
+</Component>
+`;

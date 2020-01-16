@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea test TextArea should match snapshot 1`] = `
+<TextArea
+  aria-label="null"
+  className="''"
+  isRequired={false}
+  isValid={true}
+  resizeOrientation="both"
+  validated="default"
+>
+  <textarea
+    aria-invalid={false}
+    aria-label="null"
+    className="pf-c-form-control ''"
+    onChange={[Function]}
+    required={false}
+  />
+</TextArea>
+`;

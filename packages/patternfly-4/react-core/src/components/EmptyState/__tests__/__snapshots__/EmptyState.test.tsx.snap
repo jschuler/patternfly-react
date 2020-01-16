@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyState test EmptyState should match snapshot 1`] = `
+<Component
+  className="''"
+  variant="small"
+>
+  <div
+    className="pf-c-empty-state pf-m-sm ''"
+  >
+    ReactNode
+  </div>
+</Component>
+`;

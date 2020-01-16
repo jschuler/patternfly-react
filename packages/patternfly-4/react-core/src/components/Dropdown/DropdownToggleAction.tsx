@@ -8,7 +8,7 @@ export interface DropdownToggleActionProps {
   /** Flag to show if the action button is disabled */
   isDisabled?: boolean;
   /** A callback for when the action button is clicked */
-  onClick?(event: React.MouseEvent<HTMLButtonElement>): void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   /** Element to be rendered inside the <button> */
   children?: React.ReactNode;
   /** Id of the action button */
@@ -21,7 +21,7 @@ export class DropdownToggleAction extends React.Component<DropdownToggleActionPr
   static defaultProps = {
     className: '',
     isDisabled: false,
-    onClick: Function.prototype
+    onClick: () => {}
   };
 
   render() {

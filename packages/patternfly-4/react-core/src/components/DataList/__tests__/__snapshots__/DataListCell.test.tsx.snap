@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataListCell test DataListCell should match snapshot 1`] = `
+<Component
+  alignRight={false}
+  className="''"
+  isFilled={true}
+  isIcon={false}
+  width={1}
+>
+  <div
+    className="pf-c-data-list__cell ''"
+  >
+    ReactNode
+  </div>
+</Component>
+`;

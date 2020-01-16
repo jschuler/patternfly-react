@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page test Page should match snapshot 1`] = `
+<Page
+  breadcrumb={null}
+  className="''"
+  defaultManagedSidebarIsOpen={true}
+  header={null}
+  isManagedSidebar={false}
+  mainContainerId="null"
+  onPageResize={[Function]}
+  sidebar={null}
+  skipToContent={null}
+>
+  <div
+    className="pf-c-page ''"
+  >
+    <main
+      className="pf-c-page__main"
+      id="null"
+      role="main"
+      tabIndex={-1}
+    >
+      ReactNode
+    </main>
+  </div>
+</Page>
+`;

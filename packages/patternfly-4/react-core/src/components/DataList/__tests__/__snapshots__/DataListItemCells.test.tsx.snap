@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataListItemCells test DataListItemCells should match snapshot 1`] = `
+<Component
+  className="''"
+  rowid="''"
+>
+  <div
+    className="pf-c-data-list__item-content ''"
+  />
+</Component>
+`;

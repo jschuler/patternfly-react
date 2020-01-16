@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion test Accordion should match snapshot 1`] = `
+<Component
+  aria-label="''"
+  asDefinitionList={true}
+  className="''"
+  headingLevel="h3"
+  noBoxShadow={false}
+>
+  <dl
+    aria-label="''"
+    className="pf-c-accordion ''"
+  >
+    ReactNode
+  </dl>
+</Component>
+`;

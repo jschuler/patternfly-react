@@ -59,9 +59,9 @@ export class SelectToggle extends React.Component<SelectToggleProps> {
     ariaLabelledBy: '',
     ariaLabelToggle: '',
     type: 'button',
-    onToggle: Function.prototype,
-    onEnter: Function.prototype,
-    onClose: Function.prototype
+    onToggle: () => {},
+    onEnter: () => {},
+    onClose: () => {}
   };
 
   constructor(props: SelectToggleProps) {

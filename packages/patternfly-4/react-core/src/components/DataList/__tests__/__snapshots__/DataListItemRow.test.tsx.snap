@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataListItemRow test DataListItemRow should match snapshot 1`] = `
+<Component
+  className="''"
+  rowid="''"
+>
+  <div
+    className="pf-c-data-list__item-row ''"
+  >
+    ReactNode
+  </div>
+</Component>
+`;

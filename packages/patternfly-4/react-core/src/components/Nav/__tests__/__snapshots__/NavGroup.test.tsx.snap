@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavGroup test NavGroup should match snapshot 1`] = `
+<Component
+  className="''"
+  id="string"
+  title="'defaultString'"
+>
+  <section
+    aria-labelledby="string"
+    className="pf-c-nav__section ''"
+  >
+    <h2
+      className="pf-c-nav__section-title"
+      id="string"
+    >
+      'defaultString'
+    </h2>
+    <ul
+      className="pf-c-nav__list"
+    >
+      ReactNode
+    </ul>
+  </section>
+</Component>
+`;

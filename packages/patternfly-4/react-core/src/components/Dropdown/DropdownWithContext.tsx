@@ -6,7 +6,9 @@ import { DropdownProps } from './Dropdown';
 import { DropdownContext, DropdownDirection, DropdownPosition } from './dropdownConstants';
 import { InjectedOuiaProps, withOuiaContext } from '../withOuia';
 
-class DropdownWithContext extends React.Component<DropdownProps & InjectedOuiaProps> {
+interface DropdownWithContextProps extends DropdownProps, InjectedOuiaProps {};
+
+class DropdownWithContext extends React.Component<DropdownWithContextProps> {
   openedOnEnter = false;
   baseComponentRef = React.createRef<any>();
 
@@ -19,8 +21,8 @@ class DropdownWithContext extends React.Component<DropdownProps & InjectedOuiaPr
     isOpen: false,
     isPlain: false,
     isGrouped: false,
-    position: DropdownPosition.left,
-    direction: DropdownDirection.down,
+    position: 'left',
+    direction: 'down',
     onSelect: (): void => undefined,
     autoFocus: true,
     ouiaComponentType: 'Dropdown'

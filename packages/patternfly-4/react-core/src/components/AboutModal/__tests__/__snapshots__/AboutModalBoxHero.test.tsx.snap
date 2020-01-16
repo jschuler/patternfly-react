@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutModalBoxHero test AboutModalBoxHero should match snapshot 1`] = `
+<Component>
+  <div
+    className="pf-c-about-modal-box__hero"
+    style={
+      Object {
+        "--pf-c-about-modal-box__hero--sm--BackgroundImage": "url(undefined)",
+      }
+    }
+  />
+</Component>
+`;

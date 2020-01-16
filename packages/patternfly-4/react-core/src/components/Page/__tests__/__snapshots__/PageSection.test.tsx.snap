@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageSection test PageSection should match snapshot 1`] = `
+<Component
+  className="''"
+  noPadding={false}
+  noPaddingMobile={false}
+  type="default"
+  variant="default"
+>
+  <section
+    className="pf-c-page__main-section ''"
+  />
+</Component>
+`;

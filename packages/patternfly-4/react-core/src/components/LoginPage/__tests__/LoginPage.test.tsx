@@ -1,0 +1,28 @@
+// Auto-generated do not edit
+
+import * as React from 'react';
+import { mount } from 'enzyme';
+import { LoginPage } from '../LoginPage';
+
+describe('LoginPage test', () => {
+  it('LoginPage should match snapshot', () => {
+    const view = mount(
+      <LoginPage
+        children={<>ReactNode</>}
+				className={"''"}
+				brandImgSrc={"''"}
+				brandImgAlt={"''"}
+				backgroundImgSrc={''}
+				backgroundImgAlt={"''"}
+				textContent={"''"}
+				footerListItems={null}
+				footerListVariants={undefined}
+				loginTitle={"'defaultString'"}
+				loginSubtitle={undefined}
+				signUpForAccountMessage={null}
+				forgotCredentials={null}
+				socialMediaLoginContent={null}
+      />);
+    expect(view).toMatchSnapshot();
+  });
+});

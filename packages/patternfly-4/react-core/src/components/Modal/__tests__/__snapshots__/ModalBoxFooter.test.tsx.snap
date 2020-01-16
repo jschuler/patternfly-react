@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalBoxFooter test ModalBoxFooter should match snapshot 1`] = `
+<Component
+  className="''"
+  isLeftAligned={false}
+>
+  <div
+    className="pf-c-modal-box__footer ''"
+  >
+    ReactNode
+  </div>
+</Component>
+`;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormSelect test FormSelect should match snapshot 1`] = `
+<FormSelect
+  className="''"
+  isDisabled={false}
+  isRequired={false}
+  isValid={true}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  validated="default"
+  value=""
+>
+  <select
+    aria-invalid={false}
+    className="pf-c-form-control ''"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    required={false}
+    value=""
+  >
+    ReactNode
+  </select>
+</FormSelect>
+`;

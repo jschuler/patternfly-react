@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipArrow test TooltipArrow should match snapshot 1`] = `
+<Component>
+  <div
+    className="pf-c-tooltip__arrow"
+  />
+</Component>
+`;

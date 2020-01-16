@@ -6,7 +6,11 @@ exports[`Alert test Alert should match snapshot 1`] = `
   aria-label="\`\${capitalize(variant)} Alert\`"
   className="''"
   isInline={false}
-  title="defaultString"
+  title={
+    <React.Fragment>
+      ReactNode
+    </React.Fragment>
+  }
   variant="success"
   variantLabel="\`\${capitalize(variant)} alert:\`"
 >
@@ -19,7 +23,9 @@ exports[`Alert test Alert should match snapshot 1`] = `
         "children": "",
         "className": "''",
         "isInline": false,
-        "title": "defaultString",
+        "title": <React.Fragment>
+          ReactNode
+        </React.Fragment>,
         "variant": "success",
         "variantLabel": "\`\${capitalize(variant)} alert:\`",
       }
@@ -37,7 +43,11 @@ exports[`Alert test Alert should match snapshot 1`] = `
           "ouiaId": null,
         }
       }
-      title="defaultString"
+      title={
+        <React.Fragment>
+          ReactNode
+        </React.Fragment>
+      }
       variant="success"
       variantLabel="\`\${capitalize(variant)} alert:\`"
     >
@@ -87,7 +97,7 @@ exports[`Alert test Alert should match snapshot 1`] = `
           >
             \`\${capitalize(variant)} alert:\`
           </span>
-          defaultString
+          ReactNode
         </h4>
       </div>
     </Alert>

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataListToggle test DataListToggle should match snapshot 1`] = `
+<Component
+  aria-controls="''"
+  aria-label="'Details'"
+  aria-labelledby="''"
+  className="''"
+  id="'defaultString'"
+  isExpanded={false}
+  rowid="''"
+>
+  <div
+    className="pf-c-data-list__item-control ''"
+  >
+    <div
+      className="pf-c-data-list__toggle"
+    >
+      <Component
+        aria-controls="''"
+        aria-expanded={false}
+        aria-label="'Details'"
+        aria-labelledby={null}
+        id="'defaultString'"
+        variant="plain"
+      >
+        <ComponentWithOuia
+          component={[Function]}
+          componentProps={
+            Object {
+              "aria-controls": "''",
+              "aria-expanded": false,
+              "aria-label": "'Details'",
+              "aria-labelledby": null,
+              "children": <AngleRightIcon
+                color="currentColor"
+                noVerticalAlign={false}
+                size="sm"
+                title={null}
+              />,
+              "id": "'defaultString'",
+              "variant": "plain",
+            }
+          }
+          consumerContext={null}
+        >
+          <Button
+            aria-controls="''"
+            aria-expanded={false}
+            aria-label="'Details'"
+            aria-labelledby={null}
+            id="'defaultString'"
+            ouiaContext={
+              Object {
+                "isOuia": false,
+                "ouiaId": null,
+              }
+            }
+            variant="plain"
+          >
+            <button
+              aria-controls="''"
+              aria-disabled={null}
+              aria-expanded={false}
+              aria-label="'Details'"
+              aria-labelledby={null}
+              className="pf-c-button pf-m-plain"
+              disabled={false}
+              id="'defaultString'"
+              tabIndex={null}
+              type="button"
+            >
+              <AngleRightIcon
+                color="currentColor"
+                noVerticalAlign={false}
+                size="sm"
+                title={null}
+              >
+                <svg
+                  aria-hidden={true}
+                  aria-labelledby={null}
+                  fill="currentColor"
+                  height="1em"
+                  role="img"
+                  style={
+                    Object {
+                      "verticalAlign": "-0.125em",
+                    }
+                  }
+                  viewBox="0 0 256 512"
+                  width="1em"
+                >
+                  <path
+                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    transform=""
+                  />
+                </svg>
+              </AngleRightIcon>
+            </button>
+          </Button>
+        </ComponentWithOuia>
+      </Component>
+    </div>
+  </div>
+</Component>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginMainBody test LoginMainBody should match snapshot 1`] = `
+<Component
+  className="''"
+>
+  <div
+    className="pf-c-login__main-body ''"
+  >
+    ReactNode
+  </div>
+</Component>
+`;

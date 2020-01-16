@@ -61,11 +61,10 @@ export class InternalDropdownItem extends React.Component<InternalDropdownItemPr
     href: '',
     tooltipProps: {},
     onClick: (event: React.MouseEvent<HTMLAnchorElement>) => undefined as any,
-    onSelect: () => undefined as any,
     index: -1,
     context: {
-      keyHandler: Function.prototype,
-      sendRef: Function.prototype
+      keyHandler: () => {},
+      sendRef: () => {}
     },
     id: '',
     componentID: '',

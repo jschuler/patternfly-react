@@ -33,9 +33,9 @@ export class CheckboxSelectOption extends React.Component<CheckboxSelectOptionPr
     index: 0,
     isDisabled: false,
     isChecked: false,
-    onClick: Function.prototype,
-    sendRef: Function.prototype,
-    keyHandler: Function.prototype
+    onClick: () => {},
+    sendRef: () => {},
+    keyHandler: () => {}
   };
 
   componentDidMount() {
@@ -94,7 +94,7 @@ export class CheckboxSelectOption extends React.Component<CheckboxSelectOptionPr
               onChange={event => {
                 if (!isDisabled) {
                   onClick(event);
-                  onSelect(event, value);
+                  onSelect && onSelect(event, value);
                 }
               }}
               ref={this.ref}

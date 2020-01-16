@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItemSeparator test NavItemSeparator should match snapshot 1`] = `
+<Component
+  className="''"
+>
+  <li
+    className="pf-c-nav__separator ''"
+    role="separator"
+  />
+</Component>
+`;

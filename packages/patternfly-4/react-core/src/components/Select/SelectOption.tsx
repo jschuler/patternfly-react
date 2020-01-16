@@ -50,9 +50,9 @@ export class SelectOption extends React.Component<SelectOptionProps> {
     isChecked: false,
     isFocused: false,
     component: 'button',
-    onClick: Function.prototype,
-    sendRef: Function.prototype,
-    keyHandler: Function.prototype
+    onClick: () => {},
+    sendRef: () => {},
+    keyHandler: () => {}
   };
 
   componentDidMount() {

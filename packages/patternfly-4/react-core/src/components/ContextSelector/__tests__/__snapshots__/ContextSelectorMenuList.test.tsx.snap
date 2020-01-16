@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContextSelectorMenuList test ContextSelectorMenuList should match snapshot 1`] = `
+<ContextSelectorMenuList
+  className="''"
+  isOpen={true}
+>
+  <ul
+    className="pf-c-context-selector__menu-list ''"
+    hidden={false}
+    role="menu"
+  >
+    ReactNode
+  </ul>
+</ContextSelectorMenuList>
+`;

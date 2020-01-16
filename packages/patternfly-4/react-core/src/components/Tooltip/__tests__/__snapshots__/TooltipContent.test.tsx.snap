@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipContent test TooltipContent should match snapshot 1`] = `
+<Component>
+  <div
+    className="pf-c-tooltip__content"
+  >
+    ReactNode
+  </div>
+</Component>
+`;

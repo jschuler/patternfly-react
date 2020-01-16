@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutModalBoxContent test AboutModalBoxContent should match snapshot 1`] = `
+<Component
+  className="''"
+  id="'defaultString'"
+  noAboutModalBoxContentContainer={false}
+  trademark="'defaultString'"
+>
+  <div
+    className="pf-c-about-modal-box__content ''"
+    id="'defaultString'"
+  >
+    <div
+      className="pf-c-about-modal-box__body"
+    >
+      <div
+        className="pf-c-content"
+      >
+        ReactNode
+      </div>
+    </div>
+    <p
+      className="pf-c-about-modal-box__strapline"
+    >
+      'defaultString'
+    </p>
+  </div>
+</Component>
+`;

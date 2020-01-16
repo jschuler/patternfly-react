@@ -16,7 +16,7 @@ export interface DropdownToggleCheckboxProps
   /** Alternate Flag to show if the checkbox is checked */
   checked?: boolean | null;
   /** A callback for when the checkbox selection changes */
-  onChange?(checked: boolean, event: React.FormEvent<HTMLInputElement>): void;
+  onChange?: (checked: boolean, event: React.FormEvent<HTMLInputElement>) => void;
   /** Element to be rendered inside the <span> */
   children?: React.ReactNode;
   /** Id of the checkbox */

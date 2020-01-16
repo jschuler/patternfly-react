@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChipGroup test ChipGroup should match snapshot 1`] = `
+<ChipGroup
+  className="''"
+  collapsedText="'\${remaining} more'"
+  defaultIsOpen={false}
+  expandedText="'Show Less'"
+  numChips={3}
+  withToolbar={false}
+/>
+`;

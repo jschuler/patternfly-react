@@ -46,8 +46,8 @@ export class SelectMenu extends React.Component<SelectMenuProps> {
     openedOnEnter: false,
     selected: '',
     maxHeight: '',
-    sendRef: Function.prototype,
-    keyHandler: Function.prototype,
+    sendRef: () => {},
+    keyHandler: () => {},
     isCustomContent: false
   };
 

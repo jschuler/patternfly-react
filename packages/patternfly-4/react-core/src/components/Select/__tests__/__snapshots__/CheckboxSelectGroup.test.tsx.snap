@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxSelectGroup test CheckboxSelectGroup should match snapshot 1`] = `
+<Component
+  className="''"
+  label="''"
+  titleId="''"
+>
+  <div
+    className="pf-c-select__menu-group ''"
+  >
+    <div
+      aria-hidden={true}
+      className="pf-c-select__menu-group-title"
+      id="''"
+    >
+      ''
+    </div>
+  </div>
+</Component>
+`;

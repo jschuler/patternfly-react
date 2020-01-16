@@ -55,8 +55,8 @@ export class Toggle extends React.Component<ToggleProps> {
     isPlain: false,
     isPrimary: false,
     isSplitButton: false,
-    onToggle: Function.prototype,
-    onEnter: Function.prototype
+    onToggle: () => {},
+    onEnter: () => {}
   };
 
   componentDidMount = () => {

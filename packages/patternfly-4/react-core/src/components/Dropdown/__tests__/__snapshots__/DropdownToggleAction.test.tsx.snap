@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownToggleAction test DropdownToggleAction should match snapshot 1`] = `
+<DropdownToggleAction
+  className="''"
+  isDisabled={false}
+  onClick={[Function]}
+>
+  <button
+    className="pf-c-dropdown__toggle-button ''"
+    onClick={[Function]}
+  />
+</DropdownToggleAction>
+`;

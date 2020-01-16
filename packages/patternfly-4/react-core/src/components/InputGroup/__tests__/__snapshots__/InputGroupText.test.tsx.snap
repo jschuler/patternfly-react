@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputGroupText test InputGroupText should match snapshot 1`] = `
+<Component
+  className="''"
+  component="span"
+>
+  <span
+    className="pf-c-input-group__text ''"
+  >
+    ReactNode
+  </span>
+</Component>
+`;

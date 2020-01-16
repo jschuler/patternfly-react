@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge test Badge should match snapshot 1`] = `
+<Component
+  className="''"
+  isRead={false}
+>
+  <span
+    className="pf-c-badge pf-m-unread ''"
+  />
+</Component>
+`;

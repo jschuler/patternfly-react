@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApplicationLauncherIcon test ApplicationLauncherIcon should match snapshot 1`] = `
+<Component
+  className="''"
+>
+  <span
+    className="pf-c-app-launcher__menu-item-icon"
+  >
+    ReactNode
+  </span>
+</Component>
+`;
