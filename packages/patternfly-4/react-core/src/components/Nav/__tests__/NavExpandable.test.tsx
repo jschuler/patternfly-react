@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { NavExpandable } from '../NavExpandable';
 
 describe('NavExpandable test', () => {
   it('NavExpandable should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <NavExpandable
         title={"'defaultString'"}
 				srText={"''"}

@@ -1,22 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ModalContent test ModalContent should match snapshot 1`] = `
-<Component
-  actions={Array []}
-  ariaDescribedById="''"
-  className="''"
-  disableFocusTrap={false}
-  footer={null}
-  header={null}
-  hideTitle={false}
-  id="''"
-  isFooterLeftAligned={false}
-  isLarge={false}
-  isOpen={false}
-  isSmall={false}
-  onClose={[Function]}
-  showClose={true}
-  title="'defaultString'"
-  width={-1}
-/>
-`;
+exports[`ModalContent test ModalContent should match snapshot 1`] = `""`;

@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Select } from '../Select';
 
 describe('Select test', () => {
   it('Select should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Select
         children={[]}
 				className={"''"}
@@ -28,7 +28,7 @@ describe('Select test', () => {
 				ariaLabelToggle={"'Options menu'"}
 				ariaLabelRemove={"'Remove'"}
 				onSelect={undefined}
-				onToggle={(isExpanded: boolean) => void}
+				onToggle={(isExpanded: boolean) => undefined as void}
 				onClear={(_e: React.MouseEvent) => undefined as void}
 				onFilter={null}
 				onCreateOption={(_newOptionValue: string) => undefined as void}

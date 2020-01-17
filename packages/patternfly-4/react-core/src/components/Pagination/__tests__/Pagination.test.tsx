@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Pagination } from '../Pagination';
 
 describe('Pagination test', () => {
   it('Pagination should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Pagination
         children={<>ReactNode</>}
 				className={"''"}

@@ -1,30 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginMainHeader test LoginMainHeader should match snapshot 1`] = `
-<Component
-  className="''"
-  subtitle="''"
-  title="''"
+<header
+  className="pf-c-login__main-header ''"
 >
-  <header
-    className="pf-c-login__main-header ''"
+  <Component
+    headingLevel="h2"
+    size="3xl"
   >
-    <Component
-      headingLevel="h2"
-      size="3xl"
-    >
-      <h2
-        className="pf-c-title pf-m-3xl"
-      >
-        ''
-      </h2>
-    </Component>
-    <p
-      className="pf-c-login__main-header-desc"
-    >
-      ''
-    </p>
-    ReactNode
-  </header>
-</Component>
+    ''
+  </Component>
+  <p
+    className="pf-c-login__main-header-desc"
+  >
+    ''
+  </p>
+  ReactNode
+</header>
 `;

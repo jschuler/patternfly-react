@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ApplicationLauncherContent } from '../ApplicationLauncherContent';
 
 describe('ApplicationLauncherContent test', () => {
   it('ApplicationLauncherContent should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ApplicationLauncherContent
-        children={<>ReactNode</>}
+        children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

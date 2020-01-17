@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Brand test Brand should match snapshot 1`] = `
-<Component
+<img
   alt="'defaultString'"
-  className="''"
+  className="pf-c-brand ''"
   src="''"
->
-  <img
-    alt="'defaultString'"
-    className="pf-c-brand ''"
-    src="''"
-  />
-</Component>
+/>
 `;

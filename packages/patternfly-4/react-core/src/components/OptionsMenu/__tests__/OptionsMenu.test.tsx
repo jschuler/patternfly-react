@@ -1,16 +1,16 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { OptionsMenu } from '../OptionsMenu';
 
 describe('OptionsMenu test', () => {
   it('OptionsMenu should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <OptionsMenu
         className={"''"}
 				id={"'defaultString'"}
-				menuItems={unrecognizedType Array undefined, consider reporting error to react-jest-test-generator.}
+				menuItems={[]}
 				toggle={<p>ReactElement</p>}
 				isPlain={undefined}
 				isOpen={undefined}

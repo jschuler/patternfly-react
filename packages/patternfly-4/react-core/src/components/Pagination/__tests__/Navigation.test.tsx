@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Navigation } from '../Navigation';
 
 describe('Navigation test', () => {
   it('Navigation should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Navigation
         className={"''"}
 				isDisabled={false}
@@ -20,9 +20,9 @@ describe('Navigation test', () => {
 				toFirstPage={"'Go to first page'"}
 				currPage={"'Current page'"}
 				paginationTitle={"'Pagination'"}
-				page={unrecognizedType ReactReactText undefined, consider reporting error to react-jest-test-generator.}
+				page={0}
 				perPage={undefined}
-				onSetPage={unrecognizedType OnSetPage undefined, consider reporting error to react-jest-test-generator.}
+				onSetPage={jest.fn()}
 				onNextClick={() => undefined as any}
 				onPreviousClick={() => undefined as any}
 				onFirstClick={() => undefined as any}

@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EmptyStateBody test EmptyStateBody should match snapshot 1`] = `
-<Component
-  className="''"
->
-  <div
-    className="pf-c-empty-state__body ''"
-  />
-</Component>
+<div
+  className="pf-c-empty-state__body ''"
+/>
 `;

@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { EmptyStateSecondaryActions } from '../EmptyStateSecondaryActions';
 
 describe('EmptyStateSecondaryActions test', () => {
   it('EmptyStateSecondaryActions should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <EmptyStateSecondaryActions
         children={<>ReactNode</>}
 				className={"''"}

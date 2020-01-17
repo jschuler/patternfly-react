@@ -1,18 +1,18 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Popover } from '../Popover';
 
 describe('Popover test', () => {
   it('Popover should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Popover
         aria-label={"''"}
 				appendTo={() => document.body}
-				bodyContent={<>ReactNode</>}
+				bodyContent={<div>ReactNode</div>}
 				boundary={'window'}
-				children={unrecognizedType ReactElement undefined, consider reporting error to react-jest-test-generator.}
+				children={<p>ReactElement</p>}
 				className={"''"}
 				closeBtnAriaLabel={"'Close'"}
 				distance={25}

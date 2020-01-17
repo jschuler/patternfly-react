@@ -1,15 +1,15 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ClipboardCopyExpanded } from '../ClipboardCopyExpanded';
 
 describe('ClipboardCopyExpanded test', () => {
   it('ClipboardCopyExpanded should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ClipboardCopyExpanded
         className={"''"}
-				children={<>ReactNode</>}
+				children={<div>ReactNode</div>}
 				onChange={(): any => undefined}
 				isReadOnly={false}
 				isCode={false}

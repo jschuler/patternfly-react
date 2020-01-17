@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { LoginForm } from '../LoginForm';
 
 describe('LoginForm test', () => {
   it('LoginForm should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <LoginForm
         noAutoFocus={false}
 				className={"''"}

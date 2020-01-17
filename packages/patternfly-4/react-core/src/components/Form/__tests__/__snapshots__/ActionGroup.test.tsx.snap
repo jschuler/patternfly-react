@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionGroup test ActionGroup should match snapshot 1`] = `
-<Component
-  className="''"
->
-  <div
-    className="pf-c-form__group pf-m-action ''"
-  >
-    <div
-      className="pf-c-form__actions"
-    >
-      ReactNode
-    </div>
-  </div>
-</Component>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

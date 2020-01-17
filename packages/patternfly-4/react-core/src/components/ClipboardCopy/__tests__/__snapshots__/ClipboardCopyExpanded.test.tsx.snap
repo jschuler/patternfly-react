@@ -1,19 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClipboardCopyExpanded test ClipboardCopyExpanded should match snapshot 1`] = `
-<ClipboardCopyExpanded
-  className="''"
-  isCode={false}
-  isReadOnly={false}
-  onChange={[Function]}
+<div
+  className="pf-c-clipboard-copy__expandable-content ''"
+  contentEditable={true}
+  onInput={[Function]}
+  suppressContentEditableWarning={true}
 >
-  <div
-    className="pf-c-clipboard-copy__expandable-content ''"
-    contentEditable={true}
-    onInput={[Function]}
-    suppressContentEditableWarning={true}
-  >
+  <div>
     ReactNode
   </div>
-</ClipboardCopyExpanded>
+</div>
 `;

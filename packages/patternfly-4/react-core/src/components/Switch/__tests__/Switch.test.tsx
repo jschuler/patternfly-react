@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Switch } from '../Switch';
 
 describe('Switch test', () => {
   it('Switch should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Switch
         id={"''"}
 				className={"''"}

@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { CardBody } from '../CardBody';
 
 describe('CardBody test', () => {
   it('CardBody should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <CardBody
         children={<>ReactNode</>}
 				className={"''"}

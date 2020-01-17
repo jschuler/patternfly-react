@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ProgressContainer } from '../ProgressContainer';
 
 describe('ProgressContainer test', () => {
   it('ProgressContainer should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ProgressContainer
-        ariaProps={unrecognizedType AriaProps undefined, consider reporting error to react-jest-test-generator.}
+        ariaProps={{}}
 				parentId={"'defaultString'"}
 				title={"''"}
 				label={null}

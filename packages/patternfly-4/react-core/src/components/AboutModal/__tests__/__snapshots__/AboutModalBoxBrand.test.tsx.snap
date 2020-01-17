@@ -1,19 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AboutModalBoxBrand test AboutModalBoxBrand should match snapshot 1`] = `
-<Component
-  alt="'defaultString'"
-  className="''"
-  src="''"
+<div
+  className="pf-c-about-modal-box__brand ''"
 >
-  <div
-    className="pf-c-about-modal-box__brand ''"
-  >
-    <img
-      alt="'defaultString'"
-      className="pf-c-about-modal-box__brand-image"
-      src="''"
-    />
-  </div>
-</Component>
+  <img
+    alt="'defaultString'"
+    className="pf-c-about-modal-box__brand-image"
+    src="''"
+  />
+</div>
 `;

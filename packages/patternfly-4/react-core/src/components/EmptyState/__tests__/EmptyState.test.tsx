@@ -1,15 +1,15 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { EmptyState } from '../EmptyState';
 
 describe('EmptyState test', () => {
   it('EmptyState should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <EmptyState
         className={"''"}
-				children={<>ReactNode</>}
+				children={<div>ReactNode</div>}
 				variant={'small'}
       />);
     expect(view).toMatchSnapshot();

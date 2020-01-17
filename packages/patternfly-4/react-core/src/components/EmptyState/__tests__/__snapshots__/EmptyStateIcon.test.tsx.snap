@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyStateIcon test EmptyStateIcon should match snapshot 1`] = `
+<Component
+  aria-hidden="true"
+  className="pf-c-empty-state__icon ''"
+/>
+`;

@@ -1,21 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ModalBox test ModalBox should match snapshot 1`] = `
-<Component
-  className="''"
-  id="'defaultString'"
-  isLarge={false}
-  isSmall={false}
-  title="'defaultString'"
+<div
+  aria-describedby="'defaultString'"
+  aria-label="'defaultString'"
+  aria-modal="true"
+  className="pf-c-modal-box ''"
+  role="dialog"
 >
-  <div
-    aria-describedby="'defaultString'"
-    aria-label="'defaultString'"
-    aria-modal="true"
-    className="pf-c-modal-box ''"
-    role="dialog"
-  >
+  <div>
     ReactNode
   </div>
-</Component>
+</div>
 `;

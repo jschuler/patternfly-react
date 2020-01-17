@@ -1,15 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form test Form should match snapshot 1`] = `
-<Component
-  className="''"
-  isHorizontal={false}
+<form
+  className="pf-c-form ''"
+  noValidate={true}
 >
-  <form
-    className="pf-c-form ''"
-    noValidate={true}
+  <ContextProvider
+    value={
+      Object {
+        "isHorizontal": false,
+      }
+    }
   >
     ReactNode
-  </form>
-</Component>
+  </ContextProvider>
+</form>
 `;

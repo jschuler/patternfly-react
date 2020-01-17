@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { DataListItemRow } from '../DataListItemRow';
 
 describe('DataListItemRow test', () => {
   it('DataListItemRow should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <DataListItemRow
-        children={<>ReactNode</>}
+        children={<div>ReactNode</div>}
 				className={"''"}
 				rowid={"''"}
       />);

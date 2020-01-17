@@ -1,22 +1,22 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { SelectToggle } from '../SelectToggle';
 
 describe('SelectToggle test', () => {
   it('SelectToggle should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <SelectToggle
         id={"'defaultString'"}
-				children={<>ReactNode</>}
+				children={<div>ReactNode</div>}
 				className={"''"}
 				isExpanded={false}
 				onToggle={() => {}}
 				onEnter={() => {}}
 				onClose={() => {}}
 				handleTypeaheadKeys={undefined}
-				parentRef={unrecognizedType ReactRefObject undefined, consider reporting error to react-jest-test-generator.}
+				parentRef={{ current: document.createElement('div') }}
 				isFocused={false}
 				isHovered={false}
 				isActive={false}
@@ -25,7 +25,7 @@ describe('SelectToggle test', () => {
 				type={'button'}
 				ariaLabelledBy={"''"}
 				ariaLabelToggle={"''"}
-				variant={false}
+				variant={'single'}
       />);
     expect(view).toMatchSnapshot();
   });

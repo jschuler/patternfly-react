@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { WizardNavItem } from '../WizardNavItem';
 
 describe('WizardNavItem test', () => {
   it('WizardNavItem should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <WizardNavItem
         children={<>ReactNode</>}
 				text={"''"}

@@ -1,49 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Nav test Nav should match snapshot 1`] = `
-<Component
-  aria-label="''"
-  className="''"
-  onSelect={[Function]}
-  onToggle={[Function]}
-  theme="light"
->
-  <ComponentWithOuia
-    component={[Function]}
-    componentProps={
-      Object {
-        "aria-label": "''",
-        "children": <React.Fragment>
-          ReactNode
-        </React.Fragment>,
-        "className": "''",
-        "onSelect": [Function],
-        "onToggle": [Function],
-        "theme": "light",
-      }
-    }
-    consumerContext={null}
-  >
-    <Nav
-      aria-label="''"
-      className="''"
-      onSelect={[Function]}
-      onToggle={[Function]}
-      ouiaContext={
-        Object {
-          "isOuia": false,
-          "ouiaId": null,
-        }
-      }
-      theme="light"
-    >
-      <nav
-        aria-label="''"
-        className="pf-c-nav ''"
-      >
-        ReactNode
-      </nav>
-    </Nav>
-  </ComponentWithOuia>
-</Component>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

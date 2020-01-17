@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PopoverArrow test PopoverArrow should match snapshot 1`] = `
-<Component
-  className="''"
->
-  <div
-    className="pf-c-popover__arrow ''"
-  />
-</Component>
+<div
+  className="pf-c-popover__arrow ''"
+/>
 `;

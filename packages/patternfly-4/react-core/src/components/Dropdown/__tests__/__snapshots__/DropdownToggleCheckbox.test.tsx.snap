@@ -1,25 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DropdownToggleCheckbox test DropdownToggleCheckbox should match snapshot 1`] = `
-<DropdownToggleCheckbox
-  aria-label="'defaultString'"
-  className="''"
-  id="'defaultString'"
-  isDisabled={false}
-  isValid={true}
-  onChange={[Function]}
+<label
+  className="pf-c-dropdown__toggle-check ''"
+  htmlFor="'defaultString'"
 >
-  <label
-    className="pf-c-dropdown__toggle-check ''"
-    htmlFor="'defaultString'"
-  >
-    <input
-      aria-invalid={false}
-      aria-label="'defaultString'"
-      disabled={false}
-      id="'defaultString'"
-      type="checkbox"
-    />
-  </label>
-</DropdownToggleCheckbox>
+  <input
+    aria-invalid={false}
+    aria-label="'defaultString'"
+    disabled={false}
+    id="'defaultString'"
+    type="checkbox"
+  />
+</label>
 `;

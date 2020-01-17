@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`KebabToggle test KebabToggle should match snapshot 1`] = `
-<Component
+<Toggle
   aria-label="'Actions'"
   className="''"
   id="''"
@@ -11,62 +11,17 @@ exports[`KebabToggle test KebabToggle should match snapshot 1`] = `
   isHovered={false}
   isOpen={false}
   isPlain={false}
+  isPrimary={false}
+  isSplitButton={false}
+  onEnter={[Function]}
   onToggle={[Function]}
   parentRef={null}
 >
-  <Toggle
-    aria-label="'Actions'"
-    className="''"
-    id="''"
-    isActive={false}
-    isDisabled={false}
-    isFocused={false}
-    isHovered={false}
-    isOpen={false}
-    isPlain={false}
-    isPrimary={false}
-    isSplitButton={false}
-    onEnter={[Function]}
-    onToggle={[Function]}
-    parentRef={null}
-  >
-    <button
-      aria-expanded={false}
-      aria-label="'Actions'"
-      className="pf-c-dropdown__toggle ''"
-      disabled={false}
-      id="''"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      type="button"
-    >
-      <EllipsisVIcon
-        color="currentColor"
-        noVerticalAlign={false}
-        size="sm"
-        title={null}
-      >
-        <svg
-          aria-hidden={true}
-          aria-labelledby={null}
-          fill="currentColor"
-          height="1em"
-          role="img"
-          style={
-            Object {
-              "verticalAlign": "-0.125em",
-            }
-          }
-          viewBox="0 0 192 512"
-          width="1em"
-        >
-          <path
-            d="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"
-            transform=""
-          />
-        </svg>
-      </EllipsisVIcon>
-    </button>
-  </Toggle>
-</Component>
+  <EllipsisVIcon
+    color="currentColor"
+    noVerticalAlign={false}
+    size="sm"
+    title={null}
+  />
+</Toggle>
 `;

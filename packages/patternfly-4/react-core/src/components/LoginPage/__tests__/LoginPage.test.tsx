@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { LoginPage } from '../LoginPage';
 
 describe('LoginPage test', () => {
   it('LoginPage should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <LoginPage
         children={<>ReactNode</>}
 				className={"''"}

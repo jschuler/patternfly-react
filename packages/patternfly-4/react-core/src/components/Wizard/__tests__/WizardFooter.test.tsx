@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { WizardFooter } from '../WizardFooter';
 
 describe('WizardFooter test', () => {
   it('WizardFooter should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <WizardFooter
-        children={unrecognizedType any undefined, consider reporting error to react-jest-test-generator.}
+        children={'any'}
       />);
     expect(view).toMatchSnapshot();
   });

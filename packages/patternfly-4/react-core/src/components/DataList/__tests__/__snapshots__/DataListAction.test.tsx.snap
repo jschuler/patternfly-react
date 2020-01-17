@@ -1,16 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DataListAction test DataListAction should match snapshot 1`] = `
-<DataListAction
-  aria-label="'defaultString'"
-  aria-labelledby="'defaultString'"
-  className="''"
-  id="'defaultString'"
+<div
+  className="pf-c-data-list__item-action ''"
 >
-  <div
-    className="pf-c-data-list__item-action ''"
-  >
+  <div>
     ReactNode
   </div>
-</DataListAction>
+</div>
 `;

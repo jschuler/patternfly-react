@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { NavList } from '../NavList';
 
 describe('NavList test', () => {
   it('NavList should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <NavList
         children={<>ReactNode</>}
 				className={"''"}

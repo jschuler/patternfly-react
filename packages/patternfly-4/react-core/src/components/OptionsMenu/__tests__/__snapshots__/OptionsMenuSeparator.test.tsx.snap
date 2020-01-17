@@ -1,12 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OptionsMenuSeparator test OptionsMenuSeparator should match snapshot 1`] = `
-<Component
-  className="''"
->
-  <li
-    className="pf-c-options-menu__separator ''"
-    role="separator"
-  />
-</Component>
+<li
+  className="pf-c-options-menu__separator ''"
+  role="separator"
+/>
 `;

@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginFooterItem test LoginFooterItem should match snapshot 1`] = `
-<Component
-  className="''"
-  href="'#'"
-  target="'_blank'"
->
+<Fragment>
   ReactNode
-</Component>
+</Fragment>
 `;

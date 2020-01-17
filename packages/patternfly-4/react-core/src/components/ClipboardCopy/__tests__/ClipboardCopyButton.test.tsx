@@ -1,15 +1,15 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ClipboardCopyButton } from '../ClipboardCopyButton';
 
 describe('ClipboardCopyButton test', () => {
   it('ClipboardCopyButton should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ClipboardCopyButton
-        onClick={(event: React.MouseEvent) => void}
-				children={<>ReactNode</>}
+        onClick={(event: React.MouseEvent) => undefined as void}
+				children={<div>ReactNode</div>}
 				id={"'defaultString'"}
 				textId={"'defaultString'"}
 				className={"''"}

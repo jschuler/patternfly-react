@@ -1,30 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DataListCheck test DataListCheck should match snapshot 1`] = `
-<Component
-  aria-labelledby="'defaultString'"
-  checked={null}
-  className="''"
-  isChecked={null}
-  isDisabled={false}
-  isValid={true}
-  onChange={[Function]}
+<div
+  className="pf-c-data-list__item-control ''"
 >
   <div
-    className="pf-c-data-list__item-control ''"
+    className="pf-c-data-list__check"
   >
-    <div
-      className="pf-c-data-list__check"
-    >
-      <input
-        aria-invalid={false}
-        aria-labelledby="'defaultString'"
-        checked={null}
-        disabled={false}
-        onChange={[Function]}
-        type="checkbox"
-      />
-    </div>
+    <input
+      aria-invalid={false}
+      aria-labelledby="'defaultString'"
+      checked={null}
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
   </div>
-</Component>
+</div>
 `;

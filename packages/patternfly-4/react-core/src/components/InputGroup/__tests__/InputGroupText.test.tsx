@@ -1,15 +1,15 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { InputGroupText } from '../InputGroupText';
 
 describe('InputGroupText test', () => {
   it('InputGroupText should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <InputGroupText
         className={"''"}
-				children={<>ReactNode</>}
+				children={<div>ReactNode</div>}
 				component={'span'}
       />);
     expect(view).toMatchSnapshot();

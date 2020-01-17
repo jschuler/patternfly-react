@@ -1,21 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SelectGroup test SelectGroup should match snapshot 1`] = `
-<Component
-  className="''"
-  label="''"
-  titleId="''"
+<div
+  className="pf-c-select__menu-group ''"
 >
   <div
-    className="pf-c-select__menu-group ''"
+    aria-hidden={true}
+    className="pf-c-select__menu-group-title"
+    id="''"
   >
-    <div
-      aria-hidden={true}
-      className="pf-c-select__menu-group-title"
-      id="''"
-    >
-      ''
-    </div>
+    ''
   </div>
-</Component>
+</div>
 `;

@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { LoginMainFooter } from '../LoginMainFooter';
 
 describe('LoginMainFooter test', () => {
   it('LoginMainFooter should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <LoginMainFooter
         className={"''"}
 				children={<>ReactNode</>}

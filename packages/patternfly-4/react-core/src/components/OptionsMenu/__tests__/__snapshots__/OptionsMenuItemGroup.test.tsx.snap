@@ -1,21 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OptionsMenuItemGroup test OptionsMenuItemGroup should match snapshot 1`] = `
-<Component
-  ariaLabel="''"
-  className="''"
-  groupTitle=""
-  hasSeparator={false}
+<section
+  className="pf-c-options-menu__group"
 >
-  <section
-    className="pf-c-options-menu__group"
+  <ul
+    aria-label="''"
+    className="''"
   >
-    <ul
-      aria-label="''"
-      className="''"
-    >
-      ReactNode
-    </ul>
-  </section>
-</Component>
+    ReactNode
+  </ul>
+</section>
 `;

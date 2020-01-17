@@ -1,15 +1,15 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { InputGroup } from '../InputGroup';
 
 describe('InputGroup test', () => {
   it('InputGroup should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <InputGroup
         className={"''"}
-				children={<>ReactNode</>}
+				children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

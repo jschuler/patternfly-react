@@ -1,22 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageHeader test PageHeader should match snapshot 1`] = `
-<Component
-  aria-label="'Global navigation'"
-  avatar={null}
-  className="''"
-  isNavOpen={true}
-  logo={null}
-  logoComponent="a"
-  logoProps={null}
-  onNavToggle={[Function]}
-  showNavToggle={false}
-  toolbar={null}
-  topNav={null}
->
-  <header
-    className="pf-c-page__header ''"
-    role="banner"
-  />
-</Component>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

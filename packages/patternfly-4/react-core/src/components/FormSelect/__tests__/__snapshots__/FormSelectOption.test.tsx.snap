@@ -1,18 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormSelectOption test FormSelectOption should match snapshot 1`] = `
-<Component
+<option
   className="''"
-  isDisabled={false}
-  label="'defaultString'"
+  disabled={false}
   value=""
 >
-  <option
-    className="''"
-    disabled={false}
-    value=""
-  >
-    'defaultString'
-  </option>
-</Component>
+  'defaultString'
+</option>
 `;

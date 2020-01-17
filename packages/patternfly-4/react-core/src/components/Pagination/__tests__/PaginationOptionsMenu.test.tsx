@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { PaginationOptionsMenu } from '../PaginationOptionsMenu';
 
 describe('PaginationOptionsMenu test', () => {
   it('PaginationOptionsMenu should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <PaginationOptionsMenu
         className={"''"}
 				widgetId={"''"}

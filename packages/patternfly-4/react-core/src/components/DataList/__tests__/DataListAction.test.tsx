@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { DataListAction } from '../DataListAction';
 
 describe('DataListAction test', () => {
   it('DataListAction should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <DataListAction
-        children={<>ReactNode</>}
+        children={<div>ReactNode</div>}
 				className={"''"}
 				id={"'defaultString'"}
 				aria-labelledby={"'defaultString'"}

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressContainer test ProgressContainer should match snapshot 1`] = `
+<Fragment>
+  <div
+    className="pf-c-progress__description"
+    id="'defaultString'-description"
+  >
+    ''
+  </div>
+  <div
+    className="pf-c-progress__status"
+  >
+    <span
+      className="pf-c-progress__measure"
+    >
+      42%
+    </span>
+    <span
+      className="pf-c-progress__status-icon"
+    >
+      <TimesCircleIcon
+        color="currentColor"
+        noVerticalAlign={false}
+        size="sm"
+        title={null}
+      />
+    </span>
+  </div>
+  <Component
+    ariaProps={Object {}}
+    value={42}
+  />
+</Fragment>
+`;

@@ -1,13 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextContent test TextContent should match snapshot 1`] = `
-<Component
-  className="''"
+<div
+  className="pf-c-content ''"
 >
-  <div
-    className="pf-c-content ''"
-  >
-    ReactNode
-  </div>
-</Component>
+  ReactNode
+</div>
 `;

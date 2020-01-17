@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ModalBoxHeader } from '../ModalBoxHeader';
 
 describe('ModalBoxHeader test', () => {
   it('ModalBoxHeader should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ModalBoxHeader
         children={<>ReactNode</>}
 				className={"''"}

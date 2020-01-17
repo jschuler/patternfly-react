@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ToggleTemplate } from '../ToggleTemplate';
 
 describe('ToggleTemplate test', () => {
   it('ToggleTemplate should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ToggleTemplate
         firstIndex={0}
 				lastIndex={0}

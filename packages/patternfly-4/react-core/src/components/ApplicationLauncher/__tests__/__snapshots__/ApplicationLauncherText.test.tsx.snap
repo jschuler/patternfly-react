@@ -1,13 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ApplicationLauncherText test ApplicationLauncherText should match snapshot 1`] = `
-<Component
-  className="''"
+<span
+  className="pf-c-app-launcher__menu-item-text ''"
 >
-  <span
-    className="pf-c-app-launcher__menu-item-text ''"
-  >
+  <div>
     ReactNode
-  </span>
-</Component>
+  </div>
+</span>
 `;

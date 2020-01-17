@@ -1,20 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavItem test NavItem should match snapshot 1`] = `
-<Component
-  className="''"
-  component="a"
-  groupId={null}
-  isActive={false}
-  itemId={null}
-  onClick={null}
-  preventDefault={false}
-  to="''"
+<li
+  className="pf-c-nav__item ''"
 >
-  <li
-    className="pf-c-nav__item ''"
-  >
-    ReactNode
-  </li>
-</Component>
+  <ContextConsumer>
+    <Component />
+  </ContextConsumer>
+</li>
 `;

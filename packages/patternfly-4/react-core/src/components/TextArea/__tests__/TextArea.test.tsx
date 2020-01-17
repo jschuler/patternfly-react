@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { TextArea } from '../TextArea';
 
 describe('TextArea test', () => {
   it('TextArea should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <TextArea
         className={"''"}
 				isRequired={false}

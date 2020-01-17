@@ -1,19 +1,19 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Tooltip } from '../Tooltip';
 
 describe('Tooltip test', () => {
   it('Tooltip should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Tooltip
         appendTo={() => document.body}
 				aria={'describedby'}
 				boundary={'window'}
-				children={unrecognizedType ReactElement undefined, consider reporting error to react-jest-test-generator.}
+				children={<p>ReactElement</p>}
 				className={"''"}
-				content={<>ReactNode</>}
+				content={<div>ReactNode</div>}
 				distance={15}
 				enableFlip={true}
 				entryDelay={500}

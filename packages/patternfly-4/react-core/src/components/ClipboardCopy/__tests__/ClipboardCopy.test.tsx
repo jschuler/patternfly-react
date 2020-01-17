@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ClipboardCopy } from '../ClipboardCopy';
 
 describe('ClipboardCopy test', () => {
   it('ClipboardCopy should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ClipboardCopy
         className={undefined}
 				hoverTip={"'Copy to clipboard'"}
@@ -22,10 +22,10 @@ describe('ClipboardCopy test', () => {
 				exitDelay={1600}
 				entryDelay={100}
 				switchDelay={2000}
-				onCopy={(event: any, text: string) => {
+				onCopy={(event: React.ClipboardEvent<HTMLDivElement>, text?: React.ReactNode) => {
   const clipboard = event.currentTarget.parentElement;
   const el = document.createElement('input');
-  el.value = text;
+  el.value = text.toString();
   clipboard.appendChild(el);
   el.select();
   document.execCommand('copy');

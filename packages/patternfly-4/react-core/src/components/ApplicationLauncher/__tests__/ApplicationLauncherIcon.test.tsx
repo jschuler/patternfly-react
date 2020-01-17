@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ApplicationLauncherIcon } from '../ApplicationLauncherIcon';
 
 describe('ApplicationLauncherIcon test', () => {
   it('ApplicationLauncherIcon should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ApplicationLauncherIcon
-        children={<>ReactNode</>}
+        children={<div>ReactNode</div>}
 				className={"''"}
       />);
     expect(view).toMatchSnapshot();

@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { PageSidebar } from '../PageSidebar';
 
 describe('PageSidebar test', () => {
   it('PageSidebar should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <PageSidebar
         className={"''"}
 				nav={undefined}

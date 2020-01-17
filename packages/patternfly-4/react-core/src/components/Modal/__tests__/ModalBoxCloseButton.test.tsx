@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ModalBoxCloseButton } from '../ModalBoxCloseButton';
 
 describe('ModalBoxCloseButton test', () => {
   it('ModalBoxCloseButton should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ModalBoxCloseButton
         className={"''"}
 				onClose={() => undefined as any}

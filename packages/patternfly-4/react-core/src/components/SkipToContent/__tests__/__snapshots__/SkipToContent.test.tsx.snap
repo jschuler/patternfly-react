@@ -1,15 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SkipToContent test SkipToContent should match snapshot 1`] = `
-<SkipToContent
-  className="''"
-  component="a"
+<a
+  className="pf-c-button pf-m-primary pf-c-skip-to-content ''"
   href="'defaultString'"
-  show={false}
->
-  <a
-    className="pf-c-button pf-m-primary pf-c-skip-to-content ''"
-    href="'defaultString'"
-  />
-</SkipToContent>
+/>
 `;

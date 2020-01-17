@@ -1,28 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toggle test Toggle should match snapshot 1`] = `
-<Toggle
-  className="''"
-  id="'defaultString'"
-  isActive={false}
-  isDisabled={false}
-  isFocused={false}
-  isHovered={false}
-  isOpen={false}
-  isPlain={false}
-  isPrimary={false}
-  isSplitButton={false}
-  onEnter={[Function]}
-  onToggle={[Function]}
->
-  <button
-    aria-expanded={false}
-    className="pf-c-dropdown__toggle ''"
-    disabled={false}
-    id="'defaultString'"
-    onClick={[Function]}
-    onKeyDown={[Function]}
-    type="button"
-  />
-</Toggle>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

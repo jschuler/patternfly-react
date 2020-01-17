@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AboutModalBox test AboutModalBox should match snapshot 1`] = `
-<Component
-  className="''"
+<div
+  aria-modal="true"
+  className="pf-c-about-modal-box ''"
+  role="dialog"
 >
-  <div
-    aria-modal="true"
-    className="pf-c-about-modal-box ''"
-    role="dialog"
-  >
+  <div>
     ReactNode
   </div>
-</Component>
+</div>
 `;

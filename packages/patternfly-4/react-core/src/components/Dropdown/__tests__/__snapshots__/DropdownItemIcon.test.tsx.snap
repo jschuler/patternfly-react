@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DropdownItemIcon test DropdownItemIcon should match snapshot 1`] = `
-<Component
-  className="''"
->
-  <span
-    className="pf-c-dropdown__menu-item-icon ''"
-  />
-</Component>
+<span
+  className="pf-c-dropdown__menu-item-icon ''"
+/>
 `;

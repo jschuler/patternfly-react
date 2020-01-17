@@ -1,13 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardActions test CardActions should match snapshot 1`] = `
-<Component
-  className="''"
+<div
+  className="pf-c-card__actions ''"
 >
-  <div
-    className="pf-c-card__actions ''"
-  >
-    ReactNode
-  </div>
-</Component>
+  ReactNode
+</div>
 `;

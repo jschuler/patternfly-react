@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { AboutModalContainer } from '../AboutModalContainer';
 
 describe('AboutModalContainer test', () => {
   it('AboutModalContainer should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <AboutModalContainer
-        children={<>ReactNode</>}
+        children={<div>ReactNode</div>}
 				className={"''"}
 				isOpen={false}
 				onClose={() => undefined}

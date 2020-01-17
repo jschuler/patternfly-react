@@ -37,7 +37,7 @@
     "build:types": "tsc -p tsconfig.gen-dts.json",
     "clean": "rimraf dist",
     "develop": "yarn build:babel:esm --skip-initial-build --watch --verbose",
-    "gen:snapshots": "DEBUG=generator-react-jest-tests* yo react-jest-tests:test"
+    "gen:snapshots": "yalc update && DEBUG=generator-react-jest-tests* yo react-jest-tests:test"
   },
   "dependencies": {
     "@patternfly/react-icons": "^3.14.31",

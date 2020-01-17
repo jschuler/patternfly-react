@@ -60,7 +60,7 @@ export class InternalDropdownItem extends React.Component<InternalDropdownItemPr
     isDisabled: false,
     href: '',
     tooltipProps: {},
-    onClick: (event: React.MouseEvent<HTMLAnchorElement>) => undefined as any,
+    onClick: (event: React.MouseEvent<any> | React.KeyboardEvent | MouseEvent) => undefined as any,
     index: -1,
     context: {
       keyHandler: () => {},

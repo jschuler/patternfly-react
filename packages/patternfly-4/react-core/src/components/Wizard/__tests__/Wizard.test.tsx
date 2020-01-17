@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Wizard } from '../Wizard';
 
 describe('Wizard test', () => {
   it('Wizard should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Wizard
         isOpen={false}
 				isInPage={false}
@@ -20,7 +20,7 @@ describe('Wizard test', () => {
 				onClose={() => undefined as any}
 				onGoToStep={null}
 				className={"''"}
-				steps={unrecognizedType Array undefined, consider reporting error to react-jest-test-generator.}
+				steps={[]}
 				startAtStep={1}
 				ariaLabelNav={"'Steps'"}
 				hasBodyPadding={true}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClipboardCopy test ClipboardCopy should match snapshot 1`] = `
+<div
+  className="pf-c-clipboard-copy"
+>
+  <GenerateId
+    prefix=""
+  >
+    <Component />
+  </GenerateId>
+</div>
+`;

@@ -1,16 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavList test NavList should match snapshot 1`] = `
-<NavList
-  ariaLeftScroll="'Scroll left'"
-  ariaRightScroll="'Scroll right'"
-  className="''"
-  variant="default"
->
+<Fragment>
   <ul
     className="pf-c-nav__list ''"
   >
     ReactNode
   </ul>
-</NavList>
+</Fragment>
 `;

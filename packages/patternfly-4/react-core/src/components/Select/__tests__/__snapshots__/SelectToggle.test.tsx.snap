@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectToggle test SelectToggle should match snapshot 1`] = `
+<Fragment>
+  <button
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-labelledby="''"
+    className="pf-c-select__toggle ''"
+    disabled={false}
+    id="'defaultString'"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    type="button"
+  >
+    <div>
+      ReactNode
+    </div>
+    <CaretDownIcon
+      className="pf-c-select__toggle-arrow"
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+      title={null}
+    />
+  </button>
+</Fragment>
+`;

@@ -1,18 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DataListItem test DataListItem should match snapshot 1`] = `
-<Component
-  aria-labelledby="'defaultString'"
-  className="''"
-  id="''"
-  isExpanded={false}
->
-  <li
-    aria-labelledby="'defaultString'"
-    className="pf-c-data-list__item ''"
-    id="''"
-  >
-    ReactNode
-  </li>
-</Component>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

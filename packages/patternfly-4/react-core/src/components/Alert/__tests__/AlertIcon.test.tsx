@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { AlertIcon } from '../AlertIcon';
 
 describe('AlertIcon test', () => {
   it('AlertIcon should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <AlertIcon
         variant={''success''}
 				className={"''"}

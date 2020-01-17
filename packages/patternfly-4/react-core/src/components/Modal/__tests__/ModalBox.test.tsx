@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ModalBox } from '../ModalBox';
 
 describe('ModalBox test', () => {
   it('ModalBox should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ModalBox
-        children={<>ReactNode</>}
+        children={<div>ReactNode</div>}
 				className={"''"}
 				isLarge={false}
 				isSmall={false}

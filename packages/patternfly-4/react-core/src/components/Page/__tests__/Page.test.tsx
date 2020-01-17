@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Page } from '../Page';
 
 describe('Page test', () => {
   it('Page should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Page
         children={<>ReactNode</>}
 				className={"''"}

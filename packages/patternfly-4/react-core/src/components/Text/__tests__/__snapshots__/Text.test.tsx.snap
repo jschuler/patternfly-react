@@ -1,15 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text test Text should match snapshot 1`] = `
-<Component
+<h1
   className="''"
-  component="h1"
+  data-pf-content={true}
 >
-  <h1
-    className="''"
-    data-pf-content={true}
-  >
-    ReactNode
-  </h1>
-</Component>
+  ReactNode
+</h1>
 `;

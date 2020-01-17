@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Title } from '../Title';
 
 describe('Title test', () => {
   it('Title should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Title
-        size={unrecognizedType unknown undefined, consider reporting error to react-jest-test-generator.}
+        size={''xs''}
 				children={''}
 				className={"''"}
 				headingLevel={'h1'}

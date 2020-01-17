@@ -3,44 +3,8 @@
 exports[`AlertActionLink test AlertActionLink should match snapshot 1`] = `
 <Component
   className="''"
+  variant="link"
 >
-  <Component
-    className="''"
-    variant="link"
-  >
-    <ComponentWithOuia
-      component={[Function]}
-      componentProps={
-        Object {
-          "children": "''",
-          "className": "''",
-          "variant": "link",
-        }
-      }
-      consumerContext={null}
-    >
-      <Button
-        className="''"
-        ouiaContext={
-          Object {
-            "isOuia": false,
-            "ouiaId": null,
-          }
-        }
-        variant="link"
-      >
-        <button
-          aria-disabled={null}
-          aria-label={null}
-          className="pf-c-button pf-m-link ''"
-          disabled={false}
-          tabIndex={null}
-          type="button"
-        >
-          ''
-        </button>
-      </Button>
-    </ComponentWithOuia>
-  </Component>
+  ''
 </Component>
 `;

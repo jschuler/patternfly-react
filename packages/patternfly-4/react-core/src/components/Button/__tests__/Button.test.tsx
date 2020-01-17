@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Button } from '../Button';
 
 describe('Button test', () => {
   it('Button should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Button
         children={<>ReactNode</>}
 				className={"''"}

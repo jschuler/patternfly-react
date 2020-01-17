@@ -1,17 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormSelectOptionGroup test FormSelectOptionGroup should match snapshot 1`] = `
-<Component
+<optgroup
   className="''"
-  isDisabled={false}
+  disabled={false}
   label="'defaultString'"
 >
-  <optgroup
-    className="''"
-    disabled={false}
-    label="'defaultString'"
-  >
-    ReactNode
-  </optgroup>
-</Component>
+  ReactNode
+</optgroup>
 `;

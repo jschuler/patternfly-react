@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ContextSelectorItem } from '../ContextSelectorItem';
 
 describe('ContextSelectorItem test', () => {
   it('ContextSelectorItem should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ContextSelectorItem
         children={<>ReactNode</>}
 				className={"''"}

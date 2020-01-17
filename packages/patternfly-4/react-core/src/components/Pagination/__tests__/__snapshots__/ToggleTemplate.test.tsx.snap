@@ -1,12 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ToggleTemplate test ToggleTemplate should match snapshot 1`] = `
-<Component
-  firstIndex={0}
-  itemCount={0}
-  itemsTitle="'items'"
-  lastIndex={0}
->
+<Fragment>
   <b>
     0
      - 
@@ -19,5 +14,5 @@ exports[`ToggleTemplate test ToggleTemplate should match snapshot 1`] = `
   </b>
    
   'items'
-</Component>
+</Fragment>
 `;

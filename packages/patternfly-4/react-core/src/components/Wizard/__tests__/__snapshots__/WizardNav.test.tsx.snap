@@ -1,16 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WizardNav test WizardNav should match snapshot 1`] = `
-<Component
-  isOpen={false}
-  returnList={false}
+<nav
+  className="pf-c-wizard__nav"
 >
-  <nav
-    className="pf-c-wizard__nav"
-  >
-    <ol
-      className="pf-c-wizard__nav-list"
-    />
-  </nav>
-</Component>
+  <ol
+    className="pf-c-wizard__nav-list"
+  />
+</nav>
 `;

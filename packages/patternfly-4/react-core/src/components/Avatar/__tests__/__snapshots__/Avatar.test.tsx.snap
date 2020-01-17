@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar test Avatar should match snapshot 1`] = `
-<Component
+<img
   alt="'defaultString'"
-  className="''"
+  className="pf-c-avatar ''"
   src="''"
->
-  <img
-    alt="'defaultString'"
-    className="pf-c-avatar ''"
-    src="''"
-  />
-</Component>
+/>
 `;

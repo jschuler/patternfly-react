@@ -1,22 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginMainFooterLinksItem test LoginMainFooterLinksItem should match snapshot 1`] = `
-<Component
-  className="''"
-  href="''"
-  linkComponent="a"
-  target="''"
+<li
+  className="pf-c-login__main-footer-links-item ''"
 >
-  <li
-    className="pf-c-login__main-footer-links-item ''"
+  <a
+    className="pf-c-login__main-footer-links-item-link"
+    href="''"
+    target="''"
   >
-    <a
-      className="pf-c-login__main-footer-links-item-link"
-      href="''"
-      target="''"
-    >
-      ReactNode
-    </a>
-  </li>
-</Component>
+    ReactNode
+  </a>
+</li>
 `;

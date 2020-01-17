@@ -1,16 +1,16 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Alert } from '../Alert';
 
 describe('Alert test', () => {
   it('Alert should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <Alert
         variant={'success'}
 				isInline={false}
-				title={<>ReactNode</>}
+				title={<div>ReactNode</div>}
 				action={null}
 				children={''}
 				className={"''"}

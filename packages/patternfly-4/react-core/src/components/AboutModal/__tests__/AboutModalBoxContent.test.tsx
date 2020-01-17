@@ -1,14 +1,14 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { AboutModalBoxContent } from '../AboutModalBoxContent';
 
 describe('AboutModalBoxContent test', () => {
   it('AboutModalBoxContent should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <AboutModalBoxContent
-        children={<>ReactNode</>}
+        children={<div>ReactNode</div>}
 				className={"''"}
 				id={"'defaultString'"}
 				trademark={"'defaultString'"}

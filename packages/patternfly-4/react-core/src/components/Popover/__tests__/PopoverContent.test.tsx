@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { PopoverContent } from '../PopoverContent';
 
 describe('PopoverContent test', () => {
   it('PopoverContent should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <PopoverContent
         className={"null"}
       />);

@@ -1,16 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Page test Page should match snapshot 1`] = `
-<Page
-  breadcrumb={null}
-  className="''"
-  defaultManagedSidebarIsOpen={true}
-  header={null}
-  isManagedSidebar={false}
-  mainContainerId="null"
-  onPageResize={[Function]}
-  sidebar={null}
-  skipToContent={null}
+<ContextProvider
+  value={
+    Object {
+      "isManagedSidebar": false,
+      "isNavOpen": true,
+      "onNavToggle": [Function],
+    }
+  }
 >
   <div
     className="pf-c-page ''"
@@ -24,5 +22,5 @@ exports[`Page test Page should match snapshot 1`] = `
       ReactNode
     </main>
   </div>
-</Page>
+</ContextProvider>
 `;

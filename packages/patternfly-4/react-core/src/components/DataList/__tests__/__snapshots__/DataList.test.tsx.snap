@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DataList test DataList should match snapshot 1`] = `
-<Component
-  aria-label="'defaultString'"
-  className="''"
-  selectedDataListItemId="''"
+<ContextProvider
+  value={
+    Object {
+      "isSelectable": false,
+      "selectedDataListItemId": "''",
+      "updateSelectedDataListItem": [Function],
+    }
+  }
 >
   <ul
     aria-label="'defaultString'"
@@ -12,5 +16,5 @@ exports[`DataList test DataList should match snapshot 1`] = `
   >
     ReactNode
   </ul>
-</Component>
+</ContextProvider>
 `;

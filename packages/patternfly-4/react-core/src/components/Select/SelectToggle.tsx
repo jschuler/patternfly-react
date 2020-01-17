@@ -55,7 +55,7 @@ export class SelectToggle extends React.Component<SelectToggleProps> {
     isActive: false,
     isPlain: false,
     isDisabled: false,
-    variant: false,
+    variant: 'single',
     ariaLabelledBy: '',
     ariaLabelToggle: '',
     type: 'button',

@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { ApplicationLauncherSeparator } from '../ApplicationLauncherSeparator';
 
 describe('ApplicationLauncherSeparator test', () => {
   it('ApplicationLauncherSeparator should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <ApplicationLauncherSeparator
         
       />);

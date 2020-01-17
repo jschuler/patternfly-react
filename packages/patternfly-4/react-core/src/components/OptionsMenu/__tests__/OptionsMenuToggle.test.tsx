@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { OptionsMenuToggle } from '../OptionsMenuToggle';
 
 describe('OptionsMenuToggle test', () => {
   it('OptionsMenuToggle should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <OptionsMenuToggle
         parentId={"''"}
 				onToggle={undefined}

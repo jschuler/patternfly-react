@@ -1,34 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AboutModal test AboutModal should match snapshot 1`] = `
-<AboutModal
-  appendTo={null}
-  backgroundImageSrc="''"
-  brandImageAlt="'defaultString'"
-  brandImageSrc="'defaultString'"
-  className="''"
-  isOpen={false}
-  noAboutModalBoxContentContainer={false}
-  onClose={[Function]}
-  productName="''"
-  trademark="''"
+<Portal
+  containerInfo={<div />}
 >
-  <Portal
-    containerInfo={<div />}
+  <Component
+    ariaDescribedById="pf-about-modal-content-0"
+    ariaLabelledbyId="pf-about-modal-title-0"
+    backgroundImageSrc="''"
+    brandImageAlt="'defaultString'"
+    brandImageSrc="'defaultString'"
+    className="''"
+    isOpen={false}
+    noAboutModalBoxContentContainer={false}
+    onClose={[Function]}
+    productName="''"
+    trademark="''"
   >
-    <Component
-      ariaDescribedById="pf-about-modal-content-0"
-      ariaLabelledbyId="pf-about-modal-title-0"
-      backgroundImageSrc="''"
-      brandImageAlt="'defaultString'"
-      brandImageSrc="'defaultString'"
-      className="''"
-      isOpen={false}
-      noAboutModalBoxContentContainer={false}
-      onClose={[Function]}
-      productName="''"
-      trademark="''"
-    />
-  </Portal>
-</AboutModal>
+    <div>
+      ReactNode
+    </div>
+  </Component>
+</Portal>
 `;

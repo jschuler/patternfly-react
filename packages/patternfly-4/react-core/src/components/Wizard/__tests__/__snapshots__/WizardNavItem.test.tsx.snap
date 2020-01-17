@@ -1,26 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WizardNavItem test WizardNavItem should match snapshot 1`] = `
-<Component
-  isCurrent={false}
-  isDisabled={false}
-  navItemComponent="a"
-  onNavItemClick={[Function]}
-  step={42}
-  text="''"
+<li
+  className="pf-c-wizard__nav-item"
 >
-  <li
-    className="pf-c-wizard__nav-item"
+  <a
+    aria-current={false}
+    aria-disabled={false}
+    className="pf-c-wizard__nav-link"
+    onClick={[Function]}
   >
-    <a
-      aria-current={false}
-      aria-disabled={false}
-      className="pf-c-wizard__nav-link"
-      onClick={[Function]}
-    >
-      ''
-    </a>
-    ReactNode
-  </li>
-</Component>
+    ''
+  </a>
+  ReactNode
+</li>
 `;

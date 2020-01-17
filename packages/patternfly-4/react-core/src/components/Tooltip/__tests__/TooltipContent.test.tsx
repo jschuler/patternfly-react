@@ -1,15 +1,15 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { TooltipContent } from '../TooltipContent';
 
 describe('TooltipContent test', () => {
   it('TooltipContent should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <TooltipContent
         className={undefined}
-				children={<>ReactNode</>}
+				children={<div>ReactNode</div>}
 				isLeftAligned={undefined}
       />);
     expect(view).toMatchSnapshot();

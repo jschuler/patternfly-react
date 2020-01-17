@@ -1,26 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AboutModalBoxHeader test AboutModalBoxHeader should match snapshot 1`] = `
-<Component
-  className="''"
-  id="'defaultString'"
-  productName="''"
+<div
+  className="pf-c-about-modal-box__header ''"
 >
-  <div
-    className="pf-c-about-modal-box__header ''"
+  <Component
+    headingLevel="h1"
+    id="'defaultString'"
+    size="4xl"
   >
-    <Component
-      headingLevel="h1"
-      id="'defaultString'"
-      size="4xl"
-    >
-      <h1
-        className="pf-c-title pf-m-4xl"
-        id="'defaultString'"
-      >
-        ''
-      </h1>
-    </Component>
-  </div>
-</Component>
+    ''
+  </Component>
+</div>
 `;

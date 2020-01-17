@@ -1,20 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TabButton test TabButton should match snapshot 1`] = `
-<ForwardRef
+<TabContainer
   className="''"
->
-  <TabContainer
-    className="''"
-    forwardRef={null}
-  >
-    <TabButtonWithRef
-      className="''"
-    >
-      <button
-        className="''"
-      />
-    </TabButtonWithRef>
-  </TabContainer>
-</ForwardRef>
+  forwardRef={null}
+/>
 `;

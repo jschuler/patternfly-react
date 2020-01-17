@@ -1,14 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginHeader test LoginHeader should match snapshot 1`] = `
-<Component
-  className="''"
-  headerBrand={null}
+<header
+  className="pf-c-login__header ''"
 >
-  <header
-    className="pf-c-login__header ''"
-  >
-    ReactNode
-  </header>
-</Component>
+  ReactNode
+</header>
 `;

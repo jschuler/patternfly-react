@@ -1,12 +1,12 @@
 // Auto-generated do not edit
 
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { FormGroup } from '../FormGroup';
 
 describe('FormGroup test', () => {
   it('FormGroup should match snapshot', () => {
-    const view = mount(
+    const view = shallow(
       <FormGroup
         children={<>ReactNode</>}
 				className={"''"}

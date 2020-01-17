@@ -1,14 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AboutModalContainer test AboutModalContainer should match snapshot 1`] = `
-<Component
-  ariaDescribedById="'defaultString'"
-  ariaLabelledbyId="'defaultString'"
-  brandImageAlt="'defaultString'"
-  brandImageSrc="'defaultString'"
-  className="''"
-  isOpen={false}
-  onClose={[Function]}
-  productName="''"
-/>
-`;
+exports[`AboutModalContainer test AboutModalContainer should match snapshot 1`] = `""`;

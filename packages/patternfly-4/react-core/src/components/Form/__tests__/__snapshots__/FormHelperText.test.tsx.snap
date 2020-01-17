@@ -1,15 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormHelperText test FormHelperText should match snapshot 1`] = `
-<Component
-  className="''"
-  isError={false}
-  isHidden={true}
+<p
+  className="pf-c-form__helper-text pf-m-hidden ''"
 >
-  <p
-    className="pf-c-form__helper-text pf-m-hidden ''"
-  >
-    ReactNode
-  </p>
-</Component>
+  ReactNode
+</p>
 `;
