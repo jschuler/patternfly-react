@@ -24,7 +24,7 @@ describe('InternalDropdownItem test', () => {
   keyHandler: () => {},
   sendRef: () => {}
 }}
-				onClick={(event: React.MouseEvent<HTMLAnchorElement>) => undefined as any}
+				onClick={(event: React.MouseEvent<any> | React.KeyboardEvent | MouseEvent) => undefined as any}
 				id={"''"}
 				componentID={"''"}
 				additionalChild={undefined}

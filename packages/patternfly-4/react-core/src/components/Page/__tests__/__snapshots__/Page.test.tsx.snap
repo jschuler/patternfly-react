@@ -13,12 +13,19 @@ exports[`Page test Page should match snapshot 1`] = `
   <div
     className="pf-c-page ''"
   >
+    ReactNode
+    ReactNode
     <main
       className="pf-c-page__main"
       id="null"
       role="main"
       tabIndex={-1}
     >
+      <section
+        className="pf-c-page__main-breadcrumb"
+      >
+        ReactNode
+      </section>
       ReactNode
     </main>
   </div>

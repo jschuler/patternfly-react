@@ -10,7 +10,7 @@ describe('LoginHeader test', () => {
       <LoginHeader
         children={<>ReactNode</>}
 				className={"''"}
-				headerBrand={null}
+				headerBrand={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

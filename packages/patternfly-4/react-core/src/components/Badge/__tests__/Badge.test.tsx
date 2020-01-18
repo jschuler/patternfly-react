@@ -9,7 +9,7 @@ describe('Badge test', () => {
     const view = shallow(
       <Badge
         isRead={false}
-				children={''}
+				children={<>ReactNode</>}
 				className={"''"}
       />);
     expect(view).toMatchSnapshot();

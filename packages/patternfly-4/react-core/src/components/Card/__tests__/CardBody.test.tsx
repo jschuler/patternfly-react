@@ -10,7 +10,7 @@ describe('CardBody test', () => {
       <CardBody
         children={<>ReactNode</>}
 				className={"''"}
-				component={'div'}
+				component={<>ReactNode</>}
 				isFilled={true}
       />);
     expect(view).toMatchSnapshot();

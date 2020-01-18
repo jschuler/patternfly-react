@@ -12,7 +12,7 @@ describe('LoginMainFooterLinksItem test', () => {
 				href={"''"}
 				target={"''"}
 				className={"''"}
-				linkComponent={'a'}
+				linkComponent={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

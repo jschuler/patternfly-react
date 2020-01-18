@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { PaginationOptionsMenu } from '../PaginationOptionsMenu';
+import { ToggleTemplateProps } from '../ToggleTemplate';
 
 describe('PaginationOptionsMenu test', () => {
   it('PaginationOptionsMenu should match snapshot', () => {

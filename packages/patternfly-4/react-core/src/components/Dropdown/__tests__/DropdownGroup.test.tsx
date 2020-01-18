@@ -10,7 +10,7 @@ describe('DropdownGroup test', () => {
       <DropdownGroup
         children={<>ReactNode</>}
 				className={"''"}
-				label={''}
+				label={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

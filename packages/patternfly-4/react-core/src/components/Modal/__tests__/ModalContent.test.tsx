@@ -13,12 +13,12 @@ describe('ModalContent test', () => {
 				isLarge={false}
 				isSmall={false}
 				isOpen={false}
-				header={null}
+				header={<>ReactNode</>}
 				title={"'defaultString'"}
 				hideTitle={false}
 				showClose={true}
 				width={-1}
-				footer={null}
+				footer={<>ReactNode</>}
 				actions={[]}
 				isFooterLeftAligned={false}
 				onClose={() => undefined as any}

@@ -10,8 +10,8 @@ describe('Login test', () => {
       <Login
         children={<>ReactNode</>}
 				className={"''"}
-				footer={null}
-				header={null}
+				footer={<>ReactNode</>}
+				header={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

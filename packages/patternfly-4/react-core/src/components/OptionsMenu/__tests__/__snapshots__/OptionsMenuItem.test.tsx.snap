@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionsMenuItem test OptionsMenuItem should match snapshot 1`] = `
+<Component
+  component="button"
+  id="''"
+  onClick={[Function]}
+>
+  ReactNode
+</Component>
+`;

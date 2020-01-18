@@ -12,7 +12,7 @@ describe('BreadcrumbHeading test', () => {
 				className={"''"}
 				to={"null"}
 				target={"null"}
-				component={'a'}
+				component={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

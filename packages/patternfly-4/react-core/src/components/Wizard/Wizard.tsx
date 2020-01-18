@@ -373,7 +373,7 @@ export class Wizard extends React.Component<WizardProps, WizardState> {
     const activeStep = flattenedSteps[adjustedStep - 1];
     const computedSteps: WizardStep[] = this.initSteps(steps);
     const firstStep = activeStep === flattenedSteps[0];
-    const isValid = activeStep.enableNext !== undefined ? activeStep.enableNext : true;
+    const isValid = activeStep && activeStep.enableNext !== undefined ? activeStep.enableNext : true;
     const setFullWidth = isFullWidth || width;
     const setFullHeight = isFullHeight || height;
 

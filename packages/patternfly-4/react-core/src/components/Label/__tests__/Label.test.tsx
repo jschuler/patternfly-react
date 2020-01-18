@@ -8,8 +8,9 @@ describe('Label test', () => {
   it('Label should match snapshot', () => {
     const view = shallow(
       <Label
-        className={"''"}
-				isCompact={"false"}
+        children={<div>ReactNode</div>}
+				className={"''"}
+				isCompact={false}
       />);
     expect(view).toMatchSnapshot();
   });

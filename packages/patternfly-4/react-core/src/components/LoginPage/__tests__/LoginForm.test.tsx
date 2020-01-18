@@ -11,7 +11,7 @@ describe('LoginForm test', () => {
         noAutoFocus={false}
 				className={"''"}
 				showHelperText={false}
-				helperText={null}
+				helperText={<>ReactNode</>}
 				usernameLabel={"'Username'"}
 				usernameValue={"''"}
 				onChangeUsername={() => undefined as any}

@@ -8,7 +8,7 @@ describe('CheckboxSelectGroup test', () => {
   it('CheckboxSelectGroup should match snapshot', () => {
     const view = shallow(
       <CheckboxSelectGroup
-        children={[]}
+        children={<>ReactNode</>}
 				className={"''"}
 				label={"''"}
 				titleId={"''"}

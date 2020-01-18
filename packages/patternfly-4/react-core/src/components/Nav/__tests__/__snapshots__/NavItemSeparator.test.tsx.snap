@@ -2,7 +2,7 @@
 
 exports[`NavItemSeparator test NavItemSeparator should match snapshot 1`] = `
 <li
-  className="pf-c-nav__separator ''"
+  className="pf-c-nav__separator"
   role="separator"
 />
 `;

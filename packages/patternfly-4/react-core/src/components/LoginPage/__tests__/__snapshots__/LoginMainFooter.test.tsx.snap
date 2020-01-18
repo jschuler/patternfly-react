@@ -5,5 +5,16 @@ exports[`LoginMainFooter test LoginMainFooter should match snapshot 1`] = `
   className="pf-c-login__main-footer ''"
 >
   ReactNode
+  <ul
+    className="pf-c-login__main-footer-links"
+  >
+    ReactNode
+  </ul>
+  <div
+    className="pf-c-login__main-footer-band"
+  >
+    ReactNode
+    ReactNode
+  </div>
 </div>
 `;

@@ -16,7 +16,7 @@ describe('NavItem test', () => {
 				itemId={null}
 				preventDefault={false}
 				onClick={null}
-				component={'a'}
+				component={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

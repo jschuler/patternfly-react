@@ -10,7 +10,7 @@ describe('InputGroupText test', () => {
       <InputGroupText
         className={"''"}
 				children={<div>ReactNode</div>}
-				component={'span'}
+				component={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

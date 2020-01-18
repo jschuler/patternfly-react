@@ -8,7 +8,7 @@ describe('SelectGroup test', () => {
   it('SelectGroup should match snapshot', () => {
     const view = shallow(
       <SelectGroup
-        children={[]}
+        children={<>ReactNode</>}
 				className={"''"}
 				label={"''"}
 				titleId={"''"}

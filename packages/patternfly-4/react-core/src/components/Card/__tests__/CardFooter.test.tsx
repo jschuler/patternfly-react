@@ -10,7 +10,7 @@ describe('CardFooter test', () => {
       <CardFooter
         children={<>ReactNode</>}
 				className={"''"}
-				component={'div'}
+				component={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

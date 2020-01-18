@@ -36,7 +36,7 @@ describe('Select test', () => {
 				width={''}
 				maxHeight={undefined}
 				toggleIcon={null}
-				customContent={null}
+				customContent={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

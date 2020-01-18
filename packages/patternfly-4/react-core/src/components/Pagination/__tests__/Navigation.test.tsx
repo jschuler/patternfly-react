@@ -22,7 +22,7 @@ describe('Navigation test', () => {
 				paginationTitle={"'Pagination'"}
 				page={0}
 				perPage={undefined}
-				onSetPage={jest.fn()}
+				onSetPage={() => {}}
 				onNextClick={() => undefined as any}
 				onPreviousClick={() => undefined as any}
 				onFirstClick={() => undefined as any}

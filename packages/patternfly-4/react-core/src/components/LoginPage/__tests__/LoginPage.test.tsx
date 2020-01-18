@@ -15,13 +15,13 @@ describe('LoginPage test', () => {
 				backgroundImgSrc={''}
 				backgroundImgAlt={"''"}
 				textContent={"''"}
-				footerListItems={null}
+				footerListItems={<>ReactNode</>}
 				footerListVariants={undefined}
 				loginTitle={"'defaultString'"}
 				loginSubtitle={undefined}
-				signUpForAccountMessage={null}
-				forgotCredentials={null}
-				socialMediaLoginContent={null}
+				signUpForAccountMessage={<>ReactNode</>}
+				forgotCredentials={<>ReactNode</>}
+				socialMediaLoginContent={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

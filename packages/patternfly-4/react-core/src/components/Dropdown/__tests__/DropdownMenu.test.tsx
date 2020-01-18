@@ -13,7 +13,7 @@ describe('DropdownMenu test', () => {
 				isOpen={true}
 				openedOnEnter={false}
 				autoFocus={true}
-				component={'ul'}
+				component={<>ReactNode</>}
 				position={'right'}
 				isGrouped={false}
       />);

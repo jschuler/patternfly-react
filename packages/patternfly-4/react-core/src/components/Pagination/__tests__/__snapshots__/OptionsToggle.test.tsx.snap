@@ -1,95 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OptionsToggle test OptionsToggle should match snapshot 1`] = `
-<Component
-  firstIndex={0}
-  isDisabled={false}
-  isOpen={false}
-  itemCount={0}
-  itemsPerPageTitle="'Items per page'"
-  itemsTitle="'items'"
-  lastIndex={0}
-  onEnter={null}
-  onToggle={[Function]}
-  optionsToggle="'Select'"
-  parentRef={null}
-  showToggle={true}
-  toggleTemplate=""
-  widgetId="''"
+<div
+  className="pf-c-options-menu__toggle pf-m-plain pf-m-text"
 >
-  <div
-    className="pf-c-options-menu__toggle pf-m-plain pf-m-text"
-  >
-    <span
-      className="pf-c-options-menu__toggle-text"
-    />
-    <Component
-      aria-label="'Select'"
-      className="pf-c-options-menu__toggle-button"
-      id="''-toggle"
-      isDisabled={true}
-      isOpen={false}
-      onEnter={null}
-      onToggle={[Function]}
-      parentRef={null}
-    >
-      <Toggle
-        aria-label="'Select'"
-        className="pf-c-options-menu__toggle-button"
-        id="''-toggle"
-        isActive={false}
-        isDisabled={true}
-        isFocused={false}
-        isHovered={false}
-        isOpen={false}
-        isPlain={false}
-        isPrimary={false}
-        isSplitButton={false}
-        onEnter={null}
-        onToggle={[Function]}
-        parentRef={null}
-      >
-        <button
-          aria-expanded={false}
-          aria-label="'Select'"
-          className="pf-c-dropdown__toggle pf-c-options-menu__toggle-button"
-          disabled={true}
-          id="''-toggle"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          type="button"
-        >
-          <CaretDownIcon
-            className=""
-            color="currentColor"
-            noVerticalAlign={false}
-            size="sm"
-            title={null}
-          >
-            <svg
-              aria-hidden={true}
-              aria-labelledby={null}
-              className=""
-              fill="currentColor"
-              height="1em"
-              role="img"
-              style={
-                Object {
-                  "verticalAlign": "-0.125em",
-                }
-              }
-              viewBox="0 0 320 512"
-              width="1em"
-            >
-              <path
-                d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                transform=""
-              />
-            </svg>
-          </CaretDownIcon>
-        </button>
-      </Toggle>
-    </Component>
-  </div>
-</Component>
+  <span
+    className="pf-c-options-menu__toggle-text"
+  />
+  <Component
+    aria-label="'Select'"
+    className="pf-c-options-menu__toggle-button"
+    id="''-toggle"
+    isDisabled={true}
+    isOpen={false}
+    onEnter={null}
+    onToggle={[Function]}
+    parentRef={null}
+  />
+</div>
 `;

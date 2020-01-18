@@ -8,7 +8,8 @@ describe('PopoverHeader test', () => {
   it('PopoverHeader should match snapshot', () => {
     const view = shallow(
       <PopoverHeader
-        
+        id={"'defaultString'"}
+				children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

@@ -9,12 +9,12 @@ describe('PageHeader test', () => {
     const view = shallow(
       <PageHeader
         className={"''"}
-				logo={null}
+				logo={<>ReactNode</>}
 				logoProps={null}
-				logoComponent={'a'}
-				toolbar={null}
-				avatar={null}
-				topNav={null}
+				logoComponent={<>ReactNode</>}
+				toolbar={<>ReactNode</>}
+				avatar={<>ReactNode</>}
+				topNav={<>ReactNode</>}
 				showNavToggle={false}
 				isNavOpen={true}
 				isManagedSidebar={undefined}

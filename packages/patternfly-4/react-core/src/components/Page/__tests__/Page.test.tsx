@@ -10,14 +10,14 @@ describe('Page test', () => {
       <Page
         children={<>ReactNode</>}
 				className={"''"}
-				header={null}
-				sidebar={null}
+				header={<>ReactNode</>}
+				sidebar={<>ReactNode</>}
 				skipToContent={null}
 				mainContainerId={"null"}
 				isManagedSidebar={false}
 				defaultManagedSidebarIsOpen={true}
 				onPageResize={(): void => null}
-				breadcrumb={null}
+				breadcrumb={<>ReactNode</>}
 				mainAriaLabel={undefined}
       />);
     expect(view).toMatchSnapshot();

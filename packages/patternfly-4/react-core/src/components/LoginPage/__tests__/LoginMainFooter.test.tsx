@@ -10,9 +10,9 @@ describe('LoginMainFooter test', () => {
       <LoginMainFooter
         className={"''"}
 				children={<>ReactNode</>}
-				socialMediaLoginContent={null}
-				signUpForAccountMessage={null}
-				forgotCredentials={null}
+				socialMediaLoginContent={<>ReactNode</>}
+				signUpForAccountMessage={<>ReactNode</>}
+				forgotCredentials={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

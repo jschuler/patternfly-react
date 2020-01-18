@@ -21,7 +21,7 @@ describe('OptionsMenuToggle test', () => {
 				aria-label={"'Options menu'"}
 				onEnter={undefined}
 				parentRef={undefined}
-				toggleTemplate={<React.Fragment />}
+				toggleTemplate={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

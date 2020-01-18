@@ -8,7 +8,7 @@ describe('AlertIcon test', () => {
   it('AlertIcon should match snapshot', () => {
     const view = shallow(
       <AlertIcon
-        variant={''success''}
+        variant={'success'}
 				className={"''"}
       />);
     expect(view).toMatchSnapshot();

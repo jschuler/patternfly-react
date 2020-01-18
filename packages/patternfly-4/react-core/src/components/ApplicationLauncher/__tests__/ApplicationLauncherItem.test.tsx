@@ -19,7 +19,7 @@ describe('ApplicationLauncherItem test', () => {
 				id={undefined}
 				customChild={undefined}
 				enterTriggersArrowDown={false}
-				className={"''"}
+				className={''}
       />);
     expect(view).toMatchSnapshot();
   });

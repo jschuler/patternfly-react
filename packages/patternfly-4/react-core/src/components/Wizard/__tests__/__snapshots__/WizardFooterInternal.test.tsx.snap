@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WizardFooterInternal test WizardFooterInternal should match snapshot 1`] = `
+<footer
+  className="pf-c-wizard__footer"
+>
+  <Component
+    isDisabled={false}
+    onClick="any"
+    type="submit"
+    variant="primary"
+  >
+    'defaultString'
+  </Component>
+  <Component
+    className="pf-m-disabled"
+    onClick="any"
+    variant="secondary"
+  >
+    'defaultString'
+  </Component>
+  <Component
+    onClick="any"
+    variant="link"
+  >
+    'defaultString'
+  </Component>
+</footer>
+`;

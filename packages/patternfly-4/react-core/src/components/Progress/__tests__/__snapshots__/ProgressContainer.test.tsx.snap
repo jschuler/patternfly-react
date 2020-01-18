@@ -14,7 +14,7 @@ exports[`ProgressContainer test ProgressContainer should match snapshot 1`] = `
     <span
       className="pf-c-progress__measure"
     >
-      42%
+      ReactNode
     </span>
     <span
       className="pf-c-progress__status-icon"

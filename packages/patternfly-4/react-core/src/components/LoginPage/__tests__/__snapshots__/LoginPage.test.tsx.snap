@@ -9,7 +9,11 @@ exports[`LoginPage test LoginPage should match snapshot 1`] = `
         <p>
           ''
         </p>
-        <Unknown />
+        <Unknown>
+          <React.Fragment>
+            ReactNode
+          </React.Fragment>
+        </Unknown>
       </Unknown>
     }
     header={
@@ -31,6 +35,23 @@ exports[`LoginPage test LoginPage should match snapshot 1`] = `
     <Component>
       ReactNode
     </Component>
+    <Component
+      forgotCredentials={
+        <React.Fragment>
+          ReactNode
+        </React.Fragment>
+      }
+      signUpForAccountMessage={
+        <React.Fragment>
+          ReactNode
+        </React.Fragment>
+      }
+      socialMediaLoginContent={
+        <React.Fragment>
+          ReactNode
+        </React.Fragment>
+      }
+    />
   </Component>
 </Fragment>
 `;

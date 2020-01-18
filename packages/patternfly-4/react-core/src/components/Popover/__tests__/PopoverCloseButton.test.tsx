@@ -8,7 +8,8 @@ describe('PopoverCloseButton test', () => {
   it('PopoverCloseButton should match snapshot', () => {
     const view = shallow(
       <PopoverCloseButton
-        onClose={"() => undefined as void"}
+        aria-label={"'defaultString'"}
+				onClose={() => undefined as void}
       />);
     expect(view).toMatchSnapshot();
   });

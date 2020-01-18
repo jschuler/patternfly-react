@@ -13,7 +13,7 @@ describe('ContextSelectorItem test', () => {
 				isDisabled={false}
 				isHovered={false}
 				onClick={(): any => undefined}
-				index={string}
+				index={42}
 				sendRef={() => {}}
       />);
     expect(view).toMatchSnapshot();

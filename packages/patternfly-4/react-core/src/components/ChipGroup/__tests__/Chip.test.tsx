@@ -14,7 +14,7 @@ describe('Chip test', () => {
 				isOverflowChip={false}
 				isReadOnly={false}
 				onClick={(_e: React.MouseEvent) => undefined as any}
-				component={'div'}
+				component={<>ReactNode</>}
 				tooltipPosition={'top'}
       />);
     expect(view).toMatchSnapshot();

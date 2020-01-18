@@ -13,7 +13,7 @@ describe('BreadcrumbItem test', () => {
 				to={"null"}
 				isActive={false}
 				target={"null"}
-				component={'a'}
+				component={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });

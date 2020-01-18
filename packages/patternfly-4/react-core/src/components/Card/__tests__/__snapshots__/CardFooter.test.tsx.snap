@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardFooter test CardFooter should match snapshot 1`] = `
-<div
+<[object Object]
   className="pf-c-card__footer ''"
 >
   ReactNode
-</div>
+</[object Object]>
 `;

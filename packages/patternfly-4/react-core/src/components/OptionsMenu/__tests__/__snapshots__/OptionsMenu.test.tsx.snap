@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionsMenu test OptionsMenu should match snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "baseClass": "pf-c-options-menu",
+      "baseComponent": "div",
+      "disabledClass": "pf-m-disabled",
+      "id": "'defaultString'",
+      "itemClass": "pf-c-options-menu__menu-item",
+      "menuClass": "pf-c-options-menu__menu",
+      "menuComponent": "ul",
+      "onSelect": [Function],
+      "toggleClass": "pf-c-options-menu__toggle",
+      "toggleIconClass": "pf-c-options-menu__toggle-icon",
+      "toggleTextClass": "pf-c-options-menu__toggle-text",
+    }
+  }
+>
+  <Component
+    className="''"
+    dropdownItems={Array []}
+    id="'defaultString'"
+    isGrouped={false}
+    toggle={
+      <p>
+        ReactElement
+      </p>
+    }
+  />
+</ContextProvider>
+`;

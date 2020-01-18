@@ -8,8 +8,8 @@ describe('Title test', () => {
   it('Title should match snapshot', () => {
     const view = shallow(
       <Title
-        size={''xs''}
-				children={''}
+        size={'xs'}
+				children={<>ReactNode</>}
 				className={"''"}
 				headingLevel={'h1'}
       />);

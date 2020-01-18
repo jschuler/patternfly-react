@@ -9,6 +9,7 @@ describe('PopoverContent test', () => {
     const view = shallow(
       <PopoverContent
         className={"null"}
+				children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

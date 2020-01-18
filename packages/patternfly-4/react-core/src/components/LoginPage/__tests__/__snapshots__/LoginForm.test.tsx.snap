@@ -7,7 +7,9 @@ exports[`LoginForm test LoginForm should match snapshot 1`] = `
   <Component
     isError={false}
     isHidden={true}
-  />
+  >
+    ReactNode
+  </Component>
   <Component
     fieldId="pf-login-username-id"
     isRequired={true}

@@ -11,7 +11,7 @@ describe('NavGroup test', () => {
         title={"'defaultString'"}
 				children={<>ReactNode</>}
 				className={"''"}
-				id={"string"}
+				id={"'defaultString'"}
       />);
     expect(view).toMatchSnapshot();
   });

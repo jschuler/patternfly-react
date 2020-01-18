@@ -8,9 +8,9 @@ describe('WizardToggle test', () => {
   it('WizardToggle should match snapshot', () => {
     const view = shallow(
       <WizardToggle
-        nav={'any'}
+        nav={(isWizardNavOpen: boolean) => <>ReactElement</>}
 				steps={[]}
-				activeStep={{name: 'step'}}
+				activeStep={() => {}/*unrecognizedType WizardStep undefined*/}
 				children={<div>ReactNode</div>}
 				hasBodyPadding={true}
 				isNavOpen={true}

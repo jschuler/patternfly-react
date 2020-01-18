@@ -8,7 +8,8 @@ describe('WizardBody test', () => {
   it('WizardBody should match snapshot', () => {
     const view = shallow(
       <WizardBody
-        hasBodyPadding={"true"}
+        children={'any'}
+				hasBodyPadding={true}
       />);
     expect(view).toMatchSnapshot();
   });

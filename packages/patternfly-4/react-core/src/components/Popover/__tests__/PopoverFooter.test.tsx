@@ -9,6 +9,7 @@ describe('PopoverFooter test', () => {
     const view = shallow(
       <PopoverFooter
         className={"''"}
+				children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

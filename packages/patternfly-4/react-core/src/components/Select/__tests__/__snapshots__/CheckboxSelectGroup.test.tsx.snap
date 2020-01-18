@@ -11,5 +11,6 @@ exports[`CheckboxSelectGroup test CheckboxSelectGroup should match snapshot 1`] 
   >
     ''
   </div>
+  ReactNode
 </div>
 `;

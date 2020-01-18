@@ -10,7 +10,7 @@ describe('Card test', () => {
       <Card
         children={<>ReactNode</>}
 				className={"''"}
-				component={'article'}
+				component={<>ReactNode</>}
 				isHoverable={false}
 				isCompact={false}
       />);

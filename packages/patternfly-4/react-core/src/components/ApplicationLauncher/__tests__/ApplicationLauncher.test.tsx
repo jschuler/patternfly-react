@@ -9,17 +9,17 @@ describe('ApplicationLauncher test', () => {
     const view = shallow(
       <ApplicationLauncher
         className={"''"}
-				direction={string}
+				direction={'up'}
 				dropdownItems={[]}
 				items={[]}
 				isDisabled={false}
 				isOpen={false}
-				position={string}
+				position={'right'}
 				onSelect={(_event: any): any => undefined}
 				onToggle={(_value: boolean): any => undefined}
 				aria-label={"'Application launcher'"}
 				isGrouped={false}
-				toggleIcon={<ThIcon />}
+				toggleIcon={<>ReactNode</>}
 				favorites={[]}
 				onFavorite={undefined}
 				onSearch={undefined}

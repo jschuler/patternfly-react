@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverDialog test PopoverDialog should match snapshot 1`] = `
+<div
+  aria-modal="true"
+  className="pf-c-popover pf-m-top null"
+  role="dialog"
+>
+  ReactNode
+</div>
+`;

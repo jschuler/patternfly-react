@@ -13,7 +13,7 @@ export interface ApplicationLauncherProps extends React.HTMLProps<HTMLDivElement
   /** Additional element css classes */
   className?: string;
   /** Display menu above or below dropdown toggle */
-  direction?: DropdownDirection;
+  direction?: DropdownDirection | 'up' | 'down';
   /**
    * @deprecated
    * Use the items prop instead
@@ -28,7 +28,7 @@ export interface ApplicationLauncherProps extends React.HTMLProps<HTMLDivElement
   /** open bool */
   isOpen?: boolean;
   /** Indicates where menu will be alligned horizontally */
-  position?: DropdownPosition;
+  position?: DropdownPosition | 'right' | 'left';
   /** Function callback called when user selects item */
   onSelect?: (event: any) => void;
   /** Callback called when application launcher toggle is clicked */

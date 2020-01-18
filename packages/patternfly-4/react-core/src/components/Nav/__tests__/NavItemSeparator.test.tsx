@@ -8,7 +8,7 @@ describe('NavItemSeparator test', () => {
   it('NavItemSeparator should match snapshot', () => {
     const view = shallow(
       <NavItemSeparator
-        className={"''"}
+        className={''}
       />);
     expect(view).toMatchSnapshot();
   });

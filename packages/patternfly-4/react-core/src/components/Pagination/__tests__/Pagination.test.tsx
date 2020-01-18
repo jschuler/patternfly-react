@@ -14,7 +14,7 @@ describe('Pagination test', () => {
 				variant={'top'}
 				isDisabled={false}
 				isCompact={false}
-				perPage={string}
+				perPage={42}
 				perPageOptions={[
   {
     title: '10',
@@ -54,7 +54,7 @@ describe('Pagination test', () => {
   currPage: 'Current page',
   paginationTitle: 'Pagination'
 }}
-				toggleTemplate={string}
+				toggleTemplate={'string'}
 				onSetPage={() => undefined}
 				onFirstClick={() => undefined}
 				onPreviousClick={() => undefined}

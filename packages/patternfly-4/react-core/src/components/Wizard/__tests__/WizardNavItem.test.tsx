@@ -14,7 +14,7 @@ describe('WizardNavItem test', () => {
 				isDisabled={false}
 				step={42}
 				onNavItemClick={() => undefined}
-				navItemComponent={'a'}
+				navItemComponent={<>ReactNode</>}
       />);
     expect(view).toMatchSnapshot();
   });
