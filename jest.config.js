@@ -21,6 +21,10 @@ module.exports = {
   testPathIgnorePatterns: [
     '<rootDir>/packages/patternfly-4/react-integration/',
   ],
+  coveragePathIgnorePatterns: [
+    '/dist/',
+    '/react-styles\/css/'
+  ],
   // https://github.com/kulshekhar/ts-jest/blob/master/docs/user/config/index.md
   preset: 'ts-jest/presets/js-with-babel',
   globals: {
