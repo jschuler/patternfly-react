@@ -31,5 +31,3 @@ lerna-debug.log
 
 # Deploy directory
 docs
-
-__tests__

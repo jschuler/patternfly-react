@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "generator-react-jest-tests-ts": {
-      "signature": "4edb566e5d025f7df3b3c87705a8cc35",
-      "pure": true
-    }
-  }
-}
