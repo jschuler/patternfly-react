@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartDonutUtilization test ChartDonutUtilization should match snapshot 1`] = `
+<Fragment>
+  <Component
+    height={42}
+    theme={Object {}}
+    width={42}
+  >
+    <Component
+      allowTooltip={true}
+      data={
+        Array [
+          Object {
+            "x": 0,
+            "y": Object {},
+          },
+          Object {
+            "y": 100,
+          },
+        ]
+      }
+      height={42}
+      key="pf-chart-donut-utilization"
+      legendPosition="bottom"
+      standalone={false}
+      theme={Object {}}
+      width={42}
+    />
+  </Component>
+</Fragment>
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartScatter test ChartScatter should match snapshot 1`] = `
+<VictoryScatter
+  containerComponent={
+    <Unknown
+      theme={Object {}}
+    />
+  }
+  dataComponent={
+    <Point
+      pathComponent={<Path />}
+      role="presentation"
+      shapeRendering="auto"
+    />
+  }
+  groupComponent={<g />}
+  labelComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+  samples={50}
+  size={[Function]}
+  sortOrder="ascending"
+  standalone={true}
+  theme={Object {}}
+/>
+`;

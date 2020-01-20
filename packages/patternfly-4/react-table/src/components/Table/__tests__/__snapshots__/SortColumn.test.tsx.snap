@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortColumn test SortColumn should match snapshot 1`] = `
+<button
+  className="''"
+  onClick={[Function]}
+>
+  ReactNode
+  <span
+    className="pf-c-table__sort-indicator"
+  >
+    <ArrowsAltVIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+      title={null}
+    />
+  </span>
+</button>
+`;

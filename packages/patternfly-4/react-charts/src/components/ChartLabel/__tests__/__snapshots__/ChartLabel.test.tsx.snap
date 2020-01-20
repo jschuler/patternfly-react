@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartLabel test ChartLabel should match snapshot 1`] = `
+<VictoryLabel
+  capHeight={0.71}
+  direction="inherit"
+  lineHeight={1}
+  style={
+    Object {
+      "fontFamily": "var(--pf-chart-global--FontFamily)",
+      "fontSize": 14,
+      "letterSpacing": "var(--pf-chart-global--letter-spacing)",
+    }
+  }
+  textComponent={<Text />}
+  tspanComponent={<TSpan />}
+/>
+`;

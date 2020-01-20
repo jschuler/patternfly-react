@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataToolbarFilter test DataToolbarFilter should match snapshot 1`] = `
+<DataToolbarFilter
+  categoryName="'defaultString'"
+  chips={Array []}
+  showToolbarItem={true}
+>
+  <div>
+    ReactNode
+  </div>
+</DataToolbarFilter>
+`;

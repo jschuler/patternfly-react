@@ -13,7 +13,7 @@ describe('WizardFooterInternal test', () => {
 				onClose={'any'}
 				isValid={true}
 				firstStep={true}
-				activeStep={() => {}}
+				activeStep={() => {}/*unrecognizedType WizardStep undefined*/}
 				nextButtonText={"'defaultString'"}
 				backButtonText={"'defaultString'"}
 				cancelButtonText={"'defaultString'"}

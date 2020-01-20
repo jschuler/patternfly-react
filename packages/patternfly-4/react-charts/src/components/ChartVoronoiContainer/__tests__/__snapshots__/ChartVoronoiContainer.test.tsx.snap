@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartVoronoiContainer test ChartVoronoiContainer should match snapshot 1`] = `
+<VictoryVoronoiContainer
+  activateData={true}
+  activateLabels={true}
+  className="pf-c-chart"
+  labelComponent={
+    <Unknown
+      constrainToVisibleArea={false}
+      theme={Object {}}
+    />
+  }
+  portalComponent={<Portal />}
+  portalZIndex={99}
+  responsive={true}
+  theme={Object {}}
+  voronoiPadding={5}
+/>
+`;

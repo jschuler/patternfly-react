@@ -8,7 +8,7 @@ describe('ProgressContainer test', () => {
   it('ProgressContainer should match snapshot', () => {
     const view = shallow(
       <ProgressContainer
-        ariaProps={{}}
+        ariaProps={{}/*unrecognizedType AriaProps undefined*/}
 				parentId={"'defaultString'"}
 				title={"''"}
 				label={<>ReactNode</>}

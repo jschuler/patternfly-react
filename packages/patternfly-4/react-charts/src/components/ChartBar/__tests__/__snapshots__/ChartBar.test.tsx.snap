@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartBar test ChartBar should match snapshot 1`] = `
+<VictoryBar
+  containerComponent={
+    <Unknown
+      theme={Object {}}
+    />
+  }
+  data={
+    Array [
+      Object {
+        "x": 1,
+        "y": 1,
+      },
+      Object {
+        "x": 2,
+        "y": 2,
+      },
+      Object {
+        "x": 3,
+        "y": 3,
+      },
+      Object {
+        "x": 4,
+        "y": 4,
+      },
+    ]
+  }
+  dataComponent={
+    <Bar
+      defaultBarWidth={8}
+      pathComponent={<Path />}
+      role="presentation"
+      shapeRendering="auto"
+    />
+  }
+  groupComponent={
+    <g
+      role="presentation"
+    />
+  }
+  labelComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+  samples={50}
+  sortOrder="ascending"
+  standalone={true}
+  theme={Object {}}
+/>
+`;

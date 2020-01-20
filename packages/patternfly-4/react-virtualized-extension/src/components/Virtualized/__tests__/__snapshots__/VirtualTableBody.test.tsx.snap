@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VirtualTableBody test VirtualTableBody should match snapshot 1`] = `
+<VirtualGrid
+  aria-label={null}
+  aria-readonly={null}
+  autoContainerWidth={true}
+  autoHeight={false}
+  autoWidth={false}
+  cellRangeRenderer={[Function]}
+  cellRenderer={[Function]}
+  className="ReactVirtualized__List"
+  columnWidth={42}
+  containerRole="rowgroup"
+  containerStyle={
+    Object {
+      "display": "block",
+    }
+  }
+  estimatedColumnSize={100}
+  estimatedRowSize={30}
+  getScrollbarSize={[Function]}
+  height={42}
+  innerScrollContainerComponent="tbody"
+  isScrollingOptOut={false}
+  noContentRenderer={[Function]}
+  noRowsRenderer={[Function]}
+  onRowsRendered={[Function]}
+  onScroll={[Function]}
+  onScrollbarPresenceChange={[Function]}
+  onSectionRendered={[Function]}
+  overscanColumnCount={0}
+  overscanIndicesGetter={[Function]}
+  overscanRowCount={10}
+  role="presentation"
+  rowCount={42}
+  rowHeight={1}
+  rowRenderer="any"
+  rows={Array []}
+  scrollContainerComponent="table"
+  scrollToAlignment="auto"
+  scrollToColumn={-1}
+  scrollToIndex={-1}
+  scrollToRow={-1}
+  scrollingResetTimeInterval={150}
+  style={
+    Object {
+      "display": "block",
+      "tableLayout": "fixed",
+    }
+  }
+  tabIndex={null}
+  width={42}
+/>
+`;

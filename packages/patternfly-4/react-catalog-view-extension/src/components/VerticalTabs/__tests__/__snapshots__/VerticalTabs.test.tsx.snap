@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VerticalTabs test VerticalTabs should match snapshot 1`] = `
+<ul
+  className="vertical-tabs-pf ''"
+>
+  ReactNode
+</ul>
+`;

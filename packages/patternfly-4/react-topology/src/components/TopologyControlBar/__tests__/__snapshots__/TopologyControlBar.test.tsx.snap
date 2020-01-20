@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopologyControlBar test TopologyControlBar should match snapshot 1`] = `
+<Toolbar
+  className="null"
+>
+  <ToolbarGroup>
+    ReactNode
+  </ToolbarGroup>
+</Toolbar>
+`;

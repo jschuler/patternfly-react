@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartContainer test ChartContainer should match snapshot 1`] = `
+<VictoryContainer
+  className="pf-c-chart"
+  portalComponent={<Portal />}
+  portalZIndex={99}
+  responsive={true}
+  theme={Object {}}
+/>
+`;

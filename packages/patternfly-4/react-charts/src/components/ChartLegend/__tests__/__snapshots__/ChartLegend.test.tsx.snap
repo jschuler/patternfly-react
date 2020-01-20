@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartLegend test ChartLegend should match snapshot 1`] = `
+<VictoryLegend
+  borderComponent={
+    <Border
+      rectComponent={<Rect />}
+      role="presentation"
+      shapeRendering="auto"
+    />
+  }
+  containerComponent={
+    <Unknown
+      responsive={true}
+      theme={Object {}}
+    />
+  }
+  data={
+    Array [
+      Object {
+        "name": "Series 1",
+      },
+      Object {
+        "name": "Series 2",
+      },
+    ]
+  }
+  dataComponent={<Unknown />}
+  groupComponent={<g />}
+  labelComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+  standalone={true}
+  theme={Object {}}
+  titleComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+/>
+`;

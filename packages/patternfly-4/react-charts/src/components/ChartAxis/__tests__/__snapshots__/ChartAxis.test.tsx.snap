@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartAxis test ChartAxis should match snapshot 1`] = `
+<VictoryAxis
+  axisComponent={
+    <LineSegment
+      lineComponent={<Line />}
+      role="presentation"
+      shapeRendering="auto"
+      type="axis"
+    />
+  }
+  axisLabelComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+  containerComponent={
+    <Unknown
+      theme={Object {}}
+    />
+  }
+  fixLabelOverlap={false}
+  gridComponent={
+    <LineSegment
+      lineComponent={<Line />}
+      role="presentation"
+      shapeRendering="auto"
+      type="grid"
+    />
+  }
+  groupComponent={
+    <g
+      role="presentation"
+    />
+  }
+  standalone={true}
+  theme={Object {}}
+  tickComponent={
+    <LineSegment
+      lineComponent={<Line />}
+      role="presentation"
+      shapeRendering="auto"
+      type="tick"
+    />
+  }
+  tickLabelComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+/>
+`;

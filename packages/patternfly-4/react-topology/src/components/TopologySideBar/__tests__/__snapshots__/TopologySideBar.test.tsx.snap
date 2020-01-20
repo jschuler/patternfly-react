@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopologySideBar test TopologySideBar should match snapshot 1`] = `
+<div
+  className="pf-topology-side-bar fade "
+  role="dialog"
+/>
+`;

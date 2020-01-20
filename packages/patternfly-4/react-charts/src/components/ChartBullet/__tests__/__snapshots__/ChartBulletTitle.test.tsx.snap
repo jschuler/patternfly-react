@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartBulletTitle test ChartBulletTitle should match snapshot 1`] = `
+<Component
+  height={140}
+  width={450}
+>
+  <Component
+    style={
+      Array [
+        Object {
+          "fontSize": 18,
+        },
+        Object {
+          "fill": "#b8bbbe",
+          "fontSize": 14,
+        },
+      ]
+    }
+    textAnchor="end"
+    verticalAnchor="middle"
+    x={36}
+    y={70}
+  />
+</Component>
+`;

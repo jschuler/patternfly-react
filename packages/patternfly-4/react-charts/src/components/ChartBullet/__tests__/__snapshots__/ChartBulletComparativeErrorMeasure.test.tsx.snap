@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartBulletComparativeErrorMeasure test ChartBulletComparativeErrorMeasure should match snapshot 1`] = `
+<Component
+  height={42}
+  width={42}
+>
+  <Component
+    allowTooltip={true}
+    constrainToVisibleArea={false}
+    height={42}
+    horizontal={true}
+    standalone={false}
+    theme={Object {}}
+    width={42}
+  />
+</Component>
+`;

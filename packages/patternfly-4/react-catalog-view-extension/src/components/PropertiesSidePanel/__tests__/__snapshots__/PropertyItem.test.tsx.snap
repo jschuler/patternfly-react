@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertyItem test PropertyItem should match snapshot 1`] = `
+<div
+  className="properties-side-panel-pf-property ''"
+>
+  <Text
+    className="properties-side-panel-pf-property-label"
+    component="h5"
+  >
+    string
+  </Text>
+  <div
+    className="properties-side-panel-pf-property-value"
+  />
+</div>
+`;

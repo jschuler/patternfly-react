@@ -22,7 +22,7 @@ describe('Navigation test', () => {
 				paginationTitle={"'Pagination'"}
 				page={0}
 				perPage={undefined}
-				onSetPage={() => {}}
+				onSetPage={() => {}/*unrecognizedType OnSetPage undefined*/}
 				onNextClick={() => undefined as any}
 				onPreviousClick={() => undefined as any}
 				onFirstClick={() => undefined as any}

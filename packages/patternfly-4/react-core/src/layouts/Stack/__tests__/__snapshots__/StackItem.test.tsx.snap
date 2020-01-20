@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StackItem test StackItem should match snapshot 1`] = `
+<div
+  className="pf-l-stack__item ''"
+>
+  ReactNode
+</div>
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataToolbar test DataToolbar should match snapshot 1`] = `
+<div
+  className="pf-c-data-toolbar"
+  id="'defaultString'"
+>
+  <ContextProvider
+    value={
+      Object {
+        "chipGroupContentRef": Object {
+          "current": null,
+        },
+        "isExpanded": false,
+        "numberOfFilters": 0,
+        "toggleIsExpanded": [Function],
+        "updateNumberFilters": [Function],
+      }
+    }
+  >
+    <DataToolbarChipGroupContent
+      chipGroupContentRef={
+        Object {
+          "current": null,
+        }
+      }
+      clearFiltersButtonText="Clear all filters"
+      collapseListedFiltersBreakpoint="lg"
+      isExpanded={false}
+      numberOfFilters={0}
+      showClearFiltersButton={false}
+    />
+  </ContextProvider>
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Split test Split should match snapshot 1`] = `
+<[object Object]
+  className="pf-l-split ''"
+>
+  ReactNode
+</[object Object]>
+`;

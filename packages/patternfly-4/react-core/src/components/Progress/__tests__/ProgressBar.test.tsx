@@ -11,7 +11,7 @@ describe('ProgressBar test', () => {
         children={<>ReactNode</>}
 				className={"''"}
 				value={42}
-				ariaProps={{}}
+				ariaProps={{}/*unrecognizedType AriaProps undefined*/}
       />);
     expect(view).toMatchSnapshot();
   });

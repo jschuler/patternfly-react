@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderCell test HeaderCell should match snapshot 1`] = `
+<[object Object]
+  className="''"
+  scope="''"
+/>
+`;

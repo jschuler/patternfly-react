@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolbarGroup test ToolbarGroup should match snapshot 1`] = `
+<div
+  className="pf-l-toolbar__group null"
+>
+  ReactNode
+</div>
+`;

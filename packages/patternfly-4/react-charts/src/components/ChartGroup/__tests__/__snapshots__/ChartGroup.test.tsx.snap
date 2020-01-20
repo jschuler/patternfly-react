@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartGroup test ChartGroup should match snapshot 1`] = `
+<VictoryGroup
+  containerComponent={
+    <Unknown
+      className="pf-c-chart"
+      theme={Object {}}
+    />
+  }
+  groupComponent={<g />}
+  samples={50}
+  sortOrder="ascending"
+  standalone={true}
+  theme={Object {}}
+/>
+`;

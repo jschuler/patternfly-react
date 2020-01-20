@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatalogItemHeader test CatalogItemHeader should match snapshot 1`] = `
+<header
+  className="catalog-item-header-pf ''"
+>
+  <img
+    alt=""
+    className="catalog-item-header-pf-icon"
+    src="null"
+  />
+  <div
+    className="catalog-item-header-pf-text"
+  >
+    <h1
+      className="catalog-item-header-pf-title"
+    >
+      string
+    </h1>
+  </div>
+</header>
+`;

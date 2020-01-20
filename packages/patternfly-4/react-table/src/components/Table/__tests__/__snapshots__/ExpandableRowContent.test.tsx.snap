@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpandableRowContent test ExpandableRowContent should match snapshot 1`] = `
+<div
+  className="pf-c-table__expandable-row-content"
+>
+  ReactNode
+</div>
+`;

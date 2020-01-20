@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatalogTile test CatalogTile should match snapshot 1`] = `
+<Card
+  className="catalog-tile-pf ''"
+  component="a"
+  href="null"
+  id={null}
+  isHoverable={true}
+  onClick={[Function]}
+>
+  <CardHead>
+    <img
+      alt="''"
+      className="catalog-tile-pf-icon"
+      src="null"
+    />
+  </CardHead>
+  <CardHeader
+    className="catalog-tile-pf-header"
+  >
+    <div
+      className="catalog-tile-pf-title"
+    >
+      string
+    </div>
+  </CardHeader>
+</Card>
+`;

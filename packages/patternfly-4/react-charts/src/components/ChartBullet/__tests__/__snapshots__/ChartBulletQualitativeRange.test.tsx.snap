@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartBulletQualitativeRange test ChartBulletQualitativeRange should match snapshot 1`] = `
+<Component
+  height={42}
+  width={42}
+/>
+`;

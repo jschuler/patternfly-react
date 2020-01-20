@@ -77,7 +77,8 @@
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^3.6.0"
+    "tslint-react": "^3.6.0",
+    "yo": "^3.1.1"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -110,7 +111,8 @@
     "test:pf3": "jest packages/patternfly-3",
     "test:pf4": "jest packages/patternfly-4",
     "test:watch": "jest --watchAll",
-    "uninstall": "find . -name node_modules -type d | xargs rm -rf"
+    "uninstall": "find . -name node_modules -type d | xargs rm -rf",
+    "gen:snapshots": "yalc update && DEBUG=generator-react-jest-tests* yo react-jest-tests:test"
   },
   "config": {
     "commitizen": {

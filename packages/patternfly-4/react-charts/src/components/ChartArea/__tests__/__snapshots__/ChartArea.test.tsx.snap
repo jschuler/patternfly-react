@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartArea test ChartArea should match snapshot 1`] = `
+<VictoryArea
+  containerComponent={
+    <Unknown
+      theme={Object {}}
+    />
+  }
+  dataComponent={
+    <Area
+      groupComponent={<g />}
+      pathComponent={<Path />}
+      role="presentation"
+      shapeRendering="auto"
+    />
+  }
+  groupComponent={
+    <VictoryClipContainer
+      circleComponent={<Circle />}
+      clipPathComponent={<ClipPath />}
+      groupComponent={<g />}
+      rectComponent={<Rect />}
+    />
+  }
+  labelComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      renderInPortal={true}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+  samples={50}
+  sortKey="x"
+  sortOrder="ascending"
+  standalone={true}
+  theme={Object {}}
+/>
+`;

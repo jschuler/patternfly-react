@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartTooltip test ChartTooltip should match snapshot 1`] = `
+<VictoryTooltip
+  active={false}
+  constrainToVisibleArea={false}
+  flyoutComponent={
+    <Flyout
+      pathComponent={<Path />}
+      role="presentation"
+      shapeRendering="auto"
+    />
+  }
+  groupComponent={<g />}
+  labelComponent={
+    <VictoryLabel
+      capHeight={0.71}
+      direction="inherit"
+      lineHeight={1}
+      textComponent={<Text />}
+      tspanComponent={<TSpan />}
+    />
+  }
+  renderInPortal={true}
+  theme={Object {}}
+/>
+`;

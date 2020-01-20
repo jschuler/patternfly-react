@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataToolbarContent test DataToolbarContent should match snapshot 1`] = `
+<div
+  className="pf-c-data-toolbar__content"
+>
+  <ContextProvider
+    value={
+      Object {
+        "chipContainerRef": Object {
+          "current": null,
+        },
+        "expandableContentId": "undefined-expandable-content-0",
+        "expandableContentRef": Object {
+          "current": null,
+        },
+      }
+    }
+  >
+    <DataToolbarExpandableContent
+      chipContainerRef={
+        Object {
+          "current": null,
+        }
+      }
+      clearFiltersButtonText="Clear all filters"
+      expandableContentRef={
+        Object {
+          "current": null,
+        }
+      }
+      id="undefined-expandable-content-0"
+      isExpanded={false}
+      showClearFiltersButton={false}
+    />
+  </ContextProvider>
+</div>
+`;

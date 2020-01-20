@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartStack test ChartStack should match snapshot 1`] = `
+<VictoryStack
+  containerComponent={
+    <Unknown
+      className="pf-c-chart"
+      theme={Object {}}
+    />
+  }
+  fillInMissingData={true}
+  groupComponent={<g />}
+  standalone={true}
+  theme={Object {}}
+/>
+`;

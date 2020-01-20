@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataToolbarChipGroupContent test DataToolbarChipGroupContent should match snapshot 1`] = `
+<div
+  className="pf-c-data-toolbar__content"
+>
+  <ForwardRef
+    className=""
+  />
+  <Component
+    className=""
+  >
+    <Component
+      isInline={true}
+      onClick={[Function]}
+      variant="link"
+    >
+      'Clear all filters'
+    </Component>
+  </Component>
+</div>
+`;

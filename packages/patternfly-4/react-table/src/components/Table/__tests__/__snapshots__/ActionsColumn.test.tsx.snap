@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionsColumn test ActionsColumn should match snapshot 1`] = `
+<Fragment>
+  <Dropdown
+    direction="down"
+    dropdownItems={Array []}
+    isOpen={false}
+    isPlain={true}
+    position="right"
+    toggle={
+      <KebabToggle
+        onToggle={[Function]}
+      />
+    }
+  />
+  ReactNode
+</Fragment>
+`;

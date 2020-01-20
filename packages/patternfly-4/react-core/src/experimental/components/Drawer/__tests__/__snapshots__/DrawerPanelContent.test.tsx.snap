@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrawerPanelContent test DrawerPanelContent should match snapshot 1`] = `
+<aside
+  className="pf-c-drawer__panel ''"
+>
+  <div
+    className="pf-c-drawer__panel-body"
+  />
+</aside>
+`;

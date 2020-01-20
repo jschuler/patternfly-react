@@ -16,14 +16,8 @@ export const ToolbarSection: React.FunctionComponent<ToolbarSectionProps> = ({
   className = null,
   'aria-label': ariaLabel,
   ...props
-}: ToolbarSectionProps) => {
-  if (!ariaLabel) {
-    throw new Error('ToolbarSection requires aria-label to be specified');
-  }
-
-  return (
-    <section {...props} className={css('pf-l-toolbar__section', className)}>
-      {children}
-    </section>
-  );
-};
+}: ToolbarSectionProps) => (
+  <section {...props} className={css('pf-l-toolbar__section', className)}>
+    {children}
+  </section>
+);
