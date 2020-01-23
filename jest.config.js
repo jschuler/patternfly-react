@@ -1,6 +1,14 @@
 module.exports = {
   collectCoverage: true,
   coverageReporters: ['lcov'],
+  collectCoverageFrom: [
+    "**/patternfly-4/**/src/**/*.{js,jsx,ts,tsx}",
+    "!**/patternfly-4/react-integration/**",
+    "!**/node_modules/**",
+    "!**/dist/**",
+    "!**/index.{js,jsx,ts,tsx}",
+    "!**/*.d.ts"
+  ],
   clearMocks: true,
   modulePathIgnorePatterns: [
     '<rootDir>/packages/*.*/dist/*.*',
@@ -20,10 +28,6 @@ module.exports = {
   transformIgnorePatterns: ['node_modules/(?!@patternfly|@novnc|tippy.js|lodash)'],
   testPathIgnorePatterns: [
     '<rootDir>/packages/patternfly-4/react-integration/',
-  ],
-  coveragePathIgnorePatterns: [
-    '/dist/',
-    '/react-styles\/css/'
   ],
   // https://github.com/kulshekhar/ts-jest/blob/master/docs/user/config/index.md
   preset: 'ts-jest/presets/js-with-babel',
