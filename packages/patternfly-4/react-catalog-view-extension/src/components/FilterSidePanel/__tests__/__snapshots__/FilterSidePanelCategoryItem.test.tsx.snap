@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSidePanelCategoryItem test FilterSidePanelCategoryItem should match snapshot 1`] = `
+<div
+  className="filter-panel-pf-category-item ''"
+>
+  <Checkbox
+    checked={false}
+    className=""
+    id="pf-15798045339509rhna798bd"
+    isChecked={false}
+    isDisabled={false}
+    isValid={true}
+    label={
+      <React.Fragment>
+        <span
+          className="item-icon"
+        >
+          <React.Fragment>
+            ReactNode
+          </React.Fragment>
+        </span>
+        <React.Fragment>
+          ReactNode
+        </React.Fragment>
+      </React.Fragment>
+    }
+    onChange={[Function]}
+    onClick={null}
+  />
+</div>
+`;

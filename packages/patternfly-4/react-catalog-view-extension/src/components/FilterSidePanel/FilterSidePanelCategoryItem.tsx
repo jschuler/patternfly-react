@@ -1,10 +1,10 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { Checkbox } from '@patternfly/react-core';
+import { Checkbox, CheckboxProps } from '@patternfly/react-core';
 
 import { getUniqueId } from '../../helpers/util';
 
-export interface FilterSidePanelCategoryItemProps extends React.Component<Checkbox> {
+export interface FilterSidePanelCategoryItemProps /*extends CheckboxProps*/ {
   /** Children nodes */
   children?: React.ReactNode;
   /** Additional css classes for the Filter Panel Property Item */
@@ -42,5 +42,3 @@ export const FilterSidePanelCategoryItem: React.FunctionComponent<FilterSidePane
     </div>
   );
 };
-
-export default FilterSidePanelCategoryItem;

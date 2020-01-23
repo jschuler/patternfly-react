@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSidePanel test FilterSidePanel should match snapshot 1`] = `
+<div
+  className="filter-panel-pf ''"
+>
+  ReactNode
+</div>
+`;

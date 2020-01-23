@@ -3,9 +3,10 @@ module.exports = {
   coverageReporters: ['lcov'],
   collectCoverageFrom: [
     "**/patternfly-4/**/src/**/*.{js,jsx,ts,tsx}",
-    "!**/patternfly-4/react-integration/**",
+    "!**/patternfly-4/{react-integration,react-docs,react-styles}/**",
     "!**/node_modules/**",
     "!**/dist/**",
+    "!**/examples/**",
     "!**/index.{js,jsx,ts,tsx}",
     "!**/*.d.ts"
   ],

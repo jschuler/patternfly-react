@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterSidePanelCategory test FilterSidePanelCategory should match snapshot 1`] = `
+<form
+  className="filter-panel-pf-category ''"
+>
+  <fieldset
+    className="pf-c-form__fieldset checkbox filter-panel-pf-category-items"
+  >
+    ReactNode
+  </fieldset>
+</form>
+`;

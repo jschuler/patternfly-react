@@ -20,5 +20,3 @@ export const FilterSidePanel: React.FunctionComponent<FilterSidePanelProps> = ({
     </div>
   );
 };
-
-export default FilterSidePanel;

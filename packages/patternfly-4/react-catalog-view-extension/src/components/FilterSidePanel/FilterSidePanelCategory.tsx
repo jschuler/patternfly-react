@@ -77,5 +77,3 @@ export const FilterSidePanelCategory: React.FunctionComponent<FilterSidePanelCat
     </form>
   );
 };
-
-export default FilterSidePanelCategory;
