@@ -22,7 +22,7 @@ export interface ContextSelectorItemProps {
 }
 
 export class ContextSelectorItem extends React.Component<ContextSelectorItemProps> {
-  static defaultProps = {
+  static defaultProps: ContextSelectorItemProps = {
     children: null as React.ReactNode,
     className: '',
     isHovered: false,

@@ -18,7 +18,7 @@ export interface DropdownToggleActionProps {
 }
 
 export class DropdownToggleAction extends React.Component<DropdownToggleActionProps> {
-  static defaultProps = {
+  static defaultProps: DropdownToggleActionProps = {
     className: '',
     isDisabled: false,
     onClick: () => {}

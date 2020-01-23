@@ -60,7 +60,7 @@ export interface ApplicationLauncherProps extends React.HTMLProps<HTMLDivElement
 export const ApplicationLauncherContext = React.createContext({ onFavorite: (itemId: string, isFavorite: boolean) => {} });
 
 export class ApplicationLauncher extends React.Component<ApplicationLauncherProps> {
-  static defaultProps = {
+  static defaultProps: ApplicationLauncherProps = {
     className: '',
     isDisabled: false,
     direction: DropdownDirection.down,

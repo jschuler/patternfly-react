@@ -5,8 +5,9 @@ import { css, getModifier } from '@patternfly/react-styles';
 import { RefObject } from 'react';
 import { DataToolbarGroup } from './DataToolbarGroup';
 import { DataToolbarItem } from './DataToolbarItem';
-import { Button } from '../../../components/Button';
+import { Button } from '../Button';
 import { DataToolbarContext } from './DataToolbarUtils';
+import { PickOptional } from '../../helpers/typeUtils';
 
 export interface DataToolbarExpandableContentProps extends React.HTMLProps<HTMLDivElement> {
   /** Classes added to the root element of the data toolbar expandable content */
@@ -28,7 +29,7 @@ export interface DataToolbarExpandableContentProps extends React.HTMLProps<HTMLD
 export class DataToolbarExpandableContent extends React.Component<DataToolbarExpandableContentProps> {
   // @ts-ignore
   static contextType: any = DataToolbarContext;
-  static defaultProps = {
+  static defaultProps: PickOptional<DataToolbarExpandableContentProps> = {
     isExpanded: false,
     clearFiltersButtonText: 'Clear all filters'
   };

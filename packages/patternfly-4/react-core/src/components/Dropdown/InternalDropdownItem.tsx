@@ -51,7 +51,7 @@ export class InternalDropdownItem extends React.Component<InternalDropdownItemPr
   ref = React.createRef<HTMLLIElement>();
   additionalRef = React.createRef<any>();
 
-  static defaultProps = {
+  static defaultProps: InternalDropdownItemProps = {
     className: '',
     isHovered: false,
     component: 'a',

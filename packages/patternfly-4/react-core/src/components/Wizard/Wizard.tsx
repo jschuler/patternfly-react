@@ -12,6 +12,7 @@ import { WizardToggle } from './WizardToggle';
 import { WizardNav } from './WizardNav';
 import { WizardNavItem } from './WizardNavItem';
 import { WizardContextProvider } from './WizardContext';
+import { PickOptional } from '../../helpers/typeUtils';
 // Can't use ES6 imports :(
 // The types for it are also wrong, we should probably ditch this dependency.
 // tslint:disable-next-line
@@ -105,7 +106,7 @@ interface WizardState {
 
 export class Wizard extends React.Component<WizardProps, WizardState> {
   private static currentId = 0;
-  static defaultProps = {
+  static defaultProps: PickOptional<WizardProps> = {
     isOpen: false,
     isInPage: false,
     isCompactNav: false,

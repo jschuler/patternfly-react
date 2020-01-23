@@ -37,7 +37,7 @@ export interface DropdownMenuItem extends React.HTMLAttributes<any> {
 export class DropdownMenu extends React.Component<DropdownMenuProps> {
   refsCollection = [] as HTMLElement[][];
 
-  static defaultProps = {
+  static defaultProps: DropdownMenuProps = {
     className: '',
     isOpen: true,
     openedOnEnter: false,

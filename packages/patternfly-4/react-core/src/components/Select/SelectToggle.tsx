@@ -4,6 +4,7 @@ import buttonStyles from '@patternfly/react-styles/css/components/Button/button'
 import { css } from '@patternfly/react-styles';
 import { CaretDownIcon } from '@patternfly/react-icons';
 import { KeyTypes, SelectVariant } from './selectConstants';
+import { PickOptional } from '../../helpers/typeUtils';
 
 export interface SelectToggleProps extends React.HTMLProps<HTMLElement> {
   /** HTML ID of dropdown toggle */
@@ -47,7 +48,7 @@ export interface SelectToggleProps extends React.HTMLProps<HTMLElement> {
 export class SelectToggle extends React.Component<SelectToggleProps> {
   private toggle: React.RefObject<HTMLDivElement> | React.RefObject<HTMLButtonElement>;
 
-  static defaultProps = {
+  static defaultProps: PickOptional<SelectToggleProps> = {
     className: '',
     isExpanded: false,
     isFocused: false,

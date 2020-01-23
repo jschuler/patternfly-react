@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from '@patternfly/react-styles/css/components/Dropdown/dropdown';
 import { css } from '@patternfly/react-styles';
-import { Omit } from '../../helpers/typeUtils';
+import { Omit, PickOptional } from '../../helpers/typeUtils';
 
 export interface DropdownToggleCheckboxProps
   extends Omit<React.HTMLProps<HTMLInputElement>, 'type' | 'onChange' | 'disabled' | 'checked'> {
@@ -26,7 +26,7 @@ export interface DropdownToggleCheckboxProps
 }
 
 export class DropdownToggleCheckbox extends React.Component<DropdownToggleCheckboxProps> {
-  static defaultProps = {
+  static defaultProps: PickOptional<DropdownToggleCheckboxProps> = {
     className: '',
     isValid: true,
     isDisabled: false,

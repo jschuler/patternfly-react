@@ -27,7 +27,7 @@ export interface CheckboxSelectOptionProps extends React.HTMLProps<HTMLLabelElem
 
 export class CheckboxSelectOption extends React.Component<CheckboxSelectOptionProps> {
   private ref = React.createRef<any>();
-  static defaultProps = {
+  static defaultProps: CheckboxSelectOptionProps = {
     className: '',
     value: '',
     index: 0,
