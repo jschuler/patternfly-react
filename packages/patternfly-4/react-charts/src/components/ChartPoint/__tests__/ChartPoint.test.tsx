@@ -3,35 +3,36 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartPoint } from '../ChartPoint';
-import { Path } from 'victory-core';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartPoint test', () => {
   it('ChartPoint should match snapshot', () => {
     const view = shallow(
       <ChartPoint
-        active={undefined}
-				className={undefined}
-				clipPath={undefined}
-				data={undefined}
-				datum={undefined}
-				desc={undefined}
-				events={undefined}
+        active={true}
+				className={"string"}
+				clipPath={"string"}
+				data={[]}
+				datum={'any'}
+				desc={() => {}}
+				events={'any'}
 				getPath={undefined}
-				id={undefined}
-				index={undefined}
-				origin={undefined}
-				pathComponent={<Path />}
-				polar={undefined}
+				id={1}
+				index={1}
+				origin={{ x: 42, y: 42 }}
+				pathComponent={<p>ReactElement</p>}
+				polar={true}
 				role={"'presentation'"}
-				scale={undefined}
+				scale={'any'}
 				shapeRendering={"'auto'"}
-				size={undefined}
-				style={undefined}
-				symbol={undefined}
-				tabIndex={undefined}
-				transform={undefined}
-				x={undefined}
-				y={undefined}
+				size={1}
+				style={'any'}
+				symbol={'circle'}
+				tabIndex={1}
+				transform={"string"}
+				x={42}
+				y={42}
       />);
     expect(view).toMatchSnapshot();
   });

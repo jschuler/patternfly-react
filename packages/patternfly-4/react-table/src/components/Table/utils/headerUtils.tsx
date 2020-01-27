@@ -88,7 +88,11 @@ const generateCell = (
  */
 const mapHeader = (column: ICell, extra: any, key: number, ...props: any) => {
   const title = (column.hasOwnProperty('title') ? column.title : column) as string | ICell;
-  const dataLabel = (column.hasOwnProperty('dataLabel') ? column.dataLabel : typeof title === 'string' ? title : `column-${key}`) as string | ICell;
+  const dataLabel = (column.hasOwnProperty('dataLabel')
+    ? column.dataLabel
+    : typeof title === 'string'
+    ? title
+    : `column-${key}`) as string | ICell;
   return {
     property:
       (typeof title === 'string' &&

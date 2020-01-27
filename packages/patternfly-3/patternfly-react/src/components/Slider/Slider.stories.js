@@ -99,7 +99,17 @@ SliderStories.add('Slider', () => (
 
         <FormGroup>
           <Col sm={10}>
-            <Slider label="Size" id="size" min={0} max={100} tooltip="show" showBoundaries input inputFormat="GB" onSlide={onSlide} />
+            <Slider
+              label="Size"
+              id="size"
+              min={0}
+              max={100}
+              tooltip="show"
+              showBoundaries
+              input
+              inputFormat="GB"
+              onSlide={onSlide}
+            />
           </Col>
         </FormGroup>
 
@@ -122,15 +132,15 @@ SliderStories.add('Slider', () => (
       <br />
       <br />
 
-      <Slider 
-        id="slider-pf" 
-        min={0} 
-        max={100} 
-        tooltip="show" 
-        showBoundaries 
-        input 
-        dropdownList={['MB', 'GB']} 
-        dropup 
+      <Slider
+        id="slider-pf"
+        min={0}
+        max={100}
+        tooltip="show"
+        showBoundaries
+        input
+        dropdownList={['MB', 'GB']}
+        dropup
         onSlide={onSlide}
         onFormatChange={onFormatChange}
       />

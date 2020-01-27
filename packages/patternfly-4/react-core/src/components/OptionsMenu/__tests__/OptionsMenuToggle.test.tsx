@@ -3,13 +3,15 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { OptionsMenuToggle } from '../OptionsMenuToggle';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('OptionsMenuToggle test', () => {
   it('OptionsMenuToggle should match snapshot', () => {
     const view = shallow(
       <OptionsMenuToggle
         parentId={"''"}
-				onToggle={undefined}
+				onToggle={(isOpen: boolean) => undefined as void}
 				isOpen={false}
 				isPlain={false}
 				isFocused={false}
@@ -19,9 +21,9 @@ describe('OptionsMenuToggle test', () => {
 				isDisabled={false}
 				hideCaret={false}
 				aria-label={"'Options menu'"}
-				onEnter={undefined}
-				parentRef={undefined}
-				toggleTemplate={<>ReactNode</>}
+				onEnter={(event: React.MouseEvent<HTMLButtonElement>) => undefined as void}
+				parentRef={document.body}
+				toggleTemplate={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

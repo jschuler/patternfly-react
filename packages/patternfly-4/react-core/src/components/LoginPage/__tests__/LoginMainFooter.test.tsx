@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { LoginMainFooter } from '../LoginMainFooter';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('LoginMainFooter test', () => {
   it('LoginMainFooter should match snapshot', () => {
@@ -10,9 +12,9 @@ describe('LoginMainFooter test', () => {
       <LoginMainFooter
         className={"''"}
 				children={<>ReactNode</>}
-				socialMediaLoginContent={<>ReactNode</>}
-				signUpForAccountMessage={<>ReactNode</>}
-				forgotCredentials={<>ReactNode</>}
+				socialMediaLoginContent={null}
+				signUpForAccountMessage={null}
+				forgotCredentials={null}
       />);
     expect(view).toMatchSnapshot();
   });

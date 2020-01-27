@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Pagination } from '../Pagination';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Pagination test', () => {
   it('Pagination should match snapshot', () => {
@@ -41,20 +43,8 @@ describe('Pagination test', () => {
 				itemsEnd={null}
 				widgetId={"'pagination-options-menu'"}
 				dropDirection={'up'}
-				titles={{
-  items: '',
-  page: '',
-  itemsPerPage: 'Items per page',
-  perPageSuffix: 'per page',
-  toFirstPage: 'Go to first page',
-  toPreviousPage: 'Go to previous page',
-  toLastPage: 'Go to last page',
-  toNextPage: 'Go to next page',
-  optionsToggle: 'Items per page',
-  currPage: 'Current page',
-  paginationTitle: 'Pagination'
-}}
-				toggleTemplate={'string'}
+				titles={undefined}
+				toggleTemplate={undefined}
 				onSetPage={() => undefined}
 				onFirstClick={() => undefined}
 				onPreviousClick={() => undefined}

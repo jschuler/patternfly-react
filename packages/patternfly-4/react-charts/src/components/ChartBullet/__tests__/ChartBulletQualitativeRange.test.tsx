@@ -3,31 +3,31 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartBulletQualitativeRange } from '../ChartBulletQualitativeRange';
-import { ChartTooltip } from '../../ChartTooltip';
-import { ChartBar } from '../../ChartBar';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartBulletQualitativeRange test', () => {
   it('ChartBulletQualitativeRange should match snapshot', () => {
     const view = shallow(
       <ChartBulletQualitativeRange
         allowTooltip={true}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
-				barWidth={undefined/*unrecognizedType NumberOrCallback undefined*/}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
+				barWidth={undefined}
 				constrainToVisibleArea={false}
-				data={undefined}
+				data={[]}
 				domain={undefined}
 				height={42}
 				horizontal={true}
 				invert={false}
-				labelComponent={<ChartTooltip />}
-				labels={undefined}
-				measureComponent={<ChartBar />}
+				labelComponent={<p>ReactElement</p>}
+				labels={['string']}
+				measureComponent={<p>ReactElement</p>}
 				padding={undefined}
 				standalone={true}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
 				width={42}
 				y={undefined}
 				y0={undefined}

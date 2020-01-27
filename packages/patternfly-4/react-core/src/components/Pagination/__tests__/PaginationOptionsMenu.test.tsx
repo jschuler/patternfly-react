@@ -3,7 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { PaginationOptionsMenu } from '../PaginationOptionsMenu';
-import { ToggleTemplateProps } from '../ToggleTemplate';
+// any missing imports can usually be resolved by adding them here
+import { ToggleTemplateProps } from '..';
 
 describe('PaginationOptionsMenu test', () => {
   it('PaginationOptionsMenu should match snapshot', () => {
@@ -15,7 +16,7 @@ describe('PaginationOptionsMenu test', () => {
 				dropDirection={'up'}
 				perPageOptions={[]}
 				itemsPerPageTitle={"'Items per page'"}
-				page={undefined}
+				page={42}
 				perPageSuffix={"'per page'"}
 				itemsTitle={"'items'"}
 				optionsToggle={"'Select'"}
@@ -24,7 +25,7 @@ describe('PaginationOptionsMenu test', () => {
 				lastIndex={0}
 				defaultToFullPage={false}
 				perPage={0}
-				lastPage={undefined}
+				lastPage={42}
 				toggleTemplate={({ firstIndex, lastIndex, itemCount, itemsTitle }: ToggleTemplateProps) => (
   <React.Fragment>
     <b>

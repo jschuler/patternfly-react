@@ -3,46 +3,47 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartStack } from '../ChartStack';
-import { ChartContainer } from '../../ChartContainer';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartStack test', () => {
   it('ChartStack should match snapshot', () => {
     const view = shallow(
       <ChartStack
         animate={undefined}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
 				categories={undefined}
-				children={undefined}
+				children={<div>ReactNode</div>}
 				colorScale={undefined}
-				containerComponent={<ChartContainer />}
+				containerComponent={<p>ReactElement</p>}
 				domain={undefined}
 				domainPadding={undefined}
 				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
-				height={undefined}
-				horizontal={undefined}
-				labelComponent={undefined}
-				labels={undefined}
-				maxDomain={undefined}
-				minDomain={undefined}
-				name={undefined}
-				origin={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
+				height={42}
+				horizontal={true}
+				labelComponent={<p>ReactElement</p>}
+				labels={['string']}
+				maxDomain={1}
+				minDomain={1}
+				name={"string"}
+				origin={{ x: 42, y: 42 }}
 				padding={undefined}
-				polar={undefined}
-				range={undefined}
+				polar={true}
+				range={[42, 42]}
 				scale={undefined}
-				sharedEvents={undefined}
-				singleQuadrantDomainPadding={undefined}
-				standalone={undefined}
+				sharedEvents={'any'}
+				singleQuadrantDomainPadding={true}
+				standalone={true}
 				style={undefined}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				width={undefined}
-				xOffset={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				width={42}
+				xOffset={42}
       />);
     expect(view).toMatchSnapshot();
   });

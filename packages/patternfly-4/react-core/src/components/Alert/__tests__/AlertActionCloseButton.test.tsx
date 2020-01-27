@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { AlertActionCloseButton } from '../AlertActionCloseButton';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('AlertActionCloseButton test', () => {
   it('AlertActionCloseButton should match snapshot', () => {

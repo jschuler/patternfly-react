@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { OptionsToggle } from '../OptionsToggle';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('OptionsToggle test', () => {
   it('OptionsToggle should match snapshot', () => {

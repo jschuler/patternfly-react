@@ -3,19 +3,21 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Toggle } from '../Toggle';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Toggle test', () => {
   it('Toggle should match snapshot', () => {
     const view = shallow(
       <Toggle
-        id={"'defaultString'"}
-				type={undefined}
-				children={undefined}
+        id={"string"}
+				type={'button'}
+				children={<div>ReactNode</div>}
 				className={"''"}
 				isOpen={false}
 				onToggle={() => {}}
 				onEnter={() => {}}
-				parentRef={undefined}
+				parentRef={'any'}
 				isFocused={false}
 				isHovered={false}
 				isActive={false}
@@ -23,7 +25,7 @@ describe('Toggle test', () => {
 				isPlain={false}
 				isPrimary={false}
 				isSplitButton={false}
-				ariaHasPopup={undefined}
+				ariaHasPopup={true}
       />);
     expect(view).toMatchSnapshot();
   });

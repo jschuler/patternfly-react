@@ -9,8 +9,10 @@ exports[`VirtualTableBody test VirtualTableBody should match snapshot 1`] = `
   autoWidth={false}
   cellRangeRenderer={[Function]}
   cellRenderer={[Function]}
-  className="ReactVirtualized__List"
+  className="ReactVirtualized__List string"
+  columnCount={0}
   columnWidth={42}
+  columns={Array []}
   containerRole="rowgroup"
   containerStyle={
     Object {
@@ -34,7 +36,6 @@ exports[`VirtualTableBody test VirtualTableBody should match snapshot 1`] = `
   overscanRowCount={10}
   role="presentation"
   rowCount={42}
-  rowHeight={1}
   rowRenderer="any"
   rows={Array []}
   scrollContainerComponent="table"
@@ -42,6 +43,7 @@ exports[`VirtualTableBody test VirtualTableBody should match snapshot 1`] = `
   scrollToColumn={-1}
   scrollToIndex={-1}
   scrollToRow={-1}
+  scrollTop={42}
   scrollingResetTimeInterval={150}
   style={
     Object {

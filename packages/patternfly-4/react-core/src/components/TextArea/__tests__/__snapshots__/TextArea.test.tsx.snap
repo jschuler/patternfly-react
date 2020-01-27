@@ -7,5 +7,6 @@ exports[`TextArea test TextArea should match snapshot 1`] = `
   className="pf-c-form-control ''"
   onChange={[Function]}
   required={false}
+  value={1}
 />
 `;

@@ -8,7 +8,7 @@ exports[`Navigation test Navigation should match snapshot 1`] = `
   <Component
     aria-label="'Go to first page'"
     data-action="first"
-    isDisabled={true}
+    isDisabled={false}
     onClick={[Function]}
     variant="plain"
   >
@@ -22,7 +22,7 @@ exports[`Navigation test Navigation should match snapshot 1`] = `
   <Component
     aria-label="'Go to previous page'"
     data-action="previous"
-    isDisabled={true}
+    isDisabled={false}
     onClick={[Function]}
     variant="plain"
   >
@@ -39,13 +39,13 @@ exports[`Navigation test Navigation should match snapshot 1`] = `
     <input
       aria-label="'Current page'"
       className="pf-c-form-control"
-      disabled={true}
+      disabled={false}
       max={0}
       min={0}
       onChange={[Function]}
       onKeyDown={[Function]}
       type="number"
-      value={0}
+      value={42}
     />
     <span
       aria-hidden="true"
@@ -57,7 +57,7 @@ exports[`Navigation test Navigation should match snapshot 1`] = `
   <Component
     aria-label="'Go to next page'"
     data-action="next"
-    isDisabled={true}
+    isDisabled={false}
     onClick={[Function]}
     variant="plain"
   >
@@ -71,7 +71,7 @@ exports[`Navigation test Navigation should match snapshot 1`] = `
   <Component
     aria-label="'Go to last page'"
     data-action="last"
-    isDisabled={true}
+    isDisabled={false}
     onClick={[Function]}
     variant="plain"
   >

@@ -70,7 +70,7 @@ export const WizardToggle: React.FunctionComponent<WizardToggleProps> = ({
       <div className={css(styles.wizardOuterWrap)}>
         <div className={css(styles.wizardInnerWrap)}>
           {nav(isNavOpen)}
-          <WizardBody hasBodyPadding={hasBodyPadding}>{activeStep.component}</WizardBody>
+          <WizardBody hasBodyPadding={hasBodyPadding}>{activeStep && activeStep.component}</WizardBody>
         </div>
         {children}
       </div>

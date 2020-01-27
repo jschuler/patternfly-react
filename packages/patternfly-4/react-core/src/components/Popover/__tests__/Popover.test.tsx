@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Popover } from '../Popover';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Popover test', () => {
   it('Popover should match snapshot', () => {
@@ -18,11 +20,11 @@ describe('Popover test', () => {
 				distance={25}
 				enableFlip={true}
 				flipBehavior={['top', 'right', 'bottom', 'left', 'top', 'right', 'bottom']}
-				footerContent={<>ReactNode</>}
-				headerContent={<>ReactNode</>}
+				footerContent={null}
+				headerContent={null}
 				hideOnOutsideClick={true}
 				isVisible={null}
-				maxWidth={"popoverMaxWidth && popoverMaxWidth.value"}
+				maxWidth={"string"}
 				onHidden={(): void => null}
 				onHide={(): void => null}
 				onMount={(): void => null}
@@ -31,7 +33,7 @@ describe('Popover test', () => {
 				position={'top'}
 				shouldClose={(): void => null}
 				zIndex={9999}
-				tippyProps={{}}
+				tippyProps={undefined}
       />);
     expect(view).toMatchSnapshot();
   });

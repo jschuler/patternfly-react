@@ -1,23 +1,23 @@
 import * as React from 'react';
 import styles from '@patternfly/react-styles/css/components/List/list';
 import { css, getModifier } from '@patternfly/react-styles';
-import { Omit } from '../../helpers/typeUtils'
+import { Omit } from '../../helpers/typeUtils';
 
 export enum OrderType {
   number = '1',
   lowercaseLetter = 'a',
   uppercaseLetter = 'A',
   lowercaseRomanNumber = 'i',
-  uppercaseRomanNumber = 'I',
+  uppercaseRomanNumber = 'I'
 }
 
 export enum ListVariant {
-  inline = 'inline',
+  inline = 'inline'
 }
 
 export enum ListComponent {
   ol = 'ol',
-  ul = 'ul',
+  ul = 'ul'
 }
 
 export interface ListProps extends Omit<React.HTMLProps<HTMLUListElement | HTMLOListElement>, 'type'> {
@@ -42,12 +42,21 @@ export const List: React.FunctionComponent<ListProps> = ({
   ...props
 }) => {
   return component === ListComponent.ol ? (
-    <ol ref={ref as React.LegacyRef<HTMLOListElement>} type={type} {...props} className={css(styles.list, variant && getModifier(styles.modifiers, variant), className)}>
+    <ol
+      ref={ref as React.LegacyRef<HTMLOListElement>}
+      type={type}
+      {...props}
+      className={css(styles.list, variant && getModifier(styles.modifiers, variant), className)}
+    >
       {children}
     </ol>
   ) : (
-      <ul ref={ref as React.LegacyRef<HTMLUListElement>} {...props} className={css(styles.list, variant && getModifier(styles.modifiers, variant), className)}>
-        {children}
-      </ul>
-    );
-}
+    <ul
+      ref={ref as React.LegacyRef<HTMLUListElement>}
+      {...props}
+      className={css(styles.list, variant && getModifier(styles.modifiers, variant), className)}
+    >
+      {children}
+    </ul>
+  );
+};

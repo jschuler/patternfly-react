@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { InputGroupText } from '../InputGroupText';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('InputGroupText test', () => {
   it('InputGroupText should match snapshot', () => {
@@ -10,7 +12,7 @@ describe('InputGroupText test', () => {
       <InputGroupText
         className={"''"}
 				children={<div>ReactNode</div>}
-				component={<>ReactNode</>}
+				component={'span'}
       />);
     expect(view).toMatchSnapshot();
   });

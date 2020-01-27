@@ -3,22 +3,24 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { InternalDropdownItem } from '../InternalDropdownItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('InternalDropdownItem test', () => {
   it('InternalDropdownItem should match snapshot', () => {
     const view = shallow(
       <InternalDropdownItem
-        children={undefined}
+        children={<div>ReactNode</div>}
 				className={"''"}
-				listItemClassName={undefined}
+				listItemClassName={"string"}
 				component={'a'}
 				variant={'item'}
 				role={"'none'"}
 				isDisabled={false}
 				isHovered={false}
 				href={"''"}
-				tooltip={undefined}
-				tooltipProps={{}}
+				tooltip={<div>ReactNode</div>}
+				tooltipProps={undefined}
 				index={-1}
 				context={{
   keyHandler: () => {},
@@ -27,8 +29,8 @@ describe('InternalDropdownItem test', () => {
 				onClick={(event: React.MouseEvent<any> | React.KeyboardEvent | MouseEvent) => undefined as any}
 				id={"''"}
 				componentID={"''"}
-				additionalChild={undefined}
-				customChild={undefined}
+				additionalChild={<div>ReactNode</div>}
+				customChild={<div>ReactNode</div>}
 				enterTriggersArrowDown={false}
       />);
     expect(view).toMatchSnapshot();

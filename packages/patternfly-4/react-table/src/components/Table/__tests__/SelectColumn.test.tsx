@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { SelectColumn } from '../SelectColumn';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('SelectColumn test', () => {
   it('SelectColumn should match snapshot', () => {
     const view = shallow(
       <SelectColumn
-        name={undefined}
+        name={"string"}
 				children={<>ReactNode</>}
 				className={"''"}
 				onSelect={null}

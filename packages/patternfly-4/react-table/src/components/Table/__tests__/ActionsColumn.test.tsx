@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ActionsColumn } from '../ActionsColumn';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ActionsColumn test', () => {
   it('ActionsColumn should match snapshot', () => {
@@ -10,9 +12,11 @@ describe('ActionsColumn test', () => {
       <ActionsColumn
         children={<>ReactNode</>}
 				items={[]}
-				isDisabled={undefined}
-				rowData={{}}
-				extraData={{}}
+				isDisabled={true}
+				dropdownPosition={undefined}
+				dropdownDirection={undefined}
+				rowData={undefined}
+				extraData={undefined}
       />);
     expect(view).toMatchSnapshot();
   });

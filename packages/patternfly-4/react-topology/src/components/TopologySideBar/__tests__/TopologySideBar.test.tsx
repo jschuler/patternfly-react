@@ -3,16 +3,18 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { TopologySideBar } from '../TopologySideBar';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('TopologySideBar test', () => {
   it('TopologySideBar should match snapshot', () => {
     const view = shallow(
       <TopologySideBar
-        className={undefined}
-				children={undefined}
-				show={undefined}
-				onClose={undefined}
-				header={undefined}
+        className={"string"}
+				children={<div>ReactNode</div>}
+				show={true}
+				onClose={() => undefined as void}
+				header={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

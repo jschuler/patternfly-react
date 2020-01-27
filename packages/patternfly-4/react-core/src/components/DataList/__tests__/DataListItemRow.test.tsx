@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DataListItemRow } from '../DataListItemRow';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DataListItemRow test', () => {
   it('DataListItemRow should match snapshot', () => {

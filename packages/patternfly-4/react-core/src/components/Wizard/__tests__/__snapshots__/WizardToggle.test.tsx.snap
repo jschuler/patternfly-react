@@ -34,7 +34,6 @@ exports[`WizardToggle test WizardToggle should match snapshot 1`] = `
     <div
       className="pf-c-wizard__inner-wrap"
     >
-      ReactElement
       <Component
         hasBodyPadding={true}
       />

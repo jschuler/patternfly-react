@@ -7,13 +7,11 @@ exports[`Login test Login should match snapshot 1`] = `
   <div
     className="pf-c-login__container"
   >
-    ReactNode
     <main
       className="pf-c-login__main"
     >
       ReactNode
     </main>
-    ReactNode
   </div>
 </div>
 `;

@@ -2,11 +2,11 @@
 
 exports[`ClipboardCopyToggle test ClipboardCopyToggle should match snapshot 1`] = `
 <button
-  aria-controls="'defaultString' 'defaultString'"
+  aria-controls="string string"
   aria-expanded={false}
-  aria-labelledby="'defaultString' 'defaultString'"
+  aria-labelledby="string string"
   className="pf-c-clipboard-copy__group-toggle ''"
-  id="'defaultString'"
+  id="string"
   onClick={[Function]}
   type="button"
 >

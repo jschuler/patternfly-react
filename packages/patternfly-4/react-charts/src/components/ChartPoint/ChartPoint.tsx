@@ -130,7 +130,7 @@ const getPath = (props: ChartPointProps) => {
     threshold: PathHelpers.threshold
   };
   const symbol = Helpers.evaluateProp(props.symbol, props);
-  const key: (keyof PathHelpersInterface) = symbol;
+  const key: keyof PathHelpersInterface = symbol;
   const symbolFunction = typeof pathFunctions[key] === 'function' ? pathFunctions[key] : pathFunctions.square;
   return symbolFunction(x, y, size);
 };

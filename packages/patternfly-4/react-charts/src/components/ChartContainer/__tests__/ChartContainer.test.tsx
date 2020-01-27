@@ -3,25 +3,27 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartContainer } from '../ChartContainer';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartContainer test', () => {
   it('ChartContainer should match snapshot', () => {
     const view = shallow(
       <ChartContainer
-        children={undefined}
-				className={undefined}
-				containerId={undefined}
+        children={[undefined as React.ReactNode]}
+				className={"string"}
+				containerId={1}
 				containerRef={undefined}
-				desc={undefined}
+				desc={"string"}
 				events={undefined}
-				height={undefined}
-				responsive={undefined}
+				height={42}
+				responsive={true}
 				style={undefined}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				title={undefined}
-				width={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				title={"string"}
+				width={42}
       />);
     expect(view).toMatchSnapshot();
   });

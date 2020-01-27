@@ -129,7 +129,8 @@ export const TableBody = ({
   className = '' as string,
   children = null as React.ReactNode,
   rowKey = 'id' as string,
-  onRowClick = (event: React.MouseEvent, row: IRow, rowProps: IExtraRowData, computedData: IComputedData) => undefined as OnRowClick,
+  onRowClick = (event: React.MouseEvent, row: IRow, rowProps: IExtraRowData, computedData: IComputedData) =>
+    undefined as OnRowClick,
   ...props
 }: TableBodyProps) => (
   <TableContext.Consumer>

@@ -12,7 +12,7 @@ exports[`DataListToggle test DataListToggle should match snapshot 1`] = `
       aria-expanded={false}
       aria-label="'Details'"
       aria-labelledby={null}
-      id="'defaultString'"
+      id="string"
       variant="plain"
     >
       <AngleRightIcon

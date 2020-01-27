@@ -3,6 +3,10 @@
 exports[`SkipToContent test SkipToContent should match snapshot 1`] = `
 <a
   className="pf-c-button pf-m-primary pf-c-skip-to-content ''"
-  href="'defaultString'"
-/>
+  href="string"
+>
+  <div>
+    ReactNode
+  </div>
+</a>
 `;

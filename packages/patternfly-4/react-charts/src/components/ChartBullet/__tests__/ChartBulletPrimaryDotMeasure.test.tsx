@@ -3,31 +3,31 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartBulletPrimaryDotMeasure } from '../ChartBulletPrimaryDotMeasure';
-import { ChartTooltip } from '../../ChartTooltip';
-import { ChartScatter } from '../../ChartScatter';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartBulletPrimaryDotMeasure test', () => {
   it('ChartBulletPrimaryDotMeasure should match snapshot', () => {
     const view = shallow(
       <ChartBulletPrimaryDotMeasure
         allowTooltip={true}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
 				constrainToVisibleArea={false}
-				data={undefined}
+				data={[]}
 				domain={undefined}
 				height={42}
 				horizontal={true}
 				invert={false}
-				labelComponent={<ChartTooltip />}
-				labels={undefined}
-				measureComponent={<ChartScatter />}
+				labelComponent={<p>ReactElement</p>}
+				labels={['string']}
+				measureComponent={<p>ReactElement</p>}
 				padding={undefined}
 				size={1}
 				standalone={true}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
 				width={42}
 				y={undefined}
 				y0={undefined}

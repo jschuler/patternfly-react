@@ -81,7 +81,7 @@ export class DataToolbar extends React.Component<DataToolbarProps, DataToolbarSt
 
     if (!filterInfoToUpdate.hasOwnProperty(categoryName) || filterInfoToUpdate[categoryName] !== numberOfFilters) {
       filterInfoToUpdate[categoryName] = numberOfFilters;
-      this.setState({filterInfo: filterInfoToUpdate});
+      this.setState({ filterInfo: filterInfoToUpdate });
     }
   };
 
@@ -116,24 +116,23 @@ export class DataToolbar extends React.Component<DataToolbarProps, DataToolbarSt
             toggleIsExpanded: isToggleManaged ? this.toggleIsExpanded : toggleIsExpanded,
             chipGroupContentRef: this.chipGroupContentRef,
             updateNumberFilters: this.updateNumberFilters,
-            numberOfFilters: numberOfFilters
+            numberOfFilters
           }}
         >
-          { React.Children.map(children, (child: any) => {
-              if (React.isValidElement(child)) {
-                return React.cloneElement(child, {
-                  // @ts-ignore
-                  clearAllFilters,
-                  clearFiltersButtonText,
-                  showClearFiltersButton,
-                  isExpanded: isToggleManaged ? isManagedToggleExpanded : isExpanded,
-                  toolbarId: id
-                });
-              } else {
-                return child;
-              }
+          {React.Children.map(children, (child: any) => {
+            if (React.isValidElement(child)) {
+              return React.cloneElement(child, {
+                // @ts-ignore
+                clearAllFilters,
+                clearFiltersButtonText,
+                showClearFiltersButton,
+                isExpanded: isToggleManaged ? isManagedToggleExpanded : isExpanded,
+                toolbarId: id
+              });
+            } else {
+              return child;
             }
-          )}
+          })}
           <DataToolbarChipGroupContent
             isExpanded={isToggleManaged ? isManagedToggleExpanded : isExpanded}
             chipGroupContentRef={this.chipGroupContentRef}

@@ -2,8 +2,8 @@
 
 exports[`DataToolbar test DataToolbar should match snapshot 1`] = `
 <div
-  className="pf-c-data-toolbar"
-  id="'defaultString'"
+  className="pf-c-data-toolbar string"
+  id="string"
 >
   <ContextProvider
     value={
@@ -11,22 +11,33 @@ exports[`DataToolbar test DataToolbar should match snapshot 1`] = `
         "chipGroupContentRef": Object {
           "current": null,
         },
-        "isExpanded": false,
+        "isExpanded": true,
         "numberOfFilters": 0,
         "toggleIsExpanded": [Function],
         "updateNumberFilters": [Function],
       }
     }
   >
+    <div
+      clearAllFilters={[Function]}
+      clearFiltersButtonText="string"
+      isExpanded={true}
+      key=".0"
+      showClearFiltersButton={false}
+      toolbarId="string"
+    >
+      ReactNode
+    </div>
     <DataToolbarChipGroupContent
       chipGroupContentRef={
         Object {
           "current": null,
         }
       }
-      clearFiltersButtonText="Clear all filters"
-      collapseListedFiltersBreakpoint="lg"
-      isExpanded={false}
+      clearAllFilters={[Function]}
+      clearFiltersButtonText="string"
+      collapseListedFiltersBreakpoint="md"
+      isExpanded={true}
       numberOfFilters={0}
       showClearFiltersButton={false}
     />

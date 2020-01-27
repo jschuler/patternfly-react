@@ -4,7 +4,7 @@ exports[`ContextSelectorToggle test ContextSelectorToggle should match snapshot 
 <button
   aria-expanded={false}
   className="pf-c-context-selector__toggle ''"
-  id="'defaultString'"
+  id="string"
   onClick={[Function]}
   onKeyDown={[Function]}
   type="button"

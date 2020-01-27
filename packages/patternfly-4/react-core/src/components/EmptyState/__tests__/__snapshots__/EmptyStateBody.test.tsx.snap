@@ -3,5 +3,9 @@
 exports[`EmptyStateBody test EmptyStateBody should match snapshot 1`] = `
 <div
   className="pf-c-empty-state__body ''"
-/>
+>
+  <div>
+    ReactNode
+  </div>
+</div>
 `;

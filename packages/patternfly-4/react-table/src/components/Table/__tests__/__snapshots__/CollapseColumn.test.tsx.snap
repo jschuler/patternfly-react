@@ -2,6 +2,21 @@
 
 exports[`CollapseColumn test CollapseColumn should match snapshot 1`] = `
 <Fragment>
+  <Component
+    aria-expanded={true}
+    aria-label="Details"
+    className="'' pf-m-expanded"
+    id="string"
+    onClick={[Function]}
+    variant="plain"
+  >
+    <AngleDownIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+      title={null}
+    />
+  </Component>
   ReactNode
 </Fragment>
 `;

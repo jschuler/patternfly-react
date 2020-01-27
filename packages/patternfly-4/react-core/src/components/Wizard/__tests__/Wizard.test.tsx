@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Wizard } from '../Wizard';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Wizard test', () => {
   it('Wizard should match snapshot', () => {
@@ -24,8 +26,8 @@ describe('Wizard test', () => {
 				startAtStep={1}
 				ariaLabelNav={"'Steps'"}
 				hasBodyPadding={true}
-				footer={<>ReactNode</>}
-				onSave={undefined}
+				footer={null}
+				onSave={() => undefined as void}
 				onNext={null}
 				onBack={null}
 				nextButtonText={"'Next'"}

@@ -17,17 +17,17 @@ describe('data toolbar', () => {
         <DataToolbarContent className="DataToolbarContent-class" />
       </DataToolbar>
     );
-    expect(view).toMatchSnapshot()
+    expect(view).toMatchSnapshot();
   });
 
   test('DataToolbarTwoContent', () => {
     const view = mount(
       <DataToolbar id="data-toolbar" className="DataToolbar-class">
-        <DataToolbarContent className="DataToolbarContent-class"/>
-        <DataToolbarContent className="DataToolbarContent-class"/>
+        <DataToolbarContent className="DataToolbarContent-class" />
+        <DataToolbarContent className="DataToolbarContent-class" />
       </DataToolbar>
     );
-    expect(view).toMatchSnapshot()
+    expect(view).toMatchSnapshot();
   });
 
   test('DataToolbarItemsAndGroups', () => {
@@ -35,25 +35,27 @@ describe('data toolbar', () => {
       <DataToolbar id="data-toolbar" className="DataToolbar-class">
         <DataToolbarContent className="DataToolbarContent-class">
           <DataToolbarGroup variant="icon-button-group">
-            <DataToolbarItem><Button variant="plain"><EditIcon/></Button></DataToolbarItem>
-            <DataToolbarItem><Button variant="plain"><CloneIcon/></Button></DataToolbarItem>
+            <DataToolbarItem>
+              <Button variant="plain">
+                <EditIcon />
+              </Button>
+            </DataToolbarItem>
+            <DataToolbarItem>
+              <Button variant="plain">
+                <CloneIcon />
+              </Button>
+            </DataToolbarItem>
           </DataToolbarGroup>
         </DataToolbarContent>
       </DataToolbar>
     );
-    expect(view).toMatchSnapshot()
+    expect(view).toMatchSnapshot();
   });
 
   test('DataToolbarToggleGroup', () => {
-    const statusOptions = [
-      { value: 'Running', disabled: false },
-      { value: 'Cancelled', disabled: false },
-    ];
+    const statusOptions = [{ value: 'Running', disabled: false }, { value: 'Cancelled', disabled: false }];
 
-    const riskOptions = [
-      { value: 'Low', disabled: false },
-      { value: 'High', disabled: false },
-    ];
+    const riskOptions = [{ value: 'Low', disabled: false }, { value: 'High', disabled: false }];
 
     const onStatusToggle = () => {};
     const onRiskToggle = () => {};
@@ -63,7 +65,7 @@ describe('data toolbar', () => {
     const view = mount(
       <DataToolbar id="data-toolbar" className="DataToolbar-class">
         <DataToolbarContent className="DataToolbarContent-class">
-          <DataToolbarToggleGroup toggleIcon={<FilterIcon/>} breakpoint='xl'>
+          <DataToolbarToggleGroup toggleIcon={<FilterIcon />} breakpoint="xl">
             <DataToolbarGroup variant="filter-group">
               <DataToolbarItem>
                 <Select
@@ -75,11 +77,7 @@ describe('data toolbar', () => {
                   isExpanded={false}
                 >
                   {statusOptions.map((option, index) => (
-                    <SelectOption
-                      isDisabled={option.disabled}
-                      key={index}
-                      value={option.value}
-                    />
+                    <SelectOption isDisabled={option.disabled} key={index} value={option.value} />
                   ))}
                 </Select>
               </DataToolbarItem>
@@ -93,11 +91,7 @@ describe('data toolbar', () => {
                   isExpanded={false}
                 >
                   {riskOptions.map((option, index) => (
-                    <SelectOption
-                      isDisabled={option.disabled}
-                      key={index}
-                      value={option.value}
-                    />
+                    <SelectOption isDisabled={option.disabled} key={index} value={option.value} />
                   ))}
                 </Select>
               </DataToolbarItem>
@@ -106,36 +100,29 @@ describe('data toolbar', () => {
         </DataToolbarContent>
       </DataToolbar>
     );
-    expect(view).toMatchSnapshot()
+    expect(view).toMatchSnapshot();
   });
 
   test('DataToolbarFilter', () => {
     const filters = {
       risk: ['Low'],
-      status: ['New', 'Pending'],
+      status: ['New', 'Pending']
     };
 
-    const statusOptions = [
-      { value: 'Running', disabled: false },
-      { value: 'Cancelled', disabled: false },
-    ];
+    const statusOptions = [{ value: 'Running', disabled: false }, { value: 'Cancelled', disabled: false }];
 
-    const riskOptions = [
-      { value: 'Low', disabled: false },
-      { value: 'High', disabled: false },
-    ];
+    const riskOptions = [{ value: 'Low', disabled: false }, { value: 'High', disabled: false }];
 
     const onStatusToggle = () => {};
     const onRiskToggle = () => {};
     const onStatusSelect = () => {};
     const onRiskSelect = () => {};
-    const onDelete = (type:string = "", id:string|DataToolbarChip = "") => {};
-
+    const onDelete = (type: string = '', id: string | DataToolbarChip = '') => {};
 
     const view = mount(
       <DataToolbar id="data-toolbar" className="DataToolbar-class" clearAllFilters={onDelete}>
         <DataToolbarContent className="DataToolbarContent-class">
-          <DataToolbarToggleGroup toggleIcon={<FilterIcon/>} breakpoint='xl'>
+          <DataToolbarToggleGroup toggleIcon={<FilterIcon />} breakpoint="xl">
             <DataToolbarGroup variant="filter-group">
               <DataToolbarFilter chips={filters.status} deleteChip={onDelete} categoryName="Status">
                 <Select
@@ -147,11 +134,7 @@ describe('data toolbar', () => {
                   isExpanded={false}
                 >
                   {statusOptions.map((option, index) => (
-                    <SelectOption
-                      isDisabled={option.disabled}
-                      key={index}
-                      value={option.value}
-                    />
+                    <SelectOption isDisabled={option.disabled} key={index} value={option.value} />
                   ))}
                 </Select>
               </DataToolbarFilter>
@@ -165,11 +148,7 @@ describe('data toolbar', () => {
                   isExpanded={false}
                 >
                   {riskOptions.map((option, index) => (
-                    <SelectOption
-                      isDisabled={option.disabled}
-                      key={index}
-                      value={option.value}
-                    />
+                    <SelectOption isDisabled={option.disabled} key={index} value={option.value} />
                   ))}
                 </Select>
               </DataToolbarFilter>
@@ -178,6 +157,6 @@ describe('data toolbar', () => {
         </DataToolbarContent>
       </DataToolbar>
     );
-    expect(view).toMatchSnapshot()
+    expect(view).toMatchSnapshot();
   });
 });

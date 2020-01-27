@@ -4,7 +4,7 @@ exports[`ProgressContainer test ProgressContainer should match snapshot 1`] = `
 <Fragment>
   <div
     className="pf-c-progress__description"
-    id="'defaultString'-description"
+    id="string-description"
   >
     ''
   </div>
@@ -14,7 +14,7 @@ exports[`ProgressContainer test ProgressContainer should match snapshot 1`] = `
     <span
       className="pf-c-progress__measure"
     >
-      ReactNode
+      42%
     </span>
     <span
       className="pf-c-progress__status-icon"
@@ -28,7 +28,6 @@ exports[`ProgressContainer test ProgressContainer should match snapshot 1`] = `
     </span>
   </div>
   <Component
-    ariaProps={Object {}}
     value={42}
   />
 </Fragment>

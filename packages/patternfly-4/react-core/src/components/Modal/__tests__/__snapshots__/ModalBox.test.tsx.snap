@@ -2,8 +2,8 @@
 
 exports[`ModalBox test ModalBox should match snapshot 1`] = `
 <div
-  aria-describedby="'defaultString'"
-  aria-label="'defaultString'"
+  aria-describedby="string"
+  aria-label="string"
   aria-modal="true"
   className="pf-c-modal-box ''"
   role="dialog"

@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DropdownToggle test DropdownToggle should match snapshot 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<div
+  className="pf-c-dropdown__toggle pf-m-split-button"
+>
+  <ContextConsumer>
+    <Component />
+  </ContextConsumer>
+</div>
 `;

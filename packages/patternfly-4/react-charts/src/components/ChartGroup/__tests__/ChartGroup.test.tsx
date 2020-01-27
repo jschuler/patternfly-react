@@ -3,7 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartGroup } from '../ChartGroup';
-import { ChartContainer } from '../../ChartContainer';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartGroup test', () => {
   it('ChartGroup should match snapshot', () => {
@@ -11,44 +12,44 @@ describe('ChartGroup test', () => {
       <ChartGroup
         allowZoom={false}
 				animate={undefined}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
 				categories={undefined}
-				children={undefined}
-				color={undefined}
+				children={<div>ReactNode</div>}
+				color={"string"}
 				colorScale={undefined}
-				containerComponent={<ChartContainer />}
-				data={undefined}
+				containerComponent={<p>ReactElement</p>}
+				data={[]}
 				domain={undefined}
 				domainPadding={undefined}
 				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
-				height={undefined}
-				horizontal={undefined}
-				labelComponent={undefined}
-				labels={undefined}
-				maxDomain={undefined}
-				minDomain={undefined}
-				name={undefined}
-				offset={undefined}
-				origin={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
+				height={42}
+				horizontal={true}
+				labelComponent={<p>ReactElement</p>}
+				labels={['string']}
+				maxDomain={1}
+				minDomain={1}
+				name={"string"}
+				offset={42}
+				origin={{ x: 42, y: 42 }}
 				padding={undefined}
-				polar={undefined}
-				range={undefined}
-				samples={undefined}
+				polar={true}
+				range={[42, 42]}
+				samples={42}
 				scale={undefined}
-				sharedEvents={undefined}
-				singleQuadrantDomainPadding={undefined}
-				sortKey={undefined}
-				sortOrder={undefined}
-				standalone={undefined}
+				sharedEvents={'any'}
+				singleQuadrantDomainPadding={true}
+				sortKey={['string']}
+				sortOrder={'ascending'}
+				standalone={true}
 				style={undefined}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				width={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				width={42}
 				x={undefined}
 				y={undefined}
 				y0={undefined}

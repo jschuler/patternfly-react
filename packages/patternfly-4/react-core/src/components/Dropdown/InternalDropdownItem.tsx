@@ -100,7 +100,9 @@ export class InternalDropdownItem extends React.Component<InternalDropdownItemPr
   onKeyDown = (event: any) => {
     // Detected key press on this item, notify the menu parent so that the appropriate item can be focused
     const innerIndex = event.target === this.ref.current ? 0 : 1;
-    if (!this.props.customChild) event.preventDefault();
+    if (!this.props.customChild) {
+      event.preventDefault();
+    }
     if (event.key === 'ArrowUp') {
       this.props.context.keyHandler(this.props.index, innerIndex, KEYHANDLER_DIRECTION.UP);
     } else if (event.key === 'ArrowDown') {

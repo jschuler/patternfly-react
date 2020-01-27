@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { FilterSidePanelCategoryItem } from '../FilterSidePanelCategoryItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('FilterSidePanelCategoryItem test', () => {
   it('FilterSidePanelCategoryItem should match snapshot', () => {
@@ -10,10 +12,10 @@ describe('FilterSidePanelCategoryItem test', () => {
       <FilterSidePanelCategoryItem
         children={<>ReactNode</>}
 				className={"''"}
-				icon={<>ReactNode</>}
+				icon={null}
 				count={null}
 				onClick={null}
-        checked={false}
+				checked={false}
       />);
     expect(view).toMatchSnapshot();
   });

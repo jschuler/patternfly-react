@@ -2,7 +2,7 @@
 
 exports[`OverflowMenu test OverflowMenu should match snapshot 1`] = `
 <div
-  className="pf-c-overflow-menu"
+  className="pf-c-overflow-menu string"
 >
   <ContextProvider
     value={
@@ -10,6 +10,8 @@ exports[`OverflowMenu test OverflowMenu should match snapshot 1`] = `
         "isBelowBreakpoint": false,
       }
     }
-  />
+  >
+    any
+  </ContextProvider>
 </div>
 `;

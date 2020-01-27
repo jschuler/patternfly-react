@@ -9,6 +9,8 @@ import { StarIcon } from '@patternfly/react-icons';
 export const ApplicationLauncherItemContext = React.createContext({ isExternal: false, icon: null });
 
 export interface ApplicationLauncherItemProps {
+  /** Additional classes added to the icon container */
+  className?: string;
   /** Icon rendered before the text */
   icon?: React.ReactNode;
   /** If clicking on the item should open the page in a separate window */
@@ -73,7 +75,7 @@ export const ApplicationLauncherItem: React.FunctionComponent<ApplicationLaunche
           tooltip={tooltip}
           tooltipProps={tooltipProps}
           {...(enterTriggersArrowDown === true && { enterTriggersArrowDown })}
-          {...(customChild && { customChild: customChild })}
+          {...(customChild && { customChild })}
           {...(isFavorite !== null && {
             additionalChild: (
               <button

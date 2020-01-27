@@ -3,7 +3,7 @@
 exports[`AboutModalBoxContent test AboutModalBoxContent should match snapshot 1`] = `
 <div
   className="pf-c-about-modal-box__content ''"
-  id="'defaultString'"
+  id="string"
 >
   <div
     className="pf-c-about-modal-box__body"
@@ -19,7 +19,7 @@ exports[`AboutModalBoxContent test AboutModalBoxContent should match snapshot 1`
   <p
     className="pf-c-about-modal-box__strapline"
   >
-    'defaultString'
+    string
   </p>
 </div>
 `;

@@ -3,5 +3,9 @@
 exports[`DropdownItemIcon test DropdownItemIcon should match snapshot 1`] = `
 <span
   className="pf-c-dropdown__menu-item-icon ''"
-/>
+>
+  <div>
+    ReactNode
+  </div>
+</span>
 `;

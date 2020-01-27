@@ -308,17 +308,20 @@ export const ChartLegend: React.FunctionComponent<ChartLegendProps> = ({
 hoistNonReactStatics(ChartLegend, VictoryLegend, { getBaseProps: true });
 
 // @ts-ignore
-ChartLegend.getBaseProps = (props) => {
+ChartLegend.getBaseProps = props => {
   const theme = getTheme(null, null);
-  return (VictoryLegend as any).getBaseProps({
-    titleComponent: <ChartLabel />, // Workaround for getBaseProps error
-    ...props
-  }, {
-    height: theme.chart.height,
-    orientation: theme.legend.orientation,
-    titleOrientation: theme.legend.titleOrientation,
-    x: 0,
-    y: 0,
-    width: theme.chart.width
-  });
-}
+  return (VictoryLegend as any).getBaseProps(
+    {
+      titleComponent: <ChartLabel />, // Workaround for getBaseProps error
+      ...props
+    },
+    {
+      height: theme.chart.height,
+      orientation: theme.legend.orientation,
+      titleOrientation: theme.legend.titleOrientation,
+      x: 0,
+      y: 0,
+      width: theme.chart.width
+    }
+  );
+};

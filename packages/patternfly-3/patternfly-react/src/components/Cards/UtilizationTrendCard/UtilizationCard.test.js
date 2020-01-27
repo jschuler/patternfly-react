@@ -11,7 +11,6 @@ import {
   UtilizationCardDetailsLine2
 } from './index';
 
-
 test('Utilization Card is working properly', () => {
   const component = mount(
     <UtilizationCard>

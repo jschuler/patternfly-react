@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Navigation } from '../Navigation';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Navigation test', () => {
   it('Navigation should match snapshot', () => {
@@ -20,9 +22,9 @@ describe('Navigation test', () => {
 				toFirstPage={"'Go to first page'"}
 				currPage={"'Current page'"}
 				paginationTitle={"'Pagination'"}
-				page={0}
-				perPage={undefined}
-				onSetPage={() => {}/*unrecognizedType OnSetPage undefined*/}
+				page={42}
+				perPage={42}
+				onSetPage={undefined}
 				onNextClick={() => undefined as any}
 				onPreviousClick={() => undefined as any}
 				onFirstClick={() => undefined as any}

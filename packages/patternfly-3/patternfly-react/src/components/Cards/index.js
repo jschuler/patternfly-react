@@ -7,11 +7,7 @@ import CardHeading from './CardHeading';
 import CardHeightMatching from './CardHeightMatching';
 import CardLink from './CardLink';
 import CardTitle from './CardTitle';
-import {
-  AggregateStatusCount,
-  AggregateStatusNotification,
-  AggregateStatusNotifications
-} from './AggregateStatusCard';
+import { AggregateStatusCount, AggregateStatusNotification, AggregateStatusNotifications } from './AggregateStatusCard';
 import {
   UtilizationCard,
   UtilizationCardDetails,

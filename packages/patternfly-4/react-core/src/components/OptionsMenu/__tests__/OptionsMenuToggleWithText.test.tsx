@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { OptionsMenuToggleWithText } from '../OptionsMenuToggleWithText';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('OptionsMenuToggleWithText test', () => {
   it('OptionsMenuToggleWithText should match snapshot', () => {
@@ -11,18 +13,18 @@ describe('OptionsMenuToggleWithText test', () => {
         parentId={"''"}
 				toggleText={<div>ReactNode</div>}
 				toggleTextClassName={"''"}
-				toggleButtonContents={undefined}
+				toggleButtonContents={<div>ReactNode</div>}
 				toggleButtonContentsClassName={"''"}
 				onToggle={() => null as any}
-				onEnter={undefined}
+				onEnter={(event: React.MouseEvent<HTMLButtonElement>) => undefined as void}
 				isOpen={false}
 				isPlain={false}
 				isFocused={false}
 				isHovered={false}
 				isActive={false}
 				isDisabled={false}
-				parentRef={undefined}
-				ariaHasPopup={undefined}
+				parentRef={document.body}
+				ariaHasPopup={true}
 				aria-label={"'Options menu'"}
       />);
     expect(view).toMatchSnapshot();

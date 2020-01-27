@@ -2,6 +2,6 @@
 
 exports[`TooltipArrow test TooltipArrow should match snapshot 1`] = `
 <div
-  className="pf-c-tooltip__arrow"
+  className="pf-c-tooltip__arrow string"
 />
 `;

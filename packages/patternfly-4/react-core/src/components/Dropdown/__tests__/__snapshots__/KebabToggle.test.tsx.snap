@@ -16,6 +16,7 @@ exports[`KebabToggle test KebabToggle should match snapshot 1`] = `
   onEnter={[Function]}
   onToggle={[Function]}
   parentRef={null}
+  type="button"
 >
   <EllipsisVIcon
     color="currentColor"

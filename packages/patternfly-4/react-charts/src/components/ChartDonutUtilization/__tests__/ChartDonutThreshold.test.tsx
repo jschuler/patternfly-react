@@ -3,7 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartDonutThreshold } from '../ChartDonutThreshold';
-import { ChartContainer } from '../../ChartContainer';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartDonutThreshold test', () => {
   it('ChartDonutThreshold should match snapshot', () => {
@@ -11,44 +12,45 @@ describe('ChartDonutThreshold test', () => {
       <ChartDonutThreshold
         allowTooltip={true}
 				animate={undefined}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
 				categories={undefined}
-				children={undefined}
+				children={<p>ReactElement</p>}
 				colorScale={undefined}
 				constrainToVisibleArea={false}
-				containerComponent={<ChartContainer />}
-				cornerRadius={undefined}
+				containerComponent={<p>ReactElement</p>}
+				cornerRadius={42}
 				data={[]}
-				dataComponent={undefined}
-				desc={undefined}
-				endAngle={undefined}
+				dataComponent={<p>ReactElement</p>}
+				desc={"string"}
+				endAngle={42}
 				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
 				height={42}
-				innerRadius={undefined}
+				innerRadius={42}
 				invert={false}
-				labelRadius={undefined}
+				labelRadius={42}
 				labels={[]}
-				name={undefined}
-				origin={undefined}
-				padAngle={undefined}
+				name={"string"}
+				origin={{ x: 42, y: 42 }}
+				padAngle={42}
 				padding={undefined}
-				radius={undefined}
-				sharedEvents={undefined}
-				showStatic={undefined}
-				sortKey={undefined}
-				sortOrder={undefined}
+				radius={42}
+				sharedEvents={'any'}
+				showStatic={true}
+				sortKey={['string']}
+				sortOrder={'ascending'}
 				standalone={true}
-				startAngle={undefined}
+				startAngle={42}
 				style={undefined}
-				subTitle={undefined}
+				subTitle={"string"}
 				subTitlePosition={'bottom'}
-				themeColor={undefined}
-				themeVariant={undefined}
-				title={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				title={"string"}
 				width={42}
 				x={undefined}
 				y={undefined}

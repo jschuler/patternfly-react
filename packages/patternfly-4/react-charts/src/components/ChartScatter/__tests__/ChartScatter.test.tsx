@@ -3,52 +3,52 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartScatter } from '../ChartScatter';
-import { ChartContainer } from '../../ChartContainer';
-import { ChartScatterStyles } from '../../ChartTheme';
+// any missing imports can usually be resolved by adding them here
+import { ChartScatterStyles } from '../..';
 
 describe('ChartScatter test', () => {
   it('ChartScatter should match snapshot', () => {
     const view = shallow(
       <ChartScatter
         animate={undefined}
-				bubbleProperty={undefined}
+				bubbleProperty={"string"}
 				categories={undefined}
-				containerComponent={<ChartContainer />}
-				data={undefined}
-				dataComponent={undefined}
+				containerComponent={<p>ReactElement</p>}
+				data={[]}
+				dataComponent={<p>ReactElement</p>}
 				domain={undefined}
 				domainPadding={undefined}
 				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
-				height={undefined}
-				horizontal={undefined}
-				labelComponent={undefined}
-				labels={undefined}
-				maxBubbleSize={undefined}
-				maxDomain={undefined}
-				minBubbleSize={undefined}
-				minDomain={undefined}
-				name={undefined}
-				origin={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
+				height={42}
+				horizontal={true}
+				labelComponent={<p>ReactElement</p>}
+				labels={['string']}
+				maxBubbleSize={42}
+				maxDomain={1}
+				minBubbleSize={42}
+				minDomain={1}
+				name={"string"}
+				origin={{ x: 42, y: 42 }}
 				padding={undefined}
-				polar={undefined}
-				range={undefined}
-				samples={undefined}
+				polar={true}
+				range={[42, 42]}
+				samples={42}
 				scale={undefined}
-				sharedEvents={undefined}
-				singleQuadrantDomainPadding={undefined}
+				sharedEvents={'any'}
+				singleQuadrantDomainPadding={true}
 				size={({ active }) => (active ? ChartScatterStyles.activeSize : ChartScatterStyles.size)}
-				sortKey={undefined}
-				sortOrder={undefined}
-				standalone={undefined}
+				sortKey={['string']}
+				sortOrder={'ascending'}
+				standalone={true}
 				style={undefined}
 				symbol={undefined}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				width={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				width={42}
 				x={undefined}
 				y={undefined}
 				y0={undefined}

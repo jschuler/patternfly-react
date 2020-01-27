@@ -3,6 +3,12 @@
 exports[`DataToolbarGroup test DataToolbarGroup should match snapshot 1`] = `
 <DataToolbarGroupWithRef
   breakpointMods={Array []}
+  className="string"
   innerRef={null}
-/>
+  variant="filter-group"
+>
+  <div>
+    ReactNode
+  </div>
+</DataToolbarGroupWithRef>
 `;

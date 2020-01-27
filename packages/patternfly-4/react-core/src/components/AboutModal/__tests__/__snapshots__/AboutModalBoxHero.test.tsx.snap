@@ -2,10 +2,10 @@
 
 exports[`AboutModalBoxHero test AboutModalBoxHero should match snapshot 1`] = `
 <div
-  className="pf-c-about-modal-box__hero"
+  className="pf-c-about-modal-box__hero string"
   style={
     Object {
-      "--pf-c-about-modal-box__hero--sm--BackgroundImage": "url(undefined)",
+      "--pf-c-about-modal-box__hero--sm--BackgroundImage": "url(string)",
     }
   }
 />

@@ -3,17 +3,20 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { TableBody } from '../Body';
+// any missing imports can usually be resolved by adding them here
+import { IRow, IExtraRowData, IComputedData, OnRowClick } from '..';
 
-describe('TableBody test', () => {
-  it('TableBody should match snapshot', () => {
+describe('Body test', () => {
+  it('Body should match snapshot', () => {
     const view = shallow(
       <TableBody
         className={"''"}
 				children={<>ReactNode</>}
-				headerData={undefined}
-				rows={undefined}
+				headerData={[]}
+				rows={[]}
 				rowKey={'id'}
-				onRowClick={() => {}}
+				onRowClick={(event: React.MouseEvent, row: IRow, rowProps: IExtraRowData, computedData: IComputedData) =>
+undefined as OnRowClick}
 				onRow={(...args: any) => Object}
       />);
     expect(view).toMatchSnapshot();

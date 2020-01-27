@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { AboutModal } from '../AboutModal';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('AboutModal test', () => {
   it('AboutModal should match snapshot', () => {
@@ -14,8 +16,8 @@ describe('AboutModal test', () => {
 				onClose={(): any => undefined}
 				productName={"''"}
 				trademark={"''"}
-				brandImageSrc={"'defaultString'"}
-				brandImageAlt={"'defaultString'"}
+				brandImageSrc={"string"}
+				brandImageAlt={"string"}
 				backgroundImageSrc={"''"}
 				noAboutModalBoxContentContainer={false}
 				appendTo={null}

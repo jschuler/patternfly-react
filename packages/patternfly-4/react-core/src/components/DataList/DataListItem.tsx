@@ -30,22 +30,22 @@ export const DataListItem: React.FunctionComponent<DataListItemProps> = ({
   'aria-labelledby': ariaLabelledBy,
   children,
   ...props
-}:DataListItemProps) => {
-
+}: DataListItemProps) => {
   return (
     <DataListContext.Consumer>
       {({ isSelectable, selectedDataListItemId, updateSelectedDataListItem }) => {
-
         const selectDataListItem = (event: React.MouseEvent) => {
           let target: any = event.target;
           while (event.currentTarget !== target) {
-            if (("onclick" in target && target["onclick"]) ||
-              target["parentNode"]["classList"].contains(styles.dataListItemAction) ||
-              target["parentNode"]["classList"].contains(styles.dataListItemControl)) {
+            if (
+              ('onclick' in target && target.onclick) ||
+              target.parentNode.classList.contains(styles.dataListItemAction) ||
+              target.parentNode.classList.contains(styles.dataListItemControl)
+            ) {
               // check other event handlers are not present.
               return;
             } else {
-              target = target["parentNode"];
+              target = target.parentNode;
             }
           }
           updateSelectedDataListItem(id);
@@ -65,9 +65,10 @@ export const DataListItem: React.FunctionComponent<DataListItemProps> = ({
               isExpanded && styles.modifiers.expanded,
               isSelectable && styles.modifiers.selectable,
               selectedDataListItemId && selectedDataListItemId === id && styles.modifiers.selected,
-              className)}
+              className
+            )}
             aria-labelledby={ariaLabelledBy}
-            {...(isSelectable && { tabIndex: 0, onClick: selectDataListItem, onKeyDown: onKeyDown })}
+            {...(isSelectable && { tabIndex: 0, onClick: selectDataListItem, onKeyDown })}
             {...(selectedDataListItemId === id && { 'aria-selected': true })}
             {...props}
           >
@@ -80,8 +81,8 @@ export const DataListItem: React.FunctionComponent<DataListItemProps> = ({
                 })
             )}
           </li>
-        )
+        );
       }}
     </DataListContext.Consumer>
-  )
+  );
 };

@@ -10,6 +10,7 @@ exports[`ActionsColumn test ActionsColumn should match snapshot 1`] = `
     position="right"
     toggle={
       <KebabToggle
+        isDisabled={true}
         onToggle={[Function]}
       />
     }

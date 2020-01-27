@@ -22,11 +22,23 @@ exports[`Dropdown test Dropdown should match snapshot 1`] = `
   }
 >
   <Component
+    autoFocus={true}
+    className="string"
+    direction="up"
+    dropdownItems={Array []}
+    isGrouped={true}
+    isOpen={true}
+    isPlain={true}
+    position="right"
     toggle={
       <p>
         ReactElement
       </p>
     }
-  />
+  >
+    <div>
+      ReactNode
+    </div>
+  </Component>
 </ContextProvider>
 `;

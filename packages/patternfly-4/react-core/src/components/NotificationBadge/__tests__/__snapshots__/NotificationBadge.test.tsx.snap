@@ -2,10 +2,16 @@
 
 exports[`NotificationBadge test NotificationBadge should match snapshot 1`] = `
 <Component
+  aria-label="string"
+  className="string"
   variant="plain"
 >
   <span
     className="pf-c-notification-badge pf-m-unread"
-  />
+  >
+    <div>
+      ReactNode
+    </div>
+  </span>
 </Component>
 `;

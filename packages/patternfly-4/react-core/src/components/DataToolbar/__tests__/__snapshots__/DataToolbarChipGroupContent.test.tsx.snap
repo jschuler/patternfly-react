@@ -2,21 +2,11 @@
 
 exports[`DataToolbarChipGroupContent test DataToolbarChipGroupContent should match snapshot 1`] = `
 <div
-  className="pf-c-data-toolbar__content"
+  className="pf-c-data-toolbar__content pf-m-hidden string"
+  hidden={true}
 >
   <ForwardRef
     className=""
   />
-  <Component
-    className=""
-  >
-    <Component
-      isInline={true}
-      onClick={[Function]}
-      variant="link"
-    >
-      'Clear all filters'
-    </Component>
-  </Component>
 </div>
 `;

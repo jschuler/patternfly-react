@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { CatalogTile } from '../CatalogTile';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('CatalogTile test', () => {
   it('CatalogTile should match snapshot', () => {
@@ -16,9 +18,9 @@ describe('CatalogTile test', () => {
 				iconImg={"null"}
 				iconAlt={"''"}
 				iconClass={"''"}
-				icon={<>ReactNode</>}
+				icon={null}
 				badges={[]}
-				title={'string'}
+				title={undefined}
 				vendor={null}
 				description={null}
 				maxDescriptionLength={112}

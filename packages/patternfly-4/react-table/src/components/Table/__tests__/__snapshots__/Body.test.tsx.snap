@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TableBody test TableBody should match snapshot 1`] = `
+exports[`Body test Body should match snapshot 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>

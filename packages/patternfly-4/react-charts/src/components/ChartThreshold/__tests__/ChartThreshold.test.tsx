@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartThreshold } from '../ChartThreshold';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartThreshold test', () => {
   it('ChartThreshold should match snapshot', () => {
@@ -10,39 +12,39 @@ describe('ChartThreshold test', () => {
       <ChartThreshold
         animate={undefined}
 				categories={undefined}
-				containerComponent={undefined}
-				data={undefined}
-				dataComponent={undefined}
+				containerComponent={<p>ReactElement</p>}
+				data={[]}
+				dataComponent={<p>ReactElement</p>}
 				domain={undefined}
 				domainPadding={undefined}
 				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
-				height={undefined}
-				horizontal={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
+				height={42}
+				horizontal={true}
 				interpolation={undefined}
-				labelComponent={undefined}
-				labels={undefined}
-				maxDomain={undefined}
-				minDomain={undefined}
-				name={undefined}
-				origin={undefined}
+				labelComponent={<p>ReactElement</p>}
+				labels={() => {}}
+				maxDomain={1}
+				minDomain={1}
+				name={"string"}
+				origin={{ x: 42, y: 42 }}
 				padding={undefined}
-				polar={undefined}
-				range={undefined}
-				samples={undefined}
+				polar={true}
+				range={[42, 42]}
+				samples={42}
 				scale={undefined}
-				sharedEvents={undefined}
-				singleQuadrantDomainPadding={undefined}
-				sortKey={undefined}
-				sortOrder={undefined}
-				standalone={undefined}
-				style={{}}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				width={undefined}
+				sharedEvents={'any'}
+				singleQuadrantDomainPadding={true}
+				sortKey={['string']}
+				sortOrder={'ascending'}
+				standalone={true}
+				style={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				width={42}
 				x={undefined}
 				y={undefined}
 				y0={undefined}

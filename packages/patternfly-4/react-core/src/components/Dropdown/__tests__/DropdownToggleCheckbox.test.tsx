@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DropdownToggleCheckbox } from '../DropdownToggleCheckbox';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DropdownToggleCheckbox test', () => {
   it('DropdownToggleCheckbox should match snapshot', () => {
@@ -11,12 +13,12 @@ describe('DropdownToggleCheckbox test', () => {
         className={"''"}
 				isValid={true}
 				isDisabled={false}
-				isChecked={undefined}
-				checked={undefined}
+				isChecked={true}
+				checked={true}
 				onChange={() => undefined as any}
-				children={undefined}
-				id={"'defaultString'"}
-				aria-label={"'defaultString'"}
+				children={<div>ReactNode</div>}
+				id={"string"}
+				aria-label={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

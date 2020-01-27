@@ -3,52 +3,52 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartAxis } from '../ChartAxis';
-import { ChartContainer } from '../../ChartContainer';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartAxis test', () => {
   it('ChartAxis should match snapshot', () => {
     const view = shallow(
       <ChartAxis
         animate={undefined}
-				axisComponent={undefined}
-				axisLabelComponent={undefined}
-				axisValue={undefined}
-				containerComponent={<ChartContainer />}
-				crossAxis={undefined}
-				dependentAxis={undefined}
+				axisComponent={<p>ReactElement</p>}
+				axisLabelComponent={<p>ReactElement</p>}
+				axisValue={'any'}
+				containerComponent={<p>ReactElement</p>}
+				crossAxis={true}
+				dependentAxis={true}
 				domain={undefined}
 				domainPadding={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				fixLabelOverlap={undefined}
-				gridComponent={undefined}
-				groupComponent={undefined}
-				height={undefined}
-				invertAxis={undefined}
-				label={undefined}
-				maxDomain={undefined}
-				minDomain={undefined}
-				name={undefined}
-				offsetX={undefined}
-				offsetY={undefined}
-				orientation={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				fixLabelOverlap={true}
+				gridComponent={<p>ReactElement</p>}
+				groupComponent={<p>ReactElement</p>}
+				height={42}
+				invertAxis={true}
+				label={'any'}
+				maxDomain={1}
+				minDomain={1}
+				name={"string"}
+				offsetX={42}
+				offsetY={42}
+				orientation={'top'}
 				padding={undefined}
-				range={undefined}
+				range={[42, 42]}
 				scale={undefined}
-				sharedEvents={undefined}
+				sharedEvents={'any'}
 				showGrid={false}
-				singleQuadrantDomainPadding={undefined}
-				standalone={undefined}
-				style={undefined}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				tickComponent={undefined}
-				tickCount={undefined}
-				tickFormat={undefined}
-				tickLabelComponent={undefined}
-				tickValues={undefined}
-				width={undefined}
+				singleQuadrantDomainPadding={true}
+				standalone={true}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				tickComponent={<p>ReactElement</p>}
+				tickCount={42}
+				tickFormat={[undefined as any]}
+				tickLabelComponent={<p>ReactElement</p>}
+				tickValues={[]}
+				width={42}
       />);
     expect(view).toMatchSnapshot();
   });

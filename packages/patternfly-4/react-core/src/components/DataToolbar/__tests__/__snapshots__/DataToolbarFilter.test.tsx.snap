@@ -2,8 +2,9 @@
 
 exports[`DataToolbarFilter test DataToolbarFilter should match snapshot 1`] = `
 <DataToolbarFilter
-  categoryName="'defaultString'"
+  categoryName="string"
   chips={Array []}
+  deleteChip={[Function]}
   showToolbarItem={true}
 >
   <div>

@@ -7,19 +7,12 @@ exports[`FilterSidePanelCategoryItem test FilterSidePanelCategoryItem should mat
   <Checkbox
     checked={false}
     className=""
-    id="pf-15798045339509rhna798bd"
+    id="pf-1579899176546xez2bfyvbo"
     isChecked={false}
     isDisabled={false}
     isValid={true}
     label={
       <React.Fragment>
-        <span
-          className="item-icon"
-        >
-          <React.Fragment>
-            ReactNode
-          </React.Fragment>
-        </span>
         <React.Fragment>
           ReactNode
         </React.Fragment>

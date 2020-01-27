@@ -20,12 +20,7 @@ export class TableRowClickDemo extends React.Component<TableProps, ITableRowClic
   constructor(props) {
     super(props);
     this.state = {
-      columns: [
-        { title: 'Repositories' },
-        'Branches',
-        { title: 'Pull requests' },
-        'Workspaces'
-      ],
+      columns: [{ title: 'Repositories' }, 'Branches', { title: 'Pull requests' }, 'Workspaces'],
       rows: [
         {
           cells: ['Repositories one', 'Branches one', 'Pull requests one', 'Workspaces one']
@@ -40,7 +35,7 @@ export class TableRowClickDemo extends React.Component<TableProps, ITableRowClic
     };
     this.rowClickHandler = (event: React.MouseEvent, row: IRow) => {
       console.log('handle row click', row);
-    }
+    };
   }
 
   render() {

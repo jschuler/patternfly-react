@@ -752,25 +752,30 @@ export class SelectDemo extends Component<SelectDemoState> {
     return (
       <StackItem isFilled={false}>
         <Title size="2xl">Typeahead inside a form</Title>
-        <Form onSubmit={(e) => { window.location.href="/404"; e.preventDefault() }}>
-        <span id={titleId} hidden>
-          Select a state
-        </span>
-        <Select
-          toggleId={'form-typeahead-button'}
-          variant={SelectVariant.typeahead}
-          aria-label="Select a state"
-          onToggle={() => null}
-          onSelect={() => null}
-          onClear={() => null}
-          selections={''}
-          isExpanded={false}
-          ariaLabelledBy={titleId}
-          placeholderText="Select a state"
+        <Form
+          onSubmit={e => {
+            window.location.href = '/404';
+            e.preventDefault();
+          }}
         >
+          <span id={titleId} hidden>
+            Select a state
+          </span>
+          <Select
+            toggleId={'form-typeahead-button'}
+            variant={SelectVariant.typeahead}
+            aria-label="Select a state"
+            onToggle={() => null}
+            onSelect={() => null}
+            onClear={() => null}
+            selections={''}
+            isExpanded={false}
+            ariaLabelledBy={titleId}
+            placeholderText="Select a state"
+          >
             <SelectOption value={'option1'} />
             <SelectOption value={'option2'} />
-        </Select>
+          </Select>
         </Form>
       </StackItem>
     );

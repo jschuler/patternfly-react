@@ -3,7 +3,5 @@
 exports[`Title test Title should match snapshot 1`] = `
 <h1
   className="pf-c-title ''"
->
-  ReactNode
-</h1>
+/>
 `;

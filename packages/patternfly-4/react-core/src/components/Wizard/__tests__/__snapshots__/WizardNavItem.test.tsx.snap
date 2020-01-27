@@ -4,14 +4,14 @@ exports[`WizardNavItem test WizardNavItem should match snapshot 1`] = `
 <li
   className="pf-c-wizard__nav-item"
 >
-  <[object Object]
+  <a
     aria-current={false}
     aria-disabled={false}
     className="pf-c-wizard__nav-link"
     onClick={[Function]}
   >
     ''
-  </[object Object]>
+  </a>
   ReactNode
 </li>
 `;

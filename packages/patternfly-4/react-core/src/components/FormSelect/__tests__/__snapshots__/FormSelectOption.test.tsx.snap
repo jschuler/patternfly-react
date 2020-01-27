@@ -6,6 +6,6 @@ exports[`FormSelectOption test FormSelectOption should match snapshot 1`] = `
   disabled={false}
   value=""
 >
-  'defaultString'
+  string
 </option>
 `;

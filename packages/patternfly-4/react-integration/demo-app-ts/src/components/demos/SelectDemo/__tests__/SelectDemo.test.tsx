@@ -3,31 +3,33 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { SelectDemo } from '../SelectDemo';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('SelectDemo test', () => {
   it('SelectDemo should match snapshot', () => {
     const view = shallow(
       <SelectDemo
         singleIsExpanded={true}
-				singleSelected={"'defaultString'"}
+				singleSelected={"string"}
 				disabledSingleIsExpanded={true}
-				disabledSingleSelected={"'defaultString'"}
+				disabledSingleSelected={"string"}
 				customSingleIsExpanded={true}
-				customSingleSelected={"'defaultString'"}
+				customSingleSelected={"string"}
 				checkIsExpanded={true}
 				checkSelected={[]}
 				typeaheadIsExpanded={true}
-				typeaheadSelected={"'defaultString'"}
+				typeaheadSelected={"string"}
 				typeaheadMultiIsExpanded={true}
 				typeaheadMultiSelected={[]}
-				cdtypeaheadMultiIsExpanded={{}/*unrecognizedType literal false*/}
+				cdtypeaheadMultiIsExpanded={() => {}}
 				cdtypeaheadMultiSelected={[]}
 				plainTypeaheadMultiIsExpanded={true}
 				plainTypeaheadMultiSelected={[]}
 				plainTypeaheadMultiIsPlain={true}
 				customTypeaheadMultiIsExpanded={true}
 				customTypeaheadMultiSelected={[]}
-				direction={'string'}
+				direction={undefined}
 				typeaheadOptions={[]}
 				typeaheadCreateNew={() => undefined as void}
 				typeaheadNewOptions={true}

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Bullseye test Bullseye should match snapshot 1`] = `
-<[object Object]
+<div
   className="pf-l-bullseye ''"
 >
   ReactNode
-</[object Object]>
+</div>
 `;

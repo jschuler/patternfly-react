@@ -42,7 +42,7 @@ exports[`Tooltip test Tooltip should match snapshot 1`] = `
   }
   isVisible={false}
   lazy={true}
-  maxWidth="tooltipMaxWidth && tooltipMaxWidth.value"
+  maxWidth="string"
   onCreate={[Function]}
   placement="top"
   popperOptions={

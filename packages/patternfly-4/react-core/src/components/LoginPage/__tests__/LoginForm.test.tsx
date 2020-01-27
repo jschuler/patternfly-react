@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { LoginForm } from '../LoginForm';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('LoginForm test', () => {
   it('LoginForm should match snapshot', () => {
@@ -11,7 +13,7 @@ describe('LoginForm test', () => {
         noAutoFocus={false}
 				className={"''"}
 				showHelperText={false}
-				helperText={<>ReactNode</>}
+				helperText={null}
 				usernameLabel={"'Username'"}
 				usernameValue={"''"}
 				onChangeUsername={() => undefined as any}

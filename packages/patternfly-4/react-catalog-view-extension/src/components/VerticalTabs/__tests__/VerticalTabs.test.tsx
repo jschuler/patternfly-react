@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { VerticalTabs } from '../VerticalTabs';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('VerticalTabs test', () => {
   it('VerticalTabs should match snapshot', () => {

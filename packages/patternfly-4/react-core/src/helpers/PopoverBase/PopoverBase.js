@@ -29,7 +29,7 @@ class PopoverBase extends React.Component {
     isVisible: PropTypes.bool,
     onCreate: PropTypes.func,
     trigger: PropTypes.string,
-    hideOnClick: PropTypes.bool,
+    hideOnClick: PropTypes.bool
   };
 
   static defaultProps = {

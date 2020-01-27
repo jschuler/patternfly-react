@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { BreadcrumbItem } from '../BreadcrumbItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('BreadcrumbItem test', () => {
   it('BreadcrumbItem should match snapshot', () => {
@@ -13,7 +15,7 @@ describe('BreadcrumbItem test', () => {
 				to={"null"}
 				isActive={false}
 				target={"null"}
-				component={<>ReactNode</>}
+				component={'a'}
       />);
     expect(view).toMatchSnapshot();
   });

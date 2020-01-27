@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { AlertDemo } from '../AlertDemo';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('AlertDemo test', () => {
   it('AlertDemo should match snapshot', () => {

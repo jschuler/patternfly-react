@@ -3,9 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartPie } from '../ChartPie';
-import { ChartContainer } from '../../ChartContainer';
-import { ChartTooltip } from '../../ChartTooltip';
-import { ChartLegend } from '../../ChartLegend';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartPie test', () => {
   it('ChartPie should match snapshot', () => {
@@ -13,44 +12,45 @@ describe('ChartPie test', () => {
       <ChartPie
         allowTooltip={true}
 				animate={undefined}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
 				categories={undefined}
 				colorScale={undefined}
 				constrainToVisibleArea={false}
-				containerComponent={<ChartContainer />}
-				cornerRadius={undefined}
-				data={undefined}
-				dataComponent={undefined}
-				endAngle={undefined}
+				containerComponent={<p>ReactElement</p>}
+				cornerRadius={42}
+				data={[]}
+				dataComponent={<p>ReactElement</p>}
+				endAngle={42}
 				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
 				height={42}
-				innerRadius={undefined}
-				labelComponent={<ChartTooltip constrainToVisibleArea={false} theme={{}} />}
-				labelPosition={undefined}
-				labelRadius={undefined}
-				labels={undefined}
+				innerRadius={42}
+				labelComponent={<p>ReactElement</p>}
+				labelPosition={'startAngle'}
+				labelRadius={42}
+				labels={['string']}
 				legendAllowWrap={false}
-				legendComponent={<ChartLegend />}
-				legendData={undefined}
+				legendComponent={<p>ReactElement</p>}
+				legendData={[]}
 				legendOrientation={'horizontal'}
 				legendPosition={'bottom'}
-				name={undefined}
-				origin={undefined}
-				padAngle={undefined}
+				name={"string"}
+				origin={{ x: 42, y: 42 }}
+				padAngle={42}
 				padding={undefined}
-				radius={undefined}
-				sharedEvents={undefined}
-				sortKey={undefined}
-				sortOrder={undefined}
+				radius={42}
+				sharedEvents={'any'}
+				sortKey={['string']}
+				sortOrder={'ascending'}
 				standalone={true}
-				startAngle={undefined}
+				startAngle={42}
 				style={undefined}
-				themeColor={undefined}
-				themeVariant={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
 				width={42}
 				x={undefined}
 				y={undefined}

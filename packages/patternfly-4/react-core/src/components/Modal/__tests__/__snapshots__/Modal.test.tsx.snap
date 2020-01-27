@@ -8,6 +8,17 @@ exports[`Modal test Modal should match snapshot 1`] = `
     actions={Array []}
     ariaDescribedById="''"
     className="''"
+    disableFocusTrap={true}
+    footer={
+      <div>
+        ReactNode
+      </div>
+    }
+    header={
+      <div>
+        ReactNode
+      </div>
+    }
     hideTitle={false}
     id="pf-modal-0"
     isFooterLeftAligned={false}
@@ -16,7 +27,8 @@ exports[`Modal test Modal should match snapshot 1`] = `
     isSmall={false}
     onClose={[Function]}
     showClose={true}
-    title="'defaultString'"
+    title="string"
+    width={1}
   >
     <div>
       ReactNode

@@ -2,7 +2,52 @@
 
 exports[`ChartBulletGroupTitle test ChartBulletGroupTitle should match snapshot 1`] = `
 <Component
+  desc="string"
   height={42}
+  title="string"
   width={42}
-/>
+>
+  <p
+    capHeight={1.1}
+    style={
+      Array [
+        Object {
+          "fontSize": 24,
+        },
+        Object {
+          "fill": "#b8bbbe",
+          "fontSize": 14,
+        },
+      ]
+    }
+    text={
+      Array [
+        "string",
+        "string",
+      ]
+    }
+    textAnchor="middle"
+    verticalAnchor="middle"
+    x={21}
+    y={50}
+  >
+    ReactElement
+  </p>
+  <p
+    style={
+      Object {
+        "fill": "#ededed",
+        "opacity": 1,
+        "stroke": "#ededed",
+        "strokeWidth": 2,
+      }
+    }
+    x1={0}
+    x2={42}
+    y1={99.4}
+    y2={99.4}
+  >
+    ReactElement
+  </p>
+</Component>
 `;

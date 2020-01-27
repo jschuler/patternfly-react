@@ -106,15 +106,15 @@ export class PaginationOptionsMenu extends React.Component<PaginationOptionsMenu
 
     if (defaultToFullPage) {
       if (itemCount / newPerPage !== newPage) {
-        while (newPage > 1 && (itemCount - (newPerPage * newPage)) < 0) {
+        while (newPage > 1 && itemCount - newPerPage * newPage < 0) {
           newPage--;
         }
       }
     }
     const startIdx = (newPage - 1) * newPerPage;
     const endIdx = newPage * newPerPage;
-    return onPerPageSelect(_evt, newPerPage, newPage, startIdx, endIdx); 
-  }
+    return onPerPageSelect(_evt, newPerPage, newPage, startIdx, endIdx);
+  };
 
   renderItems = () => {
     const { perPageOptions, perPage, perPageSuffix } = this.props;

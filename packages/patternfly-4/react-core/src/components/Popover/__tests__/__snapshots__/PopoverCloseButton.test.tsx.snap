@@ -2,7 +2,7 @@
 
 exports[`PopoverCloseButton test PopoverCloseButton should match snapshot 1`] = `
 <Component
-  aria-label="'defaultString'"
+  aria-label="string"
   onClick={[Function]}
   style={
     Object {

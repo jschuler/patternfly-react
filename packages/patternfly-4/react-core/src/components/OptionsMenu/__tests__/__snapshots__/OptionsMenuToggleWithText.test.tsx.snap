@@ -18,6 +18,10 @@ exports[`OptionsMenuToggleWithText test OptionsMenuToggleWithText should match s
     className="pf-c-options-menu__toggle-button ''"
     id="''-toggle"
     onClick={[Function]}
-  />
+  >
+    <div>
+      ReactNode
+    </div>
+  </button>
 </div>
 `;

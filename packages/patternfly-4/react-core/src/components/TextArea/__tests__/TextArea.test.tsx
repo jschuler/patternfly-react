@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { TextArea } from '../TextArea';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('TextArea test', () => {
   it('TextArea should match snapshot', () => {
@@ -12,8 +14,8 @@ describe('TextArea test', () => {
 				isRequired={false}
 				isValid={true}
 				validated={'default'}
-				value={undefined}
-				onChange={undefined}
+				value={1}
+				onChange={(value: string, event: React.ChangeEvent<HTMLTextAreaElement>) => undefined as void}
 				resizeOrientation={'both'}
 				aria-label={"null"}
       />);

@@ -4,12 +4,12 @@ exports[`LoginMainFooterLinksItem test LoginMainFooterLinksItem should match sna
 <li
   className="pf-c-login__main-footer-links-item ''"
 >
-  <[object Object]
+  <a
     className="pf-c-login__main-footer-links-item-link"
     href="''"
     target="''"
   >
     ReactNode
-  </[object Object]>
+  </a>
 </li>
 `;

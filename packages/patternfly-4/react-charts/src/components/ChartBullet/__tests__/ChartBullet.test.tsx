@@ -3,74 +3,66 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartBullet } from '../ChartBullet';
-import { ChartAxis } from '../../ChartAxis';
-import { ChartBulletComparativeErrorMeasure } from './../ChartBulletComparativeErrorMeasure';
-import { ChartBulletComparativeMeasure } from './../ChartBulletComparativeMeasure';
-import { ChartBulletComparativeWarningMeasure } from './../ChartBulletComparativeWarningMeasure';
-import { ChartBulletGroupTitle } from './../ChartBulletGroupTitle';
-import { ChartBulletPrimaryDotMeasure } from './../ChartBulletPrimaryDotMeasure';
-import { ChartBulletPrimarySegmentedMeasure } from './../ChartBulletPrimarySegmentedMeasure';
-import { ChartBulletQualitativeRange } from './../ChartBulletQualitativeRange';
-import { ChartBulletTitle } from './../ChartBulletTitle';
-import { ChartLegend } from '../../ChartLegend';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartBullet test', () => {
   it('ChartBullet should match snapshot', () => {
     const view = shallow(
       <ChartBullet
         allowTooltip={true}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
-				axisComponent={<ChartAxis />}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
+				axisComponent={<p>ReactElement</p>}
 				bulletSize={42}
-				comparativeErrorMeasureComponent={<ChartBulletComparativeErrorMeasure />}
-				comparativeErrorMeasureData={undefined}
+				comparativeErrorMeasureComponent={<p>ReactElement</p>}
+				comparativeErrorMeasureData={[]}
 				comparativeErrorMeasureDataY={undefined}
-				comparativeErrorMeasureLegendData={undefined}
-				comparativeWarningMeasureComponent={<ChartBulletComparativeWarningMeasure />}
-				comparativeWarningMeasureData={undefined}
+				comparativeErrorMeasureLegendData={[]}
+				comparativeWarningMeasureComponent={<p>ReactElement</p>}
+				comparativeWarningMeasureData={[]}
 				comparativeWarningMeasureDataY={undefined}
-				comparativeWarningMeasureLegendData={undefined}
-				comparativeZeroMeasureComponent={<ChartBulletComparativeMeasure />}
+				comparativeWarningMeasureLegendData={[]}
+				comparativeZeroMeasureComponent={<p>ReactElement</p>}
 				constrainToVisibleArea={false}
-				domain={undefined/*unrecognizedType DomainPropType undefined*/}
-				groupTitleComponent={<ChartBulletGroupTitle />}
-				groupSubTitle={undefined}
-				groupTitle={undefined}
-				height={undefined}
+				domain={undefined}
+				groupTitleComponent={<p>ReactElement</p>}
+				groupSubTitle={"string"}
+				groupTitle={"string"}
+				height={42}
 				horizontal={true}
 				invert={false}
-				labels={undefined}
+				labels={(point: any, index: number, points: any[]) => undefined as string}
 				legendAllowWrap={false}
-				legendComponent={<ChartLegend />}
-				legendItemsPerRow={undefined}
+				legendComponent={<p>ReactElement</p>}
+				legendItemsPerRow={42}
 				legendOrientation={'horizontal'}
 				legendPosition={'bottom'}
-				maxDomain={undefined}
-				minDomain={undefined}
+				maxDomain={1}
+				minDomain={1}
 				padding={undefined}
-				primaryDotMeasureComponent={<ChartBulletPrimaryDotMeasure />}
-				primaryDotMeasureData={undefined}
+				primaryDotMeasureComponent={<p>ReactElement</p>}
+				primaryDotMeasureData={[]}
 				primaryDotMeasureDataY={undefined}
-				primaryDotMeasureLegendData={undefined}
-				primarySegmentedMeasureComponent={<ChartBulletPrimarySegmentedMeasure />}
-				primarySegmentedMeasureData={undefined}
+				primaryDotMeasureLegendData={[]}
+				primarySegmentedMeasureComponent={<p>ReactElement</p>}
+				primarySegmentedMeasureData={[]}
 				primarySegmentedMeasureDataY={undefined}
-				primarySegmentedMeasureLegendData={undefined}
-				qualitativeRangeComponent={<ChartBulletQualitativeRange />}
-				qualitativeRangeData={undefined}
+				primarySegmentedMeasureLegendData={[]}
+				qualitativeRangeComponent={<p>ReactElement</p>}
+				qualitativeRangeData={[]}
 				qualitativeRangeDataY={undefined}
 				qualitativeRangeDataY0={undefined}
-				qualitativeRangeLegendData={undefined}
+				qualitativeRangeLegendData={[]}
 				standalone={true}
-				subTitle={undefined}
-				theme={undefined/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				title={undefined}
-				titleComponent={<ChartBulletTitle />}
-				titlePosition={undefined}
-				width={undefined}
+				subTitle={"string"}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				title={"string"}
+				titleComponent={<p>ReactElement</p>}
+				titlePosition={'left'}
+				width={42}
       />);
     expect(view).toMatchSnapshot();
   });

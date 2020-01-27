@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ContextSelector } from '../ContextSelector';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ContextSelector test', () => {
   it('ContextSelector should match snapshot', () => {

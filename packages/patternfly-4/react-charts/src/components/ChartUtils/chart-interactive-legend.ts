@@ -52,23 +52,25 @@ const getInteractiveLegendItems = ({ chartNames, omitIndex }: ChartInteractiveLe
 
 // Returns styles for interactive legend items
 export const getInteractiveLegendItemStyles = (hidden: boolean = false) => {
-  return !hidden ? {} : {
-    labels: {
-      fill: chart_color_black_500.value
-    },
-    symbol: {
-      fill: chart_color_black_500.value,
-      type: 'eyeSlash'
-    }
-  };
+  return !hidden
+    ? {}
+    : {
+        labels: {
+          fill: chart_color_black_500.value
+        },
+        symbol: {
+          fill: chart_color_black_500.value,
+          type: 'eyeSlash'
+        }
+      };
 };
 
 // Returns targeted events for legend 'data' or 'labels'
 const getInteractiveLegendTargetEvents = ({
   chartNames,
-  isHidden = (index) => false,
+  isHidden = index => false,
   legendName,
-  onLegendClick = (props) => null,
+  onLegendClick = props => null,
   target
 }: ChartInteractiveLegendExtInterface) => {
   if (chartNames === undefined || legendName === undefined) {
@@ -101,49 +103,59 @@ const getInteractiveLegendTargetEvents = ({
           ];
         },
         onMouseOver: () => {
-          return isHidden(index) ? null : [
-            {
-              // Mute all data series, except the data associated with this event
-              childName: childNames,
-              target: 'data',
-              eventKey: 'all',
-              mutation: (props: any) => {
-                return {
-                  style: {
-                    ...props.style,
-                    opacity: chart_area_Opacity.value
+          return isHidden(index)
+            ? null
+            : [
+                {
+                  // Mute all data series, except the data associated with this event
+                  childName: childNames,
+                  target: 'data',
+                  eventKey: 'all',
+                  mutation: (props: any) => {
+                    return {
+                      style: {
+                        ...props.style,
+                        opacity: chart_area_Opacity.value
+                      }
+                    } as any;
                   }
-                } as any;
-              }
-            }, {
-              // Mute all legend item symbols, except the symbol associated with this event
-              childName: 'legend',
-              target: 'data',
-              eventKey: legendItems,
-              mutation: (props: any) => {
-                return isHidden(props.index) ? null : { // Skip if hidden
-                  style: {
-                    ...props.style,
-                    opacity: chart_area_Opacity.value
+                },
+                {
+                  // Mute all legend item symbols, except the symbol associated with this event
+                  childName: 'legend',
+                  target: 'data',
+                  eventKey: legendItems,
+                  mutation: (props: any) => {
+                    return isHidden(props.index)
+                      ? null
+                      : {
+                          // Skip if hidden
+                          style: {
+                            ...props.style,
+                            opacity: chart_area_Opacity.value
+                          }
+                        };
                   }
-                };
-              }
-            }, {
-              // Mute all legend item labels, except the label associated with this event
-              childName: 'legend',
-              target: 'labels',
-              eventKey: legendItems,
-              mutation: (props: any) => {
-                const column = props.datum && props.datum.column ? props.datum.column : 0;
-                return isHidden(column) ? null : { // Skip if hidden
-                  style: {
-                    ...props.style,
-                    opacity: chart_area_Opacity.value
+                },
+                {
+                  // Mute all legend item labels, except the label associated with this event
+                  childName: 'legend',
+                  target: 'labels',
+                  eventKey: legendItems,
+                  mutation: (props: any) => {
+                    const column = props.datum && props.datum.column ? props.datum.column : 0;
+                    return isHidden(column)
+                      ? null
+                      : {
+                          // Skip if hidden
+                          style: {
+                            ...props.style,
+                            opacity: chart_area_Opacity.value
+                          }
+                        };
                   }
-                };
-              }
-            }
-          ];
+                }
+              ];
         },
         onMouseOut: () => {
           return [
@@ -153,13 +165,15 @@ const getInteractiveLegendTargetEvents = ({
               target: 'data',
               eventKey: 'all',
               mutation: () => null as any
-            }, {
+            },
+            {
               // Restore all legend item symbols associated with this event
               childName: 'legend',
               target: 'data',
               eventKey: legendItems,
               mutation: () => null as any
-            }, {
+            },
+            {
               // Restore all legend item labels associated with this event
               childName: 'legend',
               target: 'labels',

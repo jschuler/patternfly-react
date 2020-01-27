@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { LoginHeader } from '../LoginHeader';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('LoginHeader test', () => {
   it('LoginHeader should match snapshot', () => {
@@ -10,7 +12,7 @@ describe('LoginHeader test', () => {
       <LoginHeader
         children={<>ReactNode</>}
 				className={"''"}
-				headerBrand={<>ReactNode</>}
+				headerBrand={null}
       />);
     expect(view).toMatchSnapshot();
   });

@@ -3,17 +3,19 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DropdownMenu } from '../DropdownMenu';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DropdownMenu test', () => {
   it('DropdownMenu should match snapshot', () => {
     const view = shallow(
       <DropdownMenu
-        children={undefined}
+        children={<div>ReactNode</div>}
 				className={"''"}
 				isOpen={true}
 				openedOnEnter={false}
 				autoFocus={true}
-				component={<>ReactNode</>}
+				component={'ul'}
 				position={'right'}
 				isGrouped={false}
       />);

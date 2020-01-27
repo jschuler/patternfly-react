@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ClipboardCopy } from '../ClipboardCopy';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ClipboardCopy test', () => {
   it('ClipboardCopy should match snapshot', () => {
     const view = shallow(
       <ClipboardCopy
-        className={undefined}
+        className={"string"}
 				hoverTip={"'Copy to clipboard'"}
 				clickTip={"'Successfully copied to clipboard!'"}
 				textAriaLabel={"'Copyable input'"}
@@ -32,7 +34,7 @@ describe('ClipboardCopy test', () => {
   clipboard.removeChild(el);
 }}
 				onChange={(): any => undefined}
-				children={undefined}
+				children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

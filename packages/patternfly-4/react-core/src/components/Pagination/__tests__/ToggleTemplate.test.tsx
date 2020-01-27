@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ToggleTemplate } from '../ToggleTemplate';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ToggleTemplate test', () => {
   it('ToggleTemplate should match snapshot', () => {

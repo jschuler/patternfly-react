@@ -3,14 +3,25 @@
 exports[`DropdownToggleCheckbox test DropdownToggleCheckbox should match snapshot 1`] = `
 <label
   className="pf-c-dropdown__toggle-check ''"
-  htmlFor="'defaultString'"
+  htmlFor="string"
 >
   <input
     aria-invalid={false}
-    aria-label="'defaultString'"
+    aria-label="string"
+    checked={true}
     disabled={false}
-    id="'defaultString'"
+    id="string"
+    onChange={[Function]}
     type="checkbox"
   />
+  <span
+    aria-hidden="true"
+    className="pf-c-dropdown__toggle-text ''"
+    id="string-text"
+  >
+    <div>
+      ReactNode
+    </div>
+  </span>
 </label>
 `;

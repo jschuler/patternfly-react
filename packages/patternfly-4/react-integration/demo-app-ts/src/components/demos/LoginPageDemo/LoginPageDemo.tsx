@@ -14,7 +14,7 @@ import {
   LoginPage,
   BackgroundImageSrc,
   ListItem,
-  ListVariant,
+  ListVariant
 } from '@patternfly/react-core';
 import { ExclamationCircleIcon } from '@patternfly/react-icons';
 

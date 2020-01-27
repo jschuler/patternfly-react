@@ -3,6 +3,7 @@
 exports[`FormSelect test FormSelect should match snapshot 1`] = `
 <select
   aria-invalid={false}
+  aria-label="string"
   className="pf-c-form-control ''"
   disabled={false}
   onBlur={[Function]}

@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BodyCell test BodyCell should match snapshot 1`] = `""`;
+exports[`BodyCell test BodyCell should match snapshot 1`] = `
+<td
+  className="''"
+  colSpan={42}
+  data-label="''"
+/>
+`;

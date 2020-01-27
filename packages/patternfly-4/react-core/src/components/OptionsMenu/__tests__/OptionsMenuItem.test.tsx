@@ -3,15 +3,17 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { OptionsMenuItem } from '../OptionsMenuItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('OptionsMenuItem test', () => {
   it('OptionsMenuItem should match snapshot', () => {
     const view = shallow(
       <OptionsMenuItem
         children={<>ReactNode</>}
-				className={undefined}
+				className={"string"}
 				isSelected={false}
-				isDisabled={undefined}
+				isDisabled={true}
 				onSelect={() => null as any}
 				id={"''"}
       />);

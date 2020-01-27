@@ -2,14 +2,14 @@
 
 exports[`NavGroup test NavGroup should match snapshot 1`] = `
 <section
-  aria-labelledby="'defaultString'"
+  aria-labelledby="string"
   className="pf-c-nav__section ''"
 >
   <h2
     className="pf-c-nav__section-title"
-    id="'defaultString'"
+    id="string"
   >
-    'defaultString'
+    string
   </h2>
   <ul
     className="pf-c-nav__list"

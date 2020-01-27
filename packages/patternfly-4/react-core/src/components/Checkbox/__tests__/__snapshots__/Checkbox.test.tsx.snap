@@ -6,12 +6,21 @@ exports[`Checkbox test Checkbox should match snapshot 1`] = `
 >
   <input
     aria-invalid={false}
+    aria-label="string"
     checked={false}
     className="pf-c-check__input"
     disabled={false}
-    id="'defaultString'"
+    id="string"
     onChange={[Function]}
     type="checkbox"
   />
+  <label
+    className="pf-c-check__label"
+    htmlFor="string"
+  >
+    <div>
+      ReactNode
+    </div>
+  </label>
 </div>
 `;

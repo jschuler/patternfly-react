@@ -2,7 +2,35 @@
 
 exports[`TopologySideBar test TopologySideBar should match snapshot 1`] = `
 <div
-  className="pf-topology-side-bar fade "
+  className="pf-topology-side-bar fade string shown"
   role="dialog"
-/>
+>
+  <Component
+    aria-label="Close"
+    className="pf-topology-side-bar__dismiss"
+    onClick={[Function]}
+    variant="plain"
+  >
+    <TimesIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+      title={null}
+    />
+  </Component>
+  <div
+    className="pf-topology-side-bar__header"
+  >
+    <div>
+      ReactNode
+    </div>
+  </div>
+  <div
+    className="pf-topology-side-bar__body"
+  >
+    <div>
+      ReactNode
+    </div>
+  </div>
+</div>
 `;

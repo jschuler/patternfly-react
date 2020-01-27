@@ -106,4 +106,4 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `;
   actions.createTypes(typeDefs);
-}
+};

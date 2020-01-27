@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ProgressBar } from '../ProgressBar';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ProgressBar test', () => {
   it('ProgressBar should match snapshot', () => {
@@ -11,7 +13,7 @@ describe('ProgressBar test', () => {
         children={<>ReactNode</>}
 				className={"''"}
 				value={42}
-				ariaProps={{}/*unrecognizedType AriaProps undefined*/}
+				ariaProps={undefined}
       />);
     expect(view).toMatchSnapshot();
   });

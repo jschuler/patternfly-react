@@ -3,14 +3,16 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { EmptyStateIcon } from '../EmptyStateIcon';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('EmptyStateIcon test', () => {
   it('EmptyStateIcon should match snapshot', () => {
     const view = shallow(
       <EmptyStateIcon
-        color={undefined}
-				size={undefined}
-				title={undefined}
+        color={"string"}
+				size={'sm'}
+				title={"string"}
 				className={"''"}
 				icon={null}
 				component={null}

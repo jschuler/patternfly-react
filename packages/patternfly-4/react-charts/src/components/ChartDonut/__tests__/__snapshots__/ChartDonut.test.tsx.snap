@@ -2,7 +2,8 @@
 
 exports[`ChartDonut test ChartDonut should match snapshot 1`] = `
 <Fragment>
-  <Component
+  <p
+    desc="string"
     height={42}
     theme={
       Object {
@@ -454,16 +455,69 @@ exports[`ChartDonut test ChartDonut should match snapshot 1`] = `
         },
       }
     }
+    title="string"
     width={42}
   >
     <Component
       allowTooltip={true}
+      constrainToVisibleArea={true}
+      cornerRadius={42}
+      data={Array []}
+      dataComponent={
+        <p>
+          ReactElement
+        </p>
+      }
+      endAngle={42}
+      events={Array []}
+      externalEventMutations={Array []}
+      groupComponent={
+        <p>
+          ReactElement
+        </p>
+      }
       height={42}
-      innerRadius={0}
+      innerRadius={42}
       key="pf-chart-donut-pie"
+      labelComponent={
+        <p>
+          ReactElement
+        </p>
+      }
+      labelPosition="startAngle"
+      labelRadius={42}
+      labels={
+        Array [
+          "string",
+        ]
+      }
+      legendAllowWrap={true}
+      legendComponent={
+        <p>
+          ReactElement
+        </p>
+      }
+      legendData={Array []}
+      legendOrientation="horizontal"
       legendPosition="bottom"
-      radius={1}
+      name="string"
+      origin={
+        Object {
+          "x": 42,
+          "y": 42,
+        }
+      }
+      padAngle={42}
+      radius={42}
+      sharedEvents="any"
+      sortKey={
+        Array [
+          "string",
+        ]
+      }
+      sortOrder="ascending"
       standalone={false}
+      startAngle={42}
       theme={
         Object {
           "area": Object {
@@ -916,6 +970,43 @@ exports[`ChartDonut test ChartDonut should match snapshot 1`] = `
       }
       width={42}
     />
-  </Component>
+    <p
+      key="pf-chart-donut-title"
+      style={
+        Array [
+          Object {
+            "fontSize": 24,
+          },
+          Object {
+            "fill": "#b8bbbe",
+            "fontSize": 14,
+          },
+        ]
+      }
+      text="string"
+      textAnchor="middle"
+      verticalAnchor="middle"
+      x={21}
+      y={21}
+    >
+      ReactElement
+    </p>
+    <p
+      key="pf-chart-donut-subtitle"
+      style={
+        Object {
+          "fill": "#b8bbbe",
+          "fontSize": 14,
+        }
+      }
+      text="string"
+      textAnchor="middle"
+      verticalAnchor="middle"
+      x={21}
+      y={38}
+    >
+      ReactElement
+    </p>
+  </p>
 </Fragment>
 `;

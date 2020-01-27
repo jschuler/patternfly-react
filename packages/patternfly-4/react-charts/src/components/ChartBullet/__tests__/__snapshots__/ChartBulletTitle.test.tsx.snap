@@ -2,10 +2,13 @@
 
 exports[`ChartBulletTitle test ChartBulletTitle should match snapshot 1`] = `
 <Component
-  height={140}
-  width={450}
+  desc="string"
+  height={42}
+  title="string"
+  width={42}
 >
-  <Component
+  <p
+    capHeight={1.1}
     style={
       Array [
         Object {
@@ -17,10 +20,18 @@ exports[`ChartBulletTitle test ChartBulletTitle should match snapshot 1`] = `
         },
       ]
     }
+    text={
+      Array [
+        "string",
+        "string",
+      ]
+    }
     textAnchor="end"
     verticalAnchor="middle"
     x={36}
     y={70}
-  />
+  >
+    ReactElement
+  </p>
 </Component>
 `;

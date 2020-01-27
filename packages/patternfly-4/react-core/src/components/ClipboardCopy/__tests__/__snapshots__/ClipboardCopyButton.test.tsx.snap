@@ -40,9 +40,9 @@ exports[`ClipboardCopyButton test ClipboardCopyButton should match snapshot 1`] 
 >
   <button
     aria-label="'Copyable input'"
-    aria-labelledby="'defaultString' 'defaultString'"
+    aria-labelledby="string string"
     className="pf-c-clipboard-copy__group-copy ''"
-    id="'defaultString'"
+    id="string"
     onClick={[Function]}
     type="button"
   >

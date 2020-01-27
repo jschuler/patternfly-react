@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DataListAction } from '../DataListAction';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DataListAction test', () => {
   it('DataListAction should match snapshot', () => {
@@ -10,9 +12,9 @@ describe('DataListAction test', () => {
       <DataListAction
         children={<div>ReactNode</div>}
 				className={"''"}
-				id={"'defaultString'"}
-				aria-labelledby={"'defaultString'"}
-				aria-label={"'defaultString'"}
+				id={"string"}
+				aria-labelledby={"string"}
+				aria-label={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

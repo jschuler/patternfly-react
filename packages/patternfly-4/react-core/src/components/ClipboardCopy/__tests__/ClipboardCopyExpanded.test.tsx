@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ClipboardCopyExpanded } from '../ClipboardCopyExpanded';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ClipboardCopyExpanded test', () => {
   it('ClipboardCopyExpanded should match snapshot', () => {

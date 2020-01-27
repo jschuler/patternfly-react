@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { PopoverBody } from '../PopoverBody';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('PopoverBody test', () => {
   it('PopoverBody should match snapshot', () => {
     const view = shallow(
       <PopoverBody
-        id={"'defaultString'"}
+        id={"string"}
 				children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();

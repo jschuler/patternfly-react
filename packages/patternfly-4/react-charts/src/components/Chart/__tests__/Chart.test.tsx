@@ -3,8 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Chart } from '../Chart';
-import { ChartContainer } from '../../ChartContainer';
-import { ChartLegend } from '../../ChartLegend';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Chart test', () => {
   it('Chart should match snapshot', () => {
@@ -12,38 +12,39 @@ describe('Chart test', () => {
       <Chart
         allowZoom={false}
 				animate={undefined}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
-				children={undefined}
-				containerComponent={<ChartContainer />}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
+				children={<div>ReactNode</div>}
+				containerComponent={<p>ReactElement</p>}
 				domain={undefined}
 				domainPadding={undefined}
-				endAngle={undefined}
+				endAngle={42}
 				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
 				height={42}
-				horizontal={undefined}
-				innerRadius={undefined}
+				horizontal={true}
+				innerRadius={42}
 				legendAllowWrap={false}
-				legendComponent={<ChartLegend />}
-				legendData={undefined}
+				legendComponent={<p>ReactElement</p>}
+				legendData={[]}
 				legendOrientation={'horizontal'}
 				legendPosition={'bottom'}
-				maxDomain={undefined}
-				minDomain={undefined}
+				maxDomain={1}
+				minDomain={1}
 				padding={undefined}
-				polar={undefined}
-				range={undefined}
+				polar={true}
+				range={[42, 42]}
 				scale={undefined}
-				sharedEvents={undefined}
-				singleQuadrantDomainPadding={undefined}
+				sharedEvents={'any'}
+				singleQuadrantDomainPadding={true}
 				standalone={true}
-				startAngle={undefined}
+				startAngle={42}
 				style={undefined}
-				themeColor={undefined}
-				themeVariant={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
 				width={42}
       />);
     expect(view).toMatchSnapshot();

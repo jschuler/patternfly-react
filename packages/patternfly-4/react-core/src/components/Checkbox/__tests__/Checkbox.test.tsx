@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Checkbox } from '../Checkbox';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Checkbox test', () => {
   it('Checkbox should match snapshot', () => {
@@ -12,11 +14,11 @@ describe('Checkbox test', () => {
 				isValid={true}
 				isDisabled={false}
 				isChecked={false}
-				checked={undefined}
+				checked={true}
 				onChange={() => {}}
-				label={undefined}
-				id={"'defaultString'"}
-				aria-label={undefined}
+				label={<div>ReactNode</div>}
+				id={"string"}
+				aria-label={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

@@ -31,12 +31,12 @@ export const WizardFooterInternal: React.FunctionComponent<WizardFooterInternalP
     <Button variant={ButtonVariant.primary} type="submit" onClick={onNext} isDisabled={!isValid}>
       {nextButtonText}
     </Button>
-    {!activeStep.hideBackButton && (
+    {!(activeStep && activeStep.hideBackButton) && (
       <Button variant={ButtonVariant.secondary} onClick={onBack} className={css(firstStep && 'pf-m-disabled')}>
         {backButtonText}
       </Button>
     )}
-    {!activeStep.hideCancelButton && (
+    {!(activeStep && activeStep.hideCancelButton) && (
       <Button variant={ButtonVariant.link} onClick={onClose}>
         {cancelButtonText}
       </Button>

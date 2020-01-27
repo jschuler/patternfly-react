@@ -3,45 +3,45 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartLegend } from '../ChartLegend';
-import { ChartContainer } from '../../ChartContainer';
-import { ChartPoint } from '../../ChartPoint';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartLegend test', () => {
   it('ChartLegend should match snapshot', () => {
     const view = shallow(
       <ChartLegend
-        borderComponent={undefined}
+        borderComponent={<p>ReactElement</p>}
 				borderPadding={undefined}
-				centerTitle={undefined}
+				centerTitle={true}
 				colorScale={undefined}
-				containerComponent={<ChartContainer />}
-				data={undefined}
-				dataComponent={<ChartPoint />}
-				eventKey={undefined}
-				events={undefined}
-				externalEventMutations={undefined}
-				groupComponent={undefined}
-				gutter={undefined}
-				height={undefined}
-				itemsPerRow={undefined}
-				labelComponent={undefined}
-				orientation={undefined}
+				containerComponent={<p>ReactElement</p>}
+				data={[]}
+				dataComponent={<p>ReactElement</p>}
+				eventKey={['string']}
+				events={[]}
+				externalEventMutations={[]}
+				groupComponent={<p>ReactElement</p>}
+				gutter={1}
+				height={42}
+				itemsPerRow={42}
+				labelComponent={<p>ReactElement</p>}
+				orientation={'horizontal'}
 				padding={undefined}
 				responsive={true}
-				rowGutter={undefined}
-				sharedEvents={undefined}
-				standalone={undefined}
+				rowGutter={1}
+				sharedEvents={'any'}
+				standalone={true}
 				style={undefined}
-				symbolSpacer={undefined}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				title={undefined}
-				titleComponent={undefined}
+				symbolSpacer={42}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				title={['string']}
+				titleComponent={<p>ReactElement</p>}
 				titleOrientation={undefined}
-				width={undefined}
-				x={undefined}
-				y={undefined}
+				width={42}
+				x={42}
+				y={42}
       />);
     expect(view).toMatchSnapshot();
   });

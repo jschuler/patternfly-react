@@ -3,7 +3,5 @@
 exports[`Badge test Badge should match snapshot 1`] = `
 <span
   className="pf-c-badge pf-m-unread ''"
->
-  ReactNode
-</span>
+/>
 `;

@@ -2,7 +2,7 @@
 
 exports[`Brand test Brand should match snapshot 1`] = `
 <img
-  alt="'defaultString'"
+  alt="string"
   className="pf-c-brand ''"
   src="''"
 />

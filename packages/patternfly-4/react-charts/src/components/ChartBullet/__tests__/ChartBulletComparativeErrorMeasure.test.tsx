@@ -3,29 +3,30 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartBulletComparativeErrorMeasure } from '../ChartBulletComparativeErrorMeasure';
-import { ChartBulletComparativeMeasure } from './../ChartBulletComparativeMeasure';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartBulletComparativeErrorMeasure test', () => {
   it('ChartBulletComparativeErrorMeasure should match snapshot', () => {
     const view = shallow(
       <ChartBulletComparativeErrorMeasure
         allowTooltip={true}
-				ariaDesc={undefined}
-				ariaTitle={undefined}
+				ariaDesc={"string"}
+				ariaTitle={"string"}
 				barWidth={undefined}
 				constrainToVisibleArea={false}
-				data={undefined}
+				data={[]}
 				domain={undefined}
 				height={42}
 				horizontal={true}
-				labelComponent={undefined}
-				labels={undefined}
-				measureComponent={<ChartBulletComparativeMeasure />}
+				labelComponent={<p>ReactElement</p>}
+				labels={() => {}}
+				measureComponent={<p>ReactElement</p>}
 				padding={undefined}
 				standalone={true}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
 				width={42}
 				y={undefined}
       />);

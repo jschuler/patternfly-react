@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Page } from '../Page';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Page test', () => {
   it('Page should match snapshot', () => {
@@ -10,15 +12,15 @@ describe('Page test', () => {
       <Page
         children={<>ReactNode</>}
 				className={"''"}
-				header={<>ReactNode</>}
-				sidebar={<>ReactNode</>}
+				header={null}
+				sidebar={null}
 				skipToContent={null}
 				mainContainerId={"null"}
 				isManagedSidebar={false}
 				defaultManagedSidebarIsOpen={true}
 				onPageResize={(): void => null}
-				breadcrumb={<>ReactNode</>}
-				mainAriaLabel={undefined}
+				breadcrumb={null}
+				mainAriaLabel={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

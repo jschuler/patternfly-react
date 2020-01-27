@@ -2,7 +2,9 @@
 
 exports[`ChartBulletPrimaryDotMeasure test ChartBulletPrimaryDotMeasure should match snapshot 1`] = `
 <Component
+  desc="string"
   height={42}
+  title="string"
   width={42}
 />
 `;

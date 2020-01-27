@@ -3,5 +3,9 @@
 exports[`DataListItemCells test DataListItemCells should match snapshot 1`] = `
 <div
   className="pf-c-data-list__item-content ''"
-/>
+>
+  <div>
+    ReactNode
+  </div>
+</div>
 `;

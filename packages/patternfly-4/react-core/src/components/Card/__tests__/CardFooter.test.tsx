@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { CardFooter } from '../CardFooter';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('CardFooter test', () => {
   it('CardFooter should match snapshot', () => {
@@ -10,7 +12,7 @@ describe('CardFooter test', () => {
       <CardFooter
         children={<>ReactNode</>}
 				className={"''"}
-				component={<>ReactNode</>}
+				component={'div'}
       />);
     expect(view).toMatchSnapshot();
   });

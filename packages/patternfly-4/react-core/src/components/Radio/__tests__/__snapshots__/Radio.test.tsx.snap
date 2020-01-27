@@ -1,17 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio test Radio should match snapshot 1`] = `
-<div
+<label
   className="pf-c-radio ''"
+  htmlFor="string"
 >
+  <span
+    className="pf-c-radio__label"
+  >
+    <div>
+      ReactNode
+    </div>
+  </span>
   <input
     aria-invalid={false}
+    checked={true}
     className="pf-c-radio__input"
     disabled={false}
-    id="'defaultString'"
-    name="'defaultString'"
+    id="string"
+    name="string"
     onChange={[Function]}
     type="radio"
   />
-</div>
+</label>
 `;

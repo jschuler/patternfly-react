@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ClipboardCopyButton } from '../ClipboardCopyButton';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ClipboardCopyButton test', () => {
   it('ClipboardCopyButton should match snapshot', () => {
@@ -10,8 +12,8 @@ describe('ClipboardCopyButton test', () => {
       <ClipboardCopyButton
         onClick={(event: React.MouseEvent) => undefined as void}
 				children={<div>ReactNode</div>}
-				id={"'defaultString'"}
-				textId={"'defaultString'"}
+				id={"string"}
+				textId={"string"}
 				className={"''"}
 				exitDelay={100}
 				entryDelay={100}

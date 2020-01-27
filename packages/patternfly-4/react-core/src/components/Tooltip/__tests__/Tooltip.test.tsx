@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Tooltip } from '../Tooltip';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Tooltip test', () => {
   it('Tooltip should match snapshot', () => {
@@ -20,13 +22,13 @@ describe('Tooltip test', () => {
 				exitDelay={500}
 				flipBehavior={['top', 'right', 'bottom', 'left', 'top', 'right', 'bottom']}
 				isAppLauncher={false}
-				maxWidth={"tooltipMaxWidth && tooltipMaxWidth.value"}
+				maxWidth={"string"}
 				position={'top'}
 				trigger={"'mouseenter focus'"}
 				isContentLeftAligned={false}
 				isVisible={false}
 				zIndex={9999}
-				tippyProps={{}}
+				tippyProps={undefined}
 				id={"''"}
       />);
     expect(view).toMatchSnapshot();

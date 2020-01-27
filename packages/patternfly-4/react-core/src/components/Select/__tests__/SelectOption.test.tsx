@@ -3,15 +3,17 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { SelectOption } from '../SelectOption';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('SelectOption test', () => {
   it('SelectOption should match snapshot', () => {
     const view = shallow(
       <SelectOption
-        children={undefined}
+        children={<div>ReactNode</div>}
 				className={"''"}
 				index={0}
-				component={<>ReactNode</>}
+				component={'button'}
 				value={''}
 				isDisabled={false}
 				isPlaceholder={false}

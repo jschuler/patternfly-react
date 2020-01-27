@@ -2,7 +2,7 @@
 
 exports[`ClipboardCopy test ClipboardCopy should match snapshot 1`] = `
 <div
-  className="pf-c-clipboard-copy"
+  className="pf-c-clipboard-copy string"
 >
   <GenerateId
     prefix=""

@@ -2,6 +2,11 @@
 
 exports[`DataToolbarItem test DataToolbarItem should match snapshot 1`] = `
 <div
-  className="pf-c-data-toolbar__item"
-/>
+  className="pf-c-data-toolbar__item pf-m-separator string"
+  id="string"
+>
+  <div>
+    ReactNode
+  </div>
+</div>
 `;

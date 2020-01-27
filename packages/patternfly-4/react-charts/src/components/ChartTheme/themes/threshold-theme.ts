@@ -1,8 +1,5 @@
 /* eslint-disable camelcase */
-import {
-  chart_threshold_stroke_dash_array,
-  chart_threshold_stroke_Width
-} from '@patternfly/react-tokens';
+import { chart_threshold_stroke_dash_array, chart_threshold_stroke_Width } from '@patternfly/react-tokens';
 
 // Threshold theme
 export const ThresholdTheme = {

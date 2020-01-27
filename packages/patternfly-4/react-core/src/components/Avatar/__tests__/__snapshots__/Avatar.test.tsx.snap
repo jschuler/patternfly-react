@@ -2,7 +2,7 @@
 
 exports[`Avatar test Avatar should match snapshot 1`] = `
 <img
-  alt="'defaultString'"
+  alt="string"
   className="pf-c-avatar ''"
   src="''"
 />

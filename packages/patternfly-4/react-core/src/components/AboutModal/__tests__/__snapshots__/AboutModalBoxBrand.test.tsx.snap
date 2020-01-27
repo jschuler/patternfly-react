@@ -5,7 +5,7 @@ exports[`AboutModalBoxBrand test AboutModalBoxBrand should match snapshot 1`] = 
   className="pf-c-about-modal-box__brand ''"
 >
   <img
-    alt="'defaultString'"
+    alt="string"
     className="pf-c-about-modal-box__brand-image"
     src="''"
   />

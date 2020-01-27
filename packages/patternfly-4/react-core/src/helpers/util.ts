@@ -165,8 +165,11 @@ export function keyHandler(
     const element = ReactDOM.findDOMNode(refsCollection[nextIndex]) as HTMLElement;
     element.focus();
   } else {
-    if (isMultiDimensional) refsCollection[nextIndex][nextInnerIndex].focus();
-    else refsCollection[nextIndex].focus();
+    if (isMultiDimensional) {
+      refsCollection[nextIndex][nextInnerIndex].focus();
+    } else {
+      refsCollection[nextIndex].focus();
+    }
   }
 }
 

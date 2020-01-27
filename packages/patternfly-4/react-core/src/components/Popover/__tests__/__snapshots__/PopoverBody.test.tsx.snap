@@ -3,7 +3,7 @@
 exports[`PopoverBody test PopoverBody should match snapshot 1`] = `
 <div
   className="pf-c-popover__body"
-  id="'defaultString'"
+  id="string"
 >
   <div>
     ReactNode

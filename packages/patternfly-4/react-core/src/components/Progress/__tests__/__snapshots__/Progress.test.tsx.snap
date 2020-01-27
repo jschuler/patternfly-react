@@ -17,11 +17,7 @@ exports[`Progress test Progress should match snapshot 1`] = `
         "aria-valuetext": "null",
       }
     }
-    label={
-      <React.Fragment>
-        ReactNode
-      </React.Fragment>
-    }
+    label={null}
     measureLocation="outside"
     parentId="''"
     title="''"

@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ModalContent } from '../ModalContent';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ModalContent test', () => {
   it('ModalContent should match snapshot', () => {
@@ -13,12 +15,12 @@ describe('ModalContent test', () => {
 				isLarge={false}
 				isSmall={false}
 				isOpen={false}
-				header={<>ReactNode</>}
-				title={"'defaultString'"}
+				header={null}
+				title={"string"}
 				hideTitle={false}
 				showClose={true}
 				width={-1}
-				footer={<>ReactNode</>}
+				footer={null}
 				actions={[]}
 				isFooterLeftAligned={false}
 				onClose={() => undefined as any}

@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { WizardNavItem } from '../WizardNavItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('WizardNavItem test', () => {
   it('WizardNavItem should match snapshot', () => {
@@ -14,7 +16,7 @@ describe('WizardNavItem test', () => {
 				isDisabled={false}
 				step={42}
 				onNavItemClick={() => undefined}
-				navItemComponent={<>ReactNode</>}
+				navItemComponent={'a'}
       />);
     expect(view).toMatchSnapshot();
   });

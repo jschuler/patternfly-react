@@ -2,7 +2,7 @@
 
 exports[`DataToolbarExpandableContent test DataToolbarExpandableContent should match snapshot 1`] = `
 <div
-  className="pf-c-data-toolbar__expandable-content"
+  className="pf-c-data-toolbar__expandable-content string"
 >
   <ForwardRef />
 </div>

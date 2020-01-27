@@ -9,7 +9,7 @@ exports[`DataListCheck test DataListCheck should match snapshot 1`] = `
   >
     <input
       aria-invalid={false}
-      aria-labelledby="'defaultString'"
+      aria-labelledby="string"
       checked={null}
       disabled={false}
       onChange={[Function]}

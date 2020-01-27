@@ -7,7 +7,7 @@ import { DropdownContext, DropdownDirection, DropdownPosition } from './dropdown
 import { InjectedOuiaProps, withOuiaContext } from '../withOuia';
 import { PickOptional } from '../../helpers/typeUtils';
 
-interface DropdownWithContextProps extends DropdownProps, InjectedOuiaProps {};
+interface DropdownWithContextProps extends DropdownProps, InjectedOuiaProps {}
 
 // class DropdownWithContext extends React.Component<DropdownWithContextProps> {
 class DropdownWithContext extends React.Component<DropdownProps & InjectedOuiaProps> {
@@ -95,10 +95,10 @@ class DropdownWithContext extends React.Component<DropdownProps & InjectedOuiaPr
                 className
               )}
               ref={this.baseComponentRef}
-              {...ouiaContext.isOuia && {
+              {...(ouiaContext.isOuia && {
                 'data-ouia-component-type': ouiaComponentType,
                 'data-ouia-component-id': ouiaId || ouiaContext.ouiaId
-              }}
+              })}
             >
               {React.Children.map(toggle, oneToggle =>
                 React.cloneElement(oneToggle, {

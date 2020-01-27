@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { WizardFooterInternal } from '../WizardFooterInternal';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('WizardFooterInternal test', () => {
   it('WizardFooterInternal should match snapshot', () => {
@@ -13,10 +15,10 @@ describe('WizardFooterInternal test', () => {
 				onClose={'any'}
 				isValid={true}
 				firstStep={true}
-				activeStep={() => {}/*unrecognizedType WizardStep undefined*/}
-				nextButtonText={"'defaultString'"}
-				backButtonText={"'defaultString'"}
-				cancelButtonText={"'defaultString'"}
+				activeStep={undefined}
+				nextButtonText={"string"}
+				backButtonText={"string"}
+				cancelButtonText={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

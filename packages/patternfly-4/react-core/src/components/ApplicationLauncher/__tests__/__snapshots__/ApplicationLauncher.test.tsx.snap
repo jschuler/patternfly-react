@@ -4,7 +4,7 @@ exports[`ApplicationLauncher test ApplicationLauncher should match snapshot 1`] 
 <ContextProvider
   value={
     Object {
-      "onFavorite": undefined,
+      "onFavorite": [Function],
     }
   }
 >
@@ -32,6 +32,23 @@ exports[`ApplicationLauncher test ApplicationLauncher should match snapshot 1`] 
       direction="up"
       dropdownItems={
         Array [
+          <div
+            className="pf-c-app-launcher__menu-search"
+          >
+            <Unknown
+              customChild={
+                <input
+                  0="a"
+                  1="n"
+                  2="y"
+                  className="pf-c-form-control"
+                  onChange={[Function]}
+                  placeholder="'Filter by name...'"
+                  type="search"
+                />
+              }
+            />
+          </div>,
           <Unknown>
             <Unknown>
               'No results found'
@@ -46,13 +63,14 @@ exports[`ApplicationLauncher test ApplicationLauncher should match snapshot 1`] 
         <Unknown
           aria-label="'Application launcher'"
           iconComponent={null}
+          id="string"
           isDisabled={false}
           isOpen={false}
           onToggle={[Function]}
         >
-          <React.Fragment>
+          <div>
             ReactNode
-          </React.Fragment>
+          </div>
         </Unknown>
       }
     />

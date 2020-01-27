@@ -2,9 +2,10 @@
 
 exports[`Expandable test Expandable should match snapshot 1`] = `
 <div
-  className="pf-c-expandable ''"
+  className="pf-c-expandable pf-m-expanded ''"
 >
   <button
+    aria-expanded={true}
     className="pf-c-expandable__toggle"
     onClick={[Function]}
     type="button"
@@ -23,7 +24,7 @@ exports[`Expandable test Expandable should match snapshot 1`] = `
   </button>
   <div
     className="pf-c-expandable__content"
-    hidden={true}
+    hidden={false}
   >
     <div>
       ReactNode

@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { KebabToggle } from '../KebabToggle';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('KebabToggle test', () => {
   it('KebabToggle should match snapshot', () => {
@@ -20,7 +22,7 @@ describe('KebabToggle test', () => {
 				isActive={false}
 				isDisabled={false}
 				isPlain={false}
-				type={undefined}
+				type={'button'}
       />);
     expect(view).toMatchSnapshot();
   });

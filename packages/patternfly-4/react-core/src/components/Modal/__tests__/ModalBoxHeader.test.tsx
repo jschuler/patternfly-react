@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ModalBoxHeader } from '../ModalBoxHeader';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ModalBoxHeader test', () => {
   it('ModalBoxHeader should match snapshot', () => {

@@ -3,37 +3,39 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartLabel } from '../ChartLabel';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ChartLabel test', () => {
   it('ChartLabel should match snapshot', () => {
     const view = shallow(
       <ChartLabel
-        active={undefined}
-				angle={undefined}
+        active={true}
+				angle={1}
 				capHeight={undefined}
 				children={undefined}
-				className={undefined}
-				data={undefined}
-				datum={undefined}
-				desc={undefined}
-				direction={undefined}
+				className={"string"}
+				data={[]}
+				datum={{}}
+				desc={"string"}
+				direction={'rtl'}
 				dx={undefined}
 				dy={undefined}
 				events={undefined}
-				index={undefined}
-				labelPlacement={undefined}
+				index={1}
+				labelPlacement={'parallel'}
 				lineHeight={undefined}
-				origin={undefined}
-				polar={undefined}
-				renderInPortal={undefined}
-				scale={undefined}
-				style={undefined}
-				text={undefined}
+				origin={{ x: 42, y: 42 }}
+				polar={true}
+				renderInPortal={true}
+				scale={{ x: 42, y: 42 }}
+				style={[undefined as React.CSSProperties]}
+				text={['string']}
 				textAnchor={undefined}
 				transform={undefined}
 				verticalAnchor={undefined}
-				x={undefined}
-				y={undefined}
+				x={42}
+				y={42}
       />);
     expect(view).toMatchSnapshot();
   });

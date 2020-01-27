@@ -3,32 +3,32 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ChartVoronoiContainer } from '../ChartVoronoiContainer';
-import { ChartTooltip } from '../../ChartTooltip';
+import { VictoryVoronoiContainerProps } from 'victory';
 
 describe('ChartVoronoiContainer test', () => {
   it('ChartVoronoiContainer should match snapshot', () => {
     const view = shallow(
       <ChartVoronoiContainer
-        activateData={undefined}
-				activateLabels={undefined}
+        activateData={true}
+				activateLabels={true}
 				allowTooltip={true}
-				className={undefined}
+				className={"string"}
 				constrainToVisibleArea={false}
-				disable={undefined}
-				labels={undefined}
-				labelComponent={<ChartTooltip />}
-				mouseFollowTooltips={undefined}
-				onActivated={undefined}
-				onDeactivated={undefined}
-				radius={undefined}
-				responsive={undefined}
+				disable={true}
+				labels={(point: any, index: number, points: any[]) => undefined as string}
+				labelComponent={<p>ReactElement</p>}
+				mouseFollowTooltips={true}
+				onActivated={(points: any[], props: VictoryVoronoiContainerProps) => undefined as void}
+				onDeactivated={(points: any[], props: VictoryVoronoiContainerProps) => undefined as void}
+				radius={42}
+				responsive={true}
 				style={undefined}
-				theme={{}/*unrecognizedType ChartThemeDefinition undefined*/}
-				themeColor={undefined}
-				themeVariant={undefined}
-				voronoiBlacklist={undefined}
-				voronoiDimension={undefined}
-				voronoiPadding={undefined}
+				theme={undefined}
+				themeColor={"string"}
+				themeVariant={"string"}
+				voronoiBlacklist={[]}
+				voronoiDimension={'x'}
+				voronoiPadding={42}
       />);
     expect(view).toMatchSnapshot();
   });

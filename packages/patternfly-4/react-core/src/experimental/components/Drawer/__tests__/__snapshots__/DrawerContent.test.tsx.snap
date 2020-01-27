@@ -3,5 +3,9 @@
 exports[`DrawerContent test DrawerContent should match snapshot 1`] = `
 <div
   className="pf-c-drawer__content"
-/>
+>
+  <div>
+    ReactNode
+  </div>
+</div>
 `;

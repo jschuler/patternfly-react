@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { TableHeader } from '../Header';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
-describe('TableHeader test', () => {
-  it('TableHeader should match snapshot', () => {
+describe('Header test', () => {
+  it('Header should match snapshot', () => {
     const view = shallow(
       <TableHeader
-        className={undefined}
+        className={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

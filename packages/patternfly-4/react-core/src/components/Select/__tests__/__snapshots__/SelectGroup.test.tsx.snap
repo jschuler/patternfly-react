@@ -11,6 +11,5 @@ exports[`SelectGroup test SelectGroup should match snapshot 1`] = `
   >
     ''
   </div>
-  ReactNode
 </div>
 `;

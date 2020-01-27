@@ -2,8 +2,11 @@
 
 exports[`OptionsMenuItem test OptionsMenuItem should match snapshot 1`] = `
 <Component
+  aria-disabled={true}
+  className="string"
   component="button"
   id="''"
+  isDisabled={true}
   onClick={[Function]}
 >
   ReactNode

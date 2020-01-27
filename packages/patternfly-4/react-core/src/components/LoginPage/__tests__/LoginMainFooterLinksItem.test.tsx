@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { LoginMainFooterLinksItem } from '../LoginMainFooterLinksItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('LoginMainFooterLinksItem test', () => {
   it('LoginMainFooterLinksItem should match snapshot', () => {
@@ -12,7 +14,7 @@ describe('LoginMainFooterLinksItem test', () => {
 				href={"''"}
 				target={"''"}
 				className={"''"}
-				linkComponent={<>ReactNode</>}
+				linkComponent={'a'}
       />);
     expect(view).toMatchSnapshot();
   });

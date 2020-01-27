@@ -2,10 +2,13 @@
 
 exports[`WizardNav test WizardNav should match snapshot 1`] = `
 <nav
+  aria-label="string"
   className="pf-c-wizard__nav"
 >
   <ol
     className="pf-c-wizard__nav-list"
-  />
+  >
+    any
+  </ol>
 </nav>
 `;

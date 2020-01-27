@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Expandable } from '../Expandable';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Expandable test', () => {
   it('Expandable should match snapshot', () => {
@@ -10,7 +12,7 @@ describe('Expandable test', () => {
       <Expandable
         children={<div>ReactNode</div>}
 				className={"''"}
-				isExpanded={undefined}
+				isExpanded={true}
 				toggleText={"''"}
 				toggleTextExpanded={"''"}
 				toggleTextCollapsed={"''"}

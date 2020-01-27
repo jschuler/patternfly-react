@@ -2,7 +2,13 @@
 
 exports[`DropdownToggleAction test DropdownToggleAction should match snapshot 1`] = `
 <button
+  aria-label="string"
   className="pf-c-dropdown__toggle-button ''"
+  id="string"
   onClick={[Function]}
-/>
+>
+  <div>
+    ReactNode
+  </div>
+</button>
 `;

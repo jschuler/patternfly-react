@@ -10,20 +10,20 @@ exports[`WizardFooterInternal test WizardFooterInternal should match snapshot 1`
     type="submit"
     variant="primary"
   >
-    'defaultString'
+    string
   </Component>
   <Component
     className="pf-m-disabled"
     onClick="any"
     variant="secondary"
   >
-    'defaultString'
+    string
   </Component>
   <Component
     onClick="any"
     variant="link"
   >
-    'defaultString'
+    string
   </Component>
 </footer>
 `;

@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { LoginPage } from '../LoginPage';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('LoginPage test', () => {
   it('LoginPage should match snapshot', () => {
@@ -15,13 +17,13 @@ describe('LoginPage test', () => {
 				backgroundImgSrc={''}
 				backgroundImgAlt={"''"}
 				textContent={"''"}
-				footerListItems={<>ReactNode</>}
+				footerListItems={null}
 				footerListVariants={undefined}
-				loginTitle={"'defaultString'"}
-				loginSubtitle={undefined}
-				signUpForAccountMessage={<>ReactNode</>}
-				forgotCredentials={<>ReactNode</>}
-				socialMediaLoginContent={<>ReactNode</>}
+				loginTitle={"string"}
+				loginSubtitle={"string"}
+				signUpForAccountMessage={null}
+				forgotCredentials={null}
+				socialMediaLoginContent={null}
       />);
     expect(view).toMatchSnapshot();
   });

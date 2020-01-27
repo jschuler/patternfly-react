@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { AboutModalBoxHeader } from '../AboutModalBoxHeader';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('AboutModalBoxHeader test', () => {
   it('AboutModalBoxHeader should match snapshot', () => {
@@ -10,7 +12,7 @@ describe('AboutModalBoxHeader test', () => {
       <AboutModalBoxHeader
         className={"''"}
 				productName={"''"}
-				id={"'defaultString'"}
+				id={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

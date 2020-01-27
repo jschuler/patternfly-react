@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Brand } from '../Brand';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Brand test', () => {
   it('Brand should match snapshot', () => {
@@ -10,7 +12,7 @@ describe('Brand test', () => {
       <Brand
         className={"''"}
 				src={"''"}
-				alt={"'defaultString'"}
+				alt={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

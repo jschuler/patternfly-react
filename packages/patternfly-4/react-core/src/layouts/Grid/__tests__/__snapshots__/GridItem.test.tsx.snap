@@ -2,7 +2,7 @@
 
 exports[`GridItem test GridItem should match snapshot 1`] = `
 <div
-  className="pf-l-grid__item ''"
+  className="pf-l-grid__item pf-m-1-col-on-sm pf-m-1-row-on-sm pf-m-offset-1-col-on-sm pf-m-1-col-on-md pf-m-1-row-on-md pf-m-offset-1-col-on-md pf-m-1-col-on-lg pf-m-1-row-on-lg pf-m-offset-1-col-on-lg pf-m-1-col-on-xl pf-m-1-row-on-xl pf-m-offset-1-col-on-xl pf-m-1-col-on-2xl pf-m-1-row-on-2xl pf-m-offset-1-col-on-2xl ''"
 >
   ReactNode
 </div>

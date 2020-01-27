@@ -4,7 +4,7 @@ exports[`FormSelectOptionGroup test FormSelectOptionGroup should match snapshot 
 <optgroup
   className="''"
   disabled={false}
-  label="'defaultString'"
+  label="string"
 >
   ReactNode
 </optgroup>

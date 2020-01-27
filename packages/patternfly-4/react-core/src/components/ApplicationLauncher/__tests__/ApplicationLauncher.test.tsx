@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ApplicationLauncher } from '../ApplicationLauncher';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ApplicationLauncher test', () => {
   it('ApplicationLauncher should match snapshot', () => {
@@ -19,15 +21,15 @@ describe('ApplicationLauncher test', () => {
 				onToggle={(_value: boolean): any => undefined}
 				aria-label={"'Application launcher'"}
 				isGrouped={false}
-				toggleIcon={<>ReactNode</>}
+				toggleIcon={<div>ReactNode</div>}
 				favorites={[]}
-				onFavorite={undefined}
-				onSearch={undefined}
+				onFavorite={(itemId: string, isFavorite: boolean) => undefined as void}
+				onSearch={(textInput: string) => undefined as void}
 				searchPlaceholderText={"'Filter by name...'"}
 				searchNoResultsText={"'No results found'"}
-				searchProps={undefined}
+				searchProps={'any'}
 				favoritesLabel={"'Favorites'"}
-				toggleId={undefined}
+				toggleId={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

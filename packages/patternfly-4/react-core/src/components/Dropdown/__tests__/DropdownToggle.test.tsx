@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DropdownToggle } from '../DropdownToggle';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DropdownToggle test', () => {
   it('DropdownToggle should match snapshot', () => {
@@ -21,12 +23,12 @@ describe('DropdownToggle test', () => {
 				isDisabled={false}
 				isPrimary={false}
 				iconComponent={() => <p>ReactElementType</p>}
-				splitButtonItems={undefined}
+				splitButtonItems={[]}
 				splitButtonVariant={'checkbox'}
-				aria-label={undefined}
-				ariaHasPopup={undefined}
-				type={undefined}
-				onEnter={undefined}
+				aria-label={"string"}
+				ariaHasPopup={true}
+				type={'button'}
+				onEnter={(event?: React.MouseEvent<HTMLButtonElement>) => undefined as void}
       />);
     expect(view).toMatchSnapshot();
   });

@@ -20,12 +20,10 @@ module.exports = {
             { section: 'demos' },
             { section: 'experimental' },
             { section: 'extensions' },
-            { section: 'layouts' },
+            { section: 'layouts' }
           ]
         },
-        topNavItems: [
-          { text: 'Icons', path: '/icons' },
-        ],
+        topNavItems: [{ text: 'Icons', path: '/icons' }]
       }
     },
     // Source shared pages from the theme
@@ -96,6 +94,6 @@ module.exports = {
       }
     },
     // The plugin for package.json files (to get version numbers)
-    'gatsby-transformer-json',
+    'gatsby-transformer-json'
   ]
 };

@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ModalBox } from '../ModalBox';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ModalBox test', () => {
   it('ModalBox should match snapshot', () => {
@@ -12,8 +14,8 @@ describe('ModalBox test', () => {
 				className={"''"}
 				isLarge={false}
 				isSmall={false}
-				title={"'defaultString'"}
-				id={"'defaultString'"}
+				title={"string"}
+				id={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

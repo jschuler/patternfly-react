@@ -1,13 +1,5 @@
 import * as React from 'react';
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableProps,
-  textCenter,
-  IRow,
-  ICell,
-} from '@patternfly/react-table';
+import { Table, TableHeader, TableBody, TableProps, textCenter, IRow, ICell } from '@patternfly/react-table';
 import {
   EmptyState,
   EmptyStateBody,

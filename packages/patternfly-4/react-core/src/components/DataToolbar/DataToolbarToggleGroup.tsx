@@ -40,7 +40,6 @@ export class DataToolbarToggleGroup extends React.Component<DataToolbarToggleGro
           return (
             <DataToolbarContentContext.Consumer>
               {({ expandableContentRef, expandableContentId }) => {
-
                 if (expandableContentRef.current && expandableContentRef.current.classList) {
                   if (isExpanded) {
                     expandableContentRef.current.classList.add(getModifier(styles, 'expanded'));
@@ -73,7 +72,9 @@ export class DataToolbarToggleGroup extends React.Component<DataToolbarToggleGro
                         {toggleIcon}
                       </Button>
                     </div>
-                    {isExpanded ? ReactDOM.createPortal(children, expandableContentRef.current.firstElementChild) : children}
+                    {isExpanded
+                      ? ReactDOM.createPortal(children, expandableContentRef.current.firstElementChild)
+                      : children}
                   </div>
                 );
               }}

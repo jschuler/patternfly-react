@@ -4,5 +4,8 @@ exports[`EmptyStateIcon test EmptyStateIcon should match snapshot 1`] = `
 <Component
   aria-hidden="true"
   className="pf-c-empty-state__icon ''"
+  color="string"
+  size="sm"
+  title="string"
 />
 `;

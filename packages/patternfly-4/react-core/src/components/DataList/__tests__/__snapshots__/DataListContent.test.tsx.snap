@@ -2,7 +2,7 @@
 
 exports[`DataListContent test DataListContent should match snapshot 1`] = `
 <section
-  aria-label="'defaultString'"
+  aria-label="string"
   className="pf-c-data-list__expandable-content ''"
   hidden={false}
   id="''"

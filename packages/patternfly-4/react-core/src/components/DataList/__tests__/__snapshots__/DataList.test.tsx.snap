@@ -4,14 +4,14 @@ exports[`DataList test DataList should match snapshot 1`] = `
 <ContextProvider
   value={
     Object {
-      "isSelectable": false,
+      "isSelectable": true,
       "selectedDataListItemId": "''",
       "updateSelectedDataListItem": [Function],
     }
   }
 >
   <ul
-    aria-label="'defaultString'"
+    aria-label="string"
     className="pf-c-data-list ''"
   >
     ReactNode

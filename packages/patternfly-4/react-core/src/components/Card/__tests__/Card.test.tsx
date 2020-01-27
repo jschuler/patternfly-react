@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Card } from '../Card';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Card test', () => {
   it('Card should match snapshot', () => {
@@ -10,7 +12,7 @@ describe('Card test', () => {
       <Card
         children={<>ReactNode</>}
 				className={"''"}
-				component={<>ReactNode</>}
+				component={'article'}
 				isHoverable={false}
 				isCompact={false}
       />);

@@ -6,7 +6,7 @@ exports[`AboutModalBoxHeader test AboutModalBoxHeader should match snapshot 1`] 
 >
   <Component
     headingLevel="h1"
-    id="'defaultString'"
+    id="string"
     size="4xl"
   >
     ''

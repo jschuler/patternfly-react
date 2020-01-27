@@ -90,12 +90,7 @@ Object.values(['success' as AlertVariant]).forEach(variant => {
 
     test('Toast alerts match snapsnot', () => {
       const view = mount(
-        <Alert
-          isToast={true}
-          variant={variant}
-          aria-label={`${variant} toast alert`}
-          title="Some title"
-        >
+        <Alert isToast={true} variant={variant} aria-label={`${variant} toast alert`} title="Some title">
           Some toast alert
         </Alert>
       );
@@ -104,27 +99,17 @@ Object.values(['success' as AlertVariant]).forEach(variant => {
 
     test('Toast alerts contain default live region', () => {
       const wrapper = mount(
-        <Alert
-          isToast={true}
-          variant={variant}
-          aria-label={`${variant} toast alert`}
-          title="Some title"
-        >
+        <Alert isToast={true} variant={variant} aria-label={`${variant} toast alert`} title="Some title">
           Some toast alert
         </Alert>
       );
-      const liveRegion = wrapper.find({ 'aria-live': 'polite' }).length
-      expect (liveRegion).toBe(1)
+      const liveRegion = wrapper.find({ 'aria-live': 'polite' }).length;
+      expect(liveRegion).toBe(1);
     });
 
     test('Toast alert live regions are not atomic', () => {
       const wrapper = mount(
-        <Alert
-          isToast={true}
-          variant={variant}
-          aria-label={`${variant} toast alert`}
-          title="Some title"
-        >
+        <Alert isToast={true} variant={variant} aria-label={`${variant} toast alert`} title="Some title">
           Some toast alert
         </Alert>
       );
@@ -133,12 +118,7 @@ Object.values(['success' as AlertVariant]).forEach(variant => {
 
     test('Toast alert should specify pf-m-live on container', () => {
       const wrapper = mount(
-        <Alert
-          isToast={true}
-          variant={variant}
-          aria-label={`${variant} toast alert`}
-          title="Some title"
-        >
+        <Alert isToast={true} variant={variant} aria-label={`${variant} toast alert`} title="Some title">
           Some toast alert
         </Alert>
       );

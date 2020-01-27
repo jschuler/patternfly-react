@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { CheckboxSelectGroup } from '../CheckboxSelectGroup';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('CheckboxSelectGroup test', () => {
   it('CheckboxSelectGroup should match snapshot', () => {
     const view = shallow(
       <CheckboxSelectGroup
-        children={<>ReactNode</>}
+        children={[]}
 				className={"''"}
 				label={"''"}
 				titleId={"''"}

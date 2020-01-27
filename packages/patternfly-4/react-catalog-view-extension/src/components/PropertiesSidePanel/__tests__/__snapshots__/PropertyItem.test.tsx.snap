@@ -7,9 +7,7 @@ exports[`PropertyItem test PropertyItem should match snapshot 1`] = `
   <Text
     className="properties-side-panel-pf-property-label"
     component="h5"
-  >
-    string
-  </Text>
+  />
   <div
     className="properties-side-panel-pf-property-value"
   />

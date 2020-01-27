@@ -3,13 +3,15 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DrawerContent } from '../DrawerContent';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DrawerContent test', () => {
   it('DrawerContent should match snapshot', () => {
     const view = shallow(
       <DrawerContent
         className={"''"}
-				children={undefined}
+				children={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

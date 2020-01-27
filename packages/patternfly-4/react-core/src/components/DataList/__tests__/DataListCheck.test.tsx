@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DataListCheck } from '../DataListCheck';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DataListCheck test', () => {
   it('DataListCheck should match snapshot', () => {
@@ -14,7 +16,7 @@ describe('DataListCheck test', () => {
 				isChecked={null}
 				checked={null}
 				onChange={(checked: boolean, event: React.FormEvent<HTMLInputElement>) => {}}
-				aria-labelledby={"'defaultString'"}
+				aria-labelledby={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

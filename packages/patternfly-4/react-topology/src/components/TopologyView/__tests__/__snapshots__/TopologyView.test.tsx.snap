@@ -5,30 +5,14 @@ exports[`TopologyView test TopologyView should match snapshot 1`] = `
   className="''"
 >
   <StackItem
-    isFilled={false}
-  >
-    ReactNode
-  </StackItem>
-  <StackItem
-    isFilled={false}
-  >
-    ReactNode
-  </StackItem>
-  <StackItem
-    className="pf-topology-container pf-topology-container__with-sidebar"
+    className="pf-topology-container"
     isFilled={true}
   >
     <div
       className="pf-topology-content"
     >
       ReactNode
-      <span
-        className="pf-topology-control-bar"
-      >
-        ReactNode
-      </span>
     </div>
-    ReactNode
   </StackItem>
 </Stack>
 `;

@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DropdownItem } from '../DropdownItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DropdownItem test', () => {
   it('DropdownItem should match snapshot', () => {
@@ -10,16 +12,16 @@ describe('DropdownItem test', () => {
       <DropdownItem
         children={<>ReactNode</>}
 				className={"''"}
-				listItemClassName={undefined}
-				component={<>ReactNode</>}
+				listItemClassName={"string"}
+				component={'a'}
 				variant={'item'}
 				isDisabled={false}
 				isHovered={false}
 				href={"''"}
-				tooltip={<>ReactNode</>}
-				tooltipProps={{}}
-				additionalChild={undefined}
-				customChild={undefined}
+				tooltip={null}
+				tooltipProps={undefined}
+				additionalChild={<div>ReactNode</div>}
+				customChild={<div>ReactNode</div>}
       />);
     expect(view).toMatchSnapshot();
   });

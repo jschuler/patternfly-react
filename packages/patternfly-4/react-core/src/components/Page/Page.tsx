@@ -147,7 +147,13 @@ export class Page extends React.Component<PageProps, PageState> {
           {skipToContent}
           {header}
           {sidebar}
-          <main role="main" id={mainContainerId} className={css(styles.pageMain)} tabIndex={-1} aria-label={mainAriaLabel}>
+          <main
+            role="main"
+            id={mainContainerId}
+            className={css(styles.pageMain)}
+            tabIndex={-1}
+            aria-label={mainAriaLabel}
+          >
             {breadcrumb && <section className={css(styles.pageMainBreadcrumb)}>{breadcrumb}</section>}
             {children}
           </main>

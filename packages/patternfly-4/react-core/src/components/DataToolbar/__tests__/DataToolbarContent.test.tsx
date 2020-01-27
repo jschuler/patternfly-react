@@ -3,19 +3,21 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { DataToolbarContent } from '../DataToolbarContent';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('DataToolbarContent test', () => {
   it('DataToolbarContent should match snapshot', () => {
     const view = shallow(
       <DataToolbarContent
-        className={undefined}
+        className={"string"}
 				breakpointMods={[]}
-				children={undefined}
+				children={<div>ReactNode</div>}
 				isExpanded={false}
-				clearAllFilters={undefined}
+				clearAllFilters={() => undefined as void}
 				showClearFiltersButton={false}
-				clearFiltersButtonText={undefined}
-				toolbarId={undefined}
+				clearFiltersButtonText={"string"}
+				toolbarId={"string"}
       />);
     expect(view).toMatchSnapshot();
   });

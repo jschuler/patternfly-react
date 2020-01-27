@@ -14,9 +14,7 @@ exports[`CatalogItemHeader test CatalogItemHeader should match snapshot 1`] = `
   >
     <h1
       className="catalog-item-header-pf-title"
-    >
-      string
-    </h1>
+    />
   </div>
 </header>
 `;

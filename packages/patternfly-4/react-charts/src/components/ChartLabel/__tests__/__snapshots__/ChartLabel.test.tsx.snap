@@ -2,17 +2,48 @@
 
 exports[`ChartLabel test ChartLabel should match snapshot 1`] = `
 <VictoryLabel
+  active={true}
+  angle={1}
   capHeight={0.71}
-  direction="inherit"
+  className="string"
+  data={Array []}
+  datum={Object {}}
+  desc="string"
+  direction="rtl"
+  index={1}
+  labelPlacement="parallel"
   lineHeight={1}
-  style={
+  origin={
     Object {
-      "fontFamily": "var(--pf-chart-global--FontFamily)",
-      "fontSize": 14,
-      "letterSpacing": "var(--pf-chart-global--letter-spacing)",
+      "x": 42,
+      "y": 42,
     }
+  }
+  polar={true}
+  renderInPortal={true}
+  scale={
+    Object {
+      "x": 42,
+      "y": 42,
+    }
+  }
+  style={
+    Array [
+      Object {
+        "fontFamily": "var(--pf-chart-global--FontFamily)",
+        "fontSize": 14,
+        "letterSpacing": "var(--pf-chart-global--letter-spacing)",
+      },
+    ]
+  }
+  text={
+    Array [
+      "string",
+    ]
   }
   textComponent={<Text />}
   tspanComponent={<TSpan />}
+  x={42}
+  y={42}
 />
 `;

@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { GridItem } from '../GridItem';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('GridItem test', () => {
   it('GridItem should match snapshot', () => {
@@ -13,21 +15,21 @@ describe('GridItem test', () => {
 				span={null}
 				rowSpan={null}
 				offset={null}
-				sm={undefined}
-				smRowSpan={undefined}
-				smOffset={undefined}
-				md={undefined}
-				mdRowSpan={undefined}
-				mdOffset={undefined}
-				lg={undefined}
-				lgRowSpan={undefined}
-				lgOffset={undefined}
-				xl={undefined}
-				xlRowSpan={undefined}
-				xlOffset={undefined}
-				xl2={undefined}
-				xl2RowSpan={undefined}
-				xl2Offset={undefined}
+				sm={1}
+				smRowSpan={1}
+				smOffset={1}
+				md={1}
+				mdRowSpan={1}
+				mdOffset={1}
+				lg={1}
+				lgRowSpan={1}
+				lgOffset={1}
+				xl={1}
+				xlRowSpan={1}
+				xlOffset={1}
+				xl2={1}
+				xl2RowSpan={1}
+				xl2Offset={1}
       />);
     expect(view).toMatchSnapshot();
   });

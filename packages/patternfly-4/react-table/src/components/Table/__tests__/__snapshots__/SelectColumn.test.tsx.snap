@@ -3,6 +3,7 @@
 exports[`SelectColumn test SelectColumn should match snapshot 1`] = `
 <Fragment>
   <input
+    name="string"
     onChange={null}
     type="checkbox"
   />

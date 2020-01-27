@@ -46,9 +46,9 @@ export class BodyRow extends React.Component<BodyRowProps, {}> {
     const { columns, renderers, onRow, rowKey, rowIndex, rowData } = this.props;
 
     return React.createElement(
-      renderers.row as createElementType,
+      renderers && renderers.row as createElementType,
       onRow(rowData, { rowIndex, rowKey }),
-      (columns as []).map((column: ColumnType, columnIndex: number) => {
+      columns && (columns as []).map((column: ColumnType, columnIndex: number) => {
         const { property, cell, props } = column;
         const evaluatedProperty = (property || (cell && cell.property)) as string;
         const { transforms = [], formatters = [] } = cell || {};

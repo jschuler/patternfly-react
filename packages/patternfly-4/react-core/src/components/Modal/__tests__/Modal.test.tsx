@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { Modal } from '../Modal';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('Modal test', () => {
   it('Modal should match snapshot', () => {
@@ -11,20 +13,20 @@ describe('Modal test', () => {
         children={<div>ReactNode</div>}
 				className={"''"}
 				isOpen={false}
-				header={undefined}
-				title={"'defaultString'"}
+				header={<div>ReactNode</div>}
+				title={"string"}
 				hideTitle={false}
 				showClose={true}
 				ariaDescribedById={"''"}
-				footer={undefined}
+				footer={<div>ReactNode</div>}
 				actions={[]}
 				isFooterLeftAligned={false}
 				onClose={() => undefined as any}
-				width={undefined}
+				width={1}
 				isLarge={false}
 				isSmall={false}
 				appendTo={(typeof document !== 'undefined' && document.body) || null}
-				disableFocusTrap={undefined}
+				disableFocusTrap={true}
       />);
     expect(view).toMatchSnapshot();
   });

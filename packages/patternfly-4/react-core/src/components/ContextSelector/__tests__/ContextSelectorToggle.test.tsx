@@ -3,12 +3,14 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import { ContextSelectorToggle } from '../ContextSelectorToggle';
+// any missing imports can usually be resolved by adding them here
+import {  } from '..';
 
 describe('ContextSelectorToggle test', () => {
   it('ContextSelectorToggle should match snapshot', () => {
     const view = shallow(
       <ContextSelectorToggle
-        id={"'defaultString'"}
+        id={"string"}
 				className={"''"}
 				toggleText={"''"}
 				isOpen={false}
