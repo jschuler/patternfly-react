@@ -275,78 +275,99 @@ export const toCamel = (s: string) => s.replace(/([-_][a-z])/gi, camelize);
 export const canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 /**
+ * Calculate the width of the text
+ * Example:
+ * getTextWidth('my text', node)
+ *
+ * @param {string} text The text to calculate the width for
+ * @param {HTMLElement} node The HTML element
+ */
+export const getTextWidth = (text: string, node: HTMLElement) => {
+  const computedStyle = getComputedStyle(node);
+  // Firefox returns the empty string for .font, so this function creates the .font property manually
+  const getFontFromComputedStyle = () => {
+    let computedFont = '';
+    // Firefox uses percentages for font-stretch, but Canvas does not accept percentages
+    // so convert to keywords, as listed at:
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch
+    const fontStretchLookupTable = {
+      '50%': 'ultra-condensed',
+      '62.5%': 'extra-condensed',
+      '75%': 'condensed',
+      '87.5%': 'semi-condensed',
+      '100%': 'normal',
+      '112.5%': 'semi-expanded',
+      '125%': 'expanded',
+      '150%': 'extra-expanded',
+      '200%': 'ultra-expanded'
+    };
+    // If the retrieved font-stretch percentage isn't found in the lookup table, use
+    // 'normal' as a last resort.
+    let fontStretch;
+    if (computedStyle.fontStretch in fontStretchLookupTable) {
+      fontStretch = (fontStretchLookupTable as any)[computedStyle.fontStretch];
+    } else {
+      fontStretch = 'normal';
+    }
+    computedFont =
+      computedStyle.fontStyle +
+      ' ' +
+      computedStyle.fontVariant +
+      ' ' +
+      computedStyle.fontWeight +
+      ' ' +
+      fontStretch +
+      ' ' +
+      computedStyle.fontSize +
+      '/' +
+      computedStyle.lineHeight +
+      ' ' +
+      computedStyle.fontFamily;
+    return computedFont;
+  };
+
+  const canvas = document.createElement('canvas');
+  const context = canvas.getContext('2d');
+  context.font = computedStyle.font || getFontFromComputedStyle();
+
+  return context.measureText(text).width;
+};
+
+/**
+ * Get the inner dimensions of an element
+ *
+ * @param {HTMLElement} node HTML element to calculate the inner dimensions for
+ */
+export const innerDimensions = (node: HTMLElement) => {
+  const computedStyle = getComputedStyle(node);
+
+  let width = node.clientWidth; // width with padding
+  let height = node.clientHeight; // height with padding
+
+  height -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
+  width -= parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
+  return { height, width };
+};
+
+/**
  * This function is a helper for truncating text content on the left, leaving the right side of the content in view
  *
- * @param {any} row The text content to be truncated
+ * @param {HTMLElement} node HTML element
+ * @param {string} value The original text value
  */
-
-export const trimLeft = (row: any) => {
-  const trimContents = (row: { scrollWidth: any; offsetWidth: any }, node: ChildNode) => {
-    while (row.scrollWidth > row.offsetWidth) {
-      const childNode = node.firstChild;
-      const parent = node;
-      let parentVal = (node as HTMLInputElement).value;
-      // console.log("node", node);
-      // console.log('node value', parentVal);
-      // console.log("document.TEXT_NODE should be 3: ", document.TEXT_NODE);
-      // console.log("childNode", childNode)
-
-      const truncate = (input: string) => (input.length > 5 ? `${input.substring(0, 5)}...` : input);
-
-      if (!childNode) {
-        if (parentVal) {
-          let value = '...' + parentVal;
-          let sub = row.scrollWidth - row.offsetWidth;
-          let frac = row.offsetWidth / row.scrollWidth;
-          if (row.scrollWidth > row.offsetWidth) {
-
-
-            console.log("frac: ", frac);
-            console.log('sub', sub)
-            console.log("value length", value.length);
-            console.log("percent", frac * 100)
-            console.log("offsetwidth", row.offsetWidth)
-            console.log("scrollwidth", row.scrollWidth)
-            let newLength = Math.ceil(value.length * frac);
-            console.log("newLEngth", newLength) 
-            value = '...' + value.substr(newLength);
-            parentVal = value;
-            console.log("parentVal", parentVal);
-            (node as HTMLInputElement).value = parentVal;
-            console.log((node as HTMLInputElement).value)
-          }
-            // console.log("parentVal", parentVal)
-            // console.log(row.scrollWidth, row.offsetWidth)
-            // if (value === '...') {
-            //   // node.removeChild(textNode);
-            //   return;
-            // }
-         }
-        return true;
-      }
-
-      if (childNode.nodeType === document.TEXT_NODE) {
-        trimText(row, node, childNode);
-      } else {
-        const empty = trimContents(row, childNode);
-        if (empty) {
-          node.removeChild(childNode);
-        }
-      }
+export const trimLeft = (node: HTMLElement, value: string) => {
+  const availableWidth = innerDimensions(node).width;
+  let newValue = value;
+  if (getTextWidth(value, node) > availableWidth) {
+    // we have text overflow, trim the text to the left and add ... in the front until it fits
+    while (getTextWidth(`...${newValue}`, node) > availableWidth) {
+      newValue = newValue.substring(1);
     }
-  };
-  const trimText = (row: { scrollWidth: number; offsetWidth: number }, node: ChildNode, textNode: ChildNode) => {
-    let value = '...' + textNode.nodeValue;
-    do {
-      value = '...' + value.substr(4);
-      textNode.nodeValue = value;
-      // console.log(row.offsetWidth, row.scrollWidth)
-      if (value === '...') {
-        node.removeChild(textNode);
-        return;
-      }
-    } while (row.scrollWidth > row.offsetWidth);
-  };
-
-  trimContents(row, row);
+    // replace text with our truncated text
+    if ((node as HTMLInputElement).value) {
+      (node as HTMLInputElement).value = `...${newValue}`;
+    } else {
+      node.innerText = `...${newValue}`;
+    }
+  }
 };
