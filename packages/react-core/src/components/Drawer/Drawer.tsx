@@ -1,8 +1,9 @@
 import * as React from 'react';
 import styles from '@patternfly/react-styles/css/components/Drawer/drawer';
 import { css } from '@patternfly/react-styles';
+import { getOUIAProps, OUIAProps } from '../../helpers';
 
-export interface DrawerProps extends React.HTMLProps<HTMLDivElement> {
+export interface DrawerProps extends React.HTMLProps<HTMLDivElement>, OUIAProps {
   /** Additional classes added to the Drawer. */
   className?: string;
   /** Content rendered in the left hand panel */
@@ -40,21 +41,31 @@ export const Drawer: React.SFC<DrawerProps> = ({
   position = 'right',
   onExpand = () => {},
   ...props
-}: DrawerProps) => (
-  <DrawerContext.Provider value={{ isExpanded, isStatic, onExpand }}>
-    <div
-      className={css(
-        styles.drawer,
-        isExpanded && styles.modifiers.expanded,
-        isInline && styles.modifiers.inline,
-        isStatic && styles.modifiers.static,
-        position === 'left' && styles.modifiers.panelLeft,
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </div>
-  </DrawerContext.Provider>
-);
+}: DrawerProps) => {
+  if (!(window as any).ouiaId) {
+    (window as any).ouiaId = {};
+  }
+  if (!(window as any).ouiaId[window.location.href]) {
+    (window as any).ouiaId[window.location.href] = 1;
+  }
+  const [ouiaStateId, setOuiaStateId] = React.useState(++(window as any).ouiaId[window.location.href]);
+  return (
+    <DrawerContext.Provider value={{ isExpanded, isStatic, onExpand }}>
+      <div
+        className={css(
+          styles.drawer,
+          isExpanded && styles.modifiers.expanded,
+          isInline && styles.modifiers.inline,
+          isStatic && styles.modifiers.static,
+          position === 'left' && styles.modifiers.panelLeft,
+          className
+        )}
+        {...getOUIAProps(Drawer.displayName, ouiaStateId, true)}
+        {...props}
+      >
+        {children}
+      </div>
+    </DrawerContext.Provider>
+  );
+};
 Drawer.displayName = 'Drawer';

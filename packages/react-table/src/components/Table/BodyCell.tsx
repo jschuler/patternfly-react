@@ -51,6 +51,7 @@ export const BodyCell: React.FunctionComponent<BodyCellProps> = ({
   /* eslint-enable @typescript-eslint/no-unused-vars */
   ...props
 }: BodyCellProps) => {
+  console.log(typeof children);
   const mappedProps = {
     ...(dataLabel && !parentId ? { 'data-label': dataLabel } : {}),
     ...props
@@ -59,7 +60,11 @@ export const BodyCell: React.FunctionComponent<BodyCellProps> = ({
   const [tooltip, setTooltip] = React.useState('');
   const onMouseEnter = (event: any) => {
     if (event.target.offsetWidth < event.target.scrollWidth) {
-      setTooltip(tooltipProp || event.target.innerHTML);
+      if (tooltipProp) {
+        setTooltip(tooltipProp);
+      } else if (typeof children === 'string') {
+        setTooltip(children);
+      }
     } else {
       setTooltip('');
     }

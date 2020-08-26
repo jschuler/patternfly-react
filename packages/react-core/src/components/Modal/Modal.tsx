@@ -57,6 +57,7 @@ export enum ModalVariant {
 
 interface ModalState {
   container: HTMLElement;
+  ouiaStateId: number;
 }
 
 export class Modal extends React.Component<ModalProps, ModalState> {
@@ -92,8 +93,16 @@ export class Modal extends React.Component<ModalProps, ModalState> {
     this.labelId = `pf-modal-part-${labelIdNum}`;
     this.descriptorId = `pf-modal-part-${descriptorIdNum}`;
 
+    if (!(window as any).ouiaId) {
+      (window as any).ouiaId = {};
+    }
+    if (!(window as any).ouiaId[window.location.href]) {
+      (window as any).ouiaId[window.location.href] = 1;
+    }
+    const id = ++(window as any).ouiaId[window.location.href];
     this.state = {
-      container: undefined
+      container: undefined,
+      ouiaStateId: id
     };
   }
 
@@ -210,7 +219,7 @@ export class Modal extends React.Component<ModalProps, ModalState> {
         aria-label={ariaLabel}
         aria-describedby={ariaDescribedby}
         aria-labelledby={ariaLabelledby}
-        ouiaId={ouiaId}
+        ouiaId={ouiaId || this.state.ouiaStateId}
         ouiaSafe={ouiaSafe}
       />,
       container

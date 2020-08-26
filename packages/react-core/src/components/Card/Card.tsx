@@ -35,6 +35,13 @@ export const Card: React.FunctionComponent<CardProps> = ({
   ouiaSafe = true,
   ...props
 }: CardProps) => {
+  if (!(window as any).ouiaId) {
+    (window as any).ouiaId = {};
+  }
+  if (!(window as any).ouiaId[window.location.href]) {
+    (window as any).ouiaId[window.location.href] = 1;
+  }
+  const [ouiaStateId, setOuiaStateId] = React.useState(++(window as any).ouiaId[window.location.href]);
   const Component = component as any;
   return (
     <Component
@@ -49,7 +56,7 @@ export const Card: React.FunctionComponent<CardProps> = ({
       )}
       tabIndex={isSelectable ? '0' : undefined}
       {...props}
-      {...getOUIAProps(Card.displayName, ouiaId, ouiaSafe)}
+      {...getOUIAProps(Card.displayName, ouiaId || ouiaStateId, ouiaSafe)}
     >
       {children}
     </Component>

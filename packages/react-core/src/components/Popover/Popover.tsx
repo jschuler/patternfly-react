@@ -124,15 +124,10 @@ export interface PopoverProps {
    * used on the focused trigger
    */
   shouldOpen?: (showFunction?: () => void) => void;
-  /** z-index of the popover */
   zIndex?: number;
-  /** CSS fade transition animation duration */
   animationDuration?: number;
-  /** id used as part of the various popover elements (popover-${id}-header/body/footer) */
   id?: string;
-  /** @deprecated - no longer used. if you want to constrain the popper to a specific element use the appendTo prop instead */
   boundary?: 'scrollParent' | 'window' | 'viewport' | HTMLElement;
-  /** @deprecated - no longer used */
   tippyProps?: Partial<TippyProps>;
 }
 

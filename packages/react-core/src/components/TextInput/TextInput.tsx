@@ -18,7 +18,8 @@ export enum TextInputTypes {
   url = 'url'
 }
 
-export interface TextInputProps extends Omit<React.HTMLProps<HTMLInputElement>, 'onChange' | 'onFocus' | 'onBlur' | 'disabled' | 'ref'> {
+export interface TextInputProps
+  extends Omit<React.HTMLProps<HTMLInputElement>, 'onChange' | 'onFocus' | 'onBlur' | 'disabled' | 'ref'> {
   /** Additional classes added to the TextInput. */
   className?: string;
   /** Flag to show if the input is disabled. */
@@ -82,6 +83,9 @@ export class TextInputBase extends React.Component<TextInputProps> {
       // eslint-disable-next-line no-console
       console.error('Text input:', 'Text input requires either an id or aria-label to be specified');
     }
+    this.state = {
+      hasFinishedRender: false
+    };
   }
 
   handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -92,7 +96,26 @@ export class TextInputBase extends React.Component<TextInputProps> {
 
   componentDidMount() {
     if (this.props.isLeftTruncated) {
-      this.handleResize();
+      // Hack to only calculate after first screen paint
+      // using only setTimeout or requestAnimationFrame was not enough
+      // need to use both
+      // this.setState(
+      //   {
+      //     hasFinishedRender: true
+      //   },
+      //   () => {
+      //     this.handleResize();
+      //   }
+      // );
+      setTimeout(() => {
+        window.requestAnimationFrame(() => {
+          window.requestAnimationFrame(() => {
+            this.handleResize();
+          });
+          // this.handleResize();
+        });
+      });
+      // this.handleResize();
       window.addEventListener('resize', debounce(this.handleResize, 250));
     }
   }
@@ -104,7 +127,9 @@ export class TextInputBase extends React.Component<TextInputProps> {
   }
 
   handleResize = () => {
+    debugger;
     const inputRef = this.props.innerRef || this.inputRef;
+    console.log(inputRef);
     if (inputRef && inputRef.current) {
       trimLeft(inputRef.current, String(this.props.value));
     }
@@ -146,16 +171,17 @@ export class TextInputBase extends React.Component<TextInputProps> {
       isReadOnly,
       isRequired,
       isDisabled,
+      /* eslint-disable @typescript-eslint/no-unused-vars */
       isLeftTruncated,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       onFocus,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       onBlur,
+      /* eslint-enable @typescript-eslint/no-unused-vars */
       ...props
     } = this.props;
     return (
       <input
         {...props}
+        onLoad={this.handleResize}
         onFocus={this.onFocus}
         onBlur={this.onBlur}
         className={

@@ -66,7 +66,11 @@ class SimpleTable extends React.Component {
     super(props);
     this.state = {
       columns: [
-        { title: 'Repositories' },
+        { 
+          title: 'Repositories',
+          transforms: [cellWidth(20)],
+          cellTransforms: [truncate]
+        },
         'Branches',
         { title: 'Pull requests' },
         'Workspaces',
@@ -78,7 +82,14 @@ class SimpleTable extends React.Component {
       ],
       rows: [
         {
-          cells: ['one', 'two', 'three', 'four', 'five']
+          cells: [
+            { 
+              title: 'Long text with overflow',
+              // props: {
+              //   tooltip: 'Help'
+              // }
+            },
+            'two', 'three', 'four', 'five']
         },
         {
           cells: [

@@ -19,6 +19,28 @@ export function getOUIAProps(componentType: string, id: OuiaId | undefined, ouia
   return {
     'data-ouia-component-type': `PF4/${componentType}`,
     'data-ouia-safe': ouiaSafe,
-    'data-ouia-component-id': id === undefined ? uid++ : id
+    'data-ouia-component-id': id === undefined ? `generated-${++uid}` : id
   };
+}
+
+/**
+ * 
+ */
+export function getDefaultOUIAId() {
+  /*
+  window.ouiaIdByRoute = {
+    [route]: [number]
+  }
+  */
+  try {
+    if (!(window as any).ouiaIdByRoute) {
+      (window as any).ouiaIdByRoute = {};
+    }
+    if (!(window as any).ouiaIdByRoute[window.location.href]) {
+      (window as any).ouiaIdByRoute[window.location.href] = 1;
+    }
+    return `generated-${++(window as any).ouiaIdByRoute[window.location.href]}`;
+  } catch (exception) {
+    return `generated-${++uid}`;
+  }
 }

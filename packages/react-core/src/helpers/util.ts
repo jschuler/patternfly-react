@@ -329,6 +329,7 @@ export const getTextWidth = (text: string, node: HTMLElement) => {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
   context.font = computedStyle.font || getFontFromComputedStyle();
+  console.log(context.font);
 
   return context.measureText(text).width;
 };
@@ -357,17 +358,53 @@ export const innerDimensions = (node: HTMLElement) => {
  */
 export const trimLeft = (node: HTMLElement, value: string) => {
   const availableWidth = innerDimensions(node).width;
+
+  const fitsInBox = (str: string) => getTextWidth(`...${str}`, node) <= availableWidth;
+
+  let highestGood: number;
+  let lowestBad: number;
+  const findFit = (str: string): string => {
+    if (lowestBad - highestGood <= 1) {
+      return str;
+    }
+
+    if (fitsInBox(str)) {
+      highestGood = str.length;
+    } else {
+      lowestBad = str.length;
+    }
+
+    const nextNum = Math.floor((lowestBad + highestGood) / 2);
+    const nextStr = value.substring(value.length - nextNum);
+    return findFit(nextStr);
+  };
+
   let newValue = value;
   if (getTextWidth(value, node) > availableWidth) {
+    console.log(`availableWidth: ${availableWidth}`);
     // we have text overflow, trim the text to the left and add ... in the front until it fits
+    highestGood = 0;
+    lowestBad = value.length;
+    // newValue = findFit(value);
     while (getTextWidth(`...${newValue}`, node) > availableWidth) {
       newValue = newValue.substring(1);
     }
+    console.log(value);
+    console.log(`text width: ${getTextWidth(value, node)}`);
+    console.log(`newValue: ${newValue}`);
+
     // replace text with our truncated text
+    debugger;
     if ((node as HTMLInputElement).value) {
       (node as HTMLInputElement).value = `...${newValue}`;
     } else {
       node.innerText = `...${newValue}`;
+    }
+  } else {
+    if ((node as HTMLInputElement).value) {
+      (node as HTMLInputElement).value = value;
+    } else {
+      node.innerText = value;
     }
   }
 };
