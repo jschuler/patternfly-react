@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { GraphElement as TopologyElement } from '../types';
 import ElementContext from '../utils/ElementContext';
 import ContextMenu from '../components/contextmenu/ContextMenu';
+import { ContextMenuItem } from '../components/contextmenu';
 
 type Reference = React.ComponentProps<typeof ContextMenu>['reference'];
 
@@ -32,7 +33,8 @@ export const withContextMenu = <E extends TopologyElement>(
           : e.currentTarget
       );
     }, []);
-
+    console.log(reference);
+    console.log(container);
     return (
       <>
         <WrappedComponent {...(props as any)} onContextMenu={onContextMenu} contextMenuOpen={!!reference} />

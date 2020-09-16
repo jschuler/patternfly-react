@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PopperJS, { PopperOptions } from 'popper.js';
+import PopperJS, { PopperOptions, ReferenceObject } from 'popper.js';
 import useCombineRefs from '../../utils/useCombineRefs';
 import Portal from './Portal';
 
@@ -8,6 +8,7 @@ interface PopperJSReference {
   getBoundingClientRect: PopperJS['reference']['getBoundingClientRect'];
   clientWidth: number;
   clientHeight: number;
+  referenceNode?: Node;
 }
 
 interface ClientRectProp {
@@ -23,6 +24,7 @@ class VirtualReference implements PopperJSReference {
   private rect: ClientRect;
 
   constructor({ height = 0, width = 0, x, y }: ClientRectProp) {
+    debugger;
     this.rect = {
       bottom: y + height,
       height,
@@ -44,10 +46,16 @@ class VirtualReference implements PopperJSReference {
   get clientHeight(): number {
     return this.rect.height || 0;
   }
+
+  // get referenceNode(): Node {
+  //   return document.querySelector('.popper-container');
+  // }
 }
 
-const getReference = (reference: Reference): PopperJSReference =>
-  'getBoundingClientRect' in reference ? reference : new VirtualReference(reference);
+const getReference = (reference: Reference): PopperJSReference => {
+  debugger;
+  return 'getBoundingClientRect' in reference ? reference : new VirtualReference(reference);
+};
 
 interface PopperProps {
   closeOnEsc?: boolean;
@@ -158,8 +166,10 @@ const Popper: React.FC<PopperProps> = ({
 
     destroy();
 
+    const asd = getReference(typeof reference === 'function' ? reference() : reference);
+
     popperRefs(
-      new PopperJS(getReference(typeof reference === 'function' ? reference() : reference), nodeRef.current, {
+      new PopperJS(asd, nodeRef.current, {
         placement,
         ...popperOptions,
         modifiers: {

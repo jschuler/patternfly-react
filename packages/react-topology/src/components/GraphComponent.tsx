@@ -46,7 +46,10 @@ const GraphComponent: React.FC<GraphComponentProps> = ({
   onSelect,
   onContextMenu
 }) => {
-  const { x, y, width, height } = element.getBounds();
+  debugger;
+  const { x, y } = element.getBounds();
+  const width = '800px';
+  const height = '300px';
   return (
     <>
       <rect

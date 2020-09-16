@@ -14,6 +14,7 @@ const Portal: React.FC<PortalProps> = ({ children, container }) => {
   const [containerNode, setContainerNode] = React.useState<Element>();
 
   React.useLayoutEffect(() => {
+    debugger;
     setContainerNode(getContainer(container) || document.body);
   }, [container]);
 
