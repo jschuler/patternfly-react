@@ -67,7 +67,6 @@ export interface MenuProps
 
 export interface MenuState {
   typeaheadInputValue: string | null;
-  typeaheadFilteredChildren: React.ReactNode[];
   ouiaStateId: string;
 }
 
@@ -87,7 +86,6 @@ export class Menu extends React.Component<MenuProps, MenuState> {
   };
 
   state: MenuState = {
-    typeaheadFilteredChildren: React.Children.toArray(this.props.children),
     ouiaStateId: getDefaultOUIAId(Menu.displayName, this.props.variant),
     typeaheadInputValue: ''
   };
