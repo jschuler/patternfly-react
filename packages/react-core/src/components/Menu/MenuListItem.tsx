@@ -30,6 +30,8 @@ export interface MenuListItemProps {
   component?: React.ReactNode;
   /** Render item as disabled option */
   isDisabled?: boolean;
+  /** Flag indicating if the item acts as a "no results" indicator */
+  isNoResultsItem?: boolean;
   /** Render item with icon */
   icon?: React.ReactNode;
   /** Render item with action icon */
@@ -79,6 +81,7 @@ export const MenuListItem: React.FunctionComponent<MenuListItemProps> = ({
   ariaIsFavoriteLabel,
   ariaIsNotFavoriteLabel,
   onShowFlyout,
+  // isNoResultsItem,
   ...props
 }: MenuListItemProps) => {
   const Component = component as any;

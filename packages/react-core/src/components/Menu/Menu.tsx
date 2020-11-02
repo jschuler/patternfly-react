@@ -3,7 +3,7 @@ import styles from '@patternfly/react-styles/css/components/Menu/menu';
 import { css } from '@patternfly/react-styles';
 import { getOUIAProps, OUIAProps, getDefaultOUIAId } from '../../helpers';
 import { SearchInput } from '../SearchInput';
-import { MenuGroup } from '.';
+import { MenuGroup, MenuListItem } from '.';
 import { Divider, SelectOptionObject } from '..';
 import { MenuContext } from './MenuContext';
 
@@ -58,6 +58,8 @@ export interface MenuProps
   isGrouped?: boolean;
   /** Array of selected items for multi select variants. */
   selections?: (string | SelectOptionObject)[];
+  /** Text to display in typeahead select when no results are found */
+  noResultsFoundText?: string;
 }
 
 export interface MenuState {
@@ -76,7 +78,8 @@ export class Menu extends React.Component<MenuProps, MenuState> {
     selections: [],
     favoritesLabel: 'Favorites',
     ouiaSafe: true,
-    isGrouped: false
+    isGrouped: false,
+    noResultsFoundText: 'No results found'
   };
 
   state: MenuState = {
@@ -112,14 +115,24 @@ export class Menu extends React.Component<MenuProps, MenuState> {
   }
 
   onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { onFilter, children } = this.props;
+    const { onFilter, children, noResultsFoundText } = this.props;
     let typeaheadFilteredChildren: any;
 
     if (onFilter) {
       typeaheadFilteredChildren = onFilter(e) || children;
+      // eslint-disable-next-line no-console
+      console.log(typeaheadFilteredChildren);
 
       if (!typeaheadFilteredChildren) {
         typeaheadFilteredChildren = [];
+      }
+
+      if (typeaheadFilteredChildren.length === 0) {
+        typeaheadFilteredChildren.push(
+          <MenuListItem isDisabled isNoResultsItem key={0}>
+            {noResultsFoundText}
+          </MenuListItem>
+        );
       }
 
       this.setState({
