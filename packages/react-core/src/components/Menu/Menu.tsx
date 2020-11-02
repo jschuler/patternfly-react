@@ -3,7 +3,7 @@ import styles from '@patternfly/react-styles/css/components/Menu/menu';
 import { css } from '@patternfly/react-styles';
 import { getOUIAProps, OUIAProps, getDefaultOUIAId } from '../../helpers';
 import { SearchInput } from '../SearchInput';
-import { MenuGroup, MenuListItem } from '.';
+import { MenuGroup } from '.';
 import { Divider, SelectOptionObject } from '..';
 import { MenuContext } from './MenuContext';
 
@@ -37,7 +37,10 @@ export interface MenuProps
     event: React.FormEvent<HTMLInputElement>;
   }) => void;
   /** A callback for when the input value changes. */
-  onSearchInputChange?: (changedItem: { value: string; event: React.FormEvent<HTMLInputElement> }) => void;
+  onSearchInputChange?: (changedItem: {
+    value: string;
+    event: React.FormEvent<HTMLInputElement> | React.SyntheticEvent<HTMLButtonElement>;
+  }) => void;
   /** Optional callback for custom filtering */
   onFilter?: (e: React.ChangeEvent<HTMLInputElement>) => React.ReactElement[];
   /** Accessibility label */
@@ -73,6 +76,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
   static defaultProps: MenuProps = {
     onSelect: () => undefined,
     onToggle: () => undefined,
+    onSearchInputChange: () => undefined,
     onFilter: null,
     favorites: [] as string[],
     selections: [],
@@ -103,50 +107,6 @@ export class Menu extends React.Component<MenuProps, MenuState> {
     }
 
     this.props.onSelect({ groupId, itemId, event, to, isSelected });
-  }
-
-  // Callback from MenuExpandable
-  onToggle(event: React.MouseEvent<HTMLInputElement>, groupId: number | string, toggleValue: boolean) {
-    this.props.onToggle({
-      event,
-      groupId,
-      isExpanded: toggleValue
-    });
-  }
-
-  onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { onFilter, children, noResultsFoundText } = this.props;
-    let typeaheadFilteredChildren: any;
-
-    if (onFilter) {
-      typeaheadFilteredChildren = onFilter(e) || children;
-      // eslint-disable-next-line no-console
-      console.log(typeaheadFilteredChildren);
-
-      if (!typeaheadFilteredChildren) {
-        typeaheadFilteredChildren = [];
-      }
-
-      if (typeaheadFilteredChildren.length === 0) {
-        typeaheadFilteredChildren.push(
-          <MenuListItem isDisabled isNoResultsItem key={0}>
-            {noResultsFoundText}
-          </MenuListItem>
-        );
-      }
-
-      this.setState({
-        typeaheadInputValue: e.target.value,
-        typeaheadFilteredChildren
-      });
-    }
-  };
-
-  onSearchInputChange(value: string, event: React.FormEvent<HTMLInputElement>) {
-    this.props.onSearchInputChange({
-      event,
-      value
-    });
   }
 
   createRenderableFavorites = () => {
@@ -246,7 +206,11 @@ export class Menu extends React.Component<MenuProps, MenuState> {
             isSelected: boolean
           ) => this.onSelect(event, groupId, itemId, to, preventDefault, isSelected),
           onToggle: (event: React.MouseEvent<HTMLInputElement>, groupId: number | string, expanded: boolean) =>
-            this.onToggle(event, groupId, expanded)
+            this.props.onToggle({
+              event,
+              groupId,
+              isExpanded: expanded
+            })
         }}
       >
         <div
@@ -262,11 +226,11 @@ export class Menu extends React.Component<MenuProps, MenuState> {
                   value={this.state.typeaheadInputValue}
                   onChange={(value, event) => {
                     this.setState({ typeaheadInputValue: value });
-                    this.onSearchInputChange && this.onSearchInputChange(value, event);
+                    this.props.onSearchInputChange({ value, event });
                   }}
-                  onClear={() => {
+                  onClear={event => {
                     this.setState({ typeaheadInputValue: '' });
-                    this.onSearchInputChange && this.onSearchInputChange('', null);
+                    this.props.onSearchInputChange({ value: '', event });
                   }}
                 />
               </div>

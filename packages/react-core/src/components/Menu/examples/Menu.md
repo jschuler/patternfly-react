@@ -227,7 +227,7 @@ class MenuWithFiltering extends React.Component {
       });
     };
 
-    this.onChange = (value, event) => {
+    this.onChange = ({ event, value }) => {
       this.setState({
         input: value
       });
@@ -235,20 +235,28 @@ class MenuWithFiltering extends React.Component {
   }
 
   render() {
-    const { activeItem } = this.state;
+    const { activeItem, input } = this.state;
     const menuListItemsText = ['Action 1', 'Action 2', 'Action 3'];
 
-    const menuListItems = menuListItemsText.map((currentValue, index) =>
-      this.state.input.value == null ? (
-        <MenuListItem component="button" to="#default-link1" itemId={index} isActive={activeItem === index}>
+    const menuListItems = menuListItemsText
+      .filter(item => !input || item.toLowerCase().includes(input.toLowerCase()))
+      .map((currentValue, index) => (
+        <MenuListItem
+          key={currentValue}
+          component="button"
+          itemId={index}
+          isActive={activeItem === index}
+        >
           {currentValue}
         </MenuListItem>
-      ) : currentValue.toLowerCase().includes(this.state.input.value) ? (
-        <MenuListItem component="button" to="#default-link1" itemId={index} isActive={activeItem === index}>
-          {currentValue}
+      ));
+    if (input && menuListItems.length === 0) {
+      menuListItems.push(
+        <MenuListItem isDisabled key="no result">
+          No results found
         </MenuListItem>
-      ) : null
-    );
+      );
+    }
 
     return (
       <Menu searchInput onSearchInputChange={this.onChange} onSelect={this.onSelect}>
